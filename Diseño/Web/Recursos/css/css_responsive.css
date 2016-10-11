@@ -1,0 +1,39 @@
+/* lg */
+@media (min-width:1400px) and (max-width:1920px) {
+}
+/* lg */
+@media (min-width:1200px) and (max-width:1401px) {
+}
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.container{ padding-left:50px}
+}
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+	.container{ padding-left:60px}
+	footer[role="footer"]{ position:absolute; bottom:0; width:100%; left:0; right:0}
+}
+/* xs */
+@media (max-width: 767px) {
+	.container{ padding-left:45px}
+	aside[role="siderbar-nav"]{ width:35px}
+	aside[role="siderbar-nav"] > nav{ padding-top:50%}
+	header[role="main-header"]{ padding-top:7%}
+	header[role="main-header"] h1 > a{ float:none; margin:0 auto}
+	header[role="main-header"] ul[role="socil-icons"]{ float:none; text-align:center; margin-top:20px}
+	main[role="main"]{ padding-top:30px}
+	article.home-content header[role="home-title"] h2{ font-size:30px; line-height:32px}
+	article.home-content p br{ display:none}
+	#countdown{ padding-top:45px; text-align:center; display:block}
+	#countdown span{ margin:0 1.5%;text-align:center;}
+	article.home-content header[role="home-title"],.other-page header[role="page-title"]{ padding-bottom:30px; text-align:center}
+	.other-page article p,article.home-content p{ width:100%; text-align:center}
+	.subscribe-pan form{ width:100%}
+	.subscribe-pan form input[type="email"]{ width:75%}
+	footer[role="footer"]{ position: fixed; bottom:0; width:100%; left:0; right:0}
+	footer[role="footer"] p{ text-align:center; line-height:35px; float:none}
+	footer[role="footer"] p + p{ float:none; text-align:center}
+	
+	
+
+}

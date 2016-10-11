@@ -1,0 +1,511 @@
+/*
+
+	Theme Name: Pixicon
+
+	Template URI: 
+
+	Description: 
+
+	Author:
+
+	Author URI: 
+
+	License: GNU General Public License version 3.0
+
+	License URI:
+
+	Version: 1.0
+
+	
+
+	1. Body style
+
+	2. Body
+
+	3. siderbar
+
+		1. Nave
+
+	4. Header
+
+	5. Main
+
+	6. Home
+
+	7. About
+
+	8. Subscribe
+
+	9. Contact
+
+	10. Footer
+	
+	11. Animated blinking cursor
+
+*/
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input, textarea {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+button, html input[type="button"],/* 1 */ input[type="reset"], input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+ *overflow:visible;
+}
+body, img {
+	transition: all .2s linear;
+	-o-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, input, main {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	border: 0;
+	outline: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, img, main {
+	display: block
+}
+audio, canvas, video {
+	display: inline-block;
+ *display:inline;
+ *zoom:1
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+.clear {
+	clear: both;
+	line-height: 0;
+	height: 0;
+}
+a {
+	text-decoration: none;
+	outline: none;
+	color: #010101;
+	transition-delay: 0s;
+	transition-duration: 0.6s;
+	transition-property: all;
+	transition-timing-function: ease;
+}
+a:focus, img:focus, button:focus, .btn:focus {
+	outline: none;
+}
+
+
+
+::-moz-selection {
+ background-color:#e84d49;
+ color:#fff;
+ text-shadow:none;
+}
+::selection {
+	background-color: #e84d49;
+	color: #fff;
+	text-shadow: none;
+}
+@font-face {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+/*== Body ==*/
+
+body {
+	background-image: url(../images/overlay-bg.png), url(../images/main-bg.jpg);
+	background-size: cover;
+	background-repeat: repeat, no-repeat;
+	background-position: center center;
+	background-attachment: fixed
+}
+/*== Siderbar ==*/
+
+aside[role="siderbar-nav"] {
+	position: fixed;
+	left: 0;
+	height: 100%;
+	width: 50px;
+	top: 0;
+	background-color: #111111
+}
+aside[role="siderbar-nav"] > nav {
+	padding-top: 110px
+}
+aside[role="siderbar-nav"] > nav > ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	border-bottom: none
+}
+aside[role="siderbar-nav"] > nav > ul > li {
+	display: block;
+	float: none;
+	margin-bottom: 25px
+}
+aside[role="siderbar-nav"] > nav > ul > li > a {
+	font-size: 18px;
+	color: #FFF;
+	border-radius: 0;
+	border: none;
+	padding: 0;
+}
+aside[role="siderbar-nav"] > nav > ul > li.active a, aside[role="siderbar-nav"] > nav > ul > li a:hover {
+	background-color: inherit;
+	border: none;
+	color: #e84d49
+}
+aside[role="siderbar-nav"] > nav .nav-tabs>li.active>a, aside[role="siderbar-nav"] > nav .nav-tabs>li.active>a:focus, aside[role="siderbar-nav"] > nav .nav-tabs>li.active>a:hover {
+	background-color: inherit;
+	border: none;
+	color: #e84d49
+}
+/*== Header ==*/
+
+header[role="main-header"] {
+	overflow: hidden;
+	padding-top: 108px
+}
+header[role="main-header"] h1 {
+	margin: 0;
+	padding: 0;
+}
+header[role="main-header"] h1 > a {
+	float: left;
+	display: block;
+	max-width: 73px
+}
+header[role="main-header"] ul[role="socil-icons"] {
+	list-style: none;
+	text-align: right;
+	float: right
+}
+header[role="main-header"] ul[role="socil-icons"] > li {
+	display: inline-block;
+	margin-left: 28px
+}
+header[role="main-header"] ul[role="socil-icons"] > li > a {
+	color: #FFF;
+	font-size: 14px;
+	font-weight: normal
+}
+header[role="main-header"] ul[role="socil-icons"] > li > a:hover {
+	color: #e84d49
+}
+/*== Main ==*/
+
+main[role="main"] {
+	padding-top: 83px
+}
+/*== Home ==*/
+
+article.home-content {
+	color: #FFF
+}
+article.home-content header[role="home-title"] {
+	padding-bottom: 44px
+}
+article.home-content header[role="home-title"] h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 60px;
+	line-height: 62px;
+	font-weight: 700;
+}
+article.home-content header[role="home-title"] h2 > span {
+	color: #e84d49;
+}
+article.home-content p {
+	font-size: 21px;
+	line-height: 27px;
+}
+#countdown {
+	padding-top: 208px;
+	padding-bottom: 86px
+}
+#countdown span {
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFF;
+	font-weight: 700;
+	font-size: 33px;
+	line-height: 34px;
+	margin-right: 57px
+}
+#countdown span b {
+	display: block;
+	font-size: 11px;
+	line-height: 12px;
+	letter-spacing: 2px;
+	border-top: 3px solid #e84d49;
+	margin-top: 5px;
+	padding-top: 6px
+}
+/*== About ==*/
+
+.about-pan {
+	padding-bottom: 151px
+}
+.other-page header[role="page-title"] {
+	padding-bottom: 59px
+}
+.other-page header[role="page-title"] h2 {
+	padding: 0;
+	margin: 0;
+	color: #FFF;
+	font-size: 39px;
+	line-height: 40px;
+	font-weight: 700
+}
+.other-page article p {
+	font-size: 16px;
+	line-height: 27px;
+	color: #FFF;
+	padding: 0;
+	margin: 0;
+	width: 598px;
+	padding-bottom: 27px
+}
+/*== Subscribe ==*/
+
+.subscribe-pan form {
+	width: 400px;
+	display: block;
+	overflow: hidden;
+	padding-top: 15px;
+	margin-bottom: 272px
+}
+.subscribe-pan form input[type="email"] {
+	display: block;
+	width: 340px;
+	height: 50px;
+	outline: none;
+	padding: 0 10px;
+	border: 1px solid #FFF;
+	background-color: inherit;
+	font-size: 15px;
+	line-height: 16px;
+	color: #a4a4a4;
+	font-weight: 300;
+	float: left
+}
+.subscribe-pan form label {
+	float: right;
+	width: 60px;
+	height: 50px;
+	position: relative;
+	text-align: center;
+}
+.subscribe-pan form label input {
+	font-size: 0;
+	display: block;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	width: 60px;
+	height: 50px;
+	background-color: #FFF
+}
+.subscribe-pan form label i {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	font-size: 24px;
+	color: #111111;
+	cursor: pointer;
+	line-height: 50px
+}
+.subscribe-pan form label:hover input {
+	background-color: #e84d49
+}
+.subscribe-pan form label:hover i {
+	color: #FFF
+}
+ .subscribe-pan form ::-webkit-input-placeholder {
+color:#a4a4a4;
+}
+ .subscribe-pan form ::-moz-placeholder {
+color:#a4a4a4;
+} /* firefox 19+ */
+ .subscribe-pan form :-ms-input-placeholder {
+color:#a4a4a4;
+} /* ie */
+ .subscribe-pan form input:-moz-placeholder {
+color:#a4a4a4;
+}
+.subscribe-pan > p {
+	font-size: 13px;
+	letter-spacing: 1px;
+	font-weight: 300
+}
+.error_message {
+	color: #e84d49
+}
+#success_page h3, #success_page p {
+	color: #60ca6f
+}
+/*== Contact ==*/
+
+.contact-from {
+	margin-bottom: 50px;
+}
+.contact-from input[type="text"], .contact-from input[type="email"], .contact-from textarea {
+	width: 100%;
+	padding: 0 10px;
+	display: block;
+	height: 50px;
+	outline: none;
+	border: 1px solid #d2d4d7;
+	background-color: inherit;
+	color: #a4a4a4;
+	font-size: 15px;
+	line-height: 16px;
+	margin-bottom: 27px
+}
+ .contact-from form ::-webkit-input-placeholder {
+color:#a4a4a4;
+}
+ .contact-from form ::-moz-placeholder {
+color:#a4a4a4;
+} /* firefox 19+ */
+ .contact-from form :-ms-input-placeholder {
+color:#a4a4a4;
+} /* ie */
+ .contact-from form input:-moz-placeholder {
+color:#a4a4a4;
+}
+.contact-from textarea {
+	margin-bottom: 21px;
+	height: 126px;
+	padding: 10px
+}
+.contact-from input[type="submit"] {
+	display: block;
+	border: none;
+	outline: none;
+	width: 168px;
+	line-height: 50px;
+	text-transform: uppercase;
+	font-size: 15px;
+	color: #FFF;
+	font-weight: 600;
+	letter-spacing: 2px;
+	background-color: #e84d49;
+	margin-bottom: 60px
+}
+.contact-from input[type="submit"]:hover {
+	background-color: #f8524e
+}
+/*== Footer ==*/
+
+footer[role="footer"] {
+	background-color: #111111;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 5
+}
+footer[role="footer"] p {
+	color: #FFF;
+	font-size: 14px;
+	line-height: 50px;
+	padding: 0;
+	margin: 0;
+	float: left
+}
+footer[role="footer"] p + p {
+	text-align: right;
+	float: right
+}
+footer[role="footer"] p i {
+	padding: 0 4px;
+	color: #e84d49
+}
+footer[role="footer"] p a {
+	padding: 0 4px;
+	color: #e84d49
+}
+/*==  code for animated blinking cursor ==*/
+.typed-cursor {
+	opacity: 1;
+	font-weight: 100;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	-ms-animation: blink 0.7s infinite;
+	-o-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+ @-keyframes blink {
+ 0% {
+opacity:1;
+}
+ 50% {
+opacity:0;
+}
+ 100% {
+opacity:1;
+}
+}
+ @-webkit-keyframes blink {
+ 0% {
+opacity:1;
+}
+ 50% {
+opacity:0;
+}
+ 100% {
+opacity:1;
+}
+}
+ @-moz-keyframes blink {
+ 0% {
+opacity:1;
+}
+ 50% {
+opacity:0;
+}
+ 100% {
+opacity:1;
+}
+}
+ @-ms-keyframes blink {
+ 0% {
+opacity:1;
+}
+ 50% {
+opacity:0;
+}
+ 100% {
+opacity:1;
+}
+}
+ @-o-keyframes blink {
+ 0% {
+opacity:1;
+}
+ 50% {
+opacity:0;
+}
+ 100% {
+opacity:1;
+}
+}
