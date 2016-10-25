@@ -4,48 +4,27 @@
  * Project :      MoldeLogicoProyecto4B.DM1
  * Author :       Luis Puc
  *
- * Date Created : Monday, October 24, 2016 10:19:42
+ * Date Created : Monday, October 24, 2016 20:07:43
  * Target DBMS : Microsoft SQL Server 2008
  */
 
 /* 
- * TABLE: Administrador 
+ * TABLE: Contactanos 
  */
+ 
 CREATE DATABASE MCTuristic;
 GO
 
 USE MCTuristic;
 GO
 
-CREATE TABLE Administrador(
-    idAdministrador    int            IDENTITY(1,1),
-    Nombre             varchar(50)    NOT NULL,
-    Apellidos          varchar(50)    NOT NULL,
-    Telefono           varchar(50)    NOT NULL,
-    Email              varchar(50)    NOT NULL,
-    Usuario            varchar(50)    NOT NULL,
-    Contraseña         varchar(50)    NOT NULL
-)
-go
-
-
-
-IF OBJECT_ID('Administrador') IS NOT NULL
-    PRINT '<<< CREATED TABLE Administrador >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Administrador >>>'
-go
-
-/* 
- * TABLE: Contactanos 
- */
-
 CREATE TABLE Contactanos(
     idComentario         int             IDENTITY(1,1),
     Comentario           varchar(500)    NULL,
     CorreoElectronico    varchar(50)     NULL,
     Nombre               varchar(50)     NOT NULL,
-    Asunto               varchar(50)     NULL
+    Asunto               varchar(50)     NULL,
+    IdEmpresa            int             NOT NULL
 )
 go
 
@@ -55,6 +34,52 @@ IF OBJECT_ID('Contactanos') IS NOT NULL
     PRINT '<<< CREATED TABLE Contactanos >>>'
 ELSE
     PRINT '<<< FAILED CREATING TABLE Contactanos >>>'
+go
+
+/* 
+ * TABLE: DireccionUsuario 
+ */
+
+CREATE TABLE DireccionUsuario(
+    idDireccion    int            IDENTITY(1,1),
+    Calle          varchar(50)    NOT NULL,
+    Cruzamiento    varchar(50)    NOT NULL,
+    Numero         varchar(50)    NULL,
+    Descripcion    varchar(50)    NULL,
+    Colonia        varchar(50)    NULL,
+    Estado         varchar(50)    NOT NULL,
+    CodPostal      varchar(50)    NOT NULL,
+    IdUsuario      int            NOT NULL
+)
+go
+
+
+
+IF OBJECT_ID('DireccionUsuario') IS NOT NULL
+    PRINT '<<< CREATED TABLE DireccionUsuario >>>'
+ELSE
+    PRINT '<<< FAILED CREATING TABLE DireccionUsuario >>>'
+go
+
+/* 
+ * TABLE: Empresa 
+ */
+
+CREATE TABLE Empresa(
+    IdEmpresa      int               IDENTITY(1,1),
+    Descripcion    varchar(100)      NULL,
+    Ubicacion      varchar(50)       NULL,
+    Latitud        decimal(10, 2)    NULL,
+    Longitud       decimal(10, 2)    NULL
+)
+go
+
+
+
+IF OBJECT_ID('Empresa') IS NOT NULL
+    PRINT '<<< CREATED TABLE Empresa >>>'
+ELSE
+    PRINT '<<< FAILED CREATING TABLE Empresa >>>'
 go
 
 /* 
@@ -258,7 +283,8 @@ CREATE TABLE Usuario(
     Apellidos          varchar(50)    NOT NULL,
     Email              varchar(50)    NOT NULL,
     TelefonoCelular    varchar(50)    NOT NULL,
-    FechaNacimiento    date           NOT NULL
+    FechaNacimiento    date           NOT NULL,
+    IdEmpresa          int            NOT NULL
 )
 go
 
@@ -268,20 +294,6 @@ IF OBJECT_ID('Usuario') IS NOT NULL
     PRINT '<<< CREATED TABLE Usuario >>>'
 ELSE
     PRINT '<<< FAILED CREATING TABLE Usuario >>>'
-go
-
-/* 
- * TABLE: Administrador 
- */
-
-ALTER TABLE Administrador ADD 
-    CONSTRAINT PK1 PRIMARY KEY NONCLUSTERED (idAdministrador)
-go
-
-IF OBJECT_ID('Administrador') IS NOT NULL
-    PRINT '<<< CREATED TABLE Administrador >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Administrador >>>'
 go
 
 /* 
@@ -296,6 +308,34 @@ IF OBJECT_ID('Contactanos') IS NOT NULL
     PRINT '<<< CREATED TABLE Contactanos >>>'
 ELSE
     PRINT '<<< FAILED CREATING TABLE Contactanos >>>'
+go
+
+/* 
+ * TABLE: DireccionUsuario 
+ */
+
+ALTER TABLE DireccionUsuario ADD 
+    CONSTRAINT PK15 PRIMARY KEY NONCLUSTERED (idDireccion)
+go
+
+IF OBJECT_ID('DireccionUsuario') IS NOT NULL
+    PRINT '<<< CREATED TABLE DireccionUsuario >>>'
+ELSE
+    PRINT '<<< FAILED CREATING TABLE DireccionUsuario >>>'
+go
+
+/* 
+ * TABLE: Empresa 
+ */
+
+ALTER TABLE Empresa ADD 
+    CONSTRAINT PK13 PRIMARY KEY NONCLUSTERED (IdEmpresa)
+go
+
+IF OBJECT_ID('Empresa') IS NOT NULL
+    PRINT '<<< CREATED TABLE Empresa >>>'
+ELSE
+    PRINT '<<< FAILED CREATING TABLE Empresa >>>'
 go
 
 /* 
@@ -425,6 +465,26 @@ ELSE
 go
 
 /* 
+ * TABLE: Contactanos 
+ */
+
+ALTER TABLE Contactanos ADD CONSTRAINT RefEmpresa19 
+    FOREIGN KEY (IdEmpresa)
+    REFERENCES Empresa(IdEmpresa)
+go
+
+
+/* 
+ * TABLE: DireccionUsuario 
+ */
+
+ALTER TABLE DireccionUsuario ADD CONSTRAINT RefUsuario15 
+    FOREIGN KEY (IdUsuario)
+    REFERENCES Usuario(IdUsuario)
+go
+
+
+/* 
  * TABLE: Establecimiento 
  */
 
@@ -496,6 +556,16 @@ go
 ALTER TABLE Suscripcion ADD CONSTRAINT RefUsuario5 
     FOREIGN KEY (IdUsuario)
     REFERENCES Usuario(IdUsuario)
+go
+
+
+/* 
+ * TABLE: Usuario 
+ */
+
+ALTER TABLE Usuario ADD CONSTRAINT RefEmpresa18 
+    FOREIGN KEY (IdEmpresa)
+    REFERENCES Empresa(IdEmpresa)
 go
 
 
