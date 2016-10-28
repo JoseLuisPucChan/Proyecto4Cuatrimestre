@@ -4,82 +4,63 @@
  * Project :      MoldeLogicoProyecto4B.DM1
  * Author :       Luis Puc
  *
- * Date Created : Monday, October 24, 2016 20:07:43
+ * Date Created : Friday, October 28, 2016 18:44:44
  * Target DBMS : Microsoft SQL Server 2008
  */
 
 /* 
- * TABLE: Contactanos 
+ * TABLE: Administrador 
  */
- 
+
 CREATE DATABASE MCTuristic;
 GO
 
 USE MCTuristic;
 GO
 
-CREATE TABLE Contactanos(
-    idComentario         int             IDENTITY(1,1),
-    Comentario           varchar(500)    NULL,
-    CorreoElectronico    varchar(50)     NULL,
-    Nombre               varchar(50)     NOT NULL,
-    Asunto               varchar(50)     NULL,
-    IdEmpresa            int             NOT NULL
+CREATE TABLE Administrador(
+    IdAdministrador    int            IDENTITY(1,1),
+    Nombre             varchar(25)    NULL,
+    Apellidos          varchar(25)    NOT NULL,
+    Email              varchar(50)    NOT NULL,
+    Contrasena         varchar(20)    NULL,
+    TelefonoCelular    varchar(25)    NULL,
+    FechaNacimiento    varchar(25)    NULL
 )
 go
 
 
 
-IF OBJECT_ID('Contactanos') IS NOT NULL
-    PRINT '<<< CREATED TABLE Contactanos >>>'
+IF OBJECT_ID('Administrador') IS NOT NULL
+    PRINT '<<< CREATED TABLE Administrador >>>'
 ELSE
-    PRINT '<<< FAILED CREATING TABLE Contactanos >>>'
+    PRINT '<<< FAILED CREATING TABLE Administrador >>>'
 go
 
 /* 
- * TABLE: DireccionUsuario 
+ * TABLE: Direccion
  */
 
-CREATE TABLE DireccionUsuario(
-    idDireccion    int            IDENTITY(1,1),
-    Calle          varchar(50)    NOT NULL,
-    Cruzamiento    varchar(50)    NOT NULL,
-    Numero         varchar(50)    NULL,
-    Descripcion    varchar(50)    NULL,
-    Colonia        varchar(50)    NULL,
-    Estado         varchar(50)    NOT NULL,
-    CodPostal      varchar(50)    NOT NULL,
-    IdUsuario      int            NOT NULL
+CREATE TABLE Direccion(
+    idDireccion        int            IDENTITY(1,1),
+    Calle              varchar(50)    NOT NULL,
+    Cruzamiento        varchar(50)    NOT NULL,
+    Numero             varchar(50)    NULL,
+    Descripcion        varchar(50)    NULL,
+    Colonia            varchar(50)    NULL,
+    Estado             varchar(50)    NOT NULL,
+    CodPostal          varchar(50)    NOT NULL,
+    IdUsuario          int            NULL,
+    IdAdministrador    int            NULL
 )
 go
 
 
 
-IF OBJECT_ID('DireccionUsuario') IS NOT NULL
-    PRINT '<<< CREATED TABLE DireccionUsuario >>>'
+IF OBJECT_ID('Direccion') IS NOT NULL
+    PRINT '<<< CREATED TABLE Direccion >>>'
 ELSE
-    PRINT '<<< FAILED CREATING TABLE DireccionUsuario >>>'
-go
-
-/* 
- * TABLE: Empresa 
- */
-
-CREATE TABLE Empresa(
-    IdEmpresa      int               IDENTITY(1,1),
-    Descripcion    varchar(100)      NULL,
-    Ubicacion      varchar(50)       NULL,
-    Latitud        decimal(10, 2)    NULL,
-    Longitud       decimal(10, 2)    NULL
-)
-go
-
-
-
-IF OBJECT_ID('Empresa') IS NOT NULL
-    PRINT '<<< CREATED TABLE Empresa >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Empresa >>>'
+    PRINT '<<< FAILED CREATING TABLE Direccion >>>'
 go
 
 /* 
@@ -198,6 +179,27 @@ ELSE
 go
 
 /* 
+ * TABLE: Soporte 
+ */
+
+CREATE TABLE Soporte(
+    idSoporte          int             IDENTITY(1,1),
+    Comentario         varchar(500)    NULL,
+    Asunto             varchar(50)     NULL,
+    IdAdministrador    int             NOT NULL,
+    IdUsuario          int             NOT NULL
+)
+go
+
+
+
+IF OBJECT_ID('Soporte') IS NOT NULL
+    PRINT '<<< CREATED TABLE Soporte >>>'
+ELSE
+    PRINT '<<< FAILED CREATING TABLE Soporte >>>'
+go
+
+/* 
  * TABLE: Suscripcion 
  */
 
@@ -282,9 +284,9 @@ CREATE TABLE Usuario(
     Nombre             varchar(50)    NOT NULL,
     Apellidos          varchar(50)    NOT NULL,
     Email              varchar(50)    NOT NULL,
+    Contrasena         varchar(20)    NULL,
     TelefonoCelular    varchar(50)    NOT NULL,
-    FechaNacimiento    date           NOT NULL,
-    IdEmpresa          int            NOT NULL
+    FechaNacimiento    date           NOT NULL
 )
 go
 
@@ -297,17 +299,17 @@ ELSE
 go
 
 /* 
- * TABLE: Contactanos 
+ * TABLE: Administrador 
  */
 
-ALTER TABLE Contactanos ADD 
-    CONSTRAINT PK12 PRIMARY KEY NONCLUSTERED (idComentario)
+ALTER TABLE Administrador ADD 
+    CONSTRAINT PK16 PRIMARY KEY NONCLUSTERED (IdAdministrador)
 go
 
-IF OBJECT_ID('Contactanos') IS NOT NULL
-    PRINT '<<< CREATED TABLE Contactanos >>>'
+IF OBJECT_ID('Administrador') IS NOT NULL
+    PRINT '<<< CREATED TABLE Administrador >>>'
 ELSE
-    PRINT '<<< FAILED CREATING TABLE Contactanos >>>'
+    PRINT '<<< FAILED CREATING TABLE Administrador >>>'
 go
 
 /* 
@@ -322,20 +324,6 @@ IF OBJECT_ID('DireccionUsuario') IS NOT NULL
     PRINT '<<< CREATED TABLE DireccionUsuario >>>'
 ELSE
     PRINT '<<< FAILED CREATING TABLE DireccionUsuario >>>'
-go
-
-/* 
- * TABLE: Empresa 
- */
-
-ALTER TABLE Empresa ADD 
-    CONSTRAINT PK13 PRIMARY KEY NONCLUSTERED (IdEmpresa)
-go
-
-IF OBJECT_ID('Empresa') IS NOT NULL
-    PRINT '<<< CREATED TABLE Empresa >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Empresa >>>'
 go
 
 /* 
@@ -409,6 +397,20 @@ ELSE
 go
 
 /* 
+ * TABLE: Soporte 
+ */
+
+ALTER TABLE Soporte ADD 
+    CONSTRAINT PK12 PRIMARY KEY NONCLUSTERED (idSoporte)
+go
+
+IF OBJECT_ID('Soporte') IS NOT NULL
+    PRINT '<<< CREATED TABLE Soporte >>>'
+ELSE
+    PRINT '<<< FAILED CREATING TABLE Soporte >>>'
+go
+
+/* 
  * TABLE: TipoServicio 
  */
 
@@ -465,22 +467,17 @@ ELSE
 go
 
 /* 
- * TABLE: Contactanos 
- */
-
-ALTER TABLE Contactanos ADD CONSTRAINT RefEmpresa19 
-    FOREIGN KEY (IdEmpresa)
-    REFERENCES Empresa(IdEmpresa)
-go
-
-
-/* 
  * TABLE: DireccionUsuario 
  */
 
 ALTER TABLE DireccionUsuario ADD CONSTRAINT RefUsuario15 
     FOREIGN KEY (IdUsuario)
     REFERENCES Usuario(IdUsuario)
+go
+
+ALTER TABLE DireccionUsuario ADD CONSTRAINT RefAdministrador23 
+    FOREIGN KEY (IdAdministrador)
+    REFERENCES Administrador(IdAdministrador)
 go
 
 
@@ -545,6 +542,21 @@ go
 
 
 /* 
+ * TABLE: Soporte 
+ */
+
+ALTER TABLE Soporte ADD CONSTRAINT RefAdministrador21 
+    FOREIGN KEY (IdAdministrador)
+    REFERENCES Administrador(IdAdministrador)
+go
+
+ALTER TABLE Soporte ADD CONSTRAINT RefUsuario22 
+    FOREIGN KEY (IdUsuario)
+    REFERENCES Usuario(IdUsuario)
+go
+
+
+/* 
  * TABLE: Suscripcion 
  */
 
@@ -556,16 +568,6 @@ go
 ALTER TABLE Suscripcion ADD CONSTRAINT RefUsuario5 
     FOREIGN KEY (IdUsuario)
     REFERENCES Usuario(IdUsuario)
-go
-
-
-/* 
- * TABLE: Usuario 
- */
-
-ALTER TABLE Usuario ADD CONSTRAINT RefEmpresa18 
-    FOREIGN KEY (IdEmpresa)
-    REFERENCES Empresa(IdEmpresa)
 go
 
 
