@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D73B2EEF-3957-4657-800F-17131D15546C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Practica2Semaforos</RootNamespace>
+    <AssemblyName>Practica2Semaforos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Autopista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Autopista.Designer.cs">
+      <DependentUpon>Autopista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Semaforo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Semaforo.Designer.cs">
+      <DependentUpon>Semaforo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Autopista.resx">
+      <DependentUpon>Autopista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Semaforo.resx">
+      <DependentUpon>Semaforo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carro2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carro3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carro41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotonda_napoleonica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-amarillo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-amarillo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-amarillo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-amarillo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-rojo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-rojo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-rojo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-verde1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-verde2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semaforo-verde3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SemaforoAmarillo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SemaforoVerde.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SemaforoRojo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
