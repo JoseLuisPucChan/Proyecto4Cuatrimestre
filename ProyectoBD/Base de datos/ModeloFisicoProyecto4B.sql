@@ -4,19 +4,20 @@
  * Project :      MoldeLogicoProyecto4B.DM1
  * Author :       Luis Puc
  *
- * Date Created : Friday, October 28, 2016 18:44:44
+ * Date Created : Monday, October 31, 2016 23:55:17
  * Target DBMS : Microsoft SQL Server 2008
  */
 
 /* 
  * TABLE: Administrador 
  */
-
+ 
 CREATE DATABASE MCTuristic;
 GO
 
 USE MCTuristic;
 GO
+
 
 CREATE TABLE Administrador(
     IdAdministrador    int            IDENTITY(1,1),
@@ -38,7 +39,7 @@ ELSE
 go
 
 /* 
- * TABLE: Direccion
+ * TABLE: Direccion 
  */
 
 CREATE TABLE Direccion(
@@ -183,11 +184,10 @@ go
  */
 
 CREATE TABLE Soporte(
-    idSoporte          int             IDENTITY(1,1),
-    Comentario         varchar(500)    NULL,
-    Asunto             varchar(50)     NULL,
-    IdAdministrador    int             NOT NULL,
-    IdUsuario          int             NOT NULL
+    idSoporte     int             IDENTITY(1,1),
+    Comentario    varchar(500)    NULL,
+    Asunto        varchar(50)     NULL,
+    IdUsuario     int             NOT NULL
 )
 go
 
@@ -313,17 +313,17 @@ ELSE
 go
 
 /* 
- * TABLE: DireccionUsuario 
+ * TABLE: Direccion 
  */
 
-ALTER TABLE DireccionUsuario ADD 
+ALTER TABLE Direccion ADD 
     CONSTRAINT PK15 PRIMARY KEY NONCLUSTERED (idDireccion)
 go
 
-IF OBJECT_ID('DireccionUsuario') IS NOT NULL
-    PRINT '<<< CREATED TABLE DireccionUsuario >>>'
+IF OBJECT_ID('Direccion') IS NOT NULL
+    PRINT '<<< CREATED TABLE Direccion >>>'
 ELSE
-    PRINT '<<< FAILED CREATING TABLE DireccionUsuario >>>'
+    PRINT '<<< FAILED CREATING TABLE Direccion >>>'
 go
 
 /* 
@@ -467,7 +467,7 @@ ELSE
 go
 
 /* 
- * TABLE: DireccionUsuario 
+ * TABLE: Direccion 
  */
 
 ALTER TABLE Direccion ADD CONSTRAINT RefUsuario15 
@@ -544,11 +544,6 @@ go
 /* 
  * TABLE: Soporte 
  */
-
-ALTER TABLE Soporte ADD CONSTRAINT RefAdministrador21 
-    FOREIGN KEY (IdAdministrador)
-    REFERENCES Administrador(IdAdministrador)
-go
 
 ALTER TABLE Soporte ADD CONSTRAINT RefUsuario22 
     FOREIGN KEY (IdUsuario)
