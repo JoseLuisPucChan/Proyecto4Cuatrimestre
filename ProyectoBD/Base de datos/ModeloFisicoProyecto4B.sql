@@ -470,12 +470,12 @@ go
  * TABLE: DireccionUsuario 
  */
 
-ALTER TABLE DireccionUsuario ADD CONSTRAINT RefUsuario15 
+ALTER TABLE Direccion ADD CONSTRAINT RefUsuario15 
     FOREIGN KEY (IdUsuario)
     REFERENCES Usuario(IdUsuario)
 go
 
-ALTER TABLE DireccionUsuario ADD CONSTRAINT RefAdministrador23 
+ALTER TABLE Direccion ADD CONSTRAINT RefAdministrador23 
     FOREIGN KEY (IdAdministrador)
     REFERENCES Administrador(IdAdministrador)
 go
