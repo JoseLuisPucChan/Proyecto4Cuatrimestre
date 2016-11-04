@@ -1,0 +1,53 @@
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="card card-tab card-mini">
+                            <div class="card-header">
+                                <ul class="nav nav-tabs tab-stats">
+                                    <li role="tab1" class="active">
+                                        <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"><b>INTRODUCCIÓN</b></a>
+                                    </li>
+                                    <li role="tab2">
+                                        <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
+                                    </li>
+                                    <li role="tab2">
+                                        <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">More</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="tab1">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="chart ct-chart-browser ct-perfect-fourth"></div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="chart-label">
+                                                <li class="ct-label ct-series-a">Google Chrome</li>
+                                                <li class="ct-label ct-series-b">Firefox</li>
+                                                <li class="ct-label ct-series-c">Safari</li>
+                                                <li class="ct-label ct-series-d">IE</li>
+                                                <li class="ct-label ct-series-e">Opera</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="tab2">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="chart ct-chart-os ct-perfect-fourth"></div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <ul class="chart-label">
+                                                <li class="ct-label ct-series-a">iOS</li>
+                                                <li class="ct-label ct-series-b">Android</li>
+                                                <li class="ct-label ct-series-c">Windows</li>
+                                                <li class="ct-label ct-series-d">OSX</li>
+                                                <li class="ct-label ct-series-e">Linux</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="tab3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>

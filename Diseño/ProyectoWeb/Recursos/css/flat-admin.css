@@ -1764,12 +1764,12 @@ body {
 html, body {
   width: 100%;
   font-family: 'Open Sans', sans-serif;
-  color: #444;
+  color: #333;
   position: relative; }
 
 body {
   min-height: 100vh;
-  background-color: #e7edee;
+  background-color: #afd7f2;
   overflow-x: hidden; }
   body .app {
     min-height: 100vh; }
@@ -4096,7 +4096,7 @@ ui-view > .app-messaging-container {
       .card.card-yellow-light:hover {
         background-color: #FFBC11; }
         .card.card-yellow-light:hover .card-body .icon {
-          color: #FFF;
+          color: #54ffe5;
           background-color: rgba(255, 255, 255, 0.1); }
         .card.card-yellow-light:hover .card-body .content .title, .card.card-yellow-light:hover .card-body .content .value {
           color: #FFF; }

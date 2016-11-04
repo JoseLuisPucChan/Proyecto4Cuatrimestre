@@ -55,6 +55,7 @@
   <ItemGroup>
     <Content Include="GUI\index.html" />
     <Content Include="GUI\messaging.html" />
+    <Content Include="GUI\WebForm1.aspx" />
     <Content Include="Recursos\css\flags\1x1\ad.svg" />
     <Content Include="Recursos\css\flags\1x1\ae.svg" />
     <Content Include="Recursos\css\flags\1x1\af.svg" />
@@ -591,6 +592,13 @@
     </Compile>
     <Compile Include="GUI\mpPrincipal.Master.designer.cs">
       <DependentUpon>mpPrincipal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="wsTuristic.asmx.cs">
