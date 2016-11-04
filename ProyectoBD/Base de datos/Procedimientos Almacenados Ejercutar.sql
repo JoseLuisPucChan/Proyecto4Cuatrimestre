@@ -98,7 +98,7 @@ EXEC actualizar_usuario 1, 'JOSE','Puc','PRIMO@HOTMAIL','12345','999135','1996-0
 
 EXEC eliminar_usaurio 1
 go
----------------------------------Procedimiento Almacenado ----------------------------------------
+---------------------------------Procedimiento Almacenado Dirección----------------------------------------
 Select * from Direccion
 go
 --Insetar Administrador
