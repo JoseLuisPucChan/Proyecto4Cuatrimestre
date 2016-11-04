@@ -1,0 +1,2079 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ProyectoAdmin1.MasterPag.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+  <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+  <title>Materialize - Material Design Admin Template</title>
+  <!-- CORE CSS-->
+
+  <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/materialize.css" rel="stylesheet" type="text/css" media="screen,projection" /> 
+  <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/style.css" rel="stylesheet" type="text/css"  media="screen,projection" />
+  <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/custom-style.css" rel="stylesheet" type="text/css" media="screen,projection" />
+  <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/style-horizontal.css" rel="stylesheet" type="text/css media="screen,projection" />
+
+
+ 
+
+
+  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+
+  
+  <link href="../demo.geekslabs.com/materialize/v2.1/layout03/js/js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" >
+    <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/prism.css" rel="stylesheet" media="screen,projection" />
+    <link href="../demo.geekslabs.com/materialize/v2.1/layout03/js/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet"  media="screen,projection" />
+    <link href="../demo.geekslabs.com/materialize/v2.1/layout03/js/plugins/chartist-js/chartist.min.css" rel="stylesheet"  media="screen,projection"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <div id="card-stats">
+                        <div class="row">
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content  green white-text">
+                                        <p class="card-stats-title"><i class="mdi-social-group-add"></i> New Clients</p>
+                                        <h4 class="card-stats-number">566</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">from yesterday</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action  green darken-2">
+                                        <div id="clients-bar"><canvas width="290" height="25" style="display: inline-block; width: 290px; height: 25px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content purple white-text">
+                                        <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total Sales</p>
+                                        <h4 class="card-stats-number">$8990.63</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action purple darken-2">
+                                        <div id="sales-compositebar"><canvas width="286" height="25" style="display: inline-block; width: 286px; height: 25px; vertical-align: top;"></canvas></div>
+
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content blue-grey white-text">
+                                        <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Today Profit</p>
+                                        <h4 class="card-stats-number">$806.52</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 80% <span class="blue-grey-text text-lighten-5">from yesterday</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action blue-grey darken-2">
+                                        <div id="profit-tristate"><canvas width="290" height="25" style="display: inline-block; width: 290px; height: 25px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content pink lighten-2 white-text">
+                                        <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> New Invoice</p>
+                                        <h4 class="card-stats-number">1806</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">from last month</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action  pink darken-2">
+                                        <div id="invoice-line"><canvas width="282" height="25" style="display: inline-block; width: 282px; height: 25px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+
+        <div class="container">
+          <p class="caption">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
+          <div class="divider"></div>
+
+          <!--toasts-->
+          <div id="toasts" class="section">
+            <h4 class="header">Tooltips</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>Add the Tooltipped class to your element and add either top, bottom, left, right on data-tooltip to control the position.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <div class="row">
+                  <a class="btn tooltipped col s4 l2 " data-position="bottom" data-delay="50" data-tooltip="I am tooltip"> Bottom</a>
+                  <a class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-position="top" data-delay="50" data-tooltip="I am tooltip"> Top</a>
+                  <a class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-position="left" data-delay="50" data-tooltip="I am tooltip"> Left</a>
+                  <a class="btn tooltipped col s4 offset-s4 l2 offset-l1" data-position="right" data-delay="50" data-tooltip="I am tooltip"> Right</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p class="header">Words Tooltips</p>
+              </div>
+              <div class="col s12 m8 l9">
+                  <p>Add the Tooltipped class to your element and add either <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="I am top tooltip">top</a>, <a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am bottom tooltip">bottom</a>, <a class="tooltipped" data-position="left" data-delay="50" data-tooltip="I am left tooltip">left</a>, <a class="tooltipped" data-position="right" data-delay="50" data-tooltip="I am right tooltip">right</a> on data-tooltip to control the position.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <h4 class="header">Initialization</h4>
+                <p>Tooltips are initialized automatically, but if you have dynamically added tooltips, you will need to initialize them.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.tooltipped'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tooltip</span><span class="token punctuation">(</span><span class="token punctuation">{</span>delay<span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      </code></pre>
+              </div>
+              </div>
+            </div>
+            <!-- Floating Action Button -->
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red">
+                  <i class="large mdi-editor-mode-edit"></i>
+                </a>
+                <ul>
+                  <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
+                  <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
+                  <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                  <li><a href="app-email.html" class="btn-floating blue"><i class="large mdi-communication-email"></i></a></li>
+                </ul>
+            </div>
+            <!-- Floating Action Button -->
+        </div>
+        <!--Botones xD-->
+
+        <div class="container">
+          <p class="caption">Toasts are content that are not original visible on a page but show up with extra information if needed. The transitions should make the appearance of the toast make sense and not jarring to the user.</p>
+          <div class="divider"></div>
+
+          <!--toasts-->
+          <div id="toasts" class="section">
+            <h4 class="header">Toasts</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>To do this, call the toast() function programatically in JavaScript.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <p>This theme provides an easy way for you to send unobtrusive alerts to your users through toasts. These toasts are also placed and sized responsively, try it out by clicking the button below on different device sizes.</p>
+                <a class="waves-effect waves-light btn light-blue" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <h4 class="header">Custom HTML</h4>
+                <p>You can pass in an HTML String as the first argument as well.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <p> Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks.</p>
+                <a class="waves-effect waves-light light-blue btn" onclick="Materialize.toast('<span>Item Deleted</span><a class=&quot;btn-flat yellow-text&quot; href=_.html#!&quot;>Undo<a>', 5000)">Toast Me!</a>
+                <a class="waves-effect waves-light light-blue btn" onclick="Materialize.toast('<span>Item Deleted</span><a class=&quot;btn light-blue &quot; href=_.html#!&quot;>Undo<a>', 5000)">Toast Again!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <!--tosts-callback-->
+          <div id="tosts-callback">
+            <h4 class="header">Callback</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>You can have the toast callback a function when it has been dismissed</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <a class="btn light-blue" onclick="Materialize.toast('I am a toast', 4000,'',function(){alert('Mickey ! Your toast was dismissed')})">Toast!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <!--styling-toasts-->
+          <div id="styling-toasts">
+            <h4 class="header">Styling ToastsCallback</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>We've added the ability to customize your toasts easily. You can pass in classes as an optional parameter into the toast function. </p>
+              </div>
+              <div class="col s12 m8 l9">
+                <p>We've added a rounded class for you, but you can create your own CSS classes and apply them to toasts. Checkout out our full example below.</p>
+                <a class="waves-effect waves-light light-blue btn" onclick="Materialize.toast('I am a toast!', 3000, 'rounded')">Round Toast!</a>
+              </div>
+            </div>
+          </div>
+          <!-- Floating Action Button -->
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red">
+                  <i class="large mdi-editor-mode-edit"></i>
+                </a>
+                <ul>
+                  <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
+                  <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
+                  <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                  <li><a href="app-email.html" class="btn-floating blue"><i class="large mdi-communication-email"></i></a></li>
+                </ul>
+            </div>
+            <!-- Floating Action Button -->
+        </div>
+
+
+
+        <div id="action" class="row icon-container section">
+                  <div class="col s12 m12 l12">
+                  <h4 class="header">Action</h4>
+                  </div>
+                  <br>
+
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-3d-rotation"></i><span>mdi-action-3d-rotation</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-accessibility"></i><span>mdi-action-accessibility</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-account-balance"></i><span>mdi-action-account-balance</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-account-balance-wallet"></i><span>mdi-action-account-balance-wallet</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-account-box"></i><span>mdi-action-account-box</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-account-child"></i><span>mdi-action-account-child</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-account-circle"></i><span>mdi-action-account-circle</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-add-shopping-cart"></i><span>mdi-action-add-shopping-cart</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-alarm"></i><span>mdi-action-alarm</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-alarm-add"></i><span>mdi-action-alarm-add</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-alarm-off"></i><span>mdi-action-alarm-off</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-alarm-on"></i><span>mdi-action-alarm-on</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-android"></i><span>mdi-action-android</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-announcement"></i><span>mdi-action-announcement</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-aspect-ratio"></i><span>mdi-action-aspect-ratio</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-assessment"></i><span>mdi-action-assessment</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-assignment"></i><span>mdi-action-assignment</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-assignment-ind"></i><span>mdi-action-assignment-ind</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-assignment-late"></i><span>mdi-action-assignment-late</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-assignment-return"></i><span>mdi-action-assignment-return</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-assignment-returned"></i><span>mdi-action-assignment-returned</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-assignment-turned-in"></i><span>mdi-action-assignment-turned-in</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-autorenew"></i><span>mdi-action-autorenew</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-backup"></i><span>mdi-action-backup</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-book"></i><span>mdi-action-book</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-bookmark"></i><span>mdi-action-bookmark</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-bookmark-outline"></i><span>mdi-action-bookmark-outline</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-bug-report"></i><span>mdi-action-bug-report</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-cached"></i><span>mdi-action-cached</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-class"></i><span>mdi-action-class</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-credit-card"></i><span>mdi-action-credit-card</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-dashboard"></i><span>mdi-action-dashboard</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-delete"></i><span>mdi-action-delete</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-description"></i><span>mdi-action-description</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-dns"></i><span>mdi-action-dns</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-done"></i><span>mdi-action-done</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-done-all"></i><span>mdi-action-done-all</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-event"></i><span>mdi-action-event</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-exit-to-app"></i><span>mdi-action-exit-to-app</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-explore"></i><span>mdi-action-explore</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-extension"></i><span>mdi-action-extension</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-face-unlock"></i><span>mdi-action-face-unlock</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-favorite"></i><span>mdi-action-favorite</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-favorite-outline"></i><span>mdi-action-favorite-outline</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-find-in-page"></i><span>mdi-action-find-in-page</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-find-replace"></i><span>mdi-action-find-replace</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-flip-to-back"></i><span>mdi-action-flip-to-back</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-flip-to-front"></i><span>mdi-action-flip-to-front</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-get-app"></i><span>mdi-action-get-app</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-grade"></i><span>mdi-action-grade</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-group-work"></i><span>mdi-action-group-work</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-help"></i><span>mdi-action-help</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-highlight-remove"></i><span>mdi-action-highlight-remove</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-history"></i><span>mdi-action-history</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-home"></i><span>mdi-action-home</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-https"></i><span>mdi-action-https</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-info"></i><span>mdi-action-info</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-info-outline"></i><span>mdi-action-info-outline</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-input"></i><span>mdi-action-input</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-invert-colors"></i><span>mdi-action-invert-colors</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-label"></i><span>mdi-action-label</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-label-outline"></i><span>mdi-action-label-outline</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-language"></i><span>mdi-action-language</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-launch"></i><span>mdi-action-launch</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-list"></i><span>mdi-action-list</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-lock"></i><span>mdi-action-lock</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-lock-open"></i><span>mdi-action-lock-open</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-lock-outline"></i><span>mdi-action-lock-outline</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-loyalty"></i><span>mdi-action-loyalty</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-markunread-mailbox"></i><span>mdi-action-markunread-mailbox</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-note-add"></i><span>mdi-action-note-add</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-open-in-browser"></i><span>mdi-action-open-in-browser</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-open-in-new"></i><span>mdi-action-open-in-new</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-open-with"></i><span>mdi-action-open-with</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-pageview"></i><span>mdi-action-pageview</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-payment"></i><span>mdi-action-payment</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-perm-camera-mic"></i><span>mdi-action-perm-camera-mic</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-perm-contact-cal"></i><span>mdi-action-perm-contact-cal</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-perm-data-setting"></i><span>mdi-action-perm-data-setting</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-perm-device-info"></i><span>mdi-action-perm-device-info</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-perm-identity"></i><span>mdi-action-perm-identity</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-perm-media"></i><span>mdi-action-perm-media</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-perm-phone-msg"></i><span>mdi-action-perm-phone-msg</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-perm-scan-wifi"></i><span>mdi-action-perm-scan-wifi</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-picture-in-picture"></i><span>mdi-action-picture-in-picture</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-polymer"></i><span>mdi-action-polymer</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-print"></i><span>mdi-action-print</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-query-builder"></i><span>mdi-action-query-builder</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-question-answer"></i><span>mdi-action-question-answer</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-receipt"></i><span>mdi-action-receipt</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-redeem"></i><span>mdi-action-redeem</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-report-problem"></i><span>mdi-action-report-problem</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-restore"></i><span>mdi-action-restore</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-room"></i><span>mdi-action-room</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-schedule"></i><span>mdi-action-schedule</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-search"></i><span>mdi-action-search</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings"></i><span>mdi-action-settings</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-applications"></i><span>mdi-action-settings-applications</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-backup-restore"></i><span>mdi-action-settings-backup-restore</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-bluetooth"></i><span>mdi-action-settings-bluetooth</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-cell"></i><span>mdi-action-settings-cell</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-display"></i><span>mdi-action-settings-display</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-ethernet"></i><span>mdi-action-settings-ethernet</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-input-antenna"></i><span>mdi-action-settings-input-antenna</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-input-component"></i><span>mdi-action-settings-input-component</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-input-composite"></i><span>mdi-action-settings-input-composite</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-input-hdmi"></i><span>mdi-action-settings-input-hdmi</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-input-svideo"></i><span>mdi-action-settings-input-svideo</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-overscan"></i><span>mdi-action-settings-overscan</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-phone"></i><span>mdi-action-settings-phone</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-power"></i><span>mdi-action-settings-power</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-remote"></i><span>mdi-action-settings-remote</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-settings-voice"></i><span>mdi-action-settings-voice</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-shop"></i><span>mdi-action-shop</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-shop-two"></i><span>mdi-action-shop-two</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-shopping-basket"></i><span>mdi-action-shopping-basket</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-shopping-cart"></i><span>mdi-action-shopping-cart</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-speaker-notes"></i><span>mdi-action-speaker-notes</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-spellcheck"></i><span>mdi-action-spellcheck</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-star-rate"></i><span>mdi-action-star-rate</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-stars"></i><span>mdi-action-stars</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-store"></i><span>mdi-action-store</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-subject"></i><span>mdi-action-subject</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-swap-horiz"></i><span>mdi-action-swap-horiz</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-swap-vert"></i><span>mdi-action-swap-vert</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-swap-vert-circle"></i><span>mdi-action-swap-vert-circle</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-system-update-tv"></i><span>mdi-action-system-update-tv</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-tab"></i><span>mdi-action-tab</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-tab-unselected"></i><span>mdi-action-tab-unselected</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-theaters"></i><span>mdi-action-theaters</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-thumb-down"></i><span>mdi-action-thumb-down</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-thumb-up"></i><span>mdi-action-thumb-up</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-thumbs-up-down"></i><span>mdi-action-thumbs-up-down</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-toc"></i><span>mdi-action-toc</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-today"></i><span>mdi-action-today</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-track-changes"></i><span>mdi-action-track-changes</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-translate"></i><span>mdi-action-translate</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-trending-down"></i><span>mdi-action-trending-down</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-trending-neutral"></i><span>mdi-action-trending-neutral</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-trending-up"></i><span>mdi-action-trending-up</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-turned-in"></i><span>mdi-action-turned-in</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-turned-in-not"></i><span>mdi-action-turned-in-not</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-verified-user"></i><span>mdi-action-verified-user</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-agenda"></i><span>mdi-action-view-agenda</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-array"></i><span>mdi-action-view-array</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-carousel"></i><span>mdi-action-view-carousel</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-column"></i><span>mdi-action-view-column</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-day"></i><span>mdi-action-view-day</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-headline"></i><span>mdi-action-view-headline</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-list"></i><span>mdi-action-view-list</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-module"></i><span>mdi-action-view-module</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-quilt"></i><span>mdi-action-view-quilt</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-stream"></i><span>mdi-action-view-stream</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-view-week"></i><span>mdi-action-view-week</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-visibility"></i><span>mdi-action-visibility</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-visibility-off"></i><span>mdi-action-visibility-off</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-wallet-giftcard"></i><span>mdi-action-wallet-giftcard</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-wallet-membership"></i><span>mdi-action-wallet-membership</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-wallet-travel"></i><span>mdi-action-wallet-travel</span>
+                  </div>
+                  <div class="icon-preview col s6 m3"><i class="mdi-action-work"></i><span>mdi-action-work</span>
+                  </div>
+                </div>
+
+
+        <!--Botones-->
+        <div class="container">
+          <p class="caption">There are 3 main button types described in material design. Raised Button, Floating circular action button &amp; Flat buttons.
+                </p><div class="divider"></div>
+                <!--Raised Button-->
+                <div id="raised-buttons" class="section">
+                    <h4 class="header">Raised Button</h4>
+                  <div class="row">
+                    <div class="col s12 m4 l3">
+                      <p>The raised button is a standard button that signify actions and seek to give depth to a mostly flat page. The floating circular action button is meant for very important functions. Flat buttons are usually used within elements that already have depth like cards or modals.</p>
+                    </div>
+                    <div class="col s12 m8 l9">
+                      <a class="waves-effect waves-light  btn">button</a>
+                      <a class="waves-effect waves-light  btn"><i class="mdi-action-3d-rotation left"></i>button</a>
+                      <a class="waves-effect waves-light  btn"><i class="mdi-action-backup right"></i>button</a>
+
+                      
+                      <a class="btn dropdown-button waves-effect waves-light " href="#!" data-activates="dropdown1">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a><ul id="dropdown1" class="dropdown-content">
+                        <li><a href="#!" class="-text">one<span class="badge">1</span></a>
+                        </li>
+                        <li><a href="#!" class="-text">two<span class="new badge ">2</span></a>
+                        </li>
+                        <li><a href="#!" class="-text">three</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>                
+                
+                <div class="divider"></div>
+                <!--Flat Buttton-->
+                <div id="flat-button" class="section">
+                  <div class="row">
+                    <div class="col s12 m4 l3">
+                      <h4 class="header">Flat Button</h4>
+                    </div>
+                    <div class="col s12 m8 l9">
+                      <a class="btn-flat waves-effect">Button</a>
+                      <a class="btn-flat waves-effect pink accent-2 white-text"><i class="mdi-communication-comment left"></i>Button</a>
+                      <a class="btn-flat waves-effect pink accent-2 white-text"><i class="mdi-communication-email right"></i>Button</a>
+                      <a class="btn-flat dropdown-button waves-effect pink accent-2 white-text" href="#!" data-activates="dropdown2">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="divider"></div>
+                <!--Floating Buttton-->
+                <div id="floating-button" class="section">
+                  <div class="row">
+                    <div class="col s12 m4 l3">
+                      <h4 class="header">Floating Button</h4>
+                    </div>
+                    <div class="col s12 m8 l9">
+                      <div class="row">
+                        <div class="col s12 m4 center">
+                          <a class="btn-floating btn-large waves-effect waves-light "><i class="mdi-content-add"></i></a>
+                          <a class="btn-floating waves-effect waves-light "><i class="mdi-content-clear"></i></a>
+                          <p>Raised</p>
+                        </div>
+                        <div class="col s12 m4 center">
+                          <a class="btn-floating btn-large btn-flat waves-effect waves-light pink accent-2 white-text"><i class="mdi-content-content-copy"></i></a>
+                          <a class="btn-floating btn-flat waves-effect waves-light pink accent-2 white-text"><i class="mdi-content-content-cut"></i></a>
+                          <p>Default</p>
+                        </div>
+                        <div class="col s12 m4 center">
+                          <ul id="dropdown1" class="dropdown-content">
+                            <li><a href="#!" class="-text">one</a>
+                            </li>
+                            <li><a href="#!" class="-text">two</a>
+                            </li>
+                            <li><a href="#!" class="-text">three</a>
+                            </li>
+                          </ul>
+                          <a class="dropdown-button btn-floating btn-large waves-effect waves-light " href="#!" data-activates="dropdown2"><i class="mdi-editor-vertical-align-bottom"></i></a>
+                          
+                          <a class="dropdown-button btn-floating btn-flat waves-effect waves-light  pink accent-2 white-text" href="#!" data-activates="dropdown2"><i class="mdi-file-cloud-download"></i></a><ul id="dropdown2" class="dropdown-content">
+                            <li><a href="#!" class="-text">.zip</a>
+                            </li>
+                            <li><a href="#!" class="-text">.tar</a>
+                            </li>
+                            <li><a href="#!" class="-text">.exe</a>
+                            </li>
+                          </ul>
+                          <p>Dropdown</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="divider"></div>
+                <!--Submit Button-->
+                <div id="submit-button" class="section">
+                  <h4 class="header">Submit Button</h4>
+                  <div class="row">
+                    <div class="col s12 m4 l3">
+                      <p>When you use a button to submit a form, instead of using a input tag, use a button tag with a type submit</p>
+                    </div>
+                    <div class="col s12 m8 l9">
+                      <button class="btn waves-effect waves-light " type="submit" name="action">Submit</button>
+                      <button class="btn waves-effect waves-light " type="submit" name="action">Reply
+                        <i class="mdi-content-reply left"></i>
+                      </button>
+                      <button class="btn waves-effect waves-light " type="submit" name="action">Send
+                        <i class="mdi-content-send right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Larger Button Size-->
+                <div class="divider"></div>
+                <div id="larger-button" class="section">
+                  <h4 class="header">Larger Button</h4>
+                  <div class="row">
+                    <div class="col s12 m4 l3">
+                      <p>This button has a larger height for buttons that need more attention.</p>
+                    </div>
+                    <div class="col s12 m8 l9">
+                      <a class="waves-effect waves-light btn-large ">Button</a>
+                      <a class="waves-effect waves-light btn-large "><i class="mdi-device-airplanemode-on left"></i>button</a>
+                      <a class="waves-effect waves-light btn-large "><i class="mdi-editor-border-color right"></i>button</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="divider"></div>
+                <!--Fixed Action Button-->
+                <div id="fixed-action-button" class="section">
+                  <h4 class="header">Fixed Action Button</h4>
+                  <div class="row">
+                    <div class="col s12 m12 l12">
+                      <p>If you want a fixed floating action button, you can add multiple actions that will appear on hover. <strong>Our demo is in the bottom righthand corner of the page</strong>.</p>
+                      <div class="fixed-action-btn">
+                        <a class="btn-floating btn-large red">
+                          <i class="large mdi-editor-mode-edit"></i>
+                        </a>
+                        <ul>
+                          <li><a class="btn-floating red" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="large mdi-editor-insert-chart"></i></a>
+                          </li>
+                          <li><a class="btn-floating yellow darken-1" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="large mdi-editor-format-quote"></i></a>
+                          </li>
+                          <li><a class="btn-floating green" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="large mdi-editor-publish"></i></a>
+                          </li>
+                          <li><a class="btn-floating blue" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="large mdi-editor-attach-file"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="divider"></div>
+                <!--Disabled Button Size-->
+                <div id="disabled-button" class="section">
+                  <h4 class="header">Disabled Button</h4>
+                  <div class="row">
+                    <div class="col s12 m4 l3">
+                      <p>This style can be applied to all button types.</p>
+                    </div>
+                    <div class="col s12 m8 l9">
+
+                      <a class="btn disabled">Button</a>
+                      <a class="btn-flat disabled">Button</a>
+                      <a class="btn-floating disabled"><i class="mdi-content-add"></i></a>
+                      <a class="btn-large disabled">Button</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="divider"></div>
+                <!--Button colors-->
+                <div id="button-colors" class="section">
+                  <div class="row">
+                    <div class="col s12 m4 l3">
+                      <h4 class="header">Button Colors</h4>
+                    </div>
+                    <div class="col s12 m8 l9">
+                      <div class="row">
+                        <div class="col s12 m3 l3 center">
+                          <p><a class="btn waves-effect waves-light indigo">button</a></p>
+                          <p><a class="btn waves-effect waves-light blue">button</a></p>
+                          <p><a class="btn waves-effect waves-light  deep-purple">button</a></p>
+                          <p><a class="btn waves-effect waves-light light-blue darken-4">button</a></p>
+                          <p><a class="btn waves-effect waves-light  cyan darken-2">button</a></p>
+                          <p><a class="btn waves-effect waves-light teal">button</a></p>
+                        </div>
+                        <div class="col s12 m3 l3 center">
+                          <p><a class="btn btn-large waves-effect waves-light red darken-4">button</a></p>
+                          <p><a class="btn btn-large waves-effect waves-light light-green darken-4">button</a></p>
+                          <p><a class="btn btn-large waves-effect waves-light lime darken-4">button</a></p>
+                          <p><a class="btn btn-large waves-effect waves-light yellow darken-4">button</a></p>
+                          <p><a class="btn btn-large waves-effect waves-light purple darken-4">button</a></p>
+                          <p></p>
+                        </div>
+                        <div class="col s12 m3 l3 center">
+                          <p><a class="btn-floating waves-effect waves-light orange"><i class="mdi-content-clear"></i></a></p>
+                          <p><a class="btn-floating waves-effect waves-light deep-orange"><i class="mdi-content-clear"></i></a></p>
+                          <p><a class="btn-floating waves-effect waves-light brown"><i class="mdi-content-clear"></i></a></p>
+                          <p><a class="btn-floating waves-effect waves-light grey"><i class="mdi-content-clear"></i></a></p>
+                          <p><a class="btn-floating waves-effect waves-light blue-grey"><i class="mdi-content-clear"></i></a></p>
+                          <p><a class="btn-floating waves-effect waves-light red"><i class="mdi-content-clear"></i></a></p>
+                        </div>
+                        <div class="col s12 m3 l3 center">
+                          <p><a class="btn-floating btn-large waves-effect waves-light pink"><i class="mdi-content-add"></i></a></p>
+                          <p><a class="btn-floating btn-large waves-effect waves-light purple"><i class="mdi-content-add"></i></a></p>
+                          <p><a class="btn-floating btn-large waves-effect waves-light green accent-3"><i class="mdi-content-add"></i></a></p>
+                          <p><a class="btn-floating btn-large waves-effect waves-light yellow darken-4"><i class="mdi-content-add"></i></a></p>
+                          <p><a class="btn-floating btn-large waves-effect waves-light orange darken-4"><i class="mdi-content-add"></i></a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>               
+        </div>
+
+
+        <div class="container">
+          <p class="caption">Use a modal for dialog boxes, confirmation messages, or other content that can be called up. In order for the modal to work you have to add the Modal ID to the link of the trigger.</p>
+          <div class="divider"></div>
+          <!--Modal Demo-->
+          <div id="modals-demo" class="section">
+            <h4 class="header">Modal Demo</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>To add a close button, just add the class <code class="  language-css">.modal-close</code> to your button.</p>
+              </div>
+              <div class="col s12 m8 l9">
+                <p><a class="waves-effect waves-light btn modal-trigger  light-blue" href="#modal1">Modal</a>
+                </p>
+                <p><a class="waves-effect waves-light btn modal-trigger  teal " href="#modal3">Modal with Color</a>
+                </p>
+
+                <div id="modal1" class="modal" style="display: none; opacity: 1; top: 0px;">
+                  <div class="modal-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
+                    <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+                  </div>
+                </div>
+
+                <div id="modal3" class="modal" style="display: none; opacity: 1; top: 0px;">
+                  <div class="modal-content teal white-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  </div>
+                  <div class="modal-footer  teal lighten-4">
+                    <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
+                    <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <!--Modal With Fixed Footer-->
+          <div class="divider"></div>
+          <div id="modal-fixed-footer">
+            <h4 class="header">Modal With Fixed Footer</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                <p>If you have content that is very long and you want the action buttons to be visible all the time, you can add the <code class="  language-markup">modal-fixed-footer</code> class to the modal. </p>
+              </div>
+              <div class="col s12 m8 l9">
+            <p></p>
+            <p><a class="waves-effect waves-light btn modal-trigger  light-blue" href="#modal2">Modal With Fixed Footer</a>
+            </p>
+            <p><a class="waves-effect waves-light btn modal-trigger  green" href="#modal4">Modal With Fixed Footer &amp; Color</a>
+            </p>
+            <div id="modal2" class="modal modal-fixed-footer" style="display: none; opacity: 1; top: 0px;">
+              <div class="modal-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
+                <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+              </div>
+            </div>
+            <div id="modal4" class="modal modal-fixed-footer green white-text" style="display: none; opacity: 1; top: 0px;">
+              <div class="modal-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+              <div class="modal-footer green lighten-4">
+                <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close">Disagree</a>
+                <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Agree</a>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          <!--Modal Bottom Sheet Style-->
+          <div class="divider"></div>
+          <div id="modal-bottom-sheet">
+            <h4 class="header">Modal Bottom Sheet Style</h4>
+            <div class="row">
+              <div class="col s12 m4 l3">
+                &nbsp;
+              </div>
+              <div class="col s12 m8 l9">
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal5">Modal Bottom Sheet Style</a>
+                <div id="modal5" class="modal bottom-sheet" style="display: block; opacity: 0; bottom: -100%;">
+                  <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <ul class="collection">
+                      <li class="collection-item avatar">
+                        <img src="images/yuna.html" alt="" class="circle">
+                        <span class="title">Title</span>
+                        <p>First Line
+                          <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                      </li>
+                      <li class="collection-item avatar">
+                        <i class="mdi-file-folder circle"></i>
+                        <span class="title">Title</span>
+                        <p>First Line
+                          <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                      </li>
+                      <li class="collection-item avatar">
+                        <i class="mdi-action-assessment circle green"></i>
+                        <span class="title">Title</span>
+                        <p>First Line
+                          <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                      </li>
+                      <li class="collection-item avatar">
+                        <i class="mdi-av-play-arrow circle red"></i>
+                        <span class="title">Title</span>
+                        <p>First Line
+                          <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Action Button -->
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red">
+                  <i class="large mdi-editor-mode-edit"></i>
+                </a>
+                <ul>
+                  <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
+                  <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
+                  <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                  <li><a href="app-email.html" class="btn-floating blue"><i class="large mdi-communication-email"></i></a></li>
+                </ul>
+            </div>
+            <!-- Floating Action Button -->
+
+
+        </div>
+
+
+
+        <div class="container">
+          <div class="section">
+
+            <p class="caption">Widgets allow users to turn personal content into dynamic web apps that can be shared on websites where the code can be installed.</p>
+            <div class="divider"></div>
+            
+            <!--card stats start-->
+            <div id="card-stats" class="seaction">
+              <h4 class="header">Stats Cards</h4>
+              <p> Show your important stats with top stats in colorful cards.</p>
+              <div class="row">
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content  green white-text">
+                                        <p class="card-stats-title"><i class="mdi-social-group-add"></i> New Clients</p>
+                                        <h4 class="card-stats-number">566</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">from yesterday</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action  green darken-2">
+                                        <div id="clients-bar"><canvas width="290" height="25" style="display: inline-block; width: 290px; height: 25px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content purple white-text">
+                                        <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total Sales</p>
+                                        <h4 class="card-stats-number">$8990.63</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action purple darken-2">
+                                        <div id="sales-compositebar"><canvas width="286" height="25" style="display: inline-block; width: 286px; height: 25px; vertical-align: top;"></canvas></div>
+
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content blue-grey white-text">
+                                        <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Today Profit</p>
+                                        <h4 class="card-stats-number">$806.52</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 80% <span class="blue-grey-text text-lighten-5">from yesterday</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action blue-grey darken-2">
+                                        <div id="profit-tristate"><canvas width="290" height="25" style="display: inline-block; width: 290px; height: 25px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content deep-purple white-text">
+                                        <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> New Invoice</p>
+                                        <h4 class="card-stats-number">1806</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">from last month</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action  deep-purple darken-2">
+                                        <div id="invoice-line"><canvas width="282" height="25" style="display: inline-block; width: 282px; height: 25px; vertical-align: top;"></canvas></div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+            </div>
+            <!--card stats end-->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <div class="divider"></div>
+            <!--chart dashboard start-->
+            <div id="chart-dashboard" class="seaction">
+              <h4 class="header">Customize Charts Widget</h4>
+              <p>Show your business trending chart using this widgets.</p>
+              <div class="row">
+                <div class="col s12 m8 l8">
+                    <div class="card">
+                        <div class="card-move-up waves-effect waves-block waves-light">
+                            <div class="move-up cyan darken-1">
+                                <div>
+                                    <span class="chart-title white-text">Revenue</span>
+                                    <div class="chart-revenue cyan darken-2 white-text">
+                                        <p class="chart-revenue-total">$4,500.85</p>
+                                        <p class="chart-revenue-per"><i class="mdi-navigation-arrow-drop-up"></i> 21.80 %</p>
+                                    </div>
+                                    <div class="switch chart-revenue-switch right">
+                                        <label class="cyan-text text-lighten-5">
+                                          Month
+                                          <input type="checkbox">
+                                          <span class="lever"></span> Year
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="trending-line-chart-wrapper">
+                                    <canvas id="trending-line-chart" height="107" width="460" style="width: 460px; height: 107px;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="mdi-content-add activator"></i></a>
+                            <div class="col s12 m3 l3">
+                                <div id="doughnut-chart-wrapper">
+                                    <canvas id="doughnut-chart" height="64" width="97" style="width: 97px; height: 64px;"></canvas>
+                                    <div class="doughnut-chart-status">4500
+                                        <p class="ultra-small center-align">Sold</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m2 l2">
+                                <ul class="doughnut-chart-legend">
+                                    <li class="mobile ultra-small"><span class="legend-color"></span>Mobile</li>
+                                    <li class="kitchen ultra-small"><span class="legend-color"></span> Kitchen</li>
+                                    <li class="home ultra-small"><span class="legend-color"></span> Home</li>
+                                </ul>
+                            </div>
+                            <div class="col s12 m5 l6">
+                                <div class="trending-bar-chart-wrapper">
+                                    <canvas id="trending-bar-chart" height="52" width="175" style="width: 175px; height: 52px;"></canvas>                                                
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Revenue by Month <i class="mdi-navigation-close right"></i></span>
+                            <table class="responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th data-field="id">ID</th>
+                                        <th data-field="month">Month</th>
+                                        <th data-field="item-sold">Item Sold</th>
+                                        <th data-field="item-price">Item Price</th>
+                                        <th data-field="total-profit">Total Profit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>January</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>February</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>March</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>April</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>May</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>June</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>July</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>August</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Septmber</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Octomber</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>November</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>December</td>
+                                        <td>122</td>
+                                        <td>100</td>
+                                        <td>$122,00.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m4 l4">
+                                <div class="card">
+                                    <div class="card-move-up teal waves-effect waves-block waves-light">
+                                        <div class="move-up">
+                                            <p class="margin white-text">Browser Stats</p>
+                                            <canvas id="trending-radar-chart" height="91" width="240" style="width: 240px; height: 91px;"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="card-content  teal darken-2">
+                                        <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="mdi-content-add activator"></i></a>
+                                        <div class="line-chart-wrapper">
+                                            <p class="margin white-text">Revenue by country</p>
+                                            <canvas id="line-chart" height="80" width="212" style="width: 212px; height: 80px;"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Revenue by country <i class="mdi-navigation-close right"></i></span>
+                                        <table class="responsive-table">
+                                            <thead>
+                                                <tr>
+                                                    <th data-field="country-name">Country Name</th>
+                                                    <th data-field="item-sold">Item Sold</th>
+                                                    <th data-field="total-profit">Total Profit</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>USA</td>
+                                                    <td>65</td>
+                                                    <td>$452.55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>UK</td>
+                                                    <td>76</td>
+                                                    <td>$452.55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Canada</td>
+                                                    <td>65</td>
+                                                    <td>$452.55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brazil</td>
+                                                    <td>76</td>
+                                                    <td>$452.55</td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>India</td>
+                                                    <td>65</td>
+                                                    <td>$452.55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>France</td>
+                                                    <td>76</td>
+                                                    <td>$452.55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Austrelia</td>
+                                                    <td>65</td>
+                                                    <td>$452.55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Russia</td>
+                                                    <td>76</td>
+                                                    <td>$452.55</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+              </div>
+            </div>
+            <!--chart dashboard end-->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <div class="divider"></div>
+            <!--card widgets start-->
+            <div id="card-widgets" class="seaction">
+              <div class="row">
+
+                <div class="col s12 m4 l4">
+                  <h4 class="header">Task List</h4>
+                  <ul id="task-card" class="collection with-header">
+                    <li class="collection-header cyan">
+                      <h4 class="task-card-title">My Task</h4>
+                      <p class="task-card-date">March 26, 2015</p>
+                    </li>
+                    <li class="collection-item dismissable" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                      <input type="checkbox" id="task1">
+                      <label for="task1" style="text-decoration: none;">Create Mobile App UI. <a href="#" class="secondary-content"><span class="ultra-small">Today</span></a>
+                      </label>
+                      <span class="task-cat teal">Mobile App</span>
+                    </li>
+                    <li class="collection-item dismissable" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                      <input type="checkbox" id="task2">
+                      <label for="task2" style="text-decoration: none;">Check the new API standerds. <a href="#" class="secondary-content"><span class="ultra-small">Monday</span></a>
+                      </label>
+                      <span class="task-cat purple">Web API</span>
+                    </li>
+                    <li class="collection-item dismissable" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                      <input type="checkbox" id="task3" checked="checked">
+                      <label for="task3" style="text-decoration: line-through;">Check the new Mockup of ABC. <a href="#" class="secondary-content"><span class="ultra-small">Wednesday</span></a>
+                      </label>
+                      <span class="task-cat pink">Mockup</span>
+                    </li>
+                    <li class="collection-item dismissable" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                      <input type="checkbox" id="task4" checked="checked" disabled="disabled">
+                      <label for="task4" style="text-decoration: line-through;">I did it !</label>
+                      <span class="task-cat cyan">Mobile App</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col s12 m4 l4">
+                  <h4 class="header">Profile Card</h4>
+                  <div id="profile-card" class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="images/user-bg.jpg" alt="user bg">
+                    </div>
+                    <div class="card-content">
+                      <img src="images/avatar.jpg" alt="" class="circle responsive-img activator card-profile-image">
+                      <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
+                        <i class="mdi-editor-mode-edit"></i>
+                      </a>
+
+                      <span class="card-title activator grey-text text-darken-4">Roger Waters</span>
+                      <p><i class="mdi-action-perm-identity"></i> Project Manager</p>
+                      <p><i class="mdi-action-perm-phone-msg"></i> +1 (612) 222 8989</p>
+                      <p><i class="mdi-communication-email"></i> yourmail@domain.com</p>
+
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">Roger Waters <i class="mdi-navigation-close right"></i></span>
+                      <p>Here is some more information about this card.</p>
+                      <p><i class="mdi-action-perm-identity"></i> Project Manager</p>
+                      <p><i class="mdi-action-perm-phone-msg"></i> +1 (612) 222 8989</p>
+                      <p><i class="mdi-communication-email"></i> yourmail@domain.com</p>
+                      <p><i class="mdi-social-cake"></i> 18th June 1990
+                        </p><p>
+                          </p><p><i class="mdi-device-airplanemode-on"></i> BAR - AUS
+                            </p><p>
+                    </p></div>
+                  </div>
+                </div>
+
+                <div class="col s12 m12 l4">
+                  <h4 class="header">Flight Card</h4>
+                  <div id="flight-card" class="card">
+                    <div class="card-header amber darken-2">
+                      <div class="card-title">
+                        <h4 class="flight-card-title">Flight</h4>
+                        <p class="flight-card-date">June 18, Thu 04:50</p>
+                      </div>
+                    </div>
+                    <div class="card-content-bg white-text">
+                      <div class="card-content">
+                        <div class="row flight-state-wrapper">
+                          <div class="col s5 m5 l5 center-align">
+                            <div class="flight-state">
+                              <h4 class="margin">LDN</h4>
+                              <p class="ultra-small">London</p>
+                            </div>
+                          </div>
+                          <div class="col s2 m2 l2 center-align">
+                            <i class="mdi-device-airplanemode-on flight-icon"></i>
+                          </div>
+                          <div class="col s5 m5 l5 center-align">
+                            <div class="flight-state">
+                              <h4 class="margin">SFO</h4>
+                              <p class="ultra-small">San Francisco</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col s6 m6 l6 center-align">
+                            <div class="flight-info">
+                              <p class="small"><span class="grey-text text-lighten-4">Depart:</span> 04.50</p>
+                              <p class="small"><span class="grey-text text-lighten-4">Flight:</span> IB 5786</p>
+                              <p class="small"><span class="grey-text text-lighten-4">Terminal:</span> B</p>
+                            </div>
+                          </div>
+                          <div class="col s6 m6 l6 center-align flight-state-two">
+                            <div class="flight-info">
+                              <p class="small"><span class="grey-text text-lighten-4">Arrive:</span> 08.50</p>
+                              <p class="small"><span class="grey-text text-lighten-4">Flight:</span> IB 5786</p>
+                              <p class="small"><span class="grey-text text-lighten-4">Terminal:</span> C</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              
+              <div class="row">
+                <div class="col s12 m4 l4">
+                  <h4 class="header">Basic Card</h4>
+                  <div class="card  light-blue">
+                      <div class="card-content white-text">
+                        <span class="card-title">Card Title</span>
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                        <p>I am convenient because I require little markup to use effectively.</p>
+                        <p>I am convenient because I require little markup to use effectively markup to use effectively.</p>
+                      </div>
+                      <div class="card-action">
+                        <a href="#" class="lime-text text-accent-1">This is a link</a>
+                        <a href="#" class="lime-text text-accent-1">This is a link</a>
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="col s12 m4 l4">
+                  <h4 class="header">Image Card</h4>
+                  <div class="card">
+                      <div class="card-image">
+                        <img src="images/sample-1.jpg" alt="sample image">
+
+                        <span class="card-title">Card Title</span>
+                      </div>
+                      <div class="card-content">
+                         <p>I am convenient because I require little</p>
+                      </div>
+                      <div class="card-action">
+                        <a href="#">This is a link</a>
+                        <a href="#">This is a link</a>
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="col s12 m4 l4">
+                  <h4 class="header">Card Reveal</h4>
+                  <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/office.jpg" alt="office">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
+                        <p><a href="#">This is a link</a>
+                        </p>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!--card widgets end-->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <div class="divider"></div>
+            <!--work collections start-->
+            <div id="work-collections" class="seaction">
+              
+              <div class="row">
+                <div class="col s12 m12 l6">
+                  <h4 class="header">Project List</h4>
+                  <ul id="projects-collection" class="collection">
+                    <li class="collection-item avatar">
+                      <i class="mdi-file-folder circle light-blue"></i>
+                      <span class="collection-header">Projects</span>
+                      <p>Your Favorites</p>
+                      <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s6">
+                          <p class="collections-title">Web App</p>
+                          <p class="collections-content">AEC Company</p>
+                        </div>
+                        <div class="col s3">
+                          <span class="task-cat cyan">Development</span>
+                        </div>
+                        <div class="col s3">
+                          <div id="project-line-1"><canvas width="133" height="30" style="display: inline-block; width: 133px; height: 30px; vertical-align: top;"></canvas></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s6">
+                          <p class="collections-title">Mobile App for Social</p>
+                          <p class="collections-content">iSocial App</p>
+                        </div>
+                        <div class="col s3">
+                          <span class="task-cat grey darken-3">UI/UX</span>
+                        </div>
+                        <div class="col s3">
+                          <div id="project-line-2"><canvas width="133" height="30" style="display: inline-block; width: 133px; height: 30px; vertical-align: top;"></canvas></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s6">
+                          <p class="collections-title">Website</p>
+                          <p class="collections-content">MediTab</p>
+                        </div>
+                        <div class="col s3">
+                          <span class="task-cat teal">Marketing</span>
+                        </div>
+                        <div class="col s3">
+                          <div id="project-line-3"><canvas width="133" height="30" style="display: inline-block; width: 133px; height: 30px; vertical-align: top;"></canvas></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="collection-item">
+                      <div class="row">
+                        <div class="col s6">
+                          <p class="collections-title">AdWord campaign</p>
+                          <p class="collections-content">True Line</p>
+                        </div>
+                        <div class="col s3">
+                          <span class="task-cat green">SEO</span>
+                        </div>
+                        <div class="col s3">
+                          <div id="project-line-4"><canvas width="133" height="30" style="display: inline-block; width: 133px; height: 30px; vertical-align: top;"></canvas></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col s12 m12 l6">
+                    <h4 class="header">Issues List</h4>
+                    <ul id="issues-collection" class="collection">
+                                    <li class="collection-item avatar">
+                                        <i class="mdi-action-bug-report red circle"></i>
+                                        <span class="collection-header">Issues</span>
+                                        <p>Assigned to you</p>
+                                        <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s7">
+                                                <p class="collections-title"><strong>#102</strong> Home Page</p>
+                                                <p class="collections-content">Web Project</p>
+                                            </div>
+                                            <div class="col s2">
+                                                <span class="task-cat pink accent-2">P1</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div class="progress">
+                                                     <div class="determinate" style="width: 70%"></div>   
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s7">
+                                                <p class="collections-title"><strong>#108</strong> API Fix</p>
+                                                <p class="collections-content">API Project </p>
+                                            </div>
+                                            <div class="col s2">
+                                                <span class="task-cat yellow darken-4">P2</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div class="progress">
+                                                    <div class="determinate" style="width: 40%"></div>   
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s7">
+                                                <p class="collections-title"><strong>#205</strong> Profile page css</p>
+                                                <p class="collections-content">New Project </p>
+                                            </div>
+                                            <div class="col s2">                                                
+                                                <span class="task-cat light-green darken-3">P3</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div class="progress">
+                                                    <div class="determinate" style="width: 95%"></div>   
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s7">
+                                                <p class="collections-title"><strong>#188</strong> SAP Changes</p>
+                                                <p class="collections-content">SAP Project</p>
+                                            </div>
+                                            <div class="col s2">
+                                                <span class="task-cat pink accent-2">P1</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div class="progress">
+                                                     <div class="determinate" style="width: 10%"></div>   
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                </div>
+              </div>
+              <!-- Floating Action Button -->
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red">
+                  <i class="large mdi-editor-mode-edit"></i>
+                </a>
+                <ul>
+                  <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
+                  <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
+                  <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                  <li><a href="app-email.html" class="btn-floating blue"><i class="large mdi-communication-email"></i></a></li>
+                </ul>
+            </div>
+            <!-- Floating Action Button -->
+            </div>
+            <!--work collections end-->
+
+          </div>
+        </div>
+
+
+
+       <!-- Start Page Loading -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>        
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+
+  <!-- START MAIN -->
+  <div id="main">
+    <div class="wrapper">
+      <section id="content">
+
+        <!--start container-->
+        <div class="container">
+
+          <div id="mail-app" class="section">
+            <div class="row">
+              <div class="col s12">
+                <nav class="red">
+                  <div class="nav-wrapper">
+                    <div class="left col s12 m5 l5">
+                      <ul>
+                        <li><a href="#!" class="email-menu"><i class="mdi-navigation-menu"></i></a>
+                        </li>
+                        <li><a href="#!" class="email-type">Primary</a>
+                        </li>
+                        <li class="right"><a href="#!"><i class="mdi-action-search"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col s12 m7 l7 hide-on-med-and-down">
+                      <ul class="right">
+                        <li><a href="#!"><i class="mdi-content-archive"></i></a>
+                        </li>
+                        <li><a href="#!"><i class="mdi-action-delete"></i></a>
+                        </li>
+                        <li><a href="#!"><i class="mdi-content-mail"></i></a>
+                        </li>
+                        <li><a href="#!"><i class="mdi-navigation-more-vert"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </nav>
+              </div>
+              <div class="col s12">
+                <div id="email-sidebar" class="col s2 m1 s1 card-panel">
+                  <ul>
+                    <li>
+                      <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
+                    </li>
+                    <li>
+                      <a href="#!"><i class="mdi-content-archive active"></i></a>
+                    </li>
+                    <li>
+                      <a href="#!"><i class="mdi-social-group"></i></a>
+                    </li>
+                    <li>
+                      <a href="#!"><i class="mdi-maps-local-offer"></i></a>
+                    </li>
+                    <li>
+                      <a href="#!"><i class="mdi-alert-error"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="email-list" class="col s10 m4 l4 card-panel z-depth-1">
+                  <ul class="collection">
+                    <li class="collection-item avatar email-unread">
+                      <i class="mdi-social-group icon blue-text"></i>
+                      <span class="email-title">Hola</span>
+                      <p class="truncate grey-text ultra-small">You have Google+ request from john doe.</p>
+                      <a href="#!" class="secondary-content"><span class="new badge blue">4</span></a>
+                    </li>
+                    <li class="collection-item avatar email-unread">
+                      <i class="mdi-maps-local-offer icon green-text"></i>
+                      <span class="email-title">Promotions</span>
+                      <p class="truncate grey-text ultra-small">Amazone, Flipkart 50% off on summer sale.</p>
+                      <a href="#!" class="secondary-content"><span class="new badge green">6</span></a>
+                    </li>
+                    <li class="collection-item avatar email-unread">
+                      <i class="mdi-alert-error icon yellow-text text-darken-3"></i>
+                      <span class="email-title">Updates</span>
+                      <p class="truncate grey-text ultra-small">Google play application updates for your mobile.</p>
+                      <a href="#!" class="secondary-content"><span class="new badge yellow darken-3">2</span></a>
+                    </li>
+                    <li class="collection-item avatar email-unread">
+                      <span class="circle red lighten-1">A</span>
+                      <span class="email-title">Amazone.com</span>
+                      <p class="truncate grey-text ultra-small">Summer sale is now going on.</p>
+                      <a href="#!" class="secondary-content email-time"><span class="blue-text ultra-small">12:10 am</span></a>
+                    </li>
+                    <li class="collection-item avatar selected">
+                      <img src="images/avatar.jpg" alt="" class="circle">
+                      <span class="email-title">Andy Brown</span>
+                      <p class="truncate grey-text ultra-small">Hay Joe, we have next project for this summer.</p>
+                      <a href="#!" class="secondary-content email-time"><i class="mdi-editor-attach-file attach-file"></i> <span class="grey-text ultra-small">12:10 am</span></a>
+                    </li>
+                    <li class="collection-item avatar email-unread">
+                      <span class="circle grey darken-1">T</span>
+                      <span class="email-title">Tuts+</span>
+                      <p class="truncate grey-text ultra-small">Update your code skill, free tutorial for web development.</p>
+                      <a href="#!" class="secondary-content email-time"><span class="blue-text ultra-small">2:05 am</span></a>
+                    </li>
+                    <li class="collection-item avatar email-unread">
+                      <span class="circle indigo darken-1">F</span>
+                      <span class="email-title">Facebook.com</span>
+                      <p class="truncate grey-text ultra-small">You have new friend request from emy nelson.</p>
+                      <a href="#!" class="secondary-content email-time"><span class="blue-text ultra-small">1:15 pm</span></a>
+                    </li>
+                    <li class="collection-item avatar email-unread">
+                      <span class="circle light-blue">T</span>
+                      <span class="email-title">Twitter</span>
+                      <p class="truncate grey-text ultra-small">You have 5 new followers today, let's check it out.</p>
+                      <a href="#!" class="secondary-content email-time"><span class="blue-text ultra-small">8:30 pm</span></a>
+                    </li>
+                    <li class="collection-item avatar email-unread">
+                      <span class="circle green accent-4">E</span>
+                      <span class="email-title">Envato Studio</span>
+                      <p class="truncate grey-text ultra-small">Envato Studio Provider News : Score the new stuff.</p>
+                      <a href="#!" class="secondary-content email-time"><span class="blue-text ultra-small">5:18 am</span></a>
+                    </li>
+                    <li class="collection-item avatar email-unread">
+                      <span class="circle red">G</span>
+                      <span class="email-title">Gmail</span>
+                      <p class="truncate grey-text ultra-small">You have 5 new mail today.</p>
+                      <a href="#!" class="secondary-content email-time"><span class="blue-text ultra-small">6:38 am</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="email-details" class="col s12 m7 l7 card-panel">
+                  <p class="email-subject truncate">New app design for iPhone <span class="email-tag grey lighten-3">inbox</span> <span class="email-tag  light-blue lighten-4">projects</span> <i class="mdi-action-star-rate yellow-text text-darken-3 right"></i>
+                  </p>
+                  <hr class="grey-text text-lighten-2">
+                  <div class="email-content-wrap">
+                    <div class="row">
+                      <div class="col s10 m10 l10">
+                        <ul class="collection">
+                          <li class="collection-item avatar">
+                            <img src="images/avatar.jpg" alt="" class="circle">
+                            <span class="email-title">Andy Brown</span>
+                            <p class="truncate grey-text ultra-small">To me, John Doe</p>
+                            <p class="grey-text ultra-small">Yesterday</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col s2 m2 l2 email-actions">
+                        <a href="#!"><span><i class="mdi-content-reply"></i></span></a>
+                        <a href="#!"><span><i class="mdi-navigation-more-vert"></i></span></a>
+                      </div>
+                    </div>
+                    <div class="email-content">
+                      <p>Hi Mike,</p>
+                      <p>We have new project requirements last night.</p>
+                      <p>The standard font Material Design uses is Roboto. We have included the font files with our framework.</p>
+                      <p>Cheers!
+                        <br>Andy Brown</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="email-content-wrap">
+                    <div class="row">
+                      <div class="col s10 m10 l10">
+                        <ul class="collection">
+                          <li class="collection-item avatar">
+                            <span class="circle light-blue">M</span>
+                            <span class="email-title">Mike Parker</span>
+                            <p class="truncate grey-text ultra-small">To Andy Brown</p>
+                            <p class="grey-text ultra-small">6:10 pm</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col s2 m2 l2 email-actions">
+                        <a href="#!"><span><i class="mdi-content-reply"></i></span></a>
+                        <a href="#!"><span><i class="mdi-navigation-more-vert"></i></span></a>
+                      </div>
+                    </div>
+                    <div class="email-content">
+                      <p>Hi Andy,</p>
+                      <p>We bundle our framework with the latest iteration of Roboto Google has released. It comes with 5 different font weights you can use: 200, 300, 400, 500, 600.</p>
+                      <p>Regards,
+                        <br>Mike Parker</p>
+                    </div>
+                  </div>
+                  <div class="email-reply">
+                    <div class="row">
+                      <div class="col s4 m4 l4 center-align">
+                        <a href="%21.html#"><i class="mdi-content-reply"></i></a>
+                        <p class="ultra-small">Reply</p>
+                      </div>
+                      <div class="col s4 m4 l4 center-align">
+                        <a href="%21.html#"><i class="mdi-content-reply-all"></i></a>
+                        <p class="ultra-small">Reply all</p>
+                      </div>
+                      <div class="col s4 m4 l4 center-align">
+                        <a href="%21.html#"><i class="mdi-content-forward"></i></a>
+                        <p class="ultra-small">Forward</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Compose Email Trigger -->
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+              <a class="btn-floating btn-large red modal-trigger" href="#modal1">
+                <i class="large mdi-editor-mode-edit"></i>
+              </a>
+            </div>
+
+
+
+            <!-- Compose Email Structure -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <nav class="red">
+                  <div class="nav-wrapper">
+                    <div class="left col s12 m5 l5">
+                      <ul>
+                        <li><a href="#!" class="email-menu"><i class="modal-action modal-close  mdi-hardware-keyboard-backspace"></i></a>
+                        </li>
+                        <li><a href="#!" class="email-type">Compose</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col s12 m7 l7 hide-on-med-and-down">
+                      <ul class="right">
+                        <li><a href="#!"><i class="mdi-editor-attach-file"></i></a>
+                        </li>
+                        <li><a href="#!"><i class="modal-action modal-close  mdi-content-send"></i></a>
+                        </li>
+                        <li><a href="#!"><i class="mdi-navigation-more-vert"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </nav>
+              </div>
+              <div class="model-email-content">
+                <div class="row">
+                  <form class="col s12">
+                    <!--<div class="row">
+                      <div class="input-field col s12">
+                        <input id="from_email" type="email" class="validate">
+                        <label for="from_email">From</label>
+                      </div>
+                    </div> -->
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="to_email" type="email" class="validate">
+                        <label for="to_email">To</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="subject" type="text" class="validate">
+                        <label for="subject">Subject</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <textarea id="compose" class="materialize-textarea" length="500"></textarea>
+                        <label for="compose">Compose email</label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+    </div>
+    <!--end container-->
+
+    </section>
+  </div>
+  </div>
+  <!-- END MAIN -->
+
+
+
+
+
+        <div class="container">
+          <div class="section">
+
+            <p class="caption">Pricing tables design is important to sell your services. For that reason, we have created various pricing tables design with builder to suit your needs.</p>
+            <div class="divider"></div>
+            <div class="row">
+              <div class="col s12">
+                <h4 class="header">Pricing tables style 1</h4>                
+              </div>
+
+              <section class="plans-container" id="plans">
+                <article class="col s12 m6 l4">
+                  <div class="card">
+                    <div class="card-image purple waves-effect">
+                      <div class="card-title">BASIC</div>
+                      <div class="price"><sup>$</sup>9<sub>/mo</sub></div>
+                      <div class="price-desc">Free 1 month</div>
+                    </div>
+                    <div class="card-content">
+                      <ul class="collection">
+                        <li class="collection-item">500 emails</li>
+                        <li class="collection-item">unlimited data</li>
+                        <li class="collection-item">1 users</li>
+                        <li class="collection-item">first 15 day free</li>
+                      </ul>
+                    </div>
+                    <div class="card-action center-align">                      
+                      <button class="waves-effect waves-light  btn">Select Plan</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col s12 m6 l4 ">
+                  <div class="card z-depth-4">
+                    <div class="card-image cyan waves-effect">
+                      <div class="card-title">PROFESSIONAL</div>
+                      <div class="price"><sup>$</sup>29<sub>/mo</sub></div>
+                      <div class="price-desc">Most Popular</div>
+                    </div>
+                    <div class="card-content">
+                      <ul class="collection">
+                        <li class="collection-item">2000 emails</li>
+                        <li class="collection-item">unlimited data</li>
+                        <li class="collection-item">10 users</li>
+                        <li class="collection-item">first 30 day free</li>
+                      </ul>
+                    </div>
+                    <div class="card-action center-align">                      
+                      <button class="waves-effect waves-light  btn">Select Plan</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col s12 m6 l4">
+                  <div class="card">
+                    <div class="card-image green waves-effect">
+                      <div class="card-title">PREMIUM</div>
+                      <div class="price"><sup>$</sup>49<sub>/mo</sub></div>
+                      <div class="price-desc">Get 20% off</div>
+                    </div>
+                    <div class="card-content">
+                      <ul class="collection">
+                        <li class="collection-item">10,000 emails</li>
+                        <li class="collection-item">unlimited data</li>
+                        <li class="collection-item">unlimited users</li>
+                        <li class="collection-item">first 90 day free</li>
+                      </ul>
+                    </div>
+                    <div class="card-action center-align">                      
+                      <button class="waves-effect waves-light  btn">Select Plan</button>
+                    </div>
+                  </div>
+                </article>
+              </section>
+
+              <div class="col s12">
+                <br><br>
+                <div class="divider"></div>
+                <h4 class="header">Pricing tables style 2</h4>                
+              </div>              
+              
+              <section class="plans-container" id="plans">
+                <article class="col s12 m6 l4">
+                  <div class="card z-depth-1">
+                    <div class="card-image light-blue waves-effect">
+                      <div class="card-title">BASIC</div>
+                      <div class="price"><sup>$</sup>9<sub>/mo</sub></div>
+                      <div class="price-desc">Free 1 month</div>
+                    </div>
+                    <div class="card-content">
+                      <ul class="collection">
+                        <li class="collection-item">500 emails</li>
+                        <li class="collection-item">unlimited data</li>
+                        <li class="collection-item">1 users</li>
+                        <li class="collection-item">first 15 day free</li>
+                      </ul>
+                    </div>
+                    <div class="card-action center-align">                      
+                      <button class="waves-effect waves-light light-blue btn">Select Plan</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col s12 m6 l4 ">
+                  <div class="card z-depth-2">
+                    <div class="card-image light-blue darken-1 waves-effect">
+                      <div class="card-title">PROFESSIONAL</div>
+                      <div class="price"><sup>$</sup>29<sub>/mo</sub></div>
+                      <div class="price-desc">Most Popular</div>
+                    </div>
+                    <div class="card-content">
+                      <ul class="collection">
+                        <li class="collection-item">2000 emails</li>
+                        <li class="collection-item">unlimited data</li>
+                        <li class="collection-item">10 users</li>
+                        <li class="collection-item">first 30 day free</li>
+                      </ul>
+                    </div>
+                    <div class="card-action center-align">                      
+                      <button class="waves-effect waves-light light-blue btn">Select Plan</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="col s12 m6 l4">
+                  <div class="card z-depth-3">
+                    <div class="card-image light-blue darken-2 waves-effect">
+                      <div class="card-title">PREMIUM</div>
+                      <div class="price"><sup>$</sup>49<sub>/mo</sub></div>
+                      <div class="price-desc">Get 20% off</div>
+                    </div>
+                    <div class="card-content">
+                      <ul class="collection">
+                        <li class="collection-item">10,000 emails</li>
+                        <li class="collection-item">unlimited data</li>
+                        <li class="collection-item">unlimited users</li>
+                        <li class="collection-item">first 90 day free</li>
+                      </ul>
+                    </div>
+                    <div class="card-action center-align">                      
+                      <button class="waves-effect waves-light light-blue btn">Select Plan</button>
+                    </div>
+                  </div>
+                </article>
+              </section>
+            
+          </div>
+            
+          </div>
+          <!-- Floating Action Button -->
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red">
+                  <i class="large mdi-editor-mode-edit"></i>
+                </a>
+                <ul>
+                  <li><a href="css-helpers.html" class="btn-floating red" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="large mdi-communication-live-help"></i></a></li>
+                  <li><a href="app-widget.html" class="btn-floating yellow darken-1" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="large mdi-device-now-widgets"></i></a></li>
+                  <li><a href="app-calendar.html" class="btn-floating green" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                  <li><a href="app-email.html" class="btn-floating blue" style="transform: scaleY(0.4) scaleX(0.4) translateY(40px); opacity: 0;"><i class="large mdi-communication-email"></i></a></li>
+                </ul>
+            </div>
+            <!-- Floating Action Button -->
+        </div>
+
+
+
+
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        <span>Copyright © 2015 <a class="grey-text text-lighten-4" href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs" target="_blank">GeeksLabs</a> All rights reserved.</span>
+        <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="http://geekslabs.com/">GeeksLabs</a></span>
+        </div>
+    </div>
+  </footer>
+    <!-- END FOOTER -->
+
+
+
+
+
+
+   <script src="../demo.geekslabs.com/materialize/v2.1/layout03/js/jquery-1.11.2.min.js"></script>
+    <!--materialize js-->
+        <script src="../demo.geekslabs.com/materialize/v2.1/layout03/js/materialize.js"></script>
+    <!--prism-->
+        <script src="../demo.geekslabs.com/materialize/v2.1/layout03/js/prism.js"></script>
+    
+    <!--scrollbar-->
+        <script src="../demo.geekslabs.com/materialize/v2.1/layout03/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+   
+    <!-- chartist -->
+        <script src="../demo.geekslabs.com/materialize/v2.1/layout03/js/plugins/chartist-js/chartist.min.js"></script>
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+     <script src="../demo.geekslabs.com/materialize/v2.1/layout03/js/plugins.js"></script>
+    </div>
+    </form>
+</body>
+</html>

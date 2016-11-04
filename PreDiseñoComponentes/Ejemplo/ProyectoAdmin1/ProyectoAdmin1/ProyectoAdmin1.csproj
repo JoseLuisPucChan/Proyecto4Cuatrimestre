@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DEF71BB-598B-40E7-9D3F-1827141E113B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoAdmin1</RootNamespace>
+    <AssemblyName>ProyectoAdmin1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPag\Admin.Master" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\material-design-icons\Material-Design-Icons.ttf" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\material-design-icons\Material-Design-Icons.woff" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\material-design-icons\Material-Design-Iconsd41d.eot" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Bold.ttf" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Bold.woff" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Light.ttf" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Light.woff" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Medium.ttf" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Medium.woff" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Regular.ttf" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Regular.woff" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Thin.ttf" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\roboto\Roboto-Thin.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\app-calendar.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\app-email.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\app-widget.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\changelogs.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\charts-chartist.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\charts-chartjs.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\charts-flotcharts.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\charts-morris.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\charts-sparklines.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\charts-xcharts.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\collections.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\colors.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\components.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css-color.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css-grid.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css-helpers.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css-icons.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css-media.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css-sass.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css-shadow.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css-typography.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css\custom-style.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css\materialize.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css\media-hover-effects.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css\page-center.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css\prism.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css\style-horizontal.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\css\style.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\eCommerce-invoice.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\eCommerce-pricing.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\eCommerce-products-page.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\font\material-design-icons\Material-Design-Icons.svg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\form-elements.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\form-layouts.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\amazon.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\avatar.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\favicon\apple-touch-icon-152x152.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\favicon\favicon-32x32.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\favicon\mstile-144x144.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\1.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\10.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\11.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\12.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\13.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\14.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\15.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\16.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\17.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\18.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\19.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\2.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\20.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\25.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\26.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\3.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\30.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\33.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\4.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\5.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\6.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\7.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\8.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\gallary\9.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\generic-logo.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\img2.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\img3.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\img4.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\img5.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\img6.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\img7.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\img8.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\login-logo.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\materialize-logo.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\office.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\sample-1.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\signature-scan.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\style_typography_roboto.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\user-bg-2.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\user-bg.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\user-profile-bg.jpg" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\images\yuna.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\index.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\javascript.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\jquery-1.11.2.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\materialize.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\materialize.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\chartist-js\chartist-script.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\chartist-js\chartist.min.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\chartist-js\chartist.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\chartjs\chart-script.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\chartjs\chart.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\chartjs\chartjs-sample-chart.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\d3\d3.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\data-tables\css\jquery.dataTables.min.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\data-tables\data-tables-script.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\data-tables\images\sort_asc.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\data-tables\images\sort_asc_disabled.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\data-tables\images\sort_both.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\data-tables\images\sort_desc.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\data-tables\images\sort_desc_disabled.png" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\data-tables\js\jquery.dataTables.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\flot-chart\flot-script.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\flot-chart\jquery.flot.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\flot-chart\jquery.flot.pie.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\flot-chart\jquery.flot.stack.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\flot-chart\jquery.flot.time.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\fullcalendar\css\fullcalendar.min.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\fullcalendar\fullcalendar-script.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\fullcalendar\js\fullcalendar.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\fullcalendar\lib\jquery-ui.custom.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\fullcalendar\lib\moment.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\imagesloaded.pkgd.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\jvectormap\jquery-jvectormap.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\jvectormap\vectormap-script.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\magnific-popup\magnific-popup.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\masonry.pkgd.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\morris-chart\morris-script.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\morris-chart\morris.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\morris-chart\morris.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\sparkline\sparkline-script.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\xcharts\xcharts-script.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\xcharts\xcharts.min.css" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\plugins\xcharts\xcharts.min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\prism.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\js\raphael-min.js" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\media-gallary-page.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\media-hover-effects.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\mobile.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-404.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-500.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-blank.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-blog-1.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-blog-2.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-contact.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-forgot-password.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-invoice.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-login.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-register.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\page-todo.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\sass.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\table-basic.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\table-data.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-accordions.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-badges.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-buttons.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-cards.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-collections.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-media.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-modals.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-navbar.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-pagination.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-preloader.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-tabs.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-toasts.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-tooltip.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\ui-waves.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\user-forgot-password.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\user-lock-screen.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\user-login.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\user-profile-page.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\user-register.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\user-session-time-out.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\user-session-timeout.html" />
+    <Content Include="demo.geekslabs.com\materialize\v2.1\layout03\user-sesssion-timeout.html" />
+    <Content Include="GUI\WebForm1.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPag\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPag\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Recursos\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10080</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10080/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
