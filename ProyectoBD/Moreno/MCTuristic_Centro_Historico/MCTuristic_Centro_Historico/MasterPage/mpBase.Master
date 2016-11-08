@@ -1,0 +1,630 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mpBase.master.cs" Inherits="MCTuristic_Centro_Historico.MasterPage.mpBase" %>
+
+<!DOCTYPE html>
+
+<html ng-app="monarchApp">
+<head runat="server">
+    <meta charset="UTF-8"/>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title><asp:ContentPlaceHolder ID="cphTituloPagina" runat="server"></asp:ContentPlaceHolder></title>
+    
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../Recursos/agileui.com/demo/monarch/assets/images/icons/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../Recursos/agileui.com/demo/monarch/assets/images/icons/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../Recursos/agileui.com/demo/monarch/assets/images/icons/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="../Recursos/agileui.com/demo/monarch/assets/images/icons/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="../Recursos/agileui.com/demo/monarch/assets/images/icons/favicon.png" />
+
+    <link href="../Recursos/agileui.com/demo/monarch/assets-minified/admin-all-demo.css" rel="stylesheet" />
+
+    <!-- JS Core -->
+    <script src="../Recursos/agileui.com/demo/monarch/assets-minified/js-core.js"></script>
+
+    <script src="../Recursos/code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="../Recursos/ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+    <script src="../Recursos/ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+    <script src="../Recursos/agileui.com/demo/monarch/assets/angular/app.js"></script>
+    <script src="../Recursos/agileui.com/demo/monarch/assets/angular/bootstrap-datepicker.js"></script>
+    
+    <script type="text/javascript">
+        /* Datepicker bootstrap */
+
+        $(function () {
+            "use strict";
+            $('.bootstrap-datepicker').bsdatepicker({
+                format: 'mm-dd-yyyy'
+            });
+        });
+
+    </script>
+
+  
+      <script src="../Recursos/agileui.com/demo/monarch/assets/angular/js.js"></script>
+   
+    <script src="../Recursos/agileui.com/demo/monarch/assets/angular/datepicker.js"></script>
+    <script src="../Recursos/agileui.com/demo/monarch/assets/angular/datepicker-demo.js"></script>
+
+    <link href="../Recursos/agileui.com/demo/monarch/assets/angular/page-animations.css" rel="stylesheet" />
+</head>
+<body ng-controller="indexController">
+    <form id="form1" runat="server">        
+        <div id="page-wrapper">
+            <div id="page-header" class="bg-gradient-9">
+                <div id="header-logo" class="logo-bg">
+                    <a href="../GUI/PagPrincipal.aspx" class="logo-content-big" title="MCTuristic">M.C. <i>Turistic</i>
+                        <span>Buscador de centros históricos</span>
+                    </a>
+                    <a href="../GUI/PagPrincipal.aspx" class="logo-content-small" title="MCTuristic">M.C. <i>Turistic</i>
+                        <span>Buscador de centros históricos</span>
+                    </a>
+                    <a id="close-sidebar" href="#" title="Close sidebar">
+                        <i class="glyph-icon icon-angle-left"></i>
+                    </a>
+                </div>
+
+
+
+                <%--Información de la cuenta del usuario (dropdown)--%>
+                <div id="header-nav-left">
+                    <div class="user-account-btn dropdown">
+                        <asp:ContentPlaceHolder ID="cphSesion" runat="server"></asp:ContentPlaceHolder>
+                        
+                        
+                    </div>
+                </div>
+                <!-- #header-nav-left -->
+
+
+
+
+                <div id="header-nav-right">
+                    
+                    <%--Buscador--%>
+                    <%--<a href="#" class="hdr-btn popover-button" title="Search" data-placement="bottom" data-id="#popover-search">
+                        <i class="glyph-icon icon-search"></i>
+                    </a>
+                    <div class="hide" id="popover-search">
+                        <div class="pad5A">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search terms here ...">
+                                <span class="input-group-btn">
+                                    <a class="btn btn-primary" href="#">Search</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>--%>
+
+                    <%--Pantalla completa--%>
+                    <a href="#" class="hdr-btn" id="fullscreen-btn" title="Fullscreen">
+                        <i class="glyph-icon icon-arrows-alt"></i>
+                    </a>
+
+                    <%--Notificaciones--%>
+                    <%--<div class="dropdown" id="notifications-btn">
+                        <a data-toggle="dropdown" href="#" title="">
+                            <span class="small-badge bg-yellow"></span>
+                            <i class="glyph-icon icon-linecons-megaphone"></i>
+                        </a>
+                        <div class="dropdown-menu box-md float-right">
+
+                            <div class="popover-title display-block clearfix pad10A">
+                                Notifications
+                    <a class="text-transform-cap font-primary font-normal btn-link float-right" href="#" title="View more options">More options...
+                    </a>
+                            </div>
+                            <div class="scrollable-content scrollable-slim-box">
+                                <ul class="no-border notifications-box">
+                                    <li>
+                                        <span class="bg-danger icon-notification glyph-icon icon-bullhorn"></span>
+                                        <span class="notification-text">This is an error notification</span>
+                                        <div class="notification-time">
+                                            a few seconds ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-warning icon-notification glyph-icon icon-users"></span>
+                                        <span class="notification-text font-blue">This is a warning notification</span>
+                                        <div class="notification-time">
+                                            <b>15</b> minutes ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-green icon-notification glyph-icon icon-sitemap"></span>
+                                        <span class="notification-text font-green">A success message example.</span>
+                                        <div class="notification-time">
+                                            <b>2 hours</b> ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-azure icon-notification glyph-icon icon-random"></span>
+                                        <span class="notification-text">This is an error notification</span>
+                                        <div class="notification-time">
+                                            a few seconds ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-warning icon-notification glyph-icon icon-ticket"></span>
+                                        <span class="notification-text">This is a warning notification</span>
+                                        <div class="notification-time">
+                                            <b>15</b> minutes ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-blue icon-notification glyph-icon icon-user"></span>
+                                        <span class="notification-text font-blue">Alternate notification styling.</span>
+                                        <div class="notification-time">
+                                            <b>2 hours</b> ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-purple icon-notification glyph-icon icon-user"></span>
+                                        <span class="notification-text">This is an error notification</span>
+                                        <div class="notification-time">
+                                            a few seconds ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-warning icon-notification glyph-icon icon-user"></span>
+                                        <span class="notification-text">This is a warning notification</span>
+                                        <div class="notification-time">
+                                            <b>15</b> minutes ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-green icon-notification glyph-icon icon-user"></span>
+                                        <span class="notification-text font-green">A success message example.</span>
+                                        <div class="notification-time">
+                                            <b>2 hours</b> ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-purple icon-notification glyph-icon icon-user"></span>
+                                        <span class="notification-text">This is an error notification</span>
+                                        <div class="notification-time">
+                                            a few seconds ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="bg-warning icon-notification glyph-icon icon-user"></span>
+                                        <span class="notification-text">This is a warning notification</span>
+                                        <div class="notification-time">
+                                            <b>15</b> minutes ago
+                                <span class="glyph-icon icon-clock-o"></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pad10A button-pane button-pane-alt text-center">
+                                <a href="#" class="btn btn-primary" title="View all notifications">View all notifications
+                                </a>
+                            </div>
+                        </div>
+                    </div>--%>
+
+
+                    <%--Barras de progreso--%>
+                   <%-- <div class="dropdown" id="progress-btn">
+                        <a data-toggle="dropdown" href="#" title="">
+                            <span class="small-badge bg-azure"></span>
+                            <i class="glyph-icon icon-linecons-params"></i>
+                        </a>
+                        <div class="dropdown-menu pad0A box-sm float-right" id="progress-dropdown">
+                            <div class="scrollable-content scrollable-slim-box">
+                                <ul class="no-border progress-box progress-box-links">
+                                    <li>
+                                        <a href="#" title="">
+                                            <b class="pull-right">23%</b>
+                                            <div class="progress-title">
+                                                Finishing uploading files
+                                    
+                                            </div>
+                                            <div class="progressbar-smaller progressbar" data-value="23">
+                                                <div class="progressbar-value bg-blue-alt">
+                                                    <div class="progressbar-overlay"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <b class="pull-right">91%</b>
+                                            <div class="progress-title">
+                                                Roadmap progress
+                                            </div>
+                                            <div class="progressbar-smaller progressbar" data-value="91">
+                                                <div class="progressbar-value bg-red">
+                                                    <div class="progressbar-overlay"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <b class="pull-right">58%</b>
+                                            <div class="progress-title">
+                                                Images upload
+                                            </div>
+                                            <div class="progressbar-smaller progressbar" data-value="58">
+                                                <div class="progressbar-value bg-green"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <b class="pull-right">74%</b>
+                                            <div class="progress-title">
+                                                WordPress migration
+                                            </div>
+                                            <div class="progressbar-smaller progressbar" data-value="74">
+                                                <div class="progressbar-value bg-purple"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <b class="pull-right">91%</b>
+                                            <div class="progress-title">
+                                                Agile development procedures
+                                            </div>
+                                            <div class="progressbar-smaller progressbar" data-value="91">
+                                                <div class="progressbar-value bg-black">
+                                                    <div class="progressbar-overlay"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <b class="pull-right">58%</b>
+                                            <div class="progress-title">
+                                                Systems integration
+                                            </div>
+                                            <div class="progressbar-smaller progressbar" data-value="58">
+                                                <div class="progressbar-value bg-azure"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">
+                                            <b class="pull-right">97%</b>
+                                            <div class="progress-title">
+                                                Code optimizations
+                                            </div>
+                                            <div class="progressbar-smaller progressbar" data-value="97">
+                                                <div class="progressbar-value bg-yellow"></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pad5A button-pane button-pane-alt text-center">
+                                <a href="#" class="btn display-block font-normal hover-green" title="View all notifications">View all notifications
+                                </a>
+                            </div>
+                        </div>
+                    </div>--%>
+
+
+
+                    <%--Tipos de botones--%>
+                    <%--<div class="dropdown" id="dashnav-btn">
+                        <a href="#" data-toggle="dropdown" data-placement="bottom" class="popover-button-header tooltip-button" title="Dashboard Quick Menu">
+                            <i class="glyph-icon icon-linecons-cog"></i>
+                        </a>
+                        <div class="dropdown-menu float-right">
+                            <div class="box-sm">
+                                <div class="pad5T pad5B pad10L pad10R dashboard-buttons clearfix">
+                                    <a href="#" class="btn vertical-button hover-blue-alt" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-dashboard opacity-80 font-size-20"></i>
+                                        </span>
+                                        Dashboard
+                                    </a>
+                                    <a href="#" class="btn vertical-button hover-green" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-tags opacity-80 font-size-20"></i>
+                                        </span>
+                                        Widgets
+                                    </a>
+                                    <a href="#" class="btn vertical-button hover-orange" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-fire opacity-80 font-size-20"></i>
+                                        </span>
+                                        Tables
+                                    </a>
+                                    <a href="#" class="btn vertical-button hover-orange" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-bar-chart-o opacity-80 font-size-20"></i>
+                                        </span>
+                                        Charts
+                                    </a>
+                                    <a href="#" class="btn vertical-button hover-purple" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-laptop opacity-80 font-size-20"></i>
+                                        </span>
+                                        Buttons
+                                    </a>
+                                    <a href="#" class="btn vertical-button hover-azure" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-code opacity-80 font-size-20"></i>
+                                        </span>
+                                        Panels
+                                    </a>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="pad5T pad5B pad10L pad10R dashboard-buttons clearfix">
+                                    <a href="#" class="btn vertical-button remove-border btn-info" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-dashboard opacity-80 font-size-20"></i>
+                                        </span>
+                                        Dashboard
+                                    </a>
+                                    <a href="#" class="btn vertical-button remove-border btn-danger" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-tags opacity-80 font-size-20"></i>
+                                        </span>
+                                        Widgets
+                                    </a>
+                                    <a href="#" class="btn vertical-button remove-border btn-purple" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-fire opacity-80 font-size-20"></i>
+                                        </span>
+                                        Tables
+                                    </a>
+                                    <a href="#" class="btn vertical-button remove-border btn-azure" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-bar-chart-o opacity-80 font-size-20"></i>
+                                        </span>
+                                        Charts
+                                    </a>
+                                    <a href="#" class="btn vertical-button remove-border btn-yellow" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-laptop opacity-80 font-size-20"></i>
+                                        </span>
+                                        Buttons
+                                    </a>
+                                    <a href="#" class="btn vertical-button remove-border btn-warning" title="">
+                                        <span class="glyph-icon icon-separator-vertical pad0A medium">
+                                            <i class="glyph-icon icon-code opacity-80 font-size-20"></i>
+                                        </span>
+                                        Panels
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>--%>
+
+
+                </div>
+                <!-- #header-nav-right -->
+
+            </div>
+
+
+            <%--Barra lateral izquierda --%>
+            <div id="page-sidebar">
+                <div class="scroll-sidebar">
+
+                    <asp:PlaceHolder ID="phModulos" runat="server">
+                        <ul id="sidebar-menu">
+                            <li class="header"><span>Módulos</span></li>
+                            <li>
+                                <a href="../GUI/GestionUsuariosGUI.aspx" title="Usuarios">
+                                    <i class="glyph-icon icon-users"></i>
+                                    <span>Usuarios</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionSitios.aspx" title="Sitios">
+                                    <i class="glyph-icon icon-university"></i>
+                                    <span>Sitios</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionEstablecimientos.aspx" title="Establecimientos">
+                                    <i class="glyph-icon icon-building"></i>
+                                    <span>Establecimientos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionSuscripciones.aspx" title="Suscripciones">
+                                    <i class="glyph-icon icon-credit-card   "></i>
+                                    <span>Suscripciones</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionEventos.aspx" title="Eventos">
+                                    <i class="glyph-icon icon-puzzle-piece"></i>
+                                    <span>Eventos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionDireccion.aspx" title="Direcciones">
+                                    <i class="glyph-icon icon-road"></i>
+                                    <span>Direcciones</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#index" title="Notificaciones">
+                                    <i class="glyph-icon icon-bullhorn"></i>
+                                    <span>Notificaciones</span>
+                                </a>
+                            </li>
+
+                            <%--Ejemplo de menú--%>
+                            <%--<li class="header"><span>Extra</span></li>
+                        <li>
+                            <a href="javascript:void(0);" title="Pages">
+                                <i class="glyph-icon icon-linecons-fire"></i>
+                                <span>Pages</span>
+                                <span class="bs-label badge-yellow">NEW</span>
+                            </a>
+                            <div class="sidebar-submenu">
+
+                                <ul>
+                                    <li><a href="#index-alt" title="Alternate dashboard"><span>Alternate dashboard</span></a></li>
+                                    <li><a href="#view-profile" title="View profile"><span>View profile</span></a></li>
+                                    <li><a href="#faq-section" title="FAQ section"><span>FAQ section</span></a></li>
+                                    <li><a href="#auto-menu" title="Auto menu"><span>Auto menu</span></a></li>
+                                    <li><a href="#invoice" title="Invoice"><span>Invoice</span></a></li>
+                                    <li><a href="#admin-blog" title="Blog posts list"><span>Blog posts list</span></a></li>
+                                    <li><a href="#admin-pricing" title="Pricing tables"><span>Pricing tables</span></a></li>
+                                    <li><a href="#portfolio-gallery" title="Portfolio gallery"><span>Portfolio gallery</span></a></li>
+                                    <li><a href="#portfolio-masonry" title="Portfolio masonry"><span>Portfolio masonry</span></a></li>
+                                    <li><a href="#slidebars" title="Slidebars"><span>Slidebars</span></a></li>
+                                </ul>
+
+                            </div>
+                            <!-- .sidebar-submenu -->
+                        </li>--%>
+                        </ul>
+                    </asp:PlaceHolder>
+                    
+
+
+                </div>
+            </div>
+
+
+            <div id="page-content-wrapper">
+                <div id="page-content">
+
+                    <%--Personalización de la página (colores)--%>
+                    <div id="theme-options" class="admin-options">
+                        <a href="javascript:void(0);" class="btn btn-primary theme-switcher tooltip-button" data-placement="left" title="Esquema de colores y opciones de página">
+                            <i class="glyph-icon icon-linecons-cog icon-spin"></i>
+                        </a>
+                        <div id="theme-switcher-wrapper">
+                            <div class="scroll-switcher">
+                                <h5 class="header">Opciones de la página</h5>
+                                <ul class="reset-ul">
+                                    <li>
+                                        <label for="boxed-layout">Encajar página</label>
+                                        <input type="checkbox" data-toggletarget="boxed-layout" id="boxed-layout" class="input-switch-alt">
+                                    </li>
+                                    <li>
+                                        <label for="fixed-header">Fijar encabezado</label>
+                                        <input type="checkbox" data-toggletarget="fixed-header" id="fixed-header" class="input-switch-alt">
+                                    </li>
+                                    <li>
+                                        <label for="fixed-sidebar">Fijar barra lateral</label>
+                                        <input type="checkbox" data-toggletarget="fixed-sidebar" id="fixed-sidebar" class="input-switch-alt">
+                                    </li>
+                                    <li>
+                                        <label for="closed-sidebar">Cerrar barra lateral</label>
+                                        <input type="checkbox" data-toggletarget="closed-sidebar" id="closed-sidebar" class="input-switch-alt">
+                                    </li>
+                                </ul>
+                                <div class="boxed-bg-wrapper hide">
+                                    <h5 class="header">Estilo del encabezado
+                                        <a class="set-background-style" data-header-bg="" title="Remover todos los estilos" href="javascript:void(0);">Limpiar</a>
+                                    </h5>
+                                    <div class="theme-color-wrapper clearfix">
+                                        <h5>Estampados</h5>
+                                        <a class="tooltip-button set-background-style pattern-bg-3" data-header-bg="pattern-bg-3" title="Estampado 3" href="javascript:void(0);">Estampado 3</a>
+                                        <a class="tooltip-button set-background-style pattern-bg-4" data-header-bg="pattern-bg-4" title="Estampado 4" href="javascript:void(0);">Estampado 4</a>
+                                        <a class="tooltip-button set-background-style pattern-bg-5" data-header-bg="pattern-bg-5" title="Estampado 5" href="javascript:void(0);">Estampado 5</a>
+                                        <a class="tooltip-button set-background-style pattern-bg-6" data-header-bg="pattern-bg-6" title="Estampado 6" href="javascript:void(0);">Estampado 6</a>
+                                        <a class="tooltip-button set-background-style pattern-bg-7" data-header-bg="pattern-bg-7" title="Estampado 7" href="javascript:void(0);">Estampado 7</a>
+                                        <a class="tooltip-button set-background-style pattern-bg-8" data-header-bg="pattern-bg-8" title="Estampado 8" href="javascript:void(0);">Estampado 8</a>
+                                        <a class="tooltip-button set-background-style pattern-bg-9" data-header-bg="pattern-bg-9" title="Estampado 9" href="javascript:void(0);">Estampado 9</a>
+                                        <a class="tooltip-button set-background-style pattern-bg-10" data-header-bg="pattern-bg-10" title="Estampado 10" href="javascript:void(0);">Estampado 10</a>
+
+                                        <div class="clear"></div>
+
+                                        <h5 class="mrg15T">Imágenes &amp;Sólidas</h5>
+                                        <a class="tooltip-button set-background-style bg-black" data-header-bg="bg-black" title="Black" href="javascript:void(0);">Negro</a>
+                                        <a class="tooltip-button set-background-style bg-gray mrg10R" data-header-bg="bg-gray" title="Gray" href="javascript:void(0);">Gris</a>
+
+                                        <a class="tooltip-button set-background-style full-bg-1" data-header-bg="full-bg-1 fixed-bg" title="Image 1" href="javascript:void(0);">Imagen 1</a>
+                                        <a class="tooltip-button set-background-style full-bg-2" data-header-bg="full-bg-2 fixed-bg" title="Image 2" href="javascript:void(0);">Imagen 2</a>
+                                        <a class="tooltip-button set-background-style full-bg-3" data-header-bg="full-bg-3 fixed-bg" title="Image 3" href="javascript:void(0);">Imagen 3</a>
+                                        <a class="tooltip-button set-background-style full-bg-4" data-header-bg="full-bg-4 fixed-bg" title="Image 4" href="javascript:void(0);">Imagen 4</a>
+                                        <a class="tooltip-button set-background-style full-bg-5" data-header-bg="full-bg-5 fixed-bg" title="Image 5" href="javascript:void(0);">Imagen 5</a>
+                                        <a class="tooltip-button set-background-style full-bg-6" data-header-bg="full-bg-6 fixed-bg" title="Image 6" href="javascript:void(0);">Imagen 6</a>
+
+                                    </div>
+                                </div>
+                                <h5 class="header">Estilo del encabezado
+                                    <a class="set-adminheader-style" data-header-bg="bg-gradient-9" title="Remover todos los estilos" href="javascript:void(0);">Limpiar</a>
+                                </h5>
+                                <div class="theme-color-wrapper clearfix">
+                                    <h5>Sólidos</h5>
+                                    <a class="tooltip-button set-adminheader-style bg-primary" data-header-bg="bg-primary font-inverse" title="Primario" href="javascript:void(0);">Primario</a>
+                                    <a class="tooltip-button set-adminheader-style bg-green" data-header-bg="bg-green font-inverse" title="Verde" href="javascript:void(0);">Verde</a>
+                                    <a class="tooltip-button set-adminheader-style bg-red" data-header-bg="bg-red font-inverse" title="Rojo" href="javascript:void(0);">Rojo</a>
+                                    <a class="tooltip-button set-adminheader-style bg-blue" data-header-bg="bg-blue font-inverse" title="Azul" href="javascript:void(0);">Azul</a>
+                                    <a class="tooltip-button set-adminheader-style bg-warning" data-header-bg="bg-warning font-inverse" title="Peligro" href="javascript:void(0);">Peligro</a>
+                                    <a class="tooltip-button set-adminheader-style bg-purple" data-header-bg="bg-purple font-inverse" title="Morado" href="javascript:void(0);">Morado</a>
+                                    <a class="tooltip-button set-adminheader-style bg-black" data-header-bg="bg-black font-inverse" title="Negro" href="javascript:void(0);">Negro</a>
+
+                                    <div class="clear"></div>
+
+                                    <h5 class="mrg15T">Degradaros</h5>
+                                    <a class="tooltip-button set-adminheader-style bg-gradient-1" data-header-bg="bg-gradient-1 font-inverse" title="Degradaro 1" href="javascript:void(0);">Degradaro 1</a>
+                                    <a class="tooltip-button set-adminheader-style bg-gradient-2" data-header-bg="bg-gradient-2 font-inverse" title="Degradaro 2" href="javascript:void(0);">Degradaro 2</a>
+                                    <a class="tooltip-button set-adminheader-style bg-gradient-3" data-header-bg="bg-gradient-3 font-inverse" title="Degradaro 3" href="javascript:void(0);">Degradaro 3</a>
+                                    <a class="tooltip-button set-adminheader-style bg-gradient-4" data-header-bg="bg-gradient-4 font-inverse" title="Degradaro 4" href="javascript:void(0);">Degradaro 4</a>
+                                    <a class="tooltip-button set-adminheader-style bg-gradient-5" data-header-bg="bg-gradient-5 font-inverse" title="Degradaro 5" href="javascript:void(0);">Degradaro 5</a>
+                                    <a class="tooltip-button set-adminheader-style bg-gradient-6" data-header-bg="bg-gradient-6 font-inverse" title="Degradaro 6" href="javascript:void(0);">Degradaro 6</a>
+                                    <a class="tooltip-button set-adminheader-style bg-gradient-7" data-header-bg="bg-gradient-7 font-inverse" title="Degradaro 7" href="javascript:void(0);">Degradaro 7</a>
+                                    <a class="tooltip-button set-adminheader-style bg-gradient-8" data-header-bg="bg-gradient-8 font-inverse" title="Degradaro 8" href="javascript:void(0);">Degradaro 8</a>
+                                </div>
+                                <h5 class="header">Estilo de la barra lateral
+                                    <a class="set-sidebar-style" data-header-bg="" title="Remover todos los estilos" href="javascript:void(0);">Limpiar</a>
+                                </h5>
+                                <div class="theme-color-wrapper clearfix">
+                                    <h5>Sólidos</h5>
+                                    <a class="tooltip-button set-sidebar-style bg-primary" data-header-bg="bg-primary font-inverse" title="Primario" href="javascript:void(0);">Primario</a>
+                                    <a class="tooltip-button set-sidebar-style bg-green" data-header-bg="bg-green font-inverse" title="Verde" href="javascript:void(0);">Verde</a>
+                                    <a class="tooltip-button set-sidebar-style bg-red" data-header-bg="bg-red font-inverse" title="Rojo" href="javascript:void(0);">Rojo</a>
+                                    <a class="tooltip-button set-sidebar-style bg-blue" data-header-bg="bg-blue font-inverse" title="Azul" href="javascript:void(0);">Azul</a>
+                                    <a class="tooltip-button set-sidebar-style bg-warning" data-header-bg="bg-warning font-inverse" title="Peligro" href="javascript:void(0);">Peligro</a>
+                                    <a class="tooltip-button set-sidebar-style bg-purple" data-header-bg="bg-purple font-inverse" title="Morado" href="javascript:void(0);">Morado</a>
+                                    <a class="tooltip-button set-sidebar-style bg-black" data-header-bg="bg-black font-inverse" title="Negro" href="javascript:void(0);">Negro</a>
+
+                                    <div class="clear"></div>
+
+                                    <h5 class="mrg15T">Degradaros</h5>
+                                    <a class="tooltip-button set-sidebar-style bg-gradient-1" data-header-bg="bg-gradient-1 font-inverse" title="Degradaro 1" href="javascript:void(0);">Degradaro 1</a>
+                                    <a class="tooltip-button set-sidebar-style bg-gradient-2" data-header-bg="bg-gradient-2 font-inverse" title="Degradaro 2" href="javascript:void(0);">Degradaro 2</a>
+                                    <a class="tooltip-button set-sidebar-style bg-gradient-3" data-header-bg="bg-gradient-3 font-inverse" title="Degradaro 3" href="javascript:void(0);">Degradaro 3</a>
+                                    <a class="tooltip-button set-sidebar-style bg-gradient-4" data-header-bg="bg-gradient-4 font-inverse" title="Degradaro 4" href="javascript:void(0);">Degradaro 4</a>
+                                    <a class="tooltip-button set-sidebar-style bg-gradient-5" data-header-bg="bg-gradient-5 font-inverse" title="Degradaro 5" href="javascript:void(0);">Degradaro 5</a>
+                                    <a class="tooltip-button set-sidebar-style bg-gradient-6" data-header-bg="bg-gradient-6 font-inverse" title="Degradaro 6" href="javascript:void(0);">Degradaro 6</a>
+                                    <a class="tooltip-button set-sidebar-style bg-gradient-7" data-header-bg="bg-gradient-7 font-inverse" title="Degradaro 7" href="javascript:void(0);">Degradaro 7</a>
+                                    <a class="tooltip-button set-sidebar-style bg-gradient-8" data-header-bg="bg-gradient-8 font-inverse" title="Degradaro 8" href="javascript:void(0);">Degradaro 8</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <%--Contenido de la página--%>
+                    <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- JS Demo -->
+        <script src="../Recursos/agileui.com/demo/monarch/assets-minified/admin-all-demo.js"></script>
+
+        
+    </form>
+</body>
+</html>
