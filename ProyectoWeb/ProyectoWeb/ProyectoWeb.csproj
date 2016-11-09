@@ -53,8 +53,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GUI\WebForm1.aspx" />
-    <Content Include="GUI\WebForm2.aspx" />
+    <Content Include="GUI\GestionDireccion.aspx" />
+    <Content Include="GUI\GestionEstablecimientos.aspx" />
+    <Content Include="GUI\GestionEventos.aspx" />
+    <Content Include="GUI\GestionNotificacion.aspx" />
+    <Content Include="GUI\GestionServicios.aspx" />
+    <Content Include="GUI\GestionSitios.aspx" />
+    <Content Include="GUI\GestionSuscripciones.aspx" />
+    <Content Include="GUI\GestionUsuarioGUI.aspx" />
+    <Content Include="GUI\Principal.aspx" />
     <Content Include="Recursos\agileui.com\demo\image-resources\logo-admin.png" />
     <Content Include="Recursos\agileui.com\demo\images\animated-overlay.gif" />
     <Content Include="Recursos\agileui.com\demo\images\colorpicker.png" />
@@ -77,7 +84,11 @@
     <Content Include="Recursos\agileui.com\demo\monarch\assets-minified\spinnericonb7a7-4.html" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets-minified\spinnericonb7a7.html" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets\angular\app.js" />
+    <Content Include="Recursos\agileui.com\demo\monarch\assets\angular\bootstrap-datepicker.js" />
+    <Content Include="Recursos\agileui.com\demo\monarch\assets\angular\js.js" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets\angular\page-animations.css" />
+    <Content Include="Recursos\agileui.com\demo\monarch\assets\angular\datepicker-demo.js" />
+    <Content Include="Recursos\agileui.com\demo\monarch\assets\angular\datepicker.js" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets\image-resources\gravatar.jpg" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets\images\icons\apple-touch-icon-114-precomposed.png" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets\images\icons\apple-touch-icon-144-precomposed.png" />
@@ -154,32 +165,84 @@
     <Content Include="Recursos\backblue.gif" />
     <Content Include="Recursos\code.angularjs.org\1.2.13\angular.js" />
     <Content Include="Recursos\fade.gif" />
+    <Content Include="Recursos\agileui.com\demo\monarch\assets\angular\gmaps-demo.js" />
+    <Content Include="Recursos\agileui.com\demo\monarch\assets\angular\gmaps.js" />
     <Content Include="Recursos\hts-cache\new.txt" />
     <Content Include="Recursos\hts-cache\readme.txt" />
     <Content Include="Recursos\hts-log.txt" />
+    <Content Include="Recursos\agileui.com\demo\monarch\logo.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\mpBase.Master.cs">
+    <Compile Include="GUI\GestionDireccion.aspx.cs">
+      <DependentUpon>GestionDireccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionDireccion.aspx.designer.cs">
+      <DependentUpon>GestionDireccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionEstablecimientos.aspx.cs">
+      <DependentUpon>GestionEstablecimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionEstablecimientos.aspx.designer.cs">
+      <DependentUpon>GestionEstablecimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionEventos.aspx.cs">
+      <DependentUpon>GestionEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionEventos.aspx.designer.cs">
+      <DependentUpon>GestionEventos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionNotificacion.aspx.cs">
+      <DependentUpon>GestionNotificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionNotificacion.aspx.designer.cs">
+      <DependentUpon>GestionNotificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionServicios.aspx.cs">
+      <DependentUpon>GestionServicios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionServicios.aspx.designer.cs">
+      <DependentUpon>GestionServicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionSitios.aspx.cs">
+      <DependentUpon>GestionSitios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionSitios.aspx.designer.cs">
+      <DependentUpon>GestionSitios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionSuscripciones.aspx.cs">
+      <DependentUpon>GestionSuscripciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionSuscripciones.aspx.designer.cs">
+      <DependentUpon>GestionSuscripciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionUsuarioGUI.aspx.cs">
+      <DependentUpon>GestionUsuarioGUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionUsuarioGUI.aspx.designer.cs">
+      <DependentUpon>GestionUsuarioGUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\mpBase.Master.cs">
       <DependentUpon>mpBase.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GUI\mpBase.Master.designer.cs">
+    <Compile Include="MasterPage\mpBase.Master.designer.cs">
       <DependentUpon>mpBase.Master</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUI\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUI\WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -195,7 +258,7 @@
     <Content Include="Recursos\hts-cache\new.lst" />
     <Content Include="Recursos\hts-cache\new.zip" />
     <Content Include="Recursos\hts-cache\winprofile.ini" />
-    <Content Include="GUI\mpBase.Master" />
+    <Content Include="MasterPage\mpBase.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

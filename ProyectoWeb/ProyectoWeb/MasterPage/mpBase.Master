@@ -6,7 +6,8 @@
 <head runat="server">
     <meta charset="UTF-8"/>
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Monarch UI - Bootstrap Frontend &amp; Admin Template </title>
+    <title><asp:ContentPlaceHolder ID="cphTituloPagina" runat="server"></asp:ContentPlaceHolder></title>
+    
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
@@ -26,7 +27,25 @@
     <script src="../Recursos/ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
     <script src="../Recursos/ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
     <script src="../Recursos/agileui.com/demo/monarch/assets/angular/app.js"></script>
+    <script src="../Recursos/agileui.com/demo/monarch/assets/angular/bootstrap-datepicker.js"></script>
     
+    <script type="text/javascript">
+    /* Datepicker bootstrap */
+
+    $(function() { "use strict";
+        $('.bootstrap-datepicker').bsdatepicker({
+            format: 'mm-dd-yyyy'
+        });
+    });
+
+    </script>
+
+    <script src="../Recursos/agileui.com/demo/monarch/assets/angular/js.js"></script>
+    <%--<script src="../Recursos/agileui.com/demo/monarch/assets/angular/gmaps.js"></script>
+    <script src="../Recursos/agileui.com/demo/monarch/assets/angular/gmaps-demo.js"></script>--%>
+    <script src="../Recursos/agileui.com/demo/monarch/assets/angular/datepicker.js"></script>
+    <script src="../Recursos/agileui.com/demo/monarch/assets/angular/datepicker-demo.js"></script>
+
     <link href="../Recursos/agileui.com/demo/monarch/assets/angular/page-animations.css" rel="stylesheet" />
 
 </head>
@@ -35,10 +54,10 @@
         <div id="page-wrapper">
             <div id="page-header" class="bg-gradient-9">
                 <div id="header-logo" class="logo-bg">
-                    <a href="" class="logo-content-big" title="MCTuristic">M.C. <i>Turistic</i>
+                    <a href="../GUI/Principal.aspx" class="logo-content-big" title="MCTuristic">M.C. <i>Turistic</i>
                         <span>Buscador de centros históricos</span>
                     </a>
-                    <a href="" class="logo-content-small" title="MCTuristic">M.C. <i>Turistic</i>
+                    <a href="../GUI/Principal.aspx" class="logo-content-small" title="MCTuristic">M.C. <i>Turistic</i>
                         <span>Buscador de centros históricos</span>
                     </a>
                     <a id="close-sidebar" href="#" title="Close sidebar">
@@ -51,58 +70,9 @@
                 <%--Información de la cuenta del usuario (dropdown)--%>
                 <div id="header-nav-left">
                     <div class="user-account-btn dropdown">
-                        <a href="#" title="My Account" class="user-profile clearfix" data-toggle="dropdown">
-                            <img width="28" src="../Recursos/agileui.com/demo/monarch/assets/image-resources/gravatar.jpg" alt="Profile image" />
-                            <span>Thomas Barnes</span>
-                            <i class="glyph-icon icon-angle-down"></i>
-                        </a>
-                        <div class="dropdown-menu float-left">
-                            <div class="box-sm">
-                                <div class="login-box clearfix">
-                                    <div class="user-img">
-                                        <a href="#" title="" class="change-img">Change photo</a>
-                                        <img src="../Recursos/agileui.com/demo/monarch/assets/image-resources/gravatar.jpg" alt="" />
-                                    </div>
-                                    <div class="user-info">
-                                        <span>Thomas Barnes
-                                <i>UX/UI developer</i>
-                                        </span>
-                                        <a href="#" title="Edit profile">Edit profile</a>
-                                        <a href="#" title="View notifications">View notifications</a>
-                                    </div>
-                                </div>
-                                <div class="divider"></div>
-                                <ul class="reset-ul mrg5B">
-                                    <li>
-                                        <a href="#">
-                                            <i class="glyph-icon float-right icon-caret-right"></i>
-                                            View login page example
-                                
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="glyph-icon float-right icon-caret-right"></i>
-                                            View lockscreen example
-                                
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="glyph-icon float-right icon-caret-right"></i>
-                                            View account details
-                                
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="pad5A button-pane button-pane-alt text-center">
-                                    <a href="#" class="btn display-block font-normal btn-danger">
-                                        <i class="glyph-icon icon-power-off"></i>
-                                        Logout
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <asp:ContentPlaceHolder ID="cphSesion" runat="server"></asp:ContentPlaceHolder>
+                        
+                        
                     </div>
                 </div>
                 <!-- #header-nav-left -->
@@ -113,7 +83,7 @@
                 <div id="header-nav-right">
                     
                     <%--Buscador--%>
-                    <a href="#" class="hdr-btn popover-button" title="Search" data-placement="bottom" data-id="#popover-search">
+                    <%--<a href="#" class="hdr-btn popover-button" title="Search" data-placement="bottom" data-id="#popover-search">
                         <i class="glyph-icon icon-search"></i>
                     </a>
                     <div class="hide" id="popover-search">
@@ -125,7 +95,7 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
 
                     <%--Pantalla completa--%>
                     <a href="#" class="hdr-btn" id="fullscreen-btn" title="Fullscreen">
@@ -445,59 +415,57 @@
 
 
             <%--Barra lateral izquierda --%>
-
-
             <div id="page-sidebar">
                 <div class="scroll-sidebar">
 
+                    <asp:PlaceHolder ID="phModulos" runat="server">
+                        <ul id="sidebar-menu">
+                            <li class="header"><span>Módulos</span></li>
+                            <li>
+                                <a href="../GUI/GestionUsuarioGUI.aspx" title="Usuarios">
+                                    <i class="glyph-icon icon-users"></i>
+                                    <span>Usuarios</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionSitios.aspx" title="Sitios">
+                                    <i class="glyph-icon icon-university"></i>
+                                    <span>Sitios</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionEstablecimientos.aspx" title="Establecimientos">
+                                    <i class="glyph-icon icon-building"></i>
+                                    <span>Establecimientos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionSuscripciones.aspx" title="Suscripciones">
+                                    <i class="glyph-icon icon-credit-card   "></i>
+                                    <span>Suscripciones</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionEventos.aspx" title="Eventos">
+                                    <i class="glyph-icon icon-puzzle-piece"></i>
+                                    <span>Eventos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionDireccion.aspx" title="Direcciones">
+                                    <i class="glyph-icon icon-road"></i>
+                                    <span>Direcciones</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../GUI/GestionNotificacion.aspx" title="Notificaciones">
+                                    <i class="glyph-icon icon-bullhorn"></i>
+                                    <span>Notificaciones</span>
+                                </a>
+                            </li>
 
-                    <ul id="sidebar-menu">
-                        <li class="header"><span>Módulos</span></li>
-                        <li>
-                            <a href="#index" title="Usuarios">
-                                <i class="glyph-icon icon-users"></i>
-                                <span>Usuarios</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#index" title="Sitios">
-                                <i class="glyph-icon icon-university"></i>
-                                <span>Sitios</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#index" title="Establecimientos">
-                                <i class="glyph-icon icon-building"></i>
-                                <span>Establecimientos</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#index" title="Suscripciones">
-                                <i class="glyph-icon icon-credit-card   "></i>
-                                <span>Suscripciones</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#index" title="Eventos">
-                                <i class="glyph-icon icon-puzzle-piece"></i>
-                                <span>Eventos</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#index" title="Direcciones">
-                                <i class="glyph-icon icon-road"></i>
-                                <span>Direcciones</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#index" title="Notificaciones">
-                                <i class="glyph-icon icon-bullhorn"></i>
-                                <span>Notificaciones</span>
-                            </a>
-                        </li>
-
-                        <%--Ejemplo de menú--%>
-                        <%--<li class="header"><span>Extra</span></li>
+                            <%--Ejemplo de menú--%>
+                            <%--<li class="header"><span>Extra</span></li>
                         <li>
                             <a href="javascript:void(0);" title="Pages">
                                 <i class="glyph-icon icon-linecons-fire"></i>
@@ -522,11 +490,9 @@
                             </div>
                             <!-- .sidebar-submenu -->
                         </li>--%>
-
-
-
-
-                    </ul>
+                        </ul>
+                    </asp:PlaceHolder>
+                    
 
 
                 </div>
@@ -648,11 +614,7 @@
 
 
                     <%--Contenido de la página--%>
-                    <div class="row border-black">
-                        <div class="col-lg-12 col-lg-offset-4 col-lg-pull-4">
-                            <img src="../Recursos/backblue.gif" /><img src="../Recursos/backblue.gif" /><img src="../Recursos/backblue.gif" />
-                        </div>
-                    </div>
+                    <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
 
                 </div>
             </div>

@@ -40,3 +40,8 @@
 @-webkit-keyframes scaleUp {
     from 		{ opacity: 0.3; -webkit-transform: scale(0.8); }
 }
+.badge-inicio,.bg-inicio,.btn-inicio,.hover-inicio:hover,.label-inicio{color:#fff;background:none;border-color:white}
+.btn-inicio.active,.btn-inicio.disabled,.btn-inicio.disabled.active,.btn-inicio.disabled:active,.btn-inicio.disabled:focus,.btn-inicio.disabled:hover,.btn-inicio:active,.btn-inicio:focus,.btn-inicio:hover,.btn-inicio[disabled],.btn-inicio[disabled].active,.btn-inicio[disabled]:active,.btn-inicio[disabled]:focus,.btn-inicio[disabled]:hover,.label-inicio[href]:focus,.label-inicio[href]:hover,.open .dropdown-toggle.btn-inicio{
+    color:#fff;background:#27d1ab;border-color:white
+
+}
