@@ -1,0 +1,59 @@
+Tu privacidad es importante para Master Coder. Por esta razón se ha desarrollado una Política de Privacidad en la que se describe cómo se recopilan, utilizan,
+revelan, transfieren y almacenan tus datos. Dedica un momento a conocer las prácticas de privacidad.
+
+Recopilación y uso de los datos de carácter personal
+
+Se considera información personal cualquier dato que pueda utilizarse para identificar a una persona en particular o ponerse en contacto con ella.
+Es posible que tengas que proporcionar datos de carácter personal cuando contactes con Master Coder o con alguna de sus empresas afiliadas. Master Coder y sus empresas
+afiliadas podrán compartir los datos de carácter personal y utilizarlos de acuerdo con la presente Política de Privacidad. Asimismo, pueden combinarlos con otros
+datos para suministrar y mejorar productos, servicios, contenidos y anuncios publicitarios. No estás obligado a facilitar la información personal que te soliciten
+pero, si decides no proporcionarla, habrá muchas ocasiones en las que no podrás utilizar los productos ni servicios, o no recibirás respuestas a las preguntas que 
+pudieras tener.
+
+A continuación se muestran algunos ejemplos de los tipos de información personal que Master Coder puede recopilar y los posibles usos que puede darle:
+
+Qué datos de carácter personal se recopilan
+-	Cuando creas un usuario de nuestra página MCTuristic te podrás poner en contacto con Master Coder o participas en una encuesta online, se pueden recopilar
+        diferentes datos, como tu nombre, dirección postal, número de teléfono, dirección de correo electrónico, preferencias de contacto o algún otro dato menor que será
+        tomado en cuenta.
+-	Cuando compartes contenido con tus amigos y familiares mediante productos Master Coder , envías ubicaciones, o invitas a terceros a participar en 
+        aplicaciones Master Coder, Master Coder puede recopilar la información que facilitas sobre esas personas, como su nombre, dirección postal, dirección de
+        correo electrónico y número de teléfono. Master Coder utilizará dichos datos para completar tus pedidos, ofrecerte el producto o servicio que corresponda o
+        para fines de lucha contra el fraude.
+-	En determinadas jurisdicciones, se te puede solicitar una identificación emitida por el gobierno en circunstancias muy concretas, como cuando configuras una 
+        cuenta de conexión inalámbrica y activas tu dispositivo, para ampliar un crédito comercial, para gestionar reservas o por imperativo legal.
+
+Cómo se usa tu información personal
+-	Los datos de carácter personal que se recopilan permiten mantenerte informado acerca de los productos más recientes de Master Coder, las actualizaciones de
+        software disponibles y los próximos eventos. Si no deseas formar parte de la lista de distribución, puedes darte de baja en cualquier momento actualizando 
+        tus preferencias.
+-	Los datos de carácter personal también ayudan a crear, desarrollar, gestionar, entregar y mejorar los productos, servicios, contenidos y anuncios 
+        publicitarios, además de evitar pérdidas y fraudes.
+-	Es posible que se usen tus datos de carácter personal, incluida la fecha de nacimiento, para verificar la identidad, colaborar en la identificación de
+        usuarios y determinar los servicios apropiados. Por ejemplo, se puede usar la fecha de nacimiento para determinar la edad de los titulares de cuentas de
+        Master Coder.
+-	Ocasionalmente es posible que se usen tus datos de carácter personal para enviarte notificaciones importantes, como comunicaciones acerca de lugares cercanos
+        y modificaciones de las condiciones y políticas. Como esta información es fundamental para tu interacción con Master Coder, no puedes optar por rechazar la
+        recepción de estas comunicaciones.
+?	También se pueden utilizar tus datos de carácter personal para fines internos, incluyendo auditorías, análisis de datos e investigaciones, con el fin de
+        mejorar los productos, servicios y comunicaciones a clientes de Master Coder.
+
+Protección de los datos de carácter personal
+Master Coder se toma muy en serio la seguridad de tus datos de carácter personal. Los servicios online de Master Coder, como MCTuristic protegen tus datos de 
+carácter personal durante el tránsito mediante cifrado como, por ejemplo, Transport Layer Security (TLS). Cuando Master Coder almacena tus datos personales, se
+utilizan sistemas informáticos con acceso limitado alojados en instalaciones con medidas de seguridad físicas. Los datos de iCloud se almacenan de forma cifrada,
+incluso cuando se utiliza el almacenamiento de terceros.
+Al utilizar determinados productos, servicios o aplicaciones de Master Coder o al publicar entradas en foros, salas de chat o redes sociales, el contenido y los 
+datos de carácter personal que compartas serán visibles para otros usuarios, que podrán leerlos, recopilarlos o utilizarlos. En estos casos, tú eres el responsable
+de los datos de carácter personal que decides compartir o enviar. Por ejemplo, si escribes tu nombre y dirección de correo electrónico en un foro, dicha información
+será pública. Es recomendable tener cuidado al usar estas prestaciones.
+Si tú, o cualquier persona de tu grupo que utilice en familia, inicias sesión en un dispositivo que pertenece a un tercero, cualquier información compartida en tu 
+en familia (como calendarios, ubicaciones, fotos) podría descargarse a dicho dispositivo ajeno, divulgándose así la información que compartes.
+Servicios de localización
+Para prestar servicios de localización en relación con productos de Master Coder, tanto nosotros como nuestros socios podrán recopilar, utilizar y compartir datos 
+precisos sobre localizaciones, incluyendo la localización geográfica en tiempo real de tu ordenador o dispositivo. Si están disponibles, los servicios de
+localización pueden usar tecnología GPS, Bluetooth y tu dirección IP, junto con localizaciones de puntos de acceso Wi-Fi procedentes de la recopilación masiva y de
+torres de telefonía móvil, además de otras tecnologías, para determinar la ubicación aproximada de tus dispositivos. Salvo que des tu consentimiento, estos datos de
+localización se recogen de manera anónima de tal forma que no puedan utilizarse para identificarte personalmente, y son utilizados por Master Coder y sus socios para
+suministrar y mejorar sus productos y servicios de localización. Por ejemplo, tu dispositivo puede compartir su ubicación geográfica con proveedores de aplicaciones
+si aceptas participar en sus servicios de localización.
