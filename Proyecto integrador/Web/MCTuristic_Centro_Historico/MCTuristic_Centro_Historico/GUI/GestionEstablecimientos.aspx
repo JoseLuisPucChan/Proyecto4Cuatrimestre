@@ -45,48 +45,48 @@
             </div>
         </div>
     </asp:PlaceHolder>
-    </asp:Content>
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
     <div class="row">
         <div class="col-lg-12">
             <div class="panel">
                 <div class="panel-body">
-                    <h3 class="text-center font-bold"><i class="glyph-icon icon-building"></i> Control de establecimientos </h3>
+                    <h3 class="text-center font-bold"><i class="glyph-icon icon-building"></i>Control de establecimientos </h3>
                     <div class="divider"></div>
                     <asp:LinkButton ID="lbtnNuevo" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-plus-circle"></i> Nuevo</asp:LinkButton>
                     <div class="divider"></div>
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
-                            <h3><i class="glyph-icon icon-tag"></i> Nombre</h3>
+                            <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
                             <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
-                            <h3><i class="glyph-icon icon-phone"></i> Teléfono</h3>
+                            <h3><i class="glyph-icon icon-phone"></i>Teléfono</h3>
                             <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
-                            <h3><i class="glyph-icon icon-facebook-square"></i> Facebook</h3>
+                            <h3><i class="glyph-icon icon-facebook-square"></i>Facebook</h3>
                             <asp:TextBox ID="txtFacebook" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
-                            <h3><i class="glyph-icon icon-sign-in"></i> Hora de apertura</h3>
+                            <h3><i class="glyph-icon icon-sign-in"></i>Hora de apertura</h3>
                             <asp:TextBox ID="txtAbrir" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
-                            <h3><i class="glyph-icon icon-sign-out"></i> Hora de cierre</h3>
+                            <h3><i class="glyph-icon icon-sign-out"></i>Hora de cierre</h3>
                             <asp:TextBox ID="txtCerrar" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
                             <h3><i class="glyph-icon icon-cutlery"></i><b>Servicios</b></h3>
-                            <asp:Button ID="btnServicios" runat="server" Text="Ver servicios" CssClass="btn btn-primary" />
+                            <asp:Button ID="btnServicios" runat="server" Text="Ver servicios" CssClass="btn btn-primary" OnClick="btnServicios_Click" />
                         </div>
                     </div>
                     <div class="col-lg-12 form-group">
-                        <h3><i class="glyph-icon icon-file-text"></i> Ubicación</h3>
+                        <h3><i class="glyph-icon icon-file-text"></i>Ubicación</h3>
                         <div class="example-box-wrapper">
                             <div id="map-basic" style="height: 300px;"></div>
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <h3><i class="glyph-icon icon-file-text"></i> Descripción del servicio</h3>
+                        <h3><i class="glyph-icon icon-file-text"></i>Descripción del servicio</h3>
                         <asp:TextBox ID="txtDescripcionServicio" runat="server" CssClass="form-control border-blue" TextMode="MultiLine"></asp:TextBox>
                     </div>
                     <div class="col-lg-12 form-group">
@@ -100,6 +100,81 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphBarraLat" runat="server">
+    <div id="page-sidebar">
+        <div class="scroll-sidebar">
+            <ul id="sidebar-menu">
+                <li class="header"><span>Módulos</span></li>
+                <asp:PlaceHolder ID="phAdmin" runat="server" Visible="true">
+                    <li>
+                        <a href="../GUI/GestionUsuariosGUI.aspx" title="Usuarios">
+                            <i class="glyph-icon icon-users"></i>
+                            <span>Usuarios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionSitios.aspx" title="Sitios">
+                            <i class="glyph-icon icon-university"></i>
+                            <span>Sitios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionEstablecimientos.aspx" title="Establecimientos">
+                            <i class="glyph-icon icon-building"></i>
+                            <span>Establecimientos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionSuscripciones.aspx" title="Suscripciones">
+                            <i class="glyph-icon icon-credit-card   "></i>
+                            <span>Suscripciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionEventos.aspx" title="Eventos">
+                            <i class="glyph-icon icon-puzzle-piece"></i>
+                            <span>Eventos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionDireccion.aspx" title="Direcciones">
+                            <i class="glyph-icon icon-road"></i>
+                            <span>Direcciones</span>
+                        </a>
+                    </li>
+                </asp:PlaceHolder>
+
+                <asp:PlaceHolder ID="phUsuario" runat="server" Visible="false">
+
+                    <li>
+                        <a href="../GUI/GestionUsuariosGUI.aspx" title="Perfil">
+                            <i class="glyph-icon icon-users"></i>
+                            <span>Perfil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionEstablecimientos.aspx" title="Establecimientos">
+                            <i class="glyph-icon icon-building"></i>
+                            <span>Establecimientos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionEventos.aspx" title="Eventos">
+                            <i class="glyph-icon icon-puzzle-piece"></i>
+                            <span>Eventos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionDireccion.aspx" title="Direcciones">
+                            <i class="glyph-icon icon-road"></i>
+                            <span>Direcciones</span>
+                        </a>
+                    </li>
+                </asp:PlaceHolder>
+            </ul>
         </div>
     </div>
 </asp:Content>

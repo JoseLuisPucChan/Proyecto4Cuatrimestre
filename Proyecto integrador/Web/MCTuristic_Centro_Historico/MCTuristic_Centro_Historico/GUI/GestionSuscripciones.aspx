@@ -51,25 +51,25 @@
         <div class="col-lg-12">
             <div class="panel">
                 <div class="panel-body">
-                    <h3 class="text-center font-bold"><i class="glyph-icon icon-building"></i> Control de suscripciones</h3>
+                    <h3 class="text-center font-bold"><i class="glyph-icon icon-building"></i>Control de suscripciones</h3>
                     <div class="divider"></div>
                     <asp:LinkButton ID="lbtnNuevo" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-plus-circle"></i> Nuevo</asp:LinkButton>
                     <div class="divider"></div>
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
-                            <h3><i class="glyph-icon icon-tag"></i> Nombre</h3>
+                            <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
                             <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
-                            <h3><i class="glyph-icon icon-calendar"></i> Fecha de pago</h3>
+                            <h3><i class="glyph-icon icon-calendar"></i>Fecha de pago</h3>
                             <br />
-                                <div class="input-prepend input-group">
-                                    <asp:TextBox ID="txtFecha" class="bootstrap-datepicker form-control" runat="server"></asp:TextBox>
-                                </div>
+                            <div class="input-prepend input-group">
+                                <asp:TextBox ID="txtFecha" class="bootstrap-datepicker form-control" runat="server"></asp:TextBox>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
-                            <h3><i class="glyph-icon icon-cutlery"></i> Tipo de suscripción</h3>
+                            <h3><i class="glyph-icon icon-cutlery"></i>Tipo de suscripción</h3>
                             <asp:DropDownList ID="ddlSuscripcion" runat="server" CssClass="form-control border-blue"></asp:DropDownList>
                             <button class="btn btn-primary" data-toggle="modal" data-target="#Direccion" type="button">Agregar nuevo tipo de suscripción</button>
                             <div class="modal fade bs-example-modal-lg" id="Direccion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -81,14 +81,14 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="col-lg-6">
-                                                <h3><i class="glyph-icon icon-tag"></i> Nombre</h3>
+                                                <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
                                                 <asp:TextBox ID="txtNombreTipo" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                                                 <br />
-                                                <h3><i class="glyph-icon icon-money"></i> Monto</h3>
+                                                <h3><i class="glyph-icon icon-money"></i>Monto</h3>
                                                 <asp:TextBox ID="txtMonto" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                                                 <br />
-                                                <h3><i class="glyph-icon icon-flag"></i> Tiempo de suscripción</h3>
-                                                <asp:DropDownList ID="ddlTiempo" runat="server">
+                                                <h3><i class="glyph-icon icon-flag"></i>Tiempo de suscripción</h3>
+                                                <asp:DropDownList ID="ddlTiempo" runat="server" CssClass="form-control border-blue">
                                                     <asp:ListItem Value="1 mes"></asp:ListItem>
                                                     <asp:ListItem Value="3 meses"></asp:ListItem>
                                                     <asp:ListItem Value="6 meses"></asp:ListItem>
@@ -124,4 +124,79 @@
     </div>
 
 
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphBarraLat" runat="server">
+    <div id="page-sidebar">
+        <div class="scroll-sidebar">
+            <ul id="sidebar-menu">
+                <li class="header"><span>Módulos</span></li>
+                <asp:PlaceHolder ID="phAdmin" runat="server" Visible="true">
+                    <li>
+                        <a href="../GUI/GestionUsuariosGUI.aspx" title="Usuarios">
+                            <i class="glyph-icon icon-users"></i>
+                            <span>Usuarios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionSitios.aspx" title="Sitios">
+                            <i class="glyph-icon icon-university"></i>
+                            <span>Sitios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionEstablecimientos.aspx" title="Establecimientos">
+                            <i class="glyph-icon icon-building"></i>
+                            <span>Establecimientos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionSuscripciones.aspx" title="Suscripciones">
+                            <i class="glyph-icon icon-credit-card   "></i>
+                            <span>Suscripciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionEventos.aspx" title="Eventos">
+                            <i class="glyph-icon icon-puzzle-piece"></i>
+                            <span>Eventos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionDireccion.aspx" title="Direcciones">
+                            <i class="glyph-icon icon-road"></i>
+                            <span>Direcciones</span>
+                        </a>
+                    </li>
+                </asp:PlaceHolder>
+
+                <asp:PlaceHolder ID="phUsuario" runat="server" Visible="false">
+
+                    <li>
+                        <a href="../GUI/GestionUsuariosGUI.aspx" title="Perfil">
+                            <i class="glyph-icon icon-users"></i>
+                            <span>Perfil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionEstablecimientos.aspx" title="Establecimientos">
+                            <i class="glyph-icon icon-building"></i>
+                            <span>Establecimientos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionEventos.aspx" title="Eventos">
+                            <i class="glyph-icon icon-puzzle-piece"></i>
+                            <span>Eventos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionDireccion.aspx" title="Direcciones">
+                            <i class="glyph-icon icon-road"></i>
+                            <span>Direcciones</span>
+                        </a>
+                    </li>
+                </asp:PlaceHolder>
+            </ul>
+        </div>
+    </div>
 </asp:Content>

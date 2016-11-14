@@ -40,13 +40,13 @@ namespace MCTuristic_Centro_Historico.MasterPage {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphSesion;
         
         /// <summary>
-        /// Control phModulos.
+        /// Control cphBarraLat.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phModulos;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBarraLat;
         
         /// <summary>
         /// Control cphBody.

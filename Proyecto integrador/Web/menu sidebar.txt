@@ -1,0 +1,26 @@
+ <%--Ejemplo de menú--%>
+                        <%--<li class="header"><span>Extra</span></li>
+                        <li>
+                            <a href="javascript:void(0);" title="Pages">
+                                <i class="glyph-icon icon-linecons-fire"></i>
+                                <span>Pages</span>
+                                <span class="bs-label badge-yellow">NEW</span>
+                            </a>
+                            <div class="sidebar-submenu">
+
+                                <ul>
+                                    <li><a href="#index-alt" title="Alternate dashboard"><span>Alternate dashboard</span></a></li>
+                                    <li><a href="#view-profile" title="View profile"><span>View profile</span></a></li>
+                                    <li><a href="#faq-section" title="FAQ section"><span>FAQ section</span></a></li>
+                                    <li><a href="#auto-menu" title="Auto menu"><span>Auto menu</span></a></li>
+                                    <li><a href="#invoice" title="Invoice"><span>Invoice</span></a></li>
+                                    <li><a href="#admin-blog" title="Blog posts list"><span>Blog posts list</span></a></li>
+                                    <li><a href="#admin-pricing" title="Pricing tables"><span>Pricing tables</span></a></li>
+                                    <li><a href="#portfolio-gallery" title="Portfolio gallery"><span>Portfolio gallery</span></a></li>
+                                    <li><a href="#portfolio-masonry" title="Portfolio masonry"><span>Portfolio masonry</span></a></li>
+                                    <li><a href="#slidebars" title="Slidebars"><span>Slidebars</span></a></li>
+                                </ul>
+
+                            </div>
+                            <!-- .sidebar-submenu -->
+                        </li>--%>

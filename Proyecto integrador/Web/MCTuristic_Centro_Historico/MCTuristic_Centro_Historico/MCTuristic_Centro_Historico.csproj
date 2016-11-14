@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -167,6 +168,7 @@
     <Content Include="Recursos\agileui.com\demo\monarch\img\play-pause.html" />
     <Content Include="Recursos\agileui.com\demo\monarch\img\video-play.html" />
     <Content Include="Recursos\agileui.com\demo\monarch\loader.gif" />
+    <Content Include="Recursos\agileui.com\demo\monarch\logo2.png" />
     <Content Include="Recursos\agileui.com\demo\monarch\owl.css" />
     <Content Include="Recursos\ajax.googleapis.com\ajax\libs\angularjs\1.2.13\angular-animate.js" />
     <Content Include="Recursos\ajax.googleapis.com\ajax\libs\angularjs\1.2.13\angular-route.js" />
