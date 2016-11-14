@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaPrincipal.master.cs" Inherits="MCTuristic_Centro_Historico.MasterPage.PaginaPrincipal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Chrunch Press"/>
+    <meta name="author" content="Chrunch Press"/>
+    <meta name="description" content="Awesome Description Here"/>
+    <meta name="keywords" content="location, based, messaging, social, network, service, nearby, friends, community, neighborhood, local, events"/>
+  <!--Referencias-->
+    <link href="../Recursos/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Recursos/css/color.css" rel="stylesheet" />
+    <link href="../Recursos/css/styles.css" rel="stylesheet" />
+    <link href="../Recursos/css/jquery.bxslider.css" rel="stylesheet" /> 
+    <link href="../Recursos/css/horizontal.css" rel="stylesheet" />
+    <link href="../Recursos/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="../Recursos/js/jquery-1.7.1.min.js"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+     
+        <!--Narvar-->
+            
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 topnav"> <a href="branches.html">Branches</a> | <a href="reservation.html">Reservations</a> | <span>9991565264</span></div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="social pull-left"> <a href="#" title="Facebook"><i class="fa fa-facebook-square"></i></a> <a href="#" title="Linkedin"><i class="fa fa-linkedin-square"></i></a> <a href="#" title="Gplus"><i class="fa fa-google-plus-square"></i></a> <a href="#" title="Twitter"><i class="fa fa-twitter-square"></i></a> <a href="#" title="Pinterest"><i class="fa fa-pinterest-square"></i></a> <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a> <a href="#" title="Flickr"><i class="fa fa-flickr"></i></a> </div>
+                        <div class="hlinks pull-right">
+                            <ul>
+                                <li><a href="Registro.aspx">Regístrase</a></li>
+                                <li><a id="log-active" href="../GUI/Login.aspx">Iniciar sesión</a></li>
+                                <li>
+                                    <input type="search" id="search" />
+                                    <a id="search-active" class="search-toggle"><span class="hsearch"><i class="fa fa-search"></i></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Narvar-->
+
+        <!--Principa-->
+        <asp:ContentPlaceHolder ID="Principal" runat="server"></asp:ContentPlaceHolder>
+        <!--Pricipal-->
+
+        <!--Contenido-->
+
+        <asp:ContentPlaceHolder ID="Contenido" runat="server"></asp:ContentPlaceHolder>
+
+         <!--Contenido-->
+
+
+         <!--Final-->
+        <section class="footer-mid">
+                <div class="footer-midbg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-6 getintouch">
+                                <h3>Misión</h3>
+                                <p>
+Nuestra Misión, es representar y promover las riquezas Naturales y culturales que ofrece el estado de Yucatán, Mérida es el mejor punto de partida, pues está perfectamente conectada con la costa y sus Pueblos Mágicos, así como con sus muchas zonas arqueológicas que cuentan una historia, contribuyendo a la conservación del patrimonio natural y cultural del país e integrando a las comunidades locales al desarrollo de las actividades para los turistas.
+</p>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <h3>Recent Posts</h3>
+                                <ul class="recent-posts">
+                                    <li><a href="blog-details.html">Bed ut perspiciatis unde omnis</a></li>
+                                    <li><a href="blog-details.html">Duis aute irure dolor in excepteur</a></li>
+                                    <li><a href="blog-details.html">Sint occaecat cupidatat nemo enim</a></li>
+                                    <li><a href="blog-details.html">Voluptatem quia autem vel eum iure</a></li>
+                                    <li><a href="blog-details.html">Bed ut perspiciatis unde omnis</a></li>
+                                    <li><a href="blog-details.html">Duis aute irure dolor in excepteur</a></li>
+                                    <li><a href="blog-details.html">Sint occaecat cupidatat nemo enim</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <h3>Tweets</h3>
+                                <div>
+                                    <ul class="tweets">
+                                        <li class="twuser">
+                                            <img src="../Recursos/images/twuser-1.jpg"  alt="" />
+                                            </li>
+                                        <li class="twpost">
+                                            <h4><a href="#">@johndoe</a></h4>
+                                            <p> Me gusta mucho este sitio esta completo<span class="url"><a href="#">#MCTuristic</a></span> </p>
+                                        </li>
+                                    </ul>
+                                    <ul class="tweets">
+                                        <li class="twuser">
+                                           
+                                            <img src="../Recursos/images/twuser-3.jpg" alt="" />
+                                        </li>
+                                        <li class="twpost">
+                                            <h4><a href="#">@dazy</a></h4>
+                                            <p> Pude buscar un lugar para domir muy bonito cerca del centro histórico. <span class="url"><a href="#">#MCTuristic</a></span> </p>
+                                        </li>
+                                    </ul>
+                                    <ul class="tweets">
+                                        
+                                        <li class="twuser"><img src="../Recursos/images/twuser-2.jpg" /></li>
+                                        <li class="twpost">
+                                            <h4><a href="#">@lizaanderson</a></h4>
+                                            <p> Me ayudo aconocer sobre Yucatán muy pronto regresare<span class="url"><a href="#"> #MCTuristic</a></span> </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 getintouch">
+                                <h3>¿Quiénes somos?</h3>
+                                <p>
+Somos un grupo de personas que Conscientes de que la cultura de nuestros ancestros y sus legados residen en nuestras comunidades, buscamos servir de puente para que más personas, grupos y empresas amplíen sus conocimientos y experiencias que trasciendan en su vida...
+ </p>
+                                <div class="social"> <a href="#" title="Facebook"><i class="fa fa-facebook-square"></i></a> <a href="#" title="Linkedin"><i class="fa fa-linkedin-square"></i></a> <a href="#" title="Gplus"><i class="fa fa-google-plus-square"></i></a> <a href="#" title="Twitter"><i class="fa fa-twitter-square"></i></a> <a href="#" title="Pinterest"><i class="fa fa-pinterest-square"></i></a> <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a> <a href="#" title="Flickr"><i class="fa fa-flickr"></i></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <section class="footer-copy">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12"><strong>Relax Spa Palace</strong> &copy; 2014 All Rights Reserved, Designed &amp; Developed by: <a href="http://CrunchPress.com" title="Crunch Press" target="_blank">CrunchPress.com</a></div>
+                    </div>
+                </div>
+            </section>
+         <!--Final-->
+
+
+
+
+
+
+    </div>   
+    <script src="../Recursos/js/jquery-1.10.2.js"></script>
+    <script src="../Recursos/js/modernizr.custom.39665.js"></script>
+    <script src="../Recursos/js/bootstrap.js"></script>
+    <script src="../Recursos/js/jquery.easing.1.3.js"></script>
+    <script src="../Recursos/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../Recursos/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../Recursos/js/jquery.parallax-1.1.3.js"></script>
+    <script src="../Recursos/js/sly.min.js"></script>
+    <script src="../Recursos/js/horizontal.js"></script>
+    <script src="../Recursos/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../Recursos/js/jquery.ui.core.js"></script>
+    <script src="../Recursos/js/jquery.ui.datepicker.js"></script>
+    <script src="../Recursos/js/underscore-min.js"></script>
+    <script src="../Recursos/js/cp_loader.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"/>
+    <script src="../Recursos/js/jquery.timepicker.min.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+            $("#datepicker2").datepicker();
+        });
+    </script>
+    <script src="../Recursos/js/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+    <script src="../Recursos/js/custom.js"></script>
+    <script type="text/javascript">/* <![CDATA[ */(function (d, s, a, i, j, r, l, m, t) { try { l = d.getElementsByTagName('a'); t = d.createElement('textarea'); for (i = 0; l.length - i; i++) { try { a = l[i].href; s = a.indexOf('/cdn-cgi/l/email-protection'); m = a.length; if (a && s > -1 && m > 28) { j = 28 + s; s = ''; if (j < m) { r = '0x' + a.substr(j, 2) | 0; for (j += 2; j < m && a.charAt(j) != 'X'; j += 2) s += '%' + ('0' + ('0x' + a.substr(j, 2) ^ r).toString(16)).slice(-2); j++; s = decodeURIComponent(s) + a.substr(j, m - j) } t.innerHTML = s.replace(/</g, '&lt;').replace(/>/g, '&gt;'); l[i].href = 'mailto:' + t.value } } catch (e) { } } } catch (e) { } })(document);/* ]]> */</script>
+    </form>
+    <asp:ContentPlaceHolder ID="scrip" runat="server"></asp:ContentPlaceHolder>
+    
+</body>
+</html>

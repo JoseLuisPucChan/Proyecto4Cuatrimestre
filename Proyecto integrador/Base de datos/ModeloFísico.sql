@@ -335,7 +335,7 @@ CREATE TABLE Usuario(
     Contrasena         varchar(20)    NOT NULL,
     TelefonoCelular    varchar(50)    NOT NULL,
     FechaNacimiento    date           NOT NULL,
-    Foto               image          NOT NULL
+  
 )
 go
 
