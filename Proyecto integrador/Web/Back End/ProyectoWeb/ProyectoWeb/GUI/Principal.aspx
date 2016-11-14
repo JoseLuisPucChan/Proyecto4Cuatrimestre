@@ -3,8 +3,7 @@
     Inicio
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphSesion" runat="server">
-    <asp:LinkButton ID="lbtnIniciarSesion" CssClass="btn" runat="server" Visible="true" ForeColor="White">Iniciar Sesión <i class="glyph-icon icon-sign-in"></i></asp:LinkButton>
-    <asp:PlaceHolder ID="phSesion" runat="server" Visible="false">
+    <asp:PlaceHolder ID="phSesion" runat="server" Visible="true">
         <a href="#" title="My Account" class="user-profile clearfix" data-toggle="dropdown">
             <asp:Image ID="imgUsuario" runat="server" Width="28" ImageUrl="../Recursos/agileui.com/demo/monarch/assets/image-resources/gravatar.jpg" />
             <asp:Label ID="lblUsuario" runat="server" role="span" Text="André Salazar"></asp:Label>
