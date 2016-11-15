@@ -1,10 +1,40 @@
-﻿<%@ Page Title="" Language="C#" EnableEventValidation="false"  MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Registro" %>
-
-<asp:Content ID="Contet1" ContentPlaceHolderID="title" runat="server">Registro</asp:Content>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="../Recursos/js/ABC.js"></script>
+﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Registro" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+            function Gurdar() {
+                var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value   + "' , 'apellido': '" + $("#<%=txtApellidos.ClientID%>")[0].value + "' , 'email': '" + $("#<%=txtDireccionCorreo.ClientID%>")[0].value  + "' , 'contraseña': '" + $("#<%=txtContraseña.ClientID%>")[0].value + "' , 'numero': '" + $("#<%=txtTelefono.ClientID%>")[0].value + "'}  ";
+            $.ajax({
+                type: "POST",
+                url: "Registro.aspx/Guardar",
+                data: actionData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccess,
+                failure: function (response) {
+                    alert(response.d);
+                   
+                }
+            });
+        }
+        function OnSuccess(response) {
+            alert("Hola " + response.d);
+        }
+
+    </script>
+    <script type="text/javascript" src="../Recursos/js/ABC.js"></script>
+
+
+</asp:Content>
+
+
+
+
+
+<asp:Content ID="Content4" ContentPlaceHolderID="Principal" runat="server">
+  
+   
   
      <div class="wrapper inner">
       <header id="header">
@@ -204,8 +234,8 @@
 <li>
 <font><font>
 
-<asp:Button ID="btnPrueba1" runat="server" Text="Agregar Nuevo"></asp:Button>
-  <input type="button" id="botonTabla" value="Cargar tabla" />
+<input id="Button1" type="button" class="btn btn-info boton1" onclick="Gurdar();" value="CREAR CUENTA" />
+    <span id="msg"></span>
     
       </font>
 </font>
@@ -244,10 +274,9 @@
          </div>
      <div class="gap"></div>
 
+     
+ 
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="Contenido" runat="server">
-    
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="scrip" runat="server">
-      
+
+<asp:Content ID="Content5" ContentPlaceHolderID="scrip" runat="server">
 </asp:Content>

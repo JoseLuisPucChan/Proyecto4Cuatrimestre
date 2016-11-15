@@ -69,6 +69,7 @@
     <Content Include="GUI\Principal.aspx" />
     <Content Include="GUI\Productos.aspx" />
     <Content Include="GUI\QuieneSomo.aspx" />
+    <Content Include="GUI\Registro.aspx" />
     <Content Include="images1\hombre.png" />
     <Content Include="Recursos\agileui.com\demo\image-resources\logo-admin.png" />
     <Content Include="Recursos\agileui.com\demo\images\animated-overlay.gif" />
@@ -193,9 +194,9 @@
     <Content Include="GUI\Contactanos.aspx" />
     <Content Include="GUI\Login.aspx" />
     <Content Include="GUI\PagPrincipal.aspx" />
-    <Content Include="GUI\Registro.aspx" />
     <Content Include="images1\avatar.jpg" />
     <Content Include="images1\bg.jpg" />
+    <Content Include="Recursos\css\StyleSheet1.css" />
     <Content Include="Recursos\fade.gif" />
     <Content Include="Recursos\font-awesome\fonts\fontawesome-webfontba72.eot" />
     <Content Include="Recursos\font-awesome\fonts\fontawesome-webfontba72.ttf" />
@@ -482,6 +483,7 @@
     <Content Include="Recursos\js\gmaps.js" />
     <Content Include="Recursos\js\horizontal.js" />
     <Content Include="Recursos\js\jquery-1.10.2.js" />
+    <Content Include="Recursos\js\jquery-3.1.1.min.js" />
     <Content Include="Recursos\js\jquery-scrolltofixed-min.js" />
     <Content Include="Recursos\js\jquery.bxslider.min.js" />
     <Content Include="Recursos\js\jquery.circliful.min.js" />

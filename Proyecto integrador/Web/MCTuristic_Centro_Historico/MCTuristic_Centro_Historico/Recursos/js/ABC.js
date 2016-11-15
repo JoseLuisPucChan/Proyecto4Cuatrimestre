@@ -56,3 +56,43 @@
          }
      });
  };
+
+
+
+ $(document).ready(function () {
+     $('#btn1').click(function () {
+         alert("Entro");
+         var nombre = $('#txtNombre').val();
+         var apellido = $('#txtApellidos').val();
+
+         if (nombre && (nombre != ''))
+             GurdarAjax(nombre, apellido);
+     });
+ });
+
+ function GurdarAjax(nombre, apellido) {
+     alert("Hola");
+     var parametros = {
+         nombre: $('#txtNombre').val(),
+         apellido: $('#txtApellido').val(),
+         email: $('#txtDireccionCorreo').val(),
+         contraseña: $('txtContraseña').val(),
+         numero: $('txtTelefono').val()
+          
+     };
+     
+     $.ajax({
+         type: "POST",
+         url: "../../GUI/Registro.aspx/Guardar",
+         data:parametros,
+         contentType: "application/json; charset=utf-8",
+         dataType: "json",
+         success: OnSuccess,
+         failure: function (response) {
+             alert(response.d);
+         }
+     });
+ }
+ function OnSuccess(response) {
+     alert("Respuesta " + response.d);
+ }
