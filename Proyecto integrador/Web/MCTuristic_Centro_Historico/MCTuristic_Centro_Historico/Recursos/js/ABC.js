@@ -13,7 +13,7 @@
                 // Ahora hacemos la llamada tipo AJAX utilizando jQuery
                 $.ajax({
                     type: "POST",                               // tipo de llamada (POST, GET)
-                    url: "GUI/Registro.aspx/Guardar",                // el URL del método que vamos a llamar
+                    url: "../GUI/Registro.aspx/Guardar",                // el URL del método que vamos a llamar
                     cache: true,
                     async: false,
                     data: JSON.stringify(parametros),           // los parámetros en formato JSON
@@ -45,7 +45,7 @@
 
      $.ajax(
      {
-         url: "GUI/Registro.aspx/GetDataAjax",
+         url: "../GUI/Registro.aspx/GetDataAjax",
          data: actionData,
          dataType: "json",
          type: "POST",
