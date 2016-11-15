@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" EnableEventValidation="false"  MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Registro" %>
+
+<asp:Content ID="Contet1" ContentPlaceHolderID="title" runat="server">Registro</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
+    <script src="../Recursos/js/ABC.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
   
@@ -202,69 +204,9 @@
 <li>
 <font><font>
 
-<asp:Button ID="btnPrueba1" runat="server" Text="pERRROS"></asp:Button>
+<asp:Button ID="btnPrueba1" runat="server" Text="Agregar Nuevo"></asp:Button>
+  <input type="button" id="botonTabla" value="Cargar tabla" />
     
-    <script type = "text/javascript">
-        jQuery(document).ready(function () {
-            $('#btnPrueba1').click(function () {
-                var nombre = $('#txtNombre').val();
-                var apellido = $('#txtApellidos').val();
-
-                if (nombre && (nombre != ''))
-                    sendDataAjax(nombre, apellido);
-            });
-        });
-
-        function sendDataAjax(nombre, apellido) {
-            var actionData = "{'nombre': '" + nombre + "',   'apellido': '" + apellido + "'}";
-
-            $.ajax(
-            {
-
-                url: "Registro.aspx/GetDataAjax",
-                data: actionData,
-                dataType: "json",
-                type: "POST",
-                contentType: "application/json; charset=utf-8",
-                success: function (msg) { alert(msg.d); },
-                error: function (result) {
-                    alert("ERROR " + result.status + ' ' + result.statusText);
-                }
-            });
-        };
-    </script>
-    
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#btn_submit').click(function (e) {
-                e.preventDefault(); // Usamos esta línea para cancelar el postback que el botón crea
-                var parametros = {
-                    nombre: $('#txtNombre').val(),
-                    apellido: $('#txtApellidos').val(),
-                    direccion: $('#txtDireccionCorreo').val(),
-                    contraseña: $('txtConfirmarContraseña').val(),
-                    numero: $('txtNumero').val()
-                };
-
-                // Ahora hacemos la llamada tipo AJAX utilizando jQuery
-                $.ajax({
-                    type: 'POST',                               // tipo de llamada (POST, GET)
-                    url: 'Registro.aspx/Guardar',                // el URL del método que vamos a llamar
-                    data: JSON.stringify(parametros),           // los parámetros en formato JSON
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",                           // tipo de datos enviados al servidor
-                    success: function () {                      // función que se va a ejecutar si el pedido resulta exitoso
-                        $('#lblMensaje').text('La información ha sido guardada exitosamente.');
-                    },
-                    error: function (req, stat, err) {          // función que se va a ejecutar si el pedido falla
-                        var error = eval("(" + req.responseText + ")");
-                        $('#lblMensaje').text(error.Message);
-                    }
-                });
-            });
-        });
-    </script>
       </font>
 </font>
 </li>

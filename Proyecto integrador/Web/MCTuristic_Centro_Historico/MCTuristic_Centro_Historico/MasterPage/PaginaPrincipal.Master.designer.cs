@@ -13,6 +13,15 @@ namespace MCTuristic_Centro_Historico.MasterPage {
     public partial class PaginaPrincipal {
         
         /// <summary>
+        /// Control title.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder title;
+        
+        /// <summary>
         /// Control head.
         /// </summary>
         /// <remarks>

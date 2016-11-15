@@ -69,6 +69,7 @@
     <Content Include="GUI\Principal.aspx" />
     <Content Include="GUI\Productos.aspx" />
     <Content Include="GUI\QuieneSomo.aspx" />
+    <Content Include="images1\hombre.png" />
     <Content Include="Recursos\agileui.com\demo\image-resources\logo-admin.png" />
     <Content Include="Recursos\agileui.com\demo\images\animated-overlay.gif" />
     <Content Include="Recursos\agileui.com\demo\images\colorpicker.png" />
@@ -470,6 +471,7 @@
     <Content Include="Recursos\images\twuser-1.jpg" />
     <Content Include="Recursos\images\twuser-2.jpg" />
     <Content Include="Recursos\images\twuser-3.jpg" />
+    <Content Include="Recursos\js\ABC.js" />
     <Content Include="Recursos\js\jquery-1.7.1.min.js" />
     <Content Include="Recursos\js\blocksit.min.js" />
     <Content Include="Recursos\js\bootstrap-datetimepicker.min.html" />
@@ -574,6 +576,7 @@
     <Compile Include="GUI\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\OperationContract.cs" />
     <Compile Include="GUI\PagPrincipal.aspx.cs">
       <DependentUpon>PagPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -110,7 +110,6 @@ namespace WSMCTuristic_CentroHistorico.UI
         {        
             BO.EventoBO oEventoBO = new BO.EventoBO();
             oEventoBO = obj;
-
             oEventoCTRL = new Services.CtrlEvento();
             return oEventoCTRL.EliminarEvento(oEventoBO);
         }

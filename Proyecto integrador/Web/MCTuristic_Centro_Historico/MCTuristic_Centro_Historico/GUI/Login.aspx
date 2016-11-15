@@ -4,13 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Inicio de sesión</title>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
     <link href="../Recursos/css/assets/css/main.css" rel="stylesheet" />
-    
-		<link rel="stylesheet" href="assets1/css/main.css" />
+    <link rel="stylesheet" href="assets1/css/main.css" />
     <link href="../Recursos/css/assets/css/materialize.css" rel="stylesheet" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -20,31 +19,21 @@
   <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/style.css" rel="stylesheet" type="text/css"  media="screen,projection" />
   <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/custom-style.css" rel="stylesheet" type="text/css" media="screen,projection" />
   <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/style-horizontal.css" rel="stylesheet" type="text/css" media="screen,projection" />
-
-
- 
-
 </head>
 <body class="is-loading">
     <form id="form1" runat="server">
     <div>
-    
         <!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Main -->
 					<section id="main">
-                       
 						<header>
-							<span class="avatar"><img  src="../Recursos/images/twuser-1.jpg" alt="" /></span>
-							<h2>Jane Doe</h2>
+							<span class="avatar"><img src="../images1/hombre.png" alt="" /></span>
 						</header>
-						<h3>Iniciar seseción</h3>
-						
+						<h3>Iniciar seseión</h3>				
 							<div class="field">
                                 <asp:TextBox type="text" ID="txtEmail" placeholder="Email" runat="server"></asp:TextBox>
 							</div>
-                            <br />
 							<div class="field">
                                 <asp:TextBox ID="txtContraseña" type="password" runat="server" placeholder="Contraseña" ></asp:TextBox>
 
@@ -52,14 +41,12 @@
 							<div class="field">
 								<input type="checkbox" id="human" name="human" /><label for="human">Recordarmé</label>
 							</div>
-							
 							<ul class="actions">
 
 								<li>
                                     <asp:Button ID="btnIngresar" class="button" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" />
                                  </li>
 							</ul>
-					
 						<footer>
 							<ul class="icons">
 								<li><a href="#" class="fa-twitter">Twitter</a></li>

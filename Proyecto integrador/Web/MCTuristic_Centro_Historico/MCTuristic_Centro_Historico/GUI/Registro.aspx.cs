@@ -6,19 +6,17 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Services;
 using MCTuristic_Centro_Historico.localhost;
-
 namespace MCTuristic_Centro_Historico.GUI
 {
     public partial class Registro : System.Web.UI.Page
     {
-
         localhost.WsMCTuristic owebService = new WsMCTuristic(); 
         protected void Page_Load(object sender, EventArgs e)
         {
             localhost.DireccionBO odireccio = new DireccionBO();
             localhost.UsuarioBO oUsuario = new UsuarioBO();
         }
-        //--------------------Recolección de Información-----------------------------------
+       //--------------------Recolección de Información-----------------------------------
         private localhost.UsuarioBO RecuperarInformacion()
         {
             localhost.UsuarioBO oUsuariosBO = new UsuarioBO();
@@ -33,8 +31,9 @@ namespace MCTuristic_Centro_Historico.GUI
             return oUsuariosBO;
             
         }
-        [System.Web.Services.WebMethod]
-        public static void Guardar(string nombre, string apellido, string direccion, string contraseña,string numero)
+        [OperationContract]
+        [WebMethod]
+        public void Guardar(string nombre, string apellido, string direccion, string contraseña,string numero)
         {
             localhost.WsMCTuristic owebService = new WsMCTuristic();
             localhost.UsuarioBO oUsuariosBO = new UsuarioBO();
@@ -46,7 +45,7 @@ namespace MCTuristic_Centro_Historico.GUI
             //oUsuariosBO.FecharNacUsuario = DateTime.Now;
 
 
-            oUsuariosBO.NombreUsuario = "Luis";
+            oUsuariosBO.NombreUsuario = "Primo";
             oUsuariosBO.ApellidosUsuario = "Puc";
             oUsuariosBO.EmailUsuario = "Josechan";
             oUsuariosBO.ContraseñaUsuario = "Peroo";
@@ -99,6 +98,11 @@ namespace MCTuristic_Centro_Historico.GUI
             {
                 Console.Write("Efectuo");
             }
+        }
+
+        protected void btnPrueba1_Click(object sender, EventArgs e)
+        {
+
         }
 
       
