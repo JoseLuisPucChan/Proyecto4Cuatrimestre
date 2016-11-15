@@ -67,6 +67,11 @@
     <Compile Include="BO\EventoBO.cs" />
     <Compile Include="BO\NotificacionesBO.cs" />
     <Compile Include="BO\ServicioBO.cs" />
+    <Compile Include="BO\SitioBO.cs" />
+    <Compile Include="BO\SoporteBO.cs" />
+    <Compile Include="BO\TipoServicioBO.cs" />
+    <Compile Include="BO\TipoSitioBO.cs" />
+    <Compile Include="BO\TipoSuscripcionBO.cs" />
     <Compile Include="BO\UsuarioBO.cs" />
     <Compile Include="DAO\Conexion.cs" />
     <Compile Include="DAO\DireccionDAO.cs" />
@@ -74,6 +79,11 @@
     <Compile Include="DAO\EventoDAO.cs" />
     <Compile Include="DAO\NotificacionesDAO.cs" />
     <Compile Include="DAO\ServicioDAO.cs" />
+    <Compile Include="DAO\SitioDAO.cs" />
+    <Compile Include="DAO\SoporteDAO.cs" />
+    <Compile Include="DAO\TipoServicioDAO.cs" />
+    <Compile Include="DAO\TipoSitioDAO.cs" />
+    <Compile Include="DAO\TipoSuscripcionDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -88,6 +98,11 @@
     <Compile Include="Services\CtrlEvento.cs" />
     <Compile Include="Services\CtrlNotificaciones.cs" />
     <Compile Include="Services\CtrlServicio.cs" />
+    <Compile Include="Services\CtrlSitio.cs" />
+    <Compile Include="Services\CtrlSoporte.cs" />
+    <Compile Include="Services\CtrlTipoServicio.cs" />
+    <Compile Include="Services\CtrlTipoSitio.cs" />
+    <Compile Include="Services\CtrlTipoSuscripcion.cs" />
     <Compile Include="Services\CtrlUsuario.cs" />
     <Compile Include="UI\WsMCTuristic.asmx.cs">
       <DependentUpon>WsMCTuristic.asmx</DependentUpon>
