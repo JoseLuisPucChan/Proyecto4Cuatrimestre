@@ -498,3 +498,58 @@ create procedure eliminar_notificaciones
 as
 delete from Notificaciones where idNotificacion = @idNotificaciones
 go
+
+
+--------------------------------Procedimiento Almacenado Contactanos-----------------------------------
+--InsertarContactanos 
+
+
+
+create proc insertar_contactanos
+(
+	@Nombre varchar(20),
+	@Apellidos varchar(20),
+	@Email varchar(40),
+	@Asunto  varchar(30),
+	@Contenido varchar(200)
+)
+as
+insert into Contactanos (Nombre,Apellido,Email,Asunto,Contenido) 
+VALUES (@Nombre,@Apellidos,@Email,@Asunto,@Contenido)
+GO
+--ActualizarContactanos 
+
+
+
+Create proc actualizar_contactanos
+(
+	@IdContactanos int,
+	@Nombre varchar(20),
+	@Apellidos varchar(20),
+	@Email varchar(40),
+	@Asunto  varchar(30),
+	@Contenido varchar(200)
+)
+as
+UPDATE Contactanos SET Nombre = @Nombre , Apellido = @Apellidos, Email = @Email,Asunto =@Asunto,
+Contenido = @Contenido WHERE IdContactanos = @IdContactanos
+GO
+--EliminarContactanos 
+Create proc eliminar_contantanos
+(
+	@IdContactanos  int
+)
+as
+Delete from Contactanos where IdContactanos = @IdContactanos
+go
+
+------------------------------Login User------------------------------
+create proc login_user
+@email varchar(20),
+@password varchar(20)
+as
+
+select  Nombre  , IdAdministrador 
+from  Administrador
+where Email=@email and Contrasena=@password
+

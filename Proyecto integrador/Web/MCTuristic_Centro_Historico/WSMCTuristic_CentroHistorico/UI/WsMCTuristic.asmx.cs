@@ -27,7 +27,8 @@ namespace WSMCTuristic_CentroHistorico.UI
         Services.CtrlTipoServicio oTipoServicioCTRL;
         Services.CtrlTipoSitio oTipoSitioCtrl;
         Services.CtrlTipoSuscripcion oTipoSuscripcionCTRL;
-
+        Services.CtrlContactanos oContactanosCTRL;
+        Services.CtrlAdministrador oAdministradorCTRL;
         //--------------------------ABC Usuarios-----------------------------
          [WebMethod]
         public int InsertarUsuario( UsuarioBO obj )
@@ -310,6 +311,52 @@ namespace WSMCTuristic_CentroHistorico.UI
             TipoSuscripcionBO oTipoSuscripcion = obj;
             oTipoSuscripcionCTRL = new Services.CtrlTipoSuscripcion();
             return oTipoSuscripcionCTRL.EliminarTipoSuscripcion(oTipoSuscripcion);
+        }
+        //---------------------ABC TipoSuscripcion --------------
+
+        [WebMethod]
+        public int InsertarContactanos(ContactanosBO obj)
+        {
+            ContactanosBO oContactanos = obj;
+            oContactanosCTRL = new Services.CtrlContactanos();
+            return oContactanosCTRL.InsertarContactanos(oContactanos);
+        }
+        [WebMethod]
+        public int ModificarContactanos(ContactanosBO obj)
+        {
+            ContactanosBO oContactanos = obj;
+            oContactanosCTRL = new Services.CtrlContactanos();
+            return oContactanosCTRL.ModificarContactanos(oContactanos);
+        }
+        [WebMethod]
+        public int EliminarContactanos(ContactanosBO obj)
+        {
+            ContactanosBO oContactanos = obj;
+            oContactanosCTRL = new Services.CtrlContactanos();
+            return oContactanosCTRL.EliminarContactanos(oContactanos);
+        }
+
+        //---------------------ABC Administrador-----------------
+        [WebMethod]
+        public int InsertarAdministrador(AdministradorBO obj)
+        {
+            AdministradorBO oAdministrador = obj;
+            oAdministradorCTRL = new Services.CtrlAdministrador();
+            return oAdministradorCTRL.InsertarAdministrador(oAdministrador);
+        }
+        [WebMethod]
+        public int ModificarAdministrador(AdministradorBO obj)
+        {
+            AdministradorBO oAdministrador = obj;
+            oAdministradorCTRL = new Services.CtrlAdministrador();
+            return oAdministradorCTRL.ModificarAdministrador(oAdministrador);
+        }
+        [WebMethod]
+        public int EliminarAdministrador(AdministradorBO obj)
+        {
+            AdministradorBO oAdministrador = obj;
+            oAdministradorCTRL = new Services.CtrlAdministrador();
+            return oAdministradorCTRL.EliminarAdministrador(oAdministrador);
         }
 
     }

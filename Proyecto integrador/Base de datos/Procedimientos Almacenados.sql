@@ -509,6 +509,43 @@ as
 delete from Notificaciones where idNotificacion = @idNotificaciones
 go
 
+--------------------------------Procedimiento Almacenado Contactanos-----------------------------------
+--InsertarNotificacines 
+
+
+create proc insertar_contactanos
+(
+	@Nombre varchar(20),
+	@Apellidos varchar(20),
+	@Email varchar(40),
+	@Asunto  varchar(30),
+	@Contenido varchar(200)
+)
+as
+insert into Contactanos (Nombre,Apellido,Email,Asunto,Contenido) 
+VALUES (@Nombre,@Apellidos,@Email,@Asunto,@Contenido)
+GO
+
+Create proc actualizar_contactanos
+(
+	@IdContactanos int,
+	@Nombre varchar(20),
+	@Apellidos varchar(20),
+	@Email varchar(40),
+	@Asunto  varchar(30),
+	@Contenido varchar(200)
+)
+as
+UPDATE Contactanos SET Nombre = @Nombre , Apellido = @Apellidos, Email = @Email,Asunto =@Asunto,
+Contenido = @Contenido WHERE IdContactanos = @IdContactanos
+GO
+Create proc eliminar_contantanos
+(
+	@IdContactanos  int
+)
+as
+Delete from Contactanos where IdContactanos = @IdContactanos
+go
 
 
 

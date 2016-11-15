@@ -1,5 +1,24 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="Contactanos.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Contactanos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        function Gurdar() {
+            var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "' , 'apellido': '" + $("#<%=txtApellidos.ClientID%>")[0].value + "' , 'email': '" + $("#<%=txtEmail.ClientID%>")[0].value + "' , 'asunto': '" + $("#<%=txtAsunto.ClientID%>")[0].value + "' , 'contenido': '" + $("#<%=txtContenido.ClientID%>")[0].value + "'}  ";
+                $.ajax({
+                    type: "POST",
+                    url: "Contactanos.aspx/GuardarContactanos",
+                    data: actionData,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: OnSuccess,
+                    failure: function (response) {
+                        alert(response.d);
+                    }
+                });
+            }
+            function OnSuccess(response) {
+                alert("Respuesta " + response.d);
+            }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
 </asp:Content>
@@ -163,43 +182,43 @@
  <font>Mandanos tus dudas, nosotros nos pondremos en contacto.</font>
 </font>
 </p>
-<form method="post" action="http://crunchpress.com/html/pageant/blue/contact-other.php" id="form_contact" novalidate="novalidate">
 <ul class="row">
 <li class="col-lg-6">
 <label class="first"><font><font>Nombre *</font></font></label>
-<input name="name" type="text" class="required" placeholder="Nombre">
+    <asp:TextBox ID="txtNombre"  class="required"  type="text"  placeholder="Nombre" runat="server"></asp:TextBox>
+
 </li>
 <li class="col-lg-6">
-<label class="first"><font><font>Email *</font></font></label>
-<input name="email" type="text" class="required" placeholder="Email">
+<label class="first"><font><font>Apellidos *</font></font></label>
+      <asp:TextBox ID="txtApellidos"  class="required"  type="text"  placeholder="Apellidos" runat="server"></asp:TextBox>
 </li>
 </ul>
 <ul class="row">
 <li class="col-lg-6">
 <label><font><font>Correo Electrónico *</font></font></label>
-<input name="website" type="text" class="required" placeholder="Correo Electrónico">
+    <asp:TextBox ID="txtEmail"  class="required"  type="text"  placeholder="Email" runat="server"></asp:TextBox>
+
 </li>
 <li class="col-lg-6">
-<label><font><font>Asunto*</font></font></label>
-<input name="subject" type="text" class="required" placeholder="Asunto">
+<label><font><font>Asunto *</font></font></label>
+     <asp:TextBox ID="txtAsunto"  class="required" placeHolder="Asunto"  type="text" runat="server"></asp:TextBox>
 </li>
 </ul>
 <ul>
 <li>
 <label><font><font>Mensaje</font></font></label>
-<textarea name="message" cols="" rows="10"></textarea>
+<asp:TextBox ID="txtContenido" class="required"  type="text"  placeholder="Contenido" runat="server" Height="180px" TextMode="MultiLine" Width="842px"></asp:TextBox>
 </li>
 </ul>
 <ul>
 <li>
 <font>
 <font>
-<input id="Button1" type="button" class="btn btn-info boton1" value="Enviar" />
+<input id="btnEnviar" type="button" class="btn btn-info boton1"   onclick="Gurdar();" value="Enviar" />
 </font>
  </font>
 </li>
 </ul>
-</form>
 </div>
 </div>
  
@@ -238,6 +257,9 @@
  
 <div class="gap"></div>
 </div>
+
+
+    </font></font>
 
 
 </asp:Content>

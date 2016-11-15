@@ -41,6 +41,64 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private System.Threading.SendOrPostCallback ModificarDireccionOperationCompleted;
         
+        private System.Threading.SendOrPostCallback InsertarEstablecimientoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarEstablecimientoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarEstablecimientoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarEventoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarEventoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarNotificacionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarNotificacionesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarNotificacionesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarServicioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarServicioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarServicioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarSitioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarSitioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarSitioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarSoporteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarSoporteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarSoporteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarTipoServicioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarTipoServicioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarTipoServicioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarTipoSitioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarTipoSitioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarTipoSitioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarTipoSuscripcionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarTipoSuscripcionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarTipoSuscripcionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarContactanosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarContactanosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarContactanosOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -96,6 +154,93 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         /// <remarks/>
         public event ModificarDireccionCompletedEventHandler ModificarDireccionCompleted;
+        
+        /// <remarks/>
+        public event InsertarEstablecimientoCompletedEventHandler InsertarEstablecimientoCompleted;
+        
+        /// <remarks/>
+        public event ModificarEstablecimientoCompletedEventHandler ModificarEstablecimientoCompleted;
+        
+        /// <remarks/>
+        public event EliminarEstablecimientoCompletedEventHandler EliminarEstablecimientoCompleted;
+        
+        /// <remarks/>
+        public event InsertarEventoCompletedEventHandler InsertarEventoCompleted;
+        
+        /// <remarks/>
+        public event ModificarEventoCompletedEventHandler ModificarEventoCompleted;
+        
+        /// <remarks/>
+        public event InsertarNotificacionCompletedEventHandler InsertarNotificacionCompleted;
+        
+        /// <remarks/>
+        public event ModificarNotificacionesCompletedEventHandler ModificarNotificacionesCompleted;
+        
+        /// <remarks/>
+        public event EliminarNotificacionesCompletedEventHandler EliminarNotificacionesCompleted;
+        
+        /// <remarks/>
+        public event InsertarServicioCompletedEventHandler InsertarServicioCompleted;
+        
+        /// <remarks/>
+        public event ModificarServicioCompletedEventHandler ModificarServicioCompleted;
+        
+        /// <remarks/>
+        public event EliminarServicioCompletedEventHandler EliminarServicioCompleted;
+        
+        /// <remarks/>
+        public event InsertarSitioCompletedEventHandler InsertarSitioCompleted;
+        
+        /// <remarks/>
+        public event ModificarSitioCompletedEventHandler ModificarSitioCompleted;
+        
+        /// <remarks/>
+        public event EliminarSitioCompletedEventHandler EliminarSitioCompleted;
+        
+        /// <remarks/>
+        public event InsertarSoporteCompletedEventHandler InsertarSoporteCompleted;
+        
+        /// <remarks/>
+        public event ModificarSoporteCompletedEventHandler ModificarSoporteCompleted;
+        
+        /// <remarks/>
+        public event EliminarSoporteCompletedEventHandler EliminarSoporteCompleted;
+        
+        /// <remarks/>
+        public event InsertarTipoServicioCompletedEventHandler InsertarTipoServicioCompleted;
+        
+        /// <remarks/>
+        public event ModificarTipoServicioCompletedEventHandler ModificarTipoServicioCompleted;
+        
+        /// <remarks/>
+        public event EliminarTipoServicioCompletedEventHandler EliminarTipoServicioCompleted;
+        
+        /// <remarks/>
+        public event InsertarTipoSitioCompletedEventHandler InsertarTipoSitioCompleted;
+        
+        /// <remarks/>
+        public event ModificarTipoSitioCompletedEventHandler ModificarTipoSitioCompleted;
+        
+        /// <remarks/>
+        public event EliminarTipoSitioCompletedEventHandler EliminarTipoSitioCompleted;
+        
+        /// <remarks/>
+        public event InsertarTipoSuscripcionCompletedEventHandler InsertarTipoSuscripcionCompleted;
+        
+        /// <remarks/>
+        public event ModificarTipoSuscripcionCompletedEventHandler ModificarTipoSuscripcionCompleted;
+        
+        /// <remarks/>
+        public event EliminarTipoSuscripcionCompletedEventHandler EliminarTipoSuscripcionCompleted;
+        
+        /// <remarks/>
+        public event InsertarContactanosCompletedEventHandler InsertarContactanosCompleted;
+        
+        /// <remarks/>
+        public event ModificarContactanosCompletedEventHandler ModificarContactanosCompleted;
+        
+        /// <remarks/>
+        public event EliminarContactanosCompletedEventHandler EliminarContactanosCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -272,6 +417,847 @@ namespace MCTuristic_Centro_Historico.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarEstablecimiento", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarEstablecimiento(EstablecimientoBO obj) {
+            object[] results = this.Invoke("InsertarEstablecimiento", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarEstablecimientoAsync(EstablecimientoBO obj) {
+            this.InsertarEstablecimientoAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarEstablecimientoAsync(EstablecimientoBO obj, object userState) {
+            if ((this.InsertarEstablecimientoOperationCompleted == null)) {
+                this.InsertarEstablecimientoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarEstablecimientoOperationCompleted);
+            }
+            this.InvokeAsync("InsertarEstablecimiento", new object[] {
+                        obj}, this.InsertarEstablecimientoOperationCompleted, userState);
+        }
+        
+        private void OnInsertarEstablecimientoOperationCompleted(object arg) {
+            if ((this.InsertarEstablecimientoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarEstablecimientoCompleted(this, new InsertarEstablecimientoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarEstablecimiento", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarEstablecimiento(EstablecimientoBO obj) {
+            object[] results = this.Invoke("ModificarEstablecimiento", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarEstablecimientoAsync(EstablecimientoBO obj) {
+            this.ModificarEstablecimientoAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarEstablecimientoAsync(EstablecimientoBO obj, object userState) {
+            if ((this.ModificarEstablecimientoOperationCompleted == null)) {
+                this.ModificarEstablecimientoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarEstablecimientoOperationCompleted);
+            }
+            this.InvokeAsync("ModificarEstablecimiento", new object[] {
+                        obj}, this.ModificarEstablecimientoOperationCompleted, userState);
+        }
+        
+        private void OnModificarEstablecimientoOperationCompleted(object arg) {
+            if ((this.ModificarEstablecimientoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarEstablecimientoCompleted(this, new ModificarEstablecimientoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarEstablecimiento", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarEstablecimiento(EstablecimientoBO obj) {
+            object[] results = this.Invoke("EliminarEstablecimiento", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarEstablecimientoAsync(EstablecimientoBO obj) {
+            this.EliminarEstablecimientoAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarEstablecimientoAsync(EstablecimientoBO obj, object userState) {
+            if ((this.EliminarEstablecimientoOperationCompleted == null)) {
+                this.EliminarEstablecimientoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarEstablecimientoOperationCompleted);
+            }
+            this.InvokeAsync("EliminarEstablecimiento", new object[] {
+                        obj}, this.EliminarEstablecimientoOperationCompleted, userState);
+        }
+        
+        private void OnEliminarEstablecimientoOperationCompleted(object arg) {
+            if ((this.EliminarEstablecimientoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarEstablecimientoCompleted(this, new EliminarEstablecimientoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarEvento", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarEvento(EventoBO obj) {
+            object[] results = this.Invoke("InsertarEvento", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarEventoAsync(EventoBO obj) {
+            this.InsertarEventoAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarEventoAsync(EventoBO obj, object userState) {
+            if ((this.InsertarEventoOperationCompleted == null)) {
+                this.InsertarEventoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarEventoOperationCompleted);
+            }
+            this.InvokeAsync("InsertarEvento", new object[] {
+                        obj}, this.InsertarEventoOperationCompleted, userState);
+        }
+        
+        private void OnInsertarEventoOperationCompleted(object arg) {
+            if ((this.InsertarEventoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarEventoCompleted(this, new InsertarEventoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarEvento", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarEvento(EventoBO obj) {
+            object[] results = this.Invoke("ModificarEvento", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarEventoAsync(EventoBO obj) {
+            this.ModificarEventoAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarEventoAsync(EventoBO obj, object userState) {
+            if ((this.ModificarEventoOperationCompleted == null)) {
+                this.ModificarEventoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarEventoOperationCompleted);
+            }
+            this.InvokeAsync("ModificarEvento", new object[] {
+                        obj}, this.ModificarEventoOperationCompleted, userState);
+        }
+        
+        private void OnModificarEventoOperationCompleted(object arg) {
+            if ((this.ModificarEventoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarEventoCompleted(this, new ModificarEventoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarNotificacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarNotificacion(NotificacionesBO obj) {
+            object[] results = this.Invoke("InsertarNotificacion", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarNotificacionAsync(NotificacionesBO obj) {
+            this.InsertarNotificacionAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarNotificacionAsync(NotificacionesBO obj, object userState) {
+            if ((this.InsertarNotificacionOperationCompleted == null)) {
+                this.InsertarNotificacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarNotificacionOperationCompleted);
+            }
+            this.InvokeAsync("InsertarNotificacion", new object[] {
+                        obj}, this.InsertarNotificacionOperationCompleted, userState);
+        }
+        
+        private void OnInsertarNotificacionOperationCompleted(object arg) {
+            if ((this.InsertarNotificacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarNotificacionCompleted(this, new InsertarNotificacionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarNotificaciones", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarNotificaciones(NotificacionesBO obj) {
+            object[] results = this.Invoke("ModificarNotificaciones", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarNotificacionesAsync(NotificacionesBO obj) {
+            this.ModificarNotificacionesAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarNotificacionesAsync(NotificacionesBO obj, object userState) {
+            if ((this.ModificarNotificacionesOperationCompleted == null)) {
+                this.ModificarNotificacionesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarNotificacionesOperationCompleted);
+            }
+            this.InvokeAsync("ModificarNotificaciones", new object[] {
+                        obj}, this.ModificarNotificacionesOperationCompleted, userState);
+        }
+        
+        private void OnModificarNotificacionesOperationCompleted(object arg) {
+            if ((this.ModificarNotificacionesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarNotificacionesCompleted(this, new ModificarNotificacionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarNotificaciones", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarNotificaciones(NotificacionesBO obj) {
+            object[] results = this.Invoke("EliminarNotificaciones", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarNotificacionesAsync(NotificacionesBO obj) {
+            this.EliminarNotificacionesAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarNotificacionesAsync(NotificacionesBO obj, object userState) {
+            if ((this.EliminarNotificacionesOperationCompleted == null)) {
+                this.EliminarNotificacionesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarNotificacionesOperationCompleted);
+            }
+            this.InvokeAsync("EliminarNotificaciones", new object[] {
+                        obj}, this.EliminarNotificacionesOperationCompleted, userState);
+        }
+        
+        private void OnEliminarNotificacionesOperationCompleted(object arg) {
+            if ((this.EliminarNotificacionesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarNotificacionesCompleted(this, new EliminarNotificacionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarServicio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarServicio(ServicioBO obj) {
+            object[] results = this.Invoke("InsertarServicio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarServicioAsync(ServicioBO obj) {
+            this.InsertarServicioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarServicioAsync(ServicioBO obj, object userState) {
+            if ((this.InsertarServicioOperationCompleted == null)) {
+                this.InsertarServicioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarServicioOperationCompleted);
+            }
+            this.InvokeAsync("InsertarServicio", new object[] {
+                        obj}, this.InsertarServicioOperationCompleted, userState);
+        }
+        
+        private void OnInsertarServicioOperationCompleted(object arg) {
+            if ((this.InsertarServicioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarServicioCompleted(this, new InsertarServicioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarServicio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarServicio(ServicioBO obj) {
+            object[] results = this.Invoke("ModificarServicio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarServicioAsync(ServicioBO obj) {
+            this.ModificarServicioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarServicioAsync(ServicioBO obj, object userState) {
+            if ((this.ModificarServicioOperationCompleted == null)) {
+                this.ModificarServicioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarServicioOperationCompleted);
+            }
+            this.InvokeAsync("ModificarServicio", new object[] {
+                        obj}, this.ModificarServicioOperationCompleted, userState);
+        }
+        
+        private void OnModificarServicioOperationCompleted(object arg) {
+            if ((this.ModificarServicioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarServicioCompleted(this, new ModificarServicioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarServicio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarServicio(ServicioBO obj) {
+            object[] results = this.Invoke("EliminarServicio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarServicioAsync(ServicioBO obj) {
+            this.EliminarServicioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarServicioAsync(ServicioBO obj, object userState) {
+            if ((this.EliminarServicioOperationCompleted == null)) {
+                this.EliminarServicioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarServicioOperationCompleted);
+            }
+            this.InvokeAsync("EliminarServicio", new object[] {
+                        obj}, this.EliminarServicioOperationCompleted, userState);
+        }
+        
+        private void OnEliminarServicioOperationCompleted(object arg) {
+            if ((this.EliminarServicioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarServicioCompleted(this, new EliminarServicioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarSitio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarSitio(SitioBO obj) {
+            object[] results = this.Invoke("InsertarSitio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarSitioAsync(SitioBO obj) {
+            this.InsertarSitioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarSitioAsync(SitioBO obj, object userState) {
+            if ((this.InsertarSitioOperationCompleted == null)) {
+                this.InsertarSitioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarSitioOperationCompleted);
+            }
+            this.InvokeAsync("InsertarSitio", new object[] {
+                        obj}, this.InsertarSitioOperationCompleted, userState);
+        }
+        
+        private void OnInsertarSitioOperationCompleted(object arg) {
+            if ((this.InsertarSitioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarSitioCompleted(this, new InsertarSitioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarSitio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarSitio(SitioBO obj) {
+            object[] results = this.Invoke("ModificarSitio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarSitioAsync(SitioBO obj) {
+            this.ModificarSitioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarSitioAsync(SitioBO obj, object userState) {
+            if ((this.ModificarSitioOperationCompleted == null)) {
+                this.ModificarSitioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarSitioOperationCompleted);
+            }
+            this.InvokeAsync("ModificarSitio", new object[] {
+                        obj}, this.ModificarSitioOperationCompleted, userState);
+        }
+        
+        private void OnModificarSitioOperationCompleted(object arg) {
+            if ((this.ModificarSitioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarSitioCompleted(this, new ModificarSitioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarSitio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarSitio(SitioBO obj) {
+            object[] results = this.Invoke("EliminarSitio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarSitioAsync(SitioBO obj) {
+            this.EliminarSitioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarSitioAsync(SitioBO obj, object userState) {
+            if ((this.EliminarSitioOperationCompleted == null)) {
+                this.EliminarSitioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarSitioOperationCompleted);
+            }
+            this.InvokeAsync("EliminarSitio", new object[] {
+                        obj}, this.EliminarSitioOperationCompleted, userState);
+        }
+        
+        private void OnEliminarSitioOperationCompleted(object arg) {
+            if ((this.EliminarSitioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarSitioCompleted(this, new EliminarSitioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarSoporte", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarSoporte(SoporteBO obj) {
+            object[] results = this.Invoke("InsertarSoporte", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarSoporteAsync(SoporteBO obj) {
+            this.InsertarSoporteAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarSoporteAsync(SoporteBO obj, object userState) {
+            if ((this.InsertarSoporteOperationCompleted == null)) {
+                this.InsertarSoporteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarSoporteOperationCompleted);
+            }
+            this.InvokeAsync("InsertarSoporte", new object[] {
+                        obj}, this.InsertarSoporteOperationCompleted, userState);
+        }
+        
+        private void OnInsertarSoporteOperationCompleted(object arg) {
+            if ((this.InsertarSoporteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarSoporteCompleted(this, new InsertarSoporteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarSoporte", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarSoporte(SoporteBO obj) {
+            object[] results = this.Invoke("ModificarSoporte", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarSoporteAsync(SoporteBO obj) {
+            this.ModificarSoporteAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarSoporteAsync(SoporteBO obj, object userState) {
+            if ((this.ModificarSoporteOperationCompleted == null)) {
+                this.ModificarSoporteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarSoporteOperationCompleted);
+            }
+            this.InvokeAsync("ModificarSoporte", new object[] {
+                        obj}, this.ModificarSoporteOperationCompleted, userState);
+        }
+        
+        private void OnModificarSoporteOperationCompleted(object arg) {
+            if ((this.ModificarSoporteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarSoporteCompleted(this, new ModificarSoporteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarSoporte", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarSoporte(SoporteBO obj) {
+            object[] results = this.Invoke("EliminarSoporte", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarSoporteAsync(SoporteBO obj) {
+            this.EliminarSoporteAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarSoporteAsync(SoporteBO obj, object userState) {
+            if ((this.EliminarSoporteOperationCompleted == null)) {
+                this.EliminarSoporteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarSoporteOperationCompleted);
+            }
+            this.InvokeAsync("EliminarSoporte", new object[] {
+                        obj}, this.EliminarSoporteOperationCompleted, userState);
+        }
+        
+        private void OnEliminarSoporteOperationCompleted(object arg) {
+            if ((this.EliminarSoporteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarSoporteCompleted(this, new EliminarSoporteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarTipoServicio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarTipoServicio(TipoServicioBO obj) {
+            object[] results = this.Invoke("InsertarTipoServicio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarTipoServicioAsync(TipoServicioBO obj) {
+            this.InsertarTipoServicioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarTipoServicioAsync(TipoServicioBO obj, object userState) {
+            if ((this.InsertarTipoServicioOperationCompleted == null)) {
+                this.InsertarTipoServicioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarTipoServicioOperationCompleted);
+            }
+            this.InvokeAsync("InsertarTipoServicio", new object[] {
+                        obj}, this.InsertarTipoServicioOperationCompleted, userState);
+        }
+        
+        private void OnInsertarTipoServicioOperationCompleted(object arg) {
+            if ((this.InsertarTipoServicioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarTipoServicioCompleted(this, new InsertarTipoServicioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarTipoServicio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarTipoServicio(TipoServicioBO obj) {
+            object[] results = this.Invoke("ModificarTipoServicio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarTipoServicioAsync(TipoServicioBO obj) {
+            this.ModificarTipoServicioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarTipoServicioAsync(TipoServicioBO obj, object userState) {
+            if ((this.ModificarTipoServicioOperationCompleted == null)) {
+                this.ModificarTipoServicioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarTipoServicioOperationCompleted);
+            }
+            this.InvokeAsync("ModificarTipoServicio", new object[] {
+                        obj}, this.ModificarTipoServicioOperationCompleted, userState);
+        }
+        
+        private void OnModificarTipoServicioOperationCompleted(object arg) {
+            if ((this.ModificarTipoServicioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarTipoServicioCompleted(this, new ModificarTipoServicioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarTipoServicio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarTipoServicio(TipoServicioBO obj) {
+            object[] results = this.Invoke("EliminarTipoServicio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarTipoServicioAsync(TipoServicioBO obj) {
+            this.EliminarTipoServicioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarTipoServicioAsync(TipoServicioBO obj, object userState) {
+            if ((this.EliminarTipoServicioOperationCompleted == null)) {
+                this.EliminarTipoServicioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarTipoServicioOperationCompleted);
+            }
+            this.InvokeAsync("EliminarTipoServicio", new object[] {
+                        obj}, this.EliminarTipoServicioOperationCompleted, userState);
+        }
+        
+        private void OnEliminarTipoServicioOperationCompleted(object arg) {
+            if ((this.EliminarTipoServicioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarTipoServicioCompleted(this, new EliminarTipoServicioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarTipoSitio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarTipoSitio(TipoSitioBO obj) {
+            object[] results = this.Invoke("InsertarTipoSitio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarTipoSitioAsync(TipoSitioBO obj) {
+            this.InsertarTipoSitioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarTipoSitioAsync(TipoSitioBO obj, object userState) {
+            if ((this.InsertarTipoSitioOperationCompleted == null)) {
+                this.InsertarTipoSitioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarTipoSitioOperationCompleted);
+            }
+            this.InvokeAsync("InsertarTipoSitio", new object[] {
+                        obj}, this.InsertarTipoSitioOperationCompleted, userState);
+        }
+        
+        private void OnInsertarTipoSitioOperationCompleted(object arg) {
+            if ((this.InsertarTipoSitioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarTipoSitioCompleted(this, new InsertarTipoSitioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarTipoSitio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarTipoSitio(TipoSitioBO obj) {
+            object[] results = this.Invoke("ModificarTipoSitio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarTipoSitioAsync(TipoSitioBO obj) {
+            this.ModificarTipoSitioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarTipoSitioAsync(TipoSitioBO obj, object userState) {
+            if ((this.ModificarTipoSitioOperationCompleted == null)) {
+                this.ModificarTipoSitioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarTipoSitioOperationCompleted);
+            }
+            this.InvokeAsync("ModificarTipoSitio", new object[] {
+                        obj}, this.ModificarTipoSitioOperationCompleted, userState);
+        }
+        
+        private void OnModificarTipoSitioOperationCompleted(object arg) {
+            if ((this.ModificarTipoSitioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarTipoSitioCompleted(this, new ModificarTipoSitioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarTipoSitio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarTipoSitio(TipoSitioBO obj) {
+            object[] results = this.Invoke("EliminarTipoSitio", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarTipoSitioAsync(TipoSitioBO obj) {
+            this.EliminarTipoSitioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarTipoSitioAsync(TipoSitioBO obj, object userState) {
+            if ((this.EliminarTipoSitioOperationCompleted == null)) {
+                this.EliminarTipoSitioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarTipoSitioOperationCompleted);
+            }
+            this.InvokeAsync("EliminarTipoSitio", new object[] {
+                        obj}, this.EliminarTipoSitioOperationCompleted, userState);
+        }
+        
+        private void OnEliminarTipoSitioOperationCompleted(object arg) {
+            if ((this.EliminarTipoSitioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarTipoSitioCompleted(this, new EliminarTipoSitioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarTipoSuscripcion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarTipoSuscripcion(TipoSuscripcionBO obj) {
+            object[] results = this.Invoke("InsertarTipoSuscripcion", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarTipoSuscripcionAsync(TipoSuscripcionBO obj) {
+            this.InsertarTipoSuscripcionAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarTipoSuscripcionAsync(TipoSuscripcionBO obj, object userState) {
+            if ((this.InsertarTipoSuscripcionOperationCompleted == null)) {
+                this.InsertarTipoSuscripcionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarTipoSuscripcionOperationCompleted);
+            }
+            this.InvokeAsync("InsertarTipoSuscripcion", new object[] {
+                        obj}, this.InsertarTipoSuscripcionOperationCompleted, userState);
+        }
+        
+        private void OnInsertarTipoSuscripcionOperationCompleted(object arg) {
+            if ((this.InsertarTipoSuscripcionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarTipoSuscripcionCompleted(this, new InsertarTipoSuscripcionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarTipoSuscripcion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarTipoSuscripcion(TipoSuscripcionBO obj) {
+            object[] results = this.Invoke("ModificarTipoSuscripcion", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarTipoSuscripcionAsync(TipoSuscripcionBO obj) {
+            this.ModificarTipoSuscripcionAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarTipoSuscripcionAsync(TipoSuscripcionBO obj, object userState) {
+            if ((this.ModificarTipoSuscripcionOperationCompleted == null)) {
+                this.ModificarTipoSuscripcionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarTipoSuscripcionOperationCompleted);
+            }
+            this.InvokeAsync("ModificarTipoSuscripcion", new object[] {
+                        obj}, this.ModificarTipoSuscripcionOperationCompleted, userState);
+        }
+        
+        private void OnModificarTipoSuscripcionOperationCompleted(object arg) {
+            if ((this.ModificarTipoSuscripcionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarTipoSuscripcionCompleted(this, new ModificarTipoSuscripcionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarTipoSuscripcion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarTipoSuscripcion(TipoSuscripcionBO obj) {
+            object[] results = this.Invoke("EliminarTipoSuscripcion", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarTipoSuscripcionAsync(TipoSuscripcionBO obj) {
+            this.EliminarTipoSuscripcionAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarTipoSuscripcionAsync(TipoSuscripcionBO obj, object userState) {
+            if ((this.EliminarTipoSuscripcionOperationCompleted == null)) {
+                this.EliminarTipoSuscripcionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarTipoSuscripcionOperationCompleted);
+            }
+            this.InvokeAsync("EliminarTipoSuscripcion", new object[] {
+                        obj}, this.EliminarTipoSuscripcionOperationCompleted, userState);
+        }
+        
+        private void OnEliminarTipoSuscripcionOperationCompleted(object arg) {
+            if ((this.EliminarTipoSuscripcionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarTipoSuscripcionCompleted(this, new EliminarTipoSuscripcionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarContactanos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarContactanos(ContactanosBO obj) {
+            object[] results = this.Invoke("InsertarContactanos", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarContactanosAsync(ContactanosBO obj) {
+            this.InsertarContactanosAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarContactanosAsync(ContactanosBO obj, object userState) {
+            if ((this.InsertarContactanosOperationCompleted == null)) {
+                this.InsertarContactanosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarContactanosOperationCompleted);
+            }
+            this.InvokeAsync("InsertarContactanos", new object[] {
+                        obj}, this.InsertarContactanosOperationCompleted, userState);
+        }
+        
+        private void OnInsertarContactanosOperationCompleted(object arg) {
+            if ((this.InsertarContactanosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarContactanosCompleted(this, new InsertarContactanosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarContactanos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarContactanos(ContactanosBO obj) {
+            object[] results = this.Invoke("ModificarContactanos", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarContactanosAsync(ContactanosBO obj) {
+            this.ModificarContactanosAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarContactanosAsync(ContactanosBO obj, object userState) {
+            if ((this.ModificarContactanosOperationCompleted == null)) {
+                this.ModificarContactanosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarContactanosOperationCompleted);
+            }
+            this.InvokeAsync("ModificarContactanos", new object[] {
+                        obj}, this.ModificarContactanosOperationCompleted, userState);
+        }
+        
+        private void OnModificarContactanosOperationCompleted(object arg) {
+            if ((this.ModificarContactanosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarContactanosCompleted(this, new ModificarContactanosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarContactanos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarContactanos(ContactanosBO obj) {
+            object[] results = this.Invoke("EliminarContactanos", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarContactanosAsync(ContactanosBO obj) {
+            this.EliminarContactanosAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarContactanosAsync(ContactanosBO obj, object userState) {
+            if ((this.EliminarContactanosOperationCompleted == null)) {
+                this.EliminarContactanosOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarContactanosOperationCompleted);
+            }
+            this.InvokeAsync("EliminarContactanos", new object[] {
+                        obj}, this.EliminarContactanosOperationCompleted, userState);
+        }
+        
+        private void OnEliminarContactanosOperationCompleted(object arg) {
+            if ((this.EliminarContactanosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarContactanosCompleted(this, new EliminarContactanosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -379,6 +1365,745 @@ namespace MCTuristic_Centro_Historico.localhost {
             }
             set {
                 this.nombreUsuarioField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ContactanosBO {
+        
+        private int idContactanosField;
+        
+        private string contenidoField;
+        
+        private string asuntoField;
+        
+        private string emailContactoField;
+        
+        private string apellidoContactoField;
+        
+        private string nombreContactoField;
+        
+        /// <comentarios/>
+        public int IdContactanos {
+            get {
+                return this.idContactanosField;
+            }
+            set {
+                this.idContactanosField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Contenido {
+            get {
+                return this.contenidoField;
+            }
+            set {
+                this.contenidoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Asunto {
+            get {
+                return this.asuntoField;
+            }
+            set {
+                this.asuntoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string EmailContacto {
+            get {
+                return this.emailContactoField;
+            }
+            set {
+                this.emailContactoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string ApellidoContacto {
+            get {
+                return this.apellidoContactoField;
+            }
+            set {
+                this.apellidoContactoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string NombreContacto {
+            get {
+                return this.nombreContactoField;
+            }
+            set {
+                this.nombreContactoField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TipoSuscripcionBO {
+        
+        private int tiempoSuscripcionField;
+        
+        private decimal montoSuscripcionField;
+        
+        private string nombreTipoSuscriField;
+        
+        private int idTipoSuscripcionField;
+        
+        /// <comentarios/>
+        public int TiempoSuscripcion {
+            get {
+                return this.tiempoSuscripcionField;
+            }
+            set {
+                this.tiempoSuscripcionField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public decimal MontoSuscripcion {
+            get {
+                return this.montoSuscripcionField;
+            }
+            set {
+                this.montoSuscripcionField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string NombreTipoSuscri {
+            get {
+                return this.nombreTipoSuscriField;
+            }
+            set {
+                this.nombreTipoSuscriField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdTipoSuscripcion {
+            get {
+                return this.idTipoSuscripcionField;
+            }
+            set {
+                this.idTipoSuscripcionField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TipoSitioBO {
+        
+        private string descripcicionSitioField;
+        
+        private string nombreSitioField;
+        
+        private int idTipoSitioField;
+        
+        /// <comentarios/>
+        public string DescripcicionSitio {
+            get {
+                return this.descripcicionSitioField;
+            }
+            set {
+                this.descripcicionSitioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string NombreSitio {
+            get {
+                return this.nombreSitioField;
+            }
+            set {
+                this.nombreSitioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdTipoSitio {
+            get {
+                return this.idTipoSitioField;
+            }
+            set {
+                this.idTipoSitioField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class TipoServicioBO {
+        
+        private string nombreServicioField;
+        
+        private int idTipoServicioField;
+        
+        /// <comentarios/>
+        public string NombreServicio {
+            get {
+                return this.nombreServicioField;
+            }
+            set {
+                this.nombreServicioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdTipoServicio {
+            get {
+                return this.idTipoServicioField;
+            }
+            set {
+                this.idTipoServicioField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class SoporteBO {
+        
+        private int idUsuarioField;
+        
+        private string asuntoField;
+        
+        private string comentarioSoporteField;
+        
+        private int idSoporteField;
+        
+        /// <comentarios/>
+        public int IdUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Asunto {
+            get {
+                return this.asuntoField;
+            }
+            set {
+                this.asuntoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string ComentarioSoporte {
+            get {
+                return this.comentarioSoporteField;
+            }
+            set {
+                this.comentarioSoporteField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdSoporte {
+            get {
+                return this.idSoporteField;
+            }
+            set {
+                this.idSoporteField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class SitioBO {
+        
+        private int idTipoSitioField;
+        
+        private string sucesoImportanteField;
+        
+        private byte[] fotoSitioField;
+        
+        private decimal latitudSitioField;
+        
+        private decimal longitudSitioField;
+        
+        private string direccionField;
+        
+        private string historiaField;
+        
+        private string descripcionSitioField;
+        
+        private string nombreSitioField;
+        
+        private int idSitioField;
+        
+        /// <comentarios/>
+        public int IdTipoSitio {
+            get {
+                return this.idTipoSitioField;
+            }
+            set {
+                this.idTipoSitioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string SucesoImportante {
+            get {
+                return this.sucesoImportanteField;
+            }
+            set {
+                this.sucesoImportanteField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] FotoSitio {
+            get {
+                return this.fotoSitioField;
+            }
+            set {
+                this.fotoSitioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public decimal LatitudSitio {
+            get {
+                return this.latitudSitioField;
+            }
+            set {
+                this.latitudSitioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public decimal LongitudSitio {
+            get {
+                return this.longitudSitioField;
+            }
+            set {
+                this.longitudSitioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Historia {
+            get {
+                return this.historiaField;
+            }
+            set {
+                this.historiaField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string DescripcionSitio {
+            get {
+                return this.descripcionSitioField;
+            }
+            set {
+                this.descripcionSitioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string NombreSitio {
+            get {
+                return this.nombreSitioField;
+            }
+            set {
+                this.nombreSitioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdSitio {
+            get {
+                return this.idSitioField;
+            }
+            set {
+                this.idSitioField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ServicioBO {
+        
+        private int idTipoServicioField;
+        
+        private string descripcionServicioField;
+        
+        private decimal precioServicioField;
+        
+        private string ofertaServicioField;
+        
+        private int idServicioField;
+        
+        private int idEstablecimientoField;
+        
+        /// <comentarios/>
+        public int IdTipoServicio {
+            get {
+                return this.idTipoServicioField;
+            }
+            set {
+                this.idTipoServicioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string DescripcionServicio {
+            get {
+                return this.descripcionServicioField;
+            }
+            set {
+                this.descripcionServicioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public decimal PrecioServicio {
+            get {
+                return this.precioServicioField;
+            }
+            set {
+                this.precioServicioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string OfertaServicio {
+            get {
+                return this.ofertaServicioField;
+            }
+            set {
+                this.ofertaServicioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdServicio {
+            get {
+                return this.idServicioField;
+            }
+            set {
+                this.idServicioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdEstablecimiento {
+            get {
+                return this.idEstablecimientoField;
+            }
+            set {
+                this.idEstablecimientoField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class NotificacionesBO {
+        
+        private int idEventoField;
+        
+        private int idNotificacionField;
+        
+        /// <comentarios/>
+        public int IdEvento {
+            get {
+                return this.idEventoField;
+            }
+            set {
+                this.idEventoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdNotificacion {
+            get {
+                return this.idNotificacionField;
+            }
+            set {
+                this.idNotificacionField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class EventoBO {
+        
+        private int idSitioField;
+        
+        private int idUsuarioField;
+        
+        private System.DateTime fechaFinalizacionField;
+        
+        private System.DateTime fechaInicioField;
+        
+        private string horaFinalizacionField;
+        
+        private string horaInicioEventoField;
+        
+        private string nombreEventoField;
+        
+        private int idEventoField;
+        
+        /// <comentarios/>
+        public int IdSitio {
+            get {
+                return this.idSitioField;
+            }
+            set {
+                this.idSitioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public System.DateTime FechaFinalizacion {
+            get {
+                return this.fechaFinalizacionField;
+            }
+            set {
+                this.fechaFinalizacionField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public System.DateTime FechaInicio {
+            get {
+                return this.fechaInicioField;
+            }
+            set {
+                this.fechaInicioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string HoraFinalizacion {
+            get {
+                return this.horaFinalizacionField;
+            }
+            set {
+                this.horaFinalizacionField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string HoraInicioEvento {
+            get {
+                return this.horaInicioEventoField;
+            }
+            set {
+                this.horaInicioEventoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string NombreEvento {
+            get {
+                return this.nombreEventoField;
+            }
+            set {
+                this.nombreEventoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdEvento {
+            get {
+                return this.idEventoField;
+            }
+            set {
+                this.idEventoField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class EstablecimientoBO {
+        
+        private int idEstablecimientoField;
+        
+        private int idUsuarioField;
+        
+        private decimal latitudField;
+        
+        private decimal longitudField;
+        
+        private string pagFacebookField;
+        
+        private string horaCierreEstableField;
+        
+        private string horaInicioEstableField;
+        
+        private string telefonoEstableField;
+        
+        private string nombreEstableField;
+        
+        /// <comentarios/>
+        public int IdEstablecimiento {
+            get {
+                return this.idEstablecimientoField;
+            }
+            set {
+                this.idEstablecimientoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public int IdUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public decimal Latitud {
+            get {
+                return this.latitudField;
+            }
+            set {
+                this.latitudField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public decimal Longitud {
+            get {
+                return this.longitudField;
+            }
+            set {
+                this.longitudField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string PagFacebook {
+            get {
+                return this.pagFacebookField;
+            }
+            set {
+                this.pagFacebookField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string HoraCierreEstable {
+            get {
+                return this.horaCierreEstableField;
+            }
+            set {
+                this.horaCierreEstableField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string HoraInicioEstable {
+            get {
+                return this.horaInicioEstableField;
+            }
+            set {
+                this.horaInicioEstableField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string TelefonoEstable {
+            get {
+                return this.telefonoEstableField;
+            }
+            set {
+                this.telefonoEstableField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string NombreEstable {
+            get {
+                return this.nombreEstableField;
+            }
+            set {
+                this.nombreEstableField = value;
             }
         }
     }
@@ -655,6 +2380,760 @@ namespace MCTuristic_Centro_Historico.localhost {
         private object[] results;
         
         internal ModificarDireccionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarEstablecimientoCompletedEventHandler(object sender, InsertarEstablecimientoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarEstablecimientoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarEstablecimientoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarEstablecimientoCompletedEventHandler(object sender, ModificarEstablecimientoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarEstablecimientoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarEstablecimientoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarEstablecimientoCompletedEventHandler(object sender, EliminarEstablecimientoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarEstablecimientoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarEstablecimientoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarEventoCompletedEventHandler(object sender, InsertarEventoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarEventoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarEventoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarEventoCompletedEventHandler(object sender, ModificarEventoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarEventoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarEventoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarNotificacionCompletedEventHandler(object sender, InsertarNotificacionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarNotificacionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarNotificacionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarNotificacionesCompletedEventHandler(object sender, ModificarNotificacionesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarNotificacionesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarNotificacionesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarNotificacionesCompletedEventHandler(object sender, EliminarNotificacionesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarNotificacionesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarNotificacionesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarServicioCompletedEventHandler(object sender, InsertarServicioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarServicioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarServicioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarServicioCompletedEventHandler(object sender, ModificarServicioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarServicioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarServicioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarServicioCompletedEventHandler(object sender, EliminarServicioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarServicioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarServicioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarSitioCompletedEventHandler(object sender, InsertarSitioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarSitioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarSitioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarSitioCompletedEventHandler(object sender, ModificarSitioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarSitioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarSitioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarSitioCompletedEventHandler(object sender, EliminarSitioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarSitioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarSitioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarSoporteCompletedEventHandler(object sender, InsertarSoporteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarSoporteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarSoporteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarSoporteCompletedEventHandler(object sender, ModificarSoporteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarSoporteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarSoporteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarSoporteCompletedEventHandler(object sender, EliminarSoporteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarSoporteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarSoporteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarTipoServicioCompletedEventHandler(object sender, InsertarTipoServicioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarTipoServicioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarTipoServicioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarTipoServicioCompletedEventHandler(object sender, ModificarTipoServicioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarTipoServicioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarTipoServicioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarTipoServicioCompletedEventHandler(object sender, EliminarTipoServicioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarTipoServicioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarTipoServicioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarTipoSitioCompletedEventHandler(object sender, InsertarTipoSitioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarTipoSitioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarTipoSitioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarTipoSitioCompletedEventHandler(object sender, ModificarTipoSitioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarTipoSitioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarTipoSitioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarTipoSitioCompletedEventHandler(object sender, EliminarTipoSitioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarTipoSitioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarTipoSitioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarTipoSuscripcionCompletedEventHandler(object sender, InsertarTipoSuscripcionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarTipoSuscripcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarTipoSuscripcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarTipoSuscripcionCompletedEventHandler(object sender, ModificarTipoSuscripcionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarTipoSuscripcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarTipoSuscripcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarTipoSuscripcionCompletedEventHandler(object sender, EliminarTipoSuscripcionCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarTipoSuscripcionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarTipoSuscripcionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarContactanosCompletedEventHandler(object sender, InsertarContactanosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarContactanosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarContactanosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarContactanosCompletedEventHandler(object sender, ModificarContactanosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarContactanosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarContactanosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarContactanosCompletedEventHandler(object sender, EliminarContactanosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarContactanosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarContactanosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
