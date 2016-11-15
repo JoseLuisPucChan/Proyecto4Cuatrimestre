@@ -34,7 +34,9 @@ namespace WSMCTuristic_CentroHistorico.UI
          [WebMethod]
         public int InsertarUsuario( UsuarioBO obj )
         {
-            UsuarioBO oUsuario = obj;
+            UsuarioBO oUsuario = new UsuarioBO();
+            oUsuario = obj;
+
             oUsuarioCTRL  = new Services.CtrlUsuario();
             return oUsuarioCTRL.InsertarUsuario(oUsuario);
         }
@@ -42,23 +44,29 @@ namespace WSMCTuristic_CentroHistorico.UI
 
         public int ModificarUsuario(UsuarioBO obj)
         {
-            UsuarioBO oUsuario = obj;
+            UsuarioBO oUsuario = new UsuarioBO();
+            oUsuario = obj;
+
             oUsuarioCTRL = new Services.CtrlUsuario();
             return oUsuarioCTRL.ModificarUsuario(oUsuario);
         }
         [WebMethod]
         public int EliminarUsuario(UsuarioBO obj)
         {
-            UsuarioBO oUsuario = obj;
+            UsuarioBO oUsuario = new UsuarioBO();
+            oUsuario = obj;
+
             oUsuarioCTRL = new Services.CtrlUsuario();
-            return oUsuarioCTRL.ModificarUsuario(oUsuario);
+            return oUsuarioCTRL.EliminarUsuario(oUsuario);
         }
 
         //--------------------------ABC Direcciones-----------------------------
         [WebMethod]
         public int EliminarDireccion(DireccionBO obj)
         {
-            DireccionBO oDireccion = obj;
+            DireccionBO oDireccion = new DireccionBO();
+            oDireccion = obj;
+
             oDireccionCTRL = new Services.CtrlDireccion();
             return oDireccionCTRL.EliminarDireccion(oDireccion);
         }
@@ -66,16 +74,20 @@ namespace WSMCTuristic_CentroHistorico.UI
         [WebMethod]
         public int InsertarDireccion(DireccionBO obj)
         {
-            DireccionBO oDireccion = obj;
+            DireccionBO oDireccion = new DireccionBO();
+            oDireccion = obj;
+
             oDireccionCTRL = new Services.CtrlDireccion();
-            return oDireccionCTRL.EliminarDireccion(oDireccion);
+            return oDireccionCTRL.InsertarDireccion(oDireccion);
         }
         [WebMethod]
         public int ModificarDireccion(DireccionBO obj)
         {
-            DireccionBO oDireccion = obj;
+            DireccionBO oDireccion = new DireccionBO();
+            oDireccion = obj;
+
             oDireccionCTRL = new Services.CtrlDireccion();
-            return oDireccionCTRL.EliminarDireccion(oDireccion);
+            return oDireccionCTRL.ModificarDireccion(oDireccion);
         }
 
         //---------------------ABC Establecimiento-----------------------
@@ -200,6 +212,7 @@ namespace WSMCTuristic_CentroHistorico.UI
         {
             BO.ServicioBO oServicioBO = new BO.ServicioBO();
             oServicioBO = obj;
+
             oServicioCTRL = new Services.CtrlServicio();
             return oServicioCTRL.EliminarServicio(oServicioBO);
         }
@@ -207,21 +220,27 @@ namespace WSMCTuristic_CentroHistorico.UI
         [WebMethod]
         public int InsertarSitio(SitioBO obj)
         {
-            SitioBO oSitio = obj;
+            SitioBO oSitio = new SitioBO();
+            oSitio = obj;
+
             oSitioCtrl = new Services.CtrlSitio();
             return oSitioCtrl.InsertarSitio(oSitio);
         }
         [WebMethod]
         public int ModificarSitio(SitioBO obj)
         {
-            SitioBO oSitio = obj;
+            SitioBO oSitio = new SitioBO();
+            oSitio = obj;
+
             oSitioCtrl = new Services.CtrlSitio();
             return oSitioCtrl.ModificarSitio(oSitio);
         }
         [WebMethod]
         public int EliminarSitio(SitioBO obj)
         {
-            SitioBO oSitio = obj;
+            SitioBO oSitio = new SitioBO();
+            oSitio = obj;
+
             oSitioCtrl = new Services.CtrlSitio();
             return oSitioCtrl.EliminarSitio(oSitio);
         }

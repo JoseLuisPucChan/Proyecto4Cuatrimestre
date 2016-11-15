@@ -55,10 +55,10 @@ namespace WSMCTuristic_CentroHistorico.DAO
             oDireccion = (BO.DireccionBO)obj;
 
             cmd.Connection = conn.Establecer();
-            cmd.CommandText = "insertar_direccion";
+            cmd.CommandText = "actualizar_direccion";
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@idDireccion", SqlDbType.Int).Value = oDireccion.Calle;
+            cmd.Parameters.Add("@idDireccion", SqlDbType.Int).Value = oDireccion.IdDireccion;
             cmd.Parameters.Add("@Calle", SqlDbType.VarChar).Value = oDireccion.Calle;
             cmd.Parameters.Add("@Cruzamiento", SqlDbType.VarChar).Value = oDireccion.Cruzamiento;
             cmd.Parameters.Add("@Numero", SqlDbType.VarChar).Value = oDireccion.Numero;
@@ -91,10 +91,10 @@ namespace WSMCTuristic_CentroHistorico.DAO
             oDireccion = (BO.DireccionBO)obj;
 
             cmd.Connection = conn.Establecer();
-            cmd.CommandText = "insertar_direccion";
+            cmd.CommandText = "eliminar_direccion";
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@idDireccion", SqlDbType.Int).Value = oDireccion.Calle;
+            cmd.Parameters.Add("@idDireccion", SqlDbType.Int).Value = oDireccion.IdDireccion;
 
             conn.Abrir();
             int retorno = cmd.ExecuteNonQuery();
