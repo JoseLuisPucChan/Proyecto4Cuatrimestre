@@ -59,46 +59,10 @@ namespace MCTuristic_Centro_Historico.GUI
             return "Fallo la operación";
 
         }
-        [WebMethod]
-        public static string Guardar1(string n1, string n2)
-        {
-            return "Gracias xD " + n1;
-        }
-        protected void btnAgregar_Click(object sender, EventArgs e)
-        {
-            //int i = owebService.InsertarUsuario(RecuperarInformacion());
-            //if(i>0)
-            //{
-
-            //}
+        
 
 
-        }
-
-        protected void btnCrearCuenta_Click(object sender, EventArgs e)
-        {
-            localhost.WsMCTuristic owebService = new WsMCTuristic();
-            localhost.UsuarioBO oUsuariosBO = new UsuarioBO();
-            //oUsuariosBO.NombreUsuario = nombre;
-            //oUsuariosBO.ApellidosUsuario = apellido;
-            //oUsuariosBO.EmailUsuario = direccion;
-            //oUsuariosBO.ContraseñaUsuario = contraseña;
-            //oUsuariosBO.TelefonoUsuario = numero;
-            //oUsuariosBO.FecharNacUsuario = DateTime.Now;
-
-
-            oUsuariosBO.NombreUsuario = "Luis";
-            oUsuariosBO.ApellidosUsuario = "Puc";
-            oUsuariosBO.EmailUsuario = "Josechan";
-            oUsuariosBO.ContraseñaUsuario = "Peroo";
-            oUsuariosBO.TelefonoUsuario = "42342";
-            oUsuariosBO.FecharNacUsuario = DateTime.Now;
-
-            int i = owebService.InsertarUsuario(oUsuariosBO);
-            if (i > 0)
-            {
-                Console.Write("Efectuo");
-            }
-        }
+      
+  
     }
 }

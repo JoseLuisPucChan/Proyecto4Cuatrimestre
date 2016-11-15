@@ -14,34 +14,25 @@
                 success: OnSuccess,
                 failure: function (response) {
                     alert(response.d);
-                   
                 }
             });
         }
         function OnSuccess(response) {
-            alert("Hola " + response.d);
+            alert("Respuesta " + response.d);
         }
-
     </script>
-    <script type="text/javascript" src="../Recursos/js/ABC.js"></script>
-
-
 </asp:Content>
-
-
-
-
-
 <asp:Content ID="Content4" ContentPlaceHolderID="Principal" runat="server">
-  
-   
-  
-     <div class="wrapper inner">
-      <header id="header">
+<div class="wrapper inner">
+<header id="header">
 <div class="container">
 <div class="row">
 <div class="col-lg-3 col-md-3">
-<logo class="logo"><a href="index.html"><img src="../Recursos/images/inner-logo.png" alt="Logo" title="Relax Spa Palace"/></a></logo>
+<logo class="logo">
+<a href="index.html">
+<img src="../Recursos/images/inner-logo.png" alt="Logo" title="Relax Spa Palace"/>
+</a>
+</logo>
 </div>
 <div class="col-lg-9 col-md-9">
 
@@ -152,8 +143,8 @@
 </div>
 </div>
 </header>
-         <div class="gap"></div>
-         <section class="signup">
+<div class="gap"></div>
+<section class="signup">
 <div class="container">
 <div class="row">
  
@@ -164,7 +155,7 @@
 <ul>
 <li>
 <label><font><font>Número de Teléfono *</font></font></label>
-    <asp:TextBox ID="txtTelefono" type="text" placeholder="Número teléfono" runat="server"></asp:TextBox>
+<asp:TextBox ID="txtTelefono" type="text" placeholder="Número teléfono" runat="server"></asp:TextBox>
 
 </li>
 </ul>
@@ -232,12 +223,10 @@
 </ul>
 <ul>
 <li>
-<font><font>
-
+<font>
+<font>
 <input id="Button1" type="button" class="btn btn-info boton1" onclick="Gurdar();" value="CREAR CUENTA" />
-    <span id="msg"></span>
-    
-      </font>
+</font>
 </font>
 </li>
 </ul>
@@ -271,8 +260,8 @@
 </div>
 </div>
 </section>
-         </div>
-     <div class="gap"></div>
+</div>
+<div class="gap"></div>
 
      
  

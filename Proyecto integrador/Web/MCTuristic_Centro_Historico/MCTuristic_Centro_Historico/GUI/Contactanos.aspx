@@ -4,14 +4,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Contenido" runat="server">
-   
  <div class="wrapper inner">
  
 <header id="header">
 <div class="container">
 <div class="row">
 <div class="col-lg-3 col-md-3">
-<logo class="logo"><a href="index.html"><img src="../Recursos/images/inner-logo.png" alt="Logo" title="Relax Spa Palace"/></a></logo>
+<logo class="logo">
+<a href="index.html">
+<img src="../Recursos/images/inner-logo.png" alt="Logo" title="Relax Spa Palace"/>
+</a>
+</logo>
 </div>
 <div class="col-lg-9 col-md-9">
 
@@ -118,21 +121,26 @@
 </div>
 </div>
 </header>
- 
- 
 <section class="inner-titlebg">
 <div class="container">
 <div class="row">
 <div class="col-lg-12 col-md-12">
-<h1><font><font class="">Contáctenos</font></font></h1>
+<h1>
+<font>
+<font class="">Contáctenos</font></font></h1>
 </div>
 <div>
 <div class="col-lg-9 col-md-9">
-
 </div>
 <div class="col-lg-3 col-md-3">
 <ul class="bcrumb pull-right">
-<li> <a href="PagPrincipal.aspx"><font><font>Inicio</font></font></a></li><font><font>
+<li>
+<a href="PagPrincipal.aspx">
+<font>
+<font>Inicio</font>
+</font></a></li>
+<font>
+<font>
 &gt;
 </font></font><li><a href="Contactanos.aspx"><font><font> contactanos</font></font></a></li>
 </ul>
@@ -150,7 +158,11 @@
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
 <div class="contact">
 
-<p class="contact-sub"><font><font>Mandanos tus dudas, nosotros nos pondremos en contacto.</font></font></p>
+<p class="contact-sub">
+<font>
+ <font>Mandanos tus dudas, nosotros nos pondremos en contacto.</font>
+</font>
+</p>
 <form method="post" action="http://crunchpress.com/html/pageant/blue/contact-other.php" id="form_contact" novalidate="novalidate">
 <ul class="row">
 <li class="col-lg-6">
@@ -180,9 +192,11 @@
 </ul>
 <ul>
 <li>
-<font><font>
-    <asp:Button ID="Button1"  type="submit"  runat="server" Text="Enviar"></asp:Button>
-   
+<font>
+<font>
+<input id="Button1" type="button" class="btn btn-info boton1" value="Enviar" />
+</font>
+ </font>
 </li>
 </ul>
 </form>

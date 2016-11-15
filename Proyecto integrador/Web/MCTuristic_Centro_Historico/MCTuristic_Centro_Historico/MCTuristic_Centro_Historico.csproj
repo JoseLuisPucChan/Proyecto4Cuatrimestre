@@ -578,7 +578,6 @@
     <Compile Include="GUI\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\OperationContract.cs" />
     <Compile Include="GUI\PagPrincipal.aspx.cs">
       <DependentUpon>PagPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
