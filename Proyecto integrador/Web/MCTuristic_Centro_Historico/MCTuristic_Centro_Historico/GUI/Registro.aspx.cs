@@ -54,12 +54,18 @@ namespace MCTuristic_Centro_Historico.GUI
             int i = owebService.InsertarUsuario(oUsuariosBO);
             if (i > 0)
             {
-                return "Operación exitosa";
+               return "Operación exitosa";   
             }
             return "Fallo la operación";
 
         }
-        
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Suscripciones.aspx");
+        }
+
+      
 
 
       

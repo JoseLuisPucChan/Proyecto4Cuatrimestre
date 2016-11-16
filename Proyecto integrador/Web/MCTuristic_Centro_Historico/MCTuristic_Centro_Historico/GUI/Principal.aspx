@@ -7,7 +7,7 @@
     <asp:PlaceHolder ID="phSesion" runat="server" Visible="false">
         <a href="#" title="My Account" class="user-profile clearfix" data-toggle="dropdown">
             <asp:Image ID="imgUsuario" runat="server" Width="28" ImageUrl="../Recursos/agileui.com/demo/monarch/assets/image-resources/gravatar.jpg" />
-            <asp:Label ID="lblUsuario" runat="server" role="span" Text="André Salazar"></asp:Label>
+            <asp:Label ID="lblUsuario" runat="server" role="span" Text="Luis"></asp:Label>
             <i class="glyph-icon icon-angle-down"></i>
         </a>
 

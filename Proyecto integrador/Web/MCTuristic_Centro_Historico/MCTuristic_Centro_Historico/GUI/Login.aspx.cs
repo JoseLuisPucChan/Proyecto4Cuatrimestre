@@ -25,31 +25,44 @@ namespace MCTuristic_Centro_Historico.GUI
             oAdmin.Email = email;
             oAdmin.Contraseñaadmin = contraseña;
             Datos = Services.Login(oAdmin);
-            if (Datos.Rows.Count != 0)
+            if (email =="josechan211@gmail.com" && contraseña=="12345")
             {
-                return "Usted No tiene acceso";
+                Login ologin = new Login();
+                //ologin.declararSession(Convert.ToInt32(Datos.Rows[0][1].ToString()));
+                ologin.declararSession();
             }
             else
             {
-                Login ologin = new Login();
-                ologin.declararSession(Convert.ToInt32(Datos.Rows[0][1].ToString()));
-
+                return "No tiene ecceso al sistema";
             }
-            return "Birnvenido";
+            return "";
           
         }
-        private void declararSession(int ID )
+        private void declararSession()
         {
-            Session["idDueño"] = ID ;
-            Server.Transfer("Inicio.aspx");
-          
+            Session["idAdmin"] = 2 ;
+            Server.Transfer("GestionUsuariosGUI.aspx");
         }
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            if(txtEmail.Text=="josechan211@gmail.com" && txtContraseña.Text=="12345")
+            
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "josechan211@gmail.com" && txtContraseña.Text == "12345")
             {
-                Response.Redirect("GestionUsuariosGUI.aspx");
-            } 
+                Session["idDueño"] = 2;
+                Server.Transfer("GestionUsuariosGUI.aspx");
+            }
+            else
+            {
+                if (txtEmail.Text == "joseluis@gmail.com" && txtContraseña.Text == "12345678")
+                {
+                    Session["idUser"] = 3;
+                    Server.Transfer("PagPrincipal.aspx");
+                }
+            }
         }
     }
 }

@@ -47,7 +47,8 @@
 							<ul class="actions">
 
 								<li>
-                                    <input id="Button1" type="button" class="button" onclick="VerficarUser();"  value="Ingresar" />
+                                    <asp:Button ID="Button2" runat="server" class="button" Text="Ingresar" OnClick="Button2_Click" />
+              
                                    <script type="text/javascript">
                                        function VerficarUser() {
                                            var actionData = " { 'email': '" + $("#<%=txtEmail.ClientID%>")[0].value + "'  , 'contraseña': '" + $("#<%=txtContraseña.ClientID%>")[0].value + "' }  ";

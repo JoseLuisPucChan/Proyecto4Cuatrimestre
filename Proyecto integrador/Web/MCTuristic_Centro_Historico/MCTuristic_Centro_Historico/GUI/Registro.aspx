@@ -35,8 +35,6 @@
 </logo>
 </div>
 <div class="col-lg-9 col-md-9">
-
-
                         <div class="home-menu">
                             <div class="navbar mm">
                                 <div>
@@ -225,7 +223,8 @@
 <li>
 <font>
 <font>
-<input id="Button1" type="button" class="btn btn-info boton1" onclick="Gurdar();" value="CREAR CUENTA" />
+<asp:Button ID="Button1" class="btn btn-info boton1" runat="server" Text="Crear Cuenta" OnClick="Button1_Click"></asp:Button>
+<%--<input id="Button1" type="button" class="btn btn-info boton1" onclick="Gurdar();" value="CREAR CUENTA" />--%>
 </font>
 </font>
 </li>

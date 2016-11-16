@@ -70,6 +70,7 @@
     <Content Include="GUI\Productos.aspx" />
     <Content Include="GUI\QuieneSomo.aspx" />
     <Content Include="GUI\Registro.aspx" />
+    <Content Include="GUI\Suscripciones.aspx" />
     <Content Include="images1\hombre.png" />
     <Content Include="Recursos\agileui.com\demo\image-resources\logo-admin.png" />
     <Content Include="Recursos\agileui.com\demo\images\animated-overlay.gif" />
@@ -612,6 +613,13 @@
     </Compile>
     <Compile Include="GUI\Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Suscripciones.aspx.cs">
+      <DependentUpon>Suscripciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Suscripciones.aspx.designer.cs">
+      <DependentUpon>Suscripciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage\mpBase.Master.cs">
       <DependentUpon>mpBase.Master</DependentUpon>

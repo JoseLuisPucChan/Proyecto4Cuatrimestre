@@ -43,7 +43,9 @@
                         <div class="hlinks pull-right">
                             <ul>
                                 <li><a href="Registro.aspx">Regístrase</a></li>
-                                <li><a id="log-active" href="../GUI/Login.aspx">Iniciar sesión</a></li>
+                                <li>
+                                    <asp:HyperLink ID="hyInicioSeción" NavigateUrl="~/GUI/Login.aspx" Visible ="true" runat="server">Iniciar sesión</asp:HyperLink>
+                                 </li>
                                 <li>
                                     <input type="search" id="search" />
                                     <a id="search-active" class="search-toggle"><span class="hsearch"><i class="fa fa-search"></i></span></a>
