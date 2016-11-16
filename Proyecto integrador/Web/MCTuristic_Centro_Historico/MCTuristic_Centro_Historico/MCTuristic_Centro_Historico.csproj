@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\Contactanos1.aspx" />
     <Content Include="GUI\DetalleProducto.aspx" />
     <Content Include="GUI\GestionDireccion.aspx" />
     <Content Include="GUI\GestionEstablecimientos.aspx" />
@@ -68,10 +69,12 @@
     <Content Include="GUI\GestionUsuariosGUI.aspx" />
     <Content Include="GUI\Principal.aspx" />
     <Content Include="GUI\Productos.aspx" />
+    <Content Include="GUI\Productos1.aspx" />
     <Content Include="GUI\QuieneSomo.aspx" />
     <Content Include="GUI\Registro.aspx" />
     <Content Include="GUI\Suscripciones.aspx" />
     <Content Include="images1\hombre.png" />
+    <Content Include="Recursos\Imagenes\17411434.jpg" />
     <Content Include="Recursos\agileui.com\demo\image-resources\logo-admin.png" />
     <Content Include="Recursos\agileui.com\demo\images\animated-overlay.gif" />
     <Content Include="Recursos\agileui.com\demo\images\colorpicker.png" />
@@ -175,6 +178,7 @@
     <Content Include="Recursos\agileui.com\demo\monarch\owl.css" />
     <Content Include="Recursos\ajax.googleapis.com\ajax\libs\angularjs\1.2.13\angular-animate.js" />
     <Content Include="Recursos\ajax.googleapis.com\ajax\libs\angularjs\1.2.13\angular-route.js" />
+    <Content Include="Recursos\Imagenes\app-hogar-reparacion32.png" />
     <Content Include="Recursos\backblue.gif" />
     <Content Include="Recursos\code.angularjs.org\1.2.13\angular.js" />
     <Content Include="Recursos\css\assets\css\font-awesome.min.css" />
@@ -288,8 +292,10 @@
     <Content Include="Recursos\Imagenes\7.jpg" />
     <Content Include="Recursos\Imagenes\8.jpg" />
     <Content Include="Recursos\Imagenes\9.jpg" />
+    <Content Include="Recursos\Imagenes\app-hogar-reparacion4.png" />
     <Content Include="Recursos\Imagenes\logo-blue.png" />
     <Content Include="Recursos\Imagenes\inner-logo.png" />
+    <Content Include="Recursos\Imagenes\Mapa.png" />
     <Content Include="Recursos\Imagenes\slider01.jpeg" />
     <Content Include="Recursos\Imagenes\slider02.jpg" />
     <Content Include="Recursos\Imagenes\slider03.jpg" />
@@ -506,6 +512,13 @@
     <Content Include="Recursos\js\sly.min.js" />
     <Content Include="Recursos\js\underscore-min.js" />
     <None Include="Web References\localhost\WsMCTuristic.disco" />
+    <Content Include="Recursos\slider\comment-reply.min.js" />
+    <Content Include="Recursos\slider\jquery-migrate.min.js" />
+    <Content Include="Recursos\slider\jquery.js" />
+    <Content Include="Recursos\slider\jquery.themepunch.revolution.min.js" />
+    <Content Include="Recursos\slider\main.css" />
+    <Content Include="Recursos\slider\settings.css" />
+    <Content Include="Recursos\slider\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -515,6 +528,13 @@
     </Compile>
     <Compile Include="GUI\Contactanos.aspx.designer.cs">
       <DependentUpon>Contactanos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contactanos1.aspx.cs">
+      <DependentUpon>Contactanos1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Contactanos1.aspx.designer.cs">
+      <DependentUpon>Contactanos1.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\DetalleProducto.aspx.cs">
       <DependentUpon>DetalleProducto.aspx</DependentUpon>
@@ -599,6 +619,13 @@
     </Compile>
     <Compile Include="GUI\Productos.aspx.designer.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Productos1.aspx.cs">
+      <DependentUpon>Productos1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Productos1.aspx.designer.cs">
+      <DependentUpon>Productos1.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\QuieneSomo.aspx.cs">
       <DependentUpon>QuieneSomo.aspx</DependentUpon>

@@ -1,9 +1,33 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="Productos.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Productos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Productos1.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Productos1" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
-    <div class="wrapper inner">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Chrunch Press"/>
+    <meta name="author" content="Chrunch Press"/>
+    <meta name="description" content="Awesome Description Here"/>
+    <meta name="keywords" content="location, based, messaging, social, network, service, nearby, friends, community, neighborhood, local, events"/>
+  <!--Referencias-->
+
+    <script src="../Recursos/js/ABC.js"></script>
+    <link href="../Recursos/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Recursos/css/color.css" rel="stylesheet" />
+    <link href="../Recursos/css/styles.css" rel="stylesheet" />
+    <link href="../Recursos/css/jquery.bxslider.css" rel="stylesheet" /> 
+    <link href="../Recursos/css/horizontal.css" rel="stylesheet" />
+    <link href="../Recursos/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="../Recursos/js/jquery-1.7.1.min.js"></script>
+       <script src="../Recursos/js/jquery-3.1.1.min.js"></script>
+    <link href="../Recursos/css/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+      <div class="wrapper inner">
 
         <header id="header">
             <div class="container">
@@ -594,6 +618,7 @@
         <div class="gap"></div>
 
     </div>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="Contenido" runat="server">
-</asp:Content>
+    </div>
+    </form>
+</body>
+</html>

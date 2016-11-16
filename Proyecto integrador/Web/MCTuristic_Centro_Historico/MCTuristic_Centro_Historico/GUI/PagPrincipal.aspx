@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="PagPrincipal.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.PagPrincipal" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
     <header id="header">
@@ -83,7 +84,7 @@
                                                 <li class="dropdown">
                                                     <a href="Productos.aspx" data-toggle="dropdown" class="dropdown-toggle">Productos<b class="caret"></b></a>
                                                     <ul role="menu" class="dropdown-menu">
-                                                       <li><a tabindex="-1"  href="Productos.aspx"> Lista Productos </a></li>
+                                                       <li><a tabindex="-1"  href="Productos1.aspx"> Lista Productos </a></li>
                                                        <%-- <li><a tabindex="-1" href="product-details.html"> Product Details</a></li>
                                                         <li><a tabindex="-1" href="cart.html"> Cart </a></li>
                                                         <li><a tabindex="-1" href="checkout.html"> Check Out</a></li>
@@ -105,7 +106,7 @@
 
 
                                                 <li>
-                                                    <a href="Contactanos.aspx">Contactanos<b></b></a>
+                                                    <a href="Contactanos1.aspx">Contactanos<b></b></a>
                                                 </li>
 
                                             </ul>
@@ -180,6 +181,84 @@
 </asp:Content>
 
 <asp:Content ID="Content3"  ContentPlaceHolderID ="Contenido" runat="server">
+     <!--Slider-->
+     <div id="rev_slider_6_2_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:#E9E9E9;padding:0px;margin-top:0px;margin-bottom:0px;max-height:400px;">
+            <div id="rev_slider_6_2" class="rev_slider fullwidthabanner" style="display:none;max-height:400px;height:400;">
+         <ul>
+                 <li data-transition="papercut,3dcurtain-horizontal,3dcurtain-vertical,flyin,turnoff,cubic" data-slotamount="7" data-masterspeed="1700"  data-fstransition="fade" data-fsmasterspeed="300" data-fsslotamount="7"> 
+                   <img src="http://www.hogarreparacion.com/wp-content/uploads/2013/07/hs2-1.jpg"  alt="hs2-1"  data-fullwidthcentering="on"/>
+                 <div class="tp-caption general_caption pst_media6 lfl" data-x="33" data-y="102" data-speed="2200" data-start="400" data-easing="easeOutExpo"  >
+                        <h3 class="bold border3">DESCARGA NUESTRA <strong>APP</strong></h3>
+                    </div>
+                     <div class="tp-caption medium_text lfl" data-x="34" data-y="161"	 data-speed="2200" data-start="800" data-easing="easeOutExpo"  >
+                         <p style="font-weight:300; font-size:21px;">Es totalmente gratuita y ya esta disponible<br/> para móvil y tablet, en android o ios ...</p>
+                     </div>
+                          <div class="tp-caption pst_media7 lfl" data-x="40" data-y="254" data-speed="2000" data-start="1400" data-easing="easeOutExpo"  >
+                            <a href="empresa/" class="button-transparent">Ver más</a>
+                          </div>
+                          <div class="tp-caption lfb" data-x="408" data-y="12" 	 data-speed="2000" data-start="1700" data-easing="easeOutExpo"  >
+                              <img src="../Recursos/Imagenes/app-hogar-reparacion4.png" alt="Image 6"/>
+                          </div>
+                           <div class="tp-caption lfb" data-x="286" data-y="151" data-speed="2000" data-start="2000" data-easing="easeOutExpo"  >
+                              <img src="http://www.hogarreparacion.com/wp-content/uploads/2013/08/app-hogar-reparacion2.png" alt="Image 7"/>
+                            </div>      
+               </li>      
+          
+                 <li data-transition="papercut,3dcurtain-horizontal,3dcurtain-vertical,flyin,turnoff,cubic" data-slotamount="7" data-masterspeed="300" > 
+                    
+
+
+                     <img src="http://www.hogarreparacion.com/wp-content/uploads/2013/08/wall-slider.jpg"  alt="wall-slider"  data-fullwidthcentering="on"/>
+                     <div class="tp-caption medium_text lfl" data-x="16" data-y="39" data-speed="2200" data-start="1000" data-easing="easeOutExpo"  >
+                     <h3 class="bold border3" style="font-size:60px; font-weight:300; text-transform:normal; text-align:left;">Descarga nuestra </br> 
+                       <strong style="color:#23afc9;">App Gratuita</strong> para</br> móvil y tablets
+                     </h3> 
+                      </div>
+                         <div class="tp-caption lfl" data-x="35" data-y="246" data-speed="300" data-start="1500" data-easing="easeOutExpo"  >
+                             <a href="https://itunes.apple.com/es/app/hogar-reparacion/id625286808?mt=8" target="_blank">
+                                 <img src="http://www.hogarreparacion.com/wp-content/uploads/2013/08/hogar-reparacion-app-ios.png" alt="Image 6"/>
+                             </a>
+                         </div>
+                   <div class="tp-caption lfl" data-x="219" data-y="244" data-speed="1000" data-start="1700" data-easing="easeOutExpo"  >
+                  <a href="https://play.google.com/store/apps/details?id=de.Rocky.Android.Hogar" target="_blank">
+                    <img src="http://www.hogarreparacion.com/wp-content/uploads/2013/08/hogar-reparacion-app-android.png" alt="Image 7"/>
+                  </a>
+                   </div>
+                     <div class="tp-caption lfb" data-x="658" data-y="18" data-speed="1000" data-start="2000" data-easing="easeInOutQuart"  >
+                        <a href="http://www.hogarreparacion.com/" target="_blank">
+                            <img src="../Recursos/Imagenes/app-hogar-reparacion32.png" alt="Image 8" />
+                         
+                         </a>
+                      </div>
+
+                   </li>
+                  <li data-transition="papercut,3dcurtain-horizontal,3dcurtain-vertical,flyin,turnoff,cubic" data-slotamount="7" data-masterspeed="300" > 
+                      <img src="../Recursos/Imagenes/17411434.jpg" alt="wall-slider2"  data-fullwidthcentering="on"/>
+
+                         <div class="tp-caption lfb" data-x="7" data-y="12" 	 data-speed="500" data-start="1400" data-easing="easeOutExpo"  >
+                             <img src="../Recursos/Imagenes/Mapa.png" alt="Image 6" />
+                                
+                         </div>
+                            <div class="tp-caption medium_text lfl" data-x="center" data-hoffset="116" data-y="center" data-voffset="-98" 	 data-speed="500" data-start="2000" data-easing="easeOutExpo"  >
+                               <h3 class="bold border3" style="font-size:60px; font-weight:300; text-transform:normal;">Rutas de Yucatán </h3>
+                            </div>
+                             <div class="tp-caption medium_text lfl" data-x="center" data-hoffset="119" data-y="center" data-voffset="4" data-speed="2200" data-start="2400" data-easing="easeOutExpo"  >
+                                     <p style="font-weight:800; font-size:21px; text-align:center">Conoce las rutas mas visitadas<br/> y la historia de cada rincón</p>
+                             </div>
+                   <div class="tp-caption pst_media7 lfl" data-x="center" data-hoffset="119" data-y="center" data-voffset="94" 	data-speed="2000" data-start="2500" data-easing="easeOutExpo"  ><a href="contacto/" class="button-transparent">¡ Consúltanos !</a>
+                       </div>
+                 </li>
+   </ul>
+               
+             <script type="text/javascript">
+                 var tpj = jQuery; tpj.noConflict(); var revapi6; tpj(document).ready(function () { if (tpj.fn.cssOriginal != undefined) tpj.fn.css = tpj.fn.cssOriginal; if (tpj('#rev_slider_6_2').revolution == undefined) revslider_showDoubleJqueryError('#rev_slider_6_2'); else revapi6 = tpj('#rev_slider_6_2').show().revolution({ delay: 15000, startwidth: 1040, startheight: 400, hideThumbs: 0, thumbWidth: 100, thumbHeight: 50, thumbAmount: 3, navigationType: "both", navigationArrows: "none", navigationStyle: "round", touchenabled: "on", onHoverStop: "on", navigationHAlign: "center", navigationVAlign: "bottom", navigationHOffset: -419, navigationVOffset: 21, soloArrowLeftHalign: "left", soloArrowLeftValign: "center", soloArrowLeftHOffset: 20, soloArrowLeftVOffset: 0, soloArrowRightHalign: "right", soloArrowRightValign: "center", soloArrowRightHOffset: 20, soloArrowRightVOffset: 0, shadow: 0, fullWidth: "on", fullScreen: "off", stopLoop: "on", stopAfterLoops: -1, stopAtSlide: -1, shuffle: "off", hideSliderAtLimit: 0, hideCaptionAtLimit: 0, hideAllCaptionAtLilmit: 0, startWithSlide: 0, videoJsPath: "http://www.hogarreparacion.com/wp-content/plugins/revslider/rs-plugin/videojs/", fullScreenOffsetContainer: "" }); });
+             </script>
+      
+  </div>
+
+    </div>
+      <div class="gap"></div>
+    <!--Suscripciones-->
     <section class="inner-titlebg">
 <div class="container">
 <div class="row">
@@ -326,7 +405,9 @@ Al igual que la biciruta para conocer los horarios y sitios de reunión
 </div>
 </div></section>
  <div class="gap"></div>
-    <!--Suscripciones-->
+
+
+   
 
     <section class="about">
 <div class="container">
@@ -344,10 +425,12 @@ Al igual que la biciruta para conocer los horarios y sitios de reunión
 <h3>Gratis<span><i>$</i><strong>0</strong>/3m</span> </h3>
 <ul>
 <li>Durante 3 meses</li>
-<li>Inner Quest</li>
-<li>Harmony</li>
-<li>Kinetic Flow</li>
-<li>Psychic Massage</li>
+<li>Visualizar sitios</li>
+<li>Publicar eventos</li>
+<li>Visualización de sugerencias</li>
+<li>-</li>
+  <li>-</li>
+    <li>-</li>
 </ul>
  
 <button>Adquirir Ahora</button>
@@ -355,39 +438,45 @@ Al igual que la biciruta para conocer los horarios y sitios de reunión
 </div>
 <div class="col-lg-3 col-md-3  col-sm-6">
 <div class="plan green">
-<h3>Basico<span><i>$</i><strong>300</strong>/m</span> </h3>
+<h3>Medium<span><i>$</i><strong>300</strong>/m</span> </h3>
 <ul>
 <li>Durante 1 meses</li>
-<li>Inner Quest</li>
-<li>Harmony</li>
-<li>Kinetic Flow</li>
-<li>Psychic Massage</li>
+<li>Visualizar sitios</li>
+<li>Publicar eventos</li>
+  <li>Visualización de sugerencias</li>
+<li>Registrar establecimientos 1</li>
+  <li>-</li>
+   <li>-</li>
 </ul>
 <button>Adquirir Ahora</button>
 </div>
 </div>
 <div class="col-lg-3 col-md-3 col-sm-6">
-<div class="plan blue">
-<h3>Medio<span><i>$</i><strong>1300</strong>/s</span> </h3>
+<div class="plan ">
+<h3>Premium<span><i>$</i><strong>1400</strong>/a</span> </h3>
 <ul>
 <li>Durante 6 meses</li>
-<li>Inner Quest</li>
-<li>Harmony</li>
-<li>Kinetic Flow</li>
-<li>Psychic Massage</li>
+<li>Visualizar sitios</li>
+<li>Publicar eventos</li>
+  <li>Visualización de sugerencias</li>
+<li>Registrar establecimientos 5</li>
+  <li>Soporte técnico</li>
+   <li>Opciones de edición</li>
 </ul>
 <button>Adquirir Ahora</button>
 </div>
 </div>
 <div class="col-lg-3 col-md-3 col-sm-6">
 <div class="plan yellow">
-<h3>Completo<span><i>$</i><strong>3000</strong>/a</span> </h3>
+<h3>Gold<span><i>$</i><strong>2500</strong>/a</span> </h3>
 <ul>
-<li>Duenrante 1 año</li>
-<li>Inner Quest</li>
-<li>Harmony</li>
-<li>Kinetic Flow</li>
-<li>Psychic Massage</li>
+<li>Durante 1 año</li>
+<li>Visualizar sitios</li>
+<li>Publicar eventos</li>
+  <li>Visualización de sugerencias</li>
+<li>Registrar establecimientos 5</li>
+  <li>Soporte técnico</li>
+   <li>Opciones de edición</li>
 </ul>
 <button>Adquirir Ahora</button>
 </div>

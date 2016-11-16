@@ -1,29 +1,35 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="Contactanos.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Contactanos" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script type="text/javascript">
-        function Gurdar() {
-            var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "' , 'apellido': '" + $("#<%=txtApellidos.ClientID%>")[0].value + "' , 'email': '" + $("#<%=txtEmail.ClientID%>")[0].value + "' , 'asunto': '" + $("#<%=txtAsunto.ClientID%>")[0].value + "' , 'contenido': '" + $("#<%=txtContenido.ClientID%>")[0].value + "'}  ";
-                $.ajax({
-                    type: "POST",
-                    url: "Contactanos.aspx/GuardarContactanos",
-                    data: actionData,
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: OnSuccess,
-                    failure: function (response) {
-                        alert(response.d);
-                    }
-                });
-            }
-            function OnSuccess(response) {
-                alert("Respuesta " + response.d);
-            }
-    </script>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="Contenido" runat="server">
- <div class="wrapper inner">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contactanos1.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Contactanos1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Chrunch Press"/>
+    <meta name="author" content="Chrunch Press"/>
+    <meta name="description" content="Awesome Description Here"/>
+    <meta name="keywords" content="location, based, messaging, social, network, service, nearby, friends, community, neighborhood, local, events"/>
+  <!--Referencias-->
+
+    <script src="../Recursos/js/ABC.js"></script>
+    <link href="../Recursos/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Recursos/css/color.css" rel="stylesheet" />
+    <link href="../Recursos/css/styles.css" rel="stylesheet" />
+    <link href="../Recursos/css/jquery.bxslider.css" rel="stylesheet" /> 
+    <link href="../Recursos/css/horizontal.css" rel="stylesheet" />
+    <link href="../Recursos/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="../Recursos/js/jquery-1.7.1.min.js"></script>
+       <script src="../Recursos/js/jquery-3.1.1.min.js"></script>
+    <link href="../Recursos/css/StyleSheet1.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <div class="wrapper inner">
  
 <header id="header">
 <div class="container">
@@ -105,9 +111,9 @@
 
 
                                                 <li class="dropdown">
-                                                    <a href="Productos.aspx" data-toggle="dropdown" class="dropdown-toggle">Productos<b class="caret"></b></a>
+                                                    <a href="Productos1.aspx" data-toggle="dropdown" class="dropdown-toggle">Productos<b class="caret"></b></a>
                                                     <ul role="menu" class="dropdown-menu">
-                                                        <li><a tabindex="-1" href="Productos.aspx">Lista Productos </a></li>
+                                                        <li><a tabindex="-1" href="Productos1.aspx">Lista Productos </a></li>
                                                         <%--      <li><a tabindex="-1" href="DetalleProducto.aspx"> Product Details</a></li>
                                                         <li><a tabindex="-1" href="cart.html"> Cart </a></li>
                                                         <li><a tabindex="-1" href="checkout.html"> Check Out</a></li>
@@ -260,4 +266,7 @@
  
 <div class="gap"></div>
 </div>
-</asp:Content>
+    </div>
+    </form>
+</body>
+</html>

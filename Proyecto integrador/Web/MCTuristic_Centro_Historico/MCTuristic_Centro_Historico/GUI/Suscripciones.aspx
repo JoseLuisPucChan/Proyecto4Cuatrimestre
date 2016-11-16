@@ -46,27 +46,31 @@
 <li>Gratis</li>
 <li>
 <h2>$0</h2>
-<span>Per Month</span> </li>
-<li> Anasazi Ubtan </li>
-<li class="odd">Turquoise Dreaming </li>
-<li>Rosemary Vitality </li>
-<li class="odd">Prickly Pear Butter Wrap </li>
-<li>Herbal Detoxification Poultice </li>
+
+<span>Durante 3 meses</span> </li>
+<li> Visualizar sitios </li>
+<li class="odd">Publicar eventos </li>
+<li>isualización de sugerencias </li>
+<li class="odd">-</li>
+<li>-</li>
+ <li class="odd">-</li>
+
+
 <li class="last" >
 <asp:Button ID="Button1" Width="264"  OnClick="Button3_Click" runat="server" Text="Adquirir ahora" />
-   
 </li>
 </ul>
 <ul class="col-lg-3 col-md-3 col-sm-6 price-col-2">
 <li>Medium</li>
 <li>
-<h2>$449.00</h2>
-<span>Per Month</span> </li>
-<li>Abhyanga and Shirodhara</li>
-<li class="odd">Custom Massage</li>
-<li>Swedish Massage</li>
-<li class="odd">Deep Tissue Massage</li>
-<li>Lymphatic Drainage</li>
+<h2>$300.00</h2>
+<span>Durante 1 meses</span> </li> 
+<li>Visualizar sitios</li>
+<li class="odd">Publicar eventos</li>
+  <li>Visualización de sugerencias</li>
+<li class="odd">Registrar establecimientos 1</li>
+  <li>-</li>
+   <li class="odd">-</li>
 <li class="last">
 <asp:Button ID="Button2" Width="264" runat="server" Text="Adquirir ahora" />
 </li>
@@ -74,13 +78,14 @@
 <ul class="col-lg-3 col-md-3 col-sm-6 price-col-3">
 <li>Premium</li>
 <li>
-<h2>$555.00</h2>
-<span>Per Month</span> </li>
-<li>Journeyman's Facial</li>
-<li class="odd">Calming Facial</li>
-<li>Rejuvenating Facial</li>
-<li class="odd">Makeup Consultation</li>
-<li>Elevate Your Facial</li>
+<h2>$1400.00</h2>
+<span>Durante 6 meses</span> </li>
+<li>Visualizar sitios</li>
+<li class="odd">Publicar eventos</li>
+  <li>Visualización de sugerencias</li>
+<li class="odd">Registrar establecimientos 5</li>
+  <li>Soporte técnico</li>
+   <li class="odd">Opciones de edición</li>
 <li class="last">
 <asp:Button ID="Button3" Width="264" runat="server" Text="Adquirir ahora" />
 </li>
@@ -88,13 +93,14 @@
 <ul class="col-lg-3 col-md-3 col-sm-6 price-col-4">
 <li>Gold</li>
 <li>
-<h2>$600.00</h2>
-<span>Per Month</span> </li>
-<li>Soul Seeker</li>
-<li class="odd">Inner Quest</li>
-<li>Harmony</li>
-<li class="odd">Kinetic Flow</li>
-<li>Psychic Massage</li>
+<h2>$2500.00</h2>
+<span>Durante 1 año</span> </li>
+<li>Visualizar sitios</li>
+<li class="odd">Publicar eventos</li>
+  <li>Visualización de sugerencias</li>
+<li class="odd">Registrar establecimientos 5</li>
+  <li>Soporte técnico</li>
+   <li class="odd">Opciones de edición</li>
 <li class="last">
 <asp:Button ID="Button4" Width="264" runat="server" Text="Adquirir ahora" />
 </li>
@@ -107,7 +113,7 @@
  
 <div class="gap"></div>
  
-
+     
  
 </div>
 </asp:Content>

@@ -9,7 +9,7 @@
     <title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Chrunch Press"/>
     <meta name="author" content="Chrunch Press"/>
     <meta name="description" content="Awesome Description Here"/>
@@ -26,6 +26,25 @@
     <script src="../Recursos/js/jquery-1.7.1.min.js"></script>
        <script src="../Recursos/js/jquery-3.1.1.min.js"></script>
     <link href="../Recursos/css/StyleSheet1.css" rel="stylesheet" />
+
+<%--    <link  rel='stylesheet' href="../Recursos/slider/settings.css" type="text/css" media="all" />--%>
+<%--   <link rel='stylesheet' href="../Recursos/slider/main.css" type="text/css" media="all" />--%>
+ <%--   <link  rel='stylesheet' href="../Recursos/slider/style.css"  type="text/css" media="all"/>--%>
+<%--    <script type="text/javascript" src="../Recursos/slider/jquery.js"></script>
+    <script type="text/javascript" src="../Recursos/slider/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="../Recursos/slider/jquery.themepunch.revolution.min.js"></script>
+    <script  type="text/javascript" src="../Recursos/slider/comment-reply.min.js"></script>--%>
+
+     <link rel='stylesheet'   href='http://www.hogarreparacion.com/wp-content/plugins/revslider/rs-plugin/css/settings.css' type='text/css' media='all' />
+     <link rel='stylesheet'   href='http://www.hogarreparacion.com/wp-content/themes/Circles/css/main.css' type='text/css' media='all' />
+     <link rel='stylesheet'  href='http://www.hogarreparacion.com/wp-content/themes/Circles/style.css' type='text/css' media='all' />
+    <script type='text/javascript' src='http://www.hogarreparacion.com/wp-includes/js/jquery/jquery.js'>
+   </script>
+    <script type='text/javascript' src='http://www.hogarreparacion.com/wp-includes/js/jquery/jquery-migrate.min.js'>
+    </script>
+     <script type='text/javascript' src='http://www.hogarreparacion.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js'>
+     </script>
+     <script type='text/javascript' src='http://www.hogarreparacion.com/wp-includes/js/comment-reply.min.js'></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -140,7 +159,7 @@ Somos un grupo de personas que Conscientes de que la cultura de nuestros ancestr
         <section class="footer-copy">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12"><strong>Relax Spa Palace</strong> &copy; 2014 All Rights Reserved, Designed &amp; Developed by: <a href="http://CrunchPress.com" title="Crunch Press" target="_blank">CrunchPress.com</a></div>
+                        <div class="col-lg-12"><strong>MasterCoder</strong> &copy; 2016 &amp; Developed by: <a href="http://CrunchPress.com" title="Crunch Press" target="_blank">CrunchPress.com</a></div>
                     </div>
                 </div>
             </section>
