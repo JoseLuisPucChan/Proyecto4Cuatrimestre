@@ -269,6 +269,7 @@
           <s:element minOccurs="0" maxOccurs="1" name="OfertaServicio" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="IdServicio" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="IdEstablecimiento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreServicio" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:element name="InsertarServicioResponse">

@@ -13,7 +13,7 @@ namespace WSMCTuristic_CentroHistorico.BO
         private string _descripcionServicio;
         private int _idEstablecimiento;
         private int _idTipoServicio;
-
+        private string _nombreServicio;
 
         public int IdTipoServicio
         {
@@ -55,6 +55,19 @@ namespace WSMCTuristic_CentroHistorico.BO
             set
             {
                 _idEstablecimiento = value;
+            }
+        }
+
+        public string NombreServicio
+        {
+            get
+            {
+                return _nombreServicio;
+            }
+
+            set
+            {
+                _nombreServicio = value;
             }
         }
     }
