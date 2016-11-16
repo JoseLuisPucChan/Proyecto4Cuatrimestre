@@ -31,8 +31,9 @@ namespace WSMCTuristic_CentroHistorico.Services
         public DataTable LoginUsuario(object obj)
         {
             oAdministrador = new DAO.AdministradorDAO();
-            BO.AdministradorBO Obj = new BO.AdministradorBO();
-            return oAdministrador.Login(Obj);
+            return oAdministrador.Login(obj);
         }
+        
+        
     }
 }

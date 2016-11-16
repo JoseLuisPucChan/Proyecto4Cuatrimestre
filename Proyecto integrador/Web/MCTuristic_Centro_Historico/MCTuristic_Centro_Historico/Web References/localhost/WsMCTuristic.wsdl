@@ -611,6 +611,80 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:AdministradorBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AdministradorBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdAdministrador" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fechanacimiento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefonoadmin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contraseñaadmin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Apellidosadmin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombreadmin" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarAdministrador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:AdministradorBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarAdministradorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarAdministradorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarAdministrador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:AdministradorBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarAdministradorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarAdministradorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarAdministrador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:AdministradorBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarAdministradorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminarAdministradorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="InsertarUsuarioSoapIn">
@@ -823,6 +897,30 @@
   <wsdl:message name="EliminarContactanosSoapOut">
     <wsdl:part name="parameters" element="tns:EliminarContactanosResponse" />
   </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAdministradorSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="InsertarAdministradorSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarAdministradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarAdministradorSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="ModificarAdministradorSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarAdministradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAdministradorSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="EliminarAdministradorSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarAdministradorResponse" />
+  </wsdl:message>
   <wsdl:portType name="WsMCTuristicSoap">
     <wsdl:operation name="InsertarUsuario">
       <wsdl:input message="tns:InsertarUsuarioSoapIn" />
@@ -963,6 +1061,22 @@
     <wsdl:operation name="EliminarContactanos">
       <wsdl:input message="tns:EliminarContactanosSoapIn" />
       <wsdl:output message="tns:EliminarContactanosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAdministrador">
+      <wsdl:input message="tns:InsertarAdministradorSoapIn" />
+      <wsdl:output message="tns:InsertarAdministradorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAdministrador">
+      <wsdl:input message="tns:ModificarAdministradorSoapIn" />
+      <wsdl:output message="tns:ModificarAdministradorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAdministrador">
+      <wsdl:input message="tns:EliminarAdministradorSoapIn" />
+      <wsdl:output message="tns:EliminarAdministradorSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WsMCTuristicSoap" type="tns:WsMCTuristicSoap">
@@ -1282,6 +1396,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAdministrador">
+      <soap:operation soapAction="http://tempuri.org/InsertarAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAdministrador">
+      <soap:operation soapAction="http://tempuri.org/ModificarAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAdministrador">
+      <soap:operation soapAction="http://tempuri.org/EliminarAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WsMCTuristicSoap12" type="tns:WsMCTuristicSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1593,6 +1743,42 @@
     </wsdl:operation>
     <wsdl:operation name="EliminarContactanos">
       <soap12:operation soapAction="http://tempuri.org/EliminarContactanos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarAdministrador">
+      <soap12:operation soapAction="http://tempuri.org/InsertarAdministrador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarAdministrador">
+      <soap12:operation soapAction="http://tempuri.org/ModificarAdministrador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarAdministrador">
+      <soap12:operation soapAction="http://tempuri.org/EliminarAdministrador" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

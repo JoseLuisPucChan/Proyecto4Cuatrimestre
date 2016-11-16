@@ -11,33 +11,38 @@ namespace MCTuristic_Centro_Historico.GUI
 {
     public partial class Login : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
         [WebMethod]
-        private void BuscarUsuario()
+        public static string BuscarUsuario(string email,string contraseña)
         {
+            DataTable Datos = new DataTable();
+            localhost.WsMCTuristic Services = new localhost.WsMCTuristic();
+            localhost.AdministradorBO oAdmin = new localhost.AdministradorBO();
+            oAdmin.Email = email;
+            oAdmin.Contraseñaadmin = contraseña;
+            Datos = Services.Login(oAdmin);
+            if (Datos.Rows.Count != 0)
+            {
+                return "Usted No tiene acceso";
+            }
+            else
+            {
+                Login ologin = new Login();
+                ologin.declararSession(Convert.ToInt32(Datos.Rows[0][1].ToString()));
 
-            //DataTable Datos = new DataTable();
-            //Datos = Services.CtrlAdmin.LoginUsuario(this.txtUsuario.Text.Trim(), this.txtContraseña.Text.Trim());
-
-            //if (txtUsuario.Text.Trim() != string.Empty || txtContraseña.Text.Trim() != string.Empty)
-            //{
-            //    if (Datos.Rows.Count == 0)
-            //    {
-            //        Mensaje("Usted Notiene acceso al Sistema");
-            //    }
-            //    else
-            //    {
-            //        Session["idDueño"] = Datos.Rows[0][1].ToString();
-            //        Server.Transfer("Inicio.aspx");
-            //        Mensaje("Bienvenido");
-
-            //    }
-            //}
-
-
+            }
+            return "Birnvenido";
+          
+        }
+        private void declararSession(int ID )
+        {
+            Session["idDueño"] = ID ;
+            Server.Transfer("Inicio.aspx");
+          
         }
         protected void btnIngresar_Click(object sender, EventArgs e)
         {

@@ -20,6 +20,7 @@ namespace MCTuristic_Centro_Historico.localhost {
     using System.Web.Services.Protocols;
     using System.Xml.Serialization;
     using System.ComponentModel;
+    using System.Data;
     
     
     /// <remarks/>
@@ -98,6 +99,14 @@ namespace MCTuristic_Centro_Historico.localhost {
         private System.Threading.SendOrPostCallback ModificarContactanosOperationCompleted;
         
         private System.Threading.SendOrPostCallback EliminarContactanosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback LoginOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback InsertarAdministradorOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarAdministradorOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback EliminarAdministradorOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -241,6 +250,18 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         /// <remarks/>
         public event EliminarContactanosCompletedEventHandler EliminarContactanosCompleted;
+        
+        /// <remarks/>
+        public event LoginCompletedEventHandler LoginCompleted;
+        
+        /// <remarks/>
+        public event InsertarAdministradorCompletedEventHandler InsertarAdministradorCompleted;
+        
+        /// <remarks/>
+        public event ModificarAdministradorCompletedEventHandler ModificarAdministradorCompleted;
+        
+        /// <remarks/>
+        public event EliminarAdministradorCompletedEventHandler EliminarAdministradorCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1258,6 +1279,122 @@ namespace MCTuristic_Centro_Historico.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/Login", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable Login(AdministradorBO obj) {
+            object[] results = this.Invoke("Login", new object[] {
+                        obj});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void LoginAsync(AdministradorBO obj) {
+            this.LoginAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void LoginAsync(AdministradorBO obj, object userState) {
+            if ((this.LoginOperationCompleted == null)) {
+                this.LoginOperationCompleted = new System.Threading.SendOrPostCallback(this.OnLoginOperationCompleted);
+            }
+            this.InvokeAsync("Login", new object[] {
+                        obj}, this.LoginOperationCompleted, userState);
+        }
+        
+        private void OnLoginOperationCompleted(object arg) {
+            if ((this.LoginCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.LoginCompleted(this, new LoginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarAdministrador", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarAdministrador(AdministradorBO obj) {
+            object[] results = this.Invoke("InsertarAdministrador", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarAdministradorAsync(AdministradorBO obj) {
+            this.InsertarAdministradorAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarAdministradorAsync(AdministradorBO obj, object userState) {
+            if ((this.InsertarAdministradorOperationCompleted == null)) {
+                this.InsertarAdministradorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarAdministradorOperationCompleted);
+            }
+            this.InvokeAsync("InsertarAdministrador", new object[] {
+                        obj}, this.InsertarAdministradorOperationCompleted, userState);
+        }
+        
+        private void OnInsertarAdministradorOperationCompleted(object arg) {
+            if ((this.InsertarAdministradorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarAdministradorCompleted(this, new InsertarAdministradorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarAdministrador", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarAdministrador(AdministradorBO obj) {
+            object[] results = this.Invoke("ModificarAdministrador", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarAdministradorAsync(AdministradorBO obj) {
+            this.ModificarAdministradorAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarAdministradorAsync(AdministradorBO obj, object userState) {
+            if ((this.ModificarAdministradorOperationCompleted == null)) {
+                this.ModificarAdministradorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarAdministradorOperationCompleted);
+            }
+            this.InvokeAsync("ModificarAdministrador", new object[] {
+                        obj}, this.ModificarAdministradorOperationCompleted, userState);
+        }
+        
+        private void OnModificarAdministradorOperationCompleted(object arg) {
+            if ((this.ModificarAdministradorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarAdministradorCompleted(this, new ModificarAdministradorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/EliminarAdministrador", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int EliminarAdministrador(AdministradorBO obj) {
+            object[] results = this.Invoke("EliminarAdministrador", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void EliminarAdministradorAsync(AdministradorBO obj) {
+            this.EliminarAdministradorAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void EliminarAdministradorAsync(AdministradorBO obj, object userState) {
+            if ((this.EliminarAdministradorOperationCompleted == null)) {
+                this.EliminarAdministradorOperationCompleted = new System.Threading.SendOrPostCallback(this.OnEliminarAdministradorOperationCompleted);
+            }
+            this.InvokeAsync("EliminarAdministrador", new object[] {
+                        obj}, this.EliminarAdministradorOperationCompleted, userState);
+        }
+        
+        private void OnEliminarAdministradorOperationCompleted(object arg) {
+            if ((this.EliminarAdministradorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.EliminarAdministradorCompleted(this, new EliminarAdministradorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -1365,6 +1502,99 @@ namespace MCTuristic_Centro_Historico.localhost {
             }
             set {
                 this.nombreUsuarioField = value;
+            }
+        }
+    }
+    
+    /// <comentarios/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class AdministradorBO {
+        
+        private int idAdministradorField;
+        
+        private System.DateTime fechanacimientoField;
+        
+        private string telefonoadminField;
+        
+        private string contraseñaadminField;
+        
+        private string emailField;
+        
+        private string apellidosadminField;
+        
+        private string nombreadminField;
+        
+        /// <comentarios/>
+        public int IdAdministrador {
+            get {
+                return this.idAdministradorField;
+            }
+            set {
+                this.idAdministradorField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public System.DateTime Fechanacimiento {
+            get {
+                return this.fechanacimientoField;
+            }
+            set {
+                this.fechanacimientoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Telefonoadmin {
+            get {
+                return this.telefonoadminField;
+            }
+            set {
+                this.telefonoadminField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Contraseñaadmin {
+            get {
+                return this.contraseñaadminField;
+            }
+            set {
+                this.contraseñaadminField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Apellidosadmin {
+            get {
+                return this.apellidosadminField;
+            }
+            set {
+                this.apellidosadminField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string Nombreadmin {
+            get {
+                return this.nombreadminField;
+            }
+            set {
+                this.nombreadminField = value;
             }
         }
     }
@@ -3134,6 +3364,110 @@ namespace MCTuristic_Centro_Historico.localhost {
         private object[] results;
         
         internal EliminarContactanosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void LoginCompletedEventHandler(object sender, LoginCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class LoginCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal LoginCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarAdministradorCompletedEventHandler(object sender, InsertarAdministradorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarAdministradorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarAdministradorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarAdministradorCompletedEventHandler(object sender, ModificarAdministradorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarAdministradorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarAdministradorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void EliminarAdministradorCompletedEventHandler(object sender, EliminarAdministradorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class EliminarAdministradorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal EliminarAdministradorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

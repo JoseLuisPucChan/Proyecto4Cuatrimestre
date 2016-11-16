@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-
+using WSMCTuristic_CentroHistorico.BO;
 namespace WSMCTuristic_CentroHistorico.DAO
 {
     public class AdministradorDAO
@@ -107,27 +107,27 @@ namespace WSMCTuristic_CentroHistorico.DAO
         }
         public DataTable Login(object obj)
         {
+            oAdministrador = (BO.AdministradorBO)obj;
             DataTable DtResultado = new DataTable("Administrador");
             try
             {
                 cmd = new SqlCommand();
                 conn = new Conexion();
-                oAdministrador = (BO.AdministradorBO)obj;
 
                 cmd.Connection = conn.Establecer();
                 conn.Abrir();
-                cmd.CommandText = "login_user";
+                cmd.CommandText = "login_administrador";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter Usuario = new SqlParameter();
-                Usuario.ParameterName = "@email";
+                Usuario.ParameterName = "@Email";
                 Usuario.SqlDbType = SqlDbType.VarChar;
                 Usuario.Size = 20;
                 Usuario.Value = oAdministrador.Email;
                 cmd.Parameters.Add(Usuario);
 
                 SqlParameter Password = new SqlParameter();
-                Password.ParameterName = "@password";
+                Password.ParameterName = "@Contrasena";
                 Password.SqlDbType = SqlDbType.VarChar;
                 Password.Size = 20;
                 Password.Value = oAdministrador.Contraseñaadmin;

@@ -14,7 +14,10 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link href="../Recursos/css/assets/css/noscript.css" rel="stylesheet" /></noscript>
-    
+    <script src="../Recursos/js/jquery-3.1.1.min.js"></script>
+
+      
+
   <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/materialize.css" rel="stylesheet" type="text/css" media="screen,projection" /> 
   <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/style.css" rel="stylesheet" type="text/css"  media="screen,projection" />
   <link href="../demo.geekslabs.com/materialize/v2.1/layout03/css/custom-style.css" rel="stylesheet" type="text/css" media="screen,projection" />
@@ -44,7 +47,26 @@
 							<ul class="actions">
 
 								<li>
-                                    <asp:Button ID="btnIngresar" class="button" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" />
+                                    <input id="Button1" type="button" class="button" onclick="VerficarUser();"  value="Ingresar" />
+                                   <script type="text/javascript">
+                                       function VerficarUser() {
+                                           var actionData = " { 'email': '" + $("#<%=txtEmail.ClientID%>")[0].value + "'  , 'contraseña': '" + $("#<%=txtContraseña.ClientID%>")[0].value + "' }  ";
+                                          $.ajax({
+                                              type: "POST",
+                                              url: "Login.aspx/BuscarUsuario",
+                                              data: actionData,
+                                              contentType: "application/json; charset=utf-8",
+                                              dataType: "json",
+                                              success: OnSuccess,
+                                              failure: function (response) {
+                                                  alert(response.d);
+                                              }
+                                          });
+                                      }
+                                      function OnSuccess(response) {
+                                          alert("Respuesta " + response.d);
+                                      }
+          </script>
                                  </li>
 							</ul>
 						<footer>
