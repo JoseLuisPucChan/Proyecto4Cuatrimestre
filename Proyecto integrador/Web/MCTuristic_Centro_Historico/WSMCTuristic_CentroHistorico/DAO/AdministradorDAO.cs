@@ -22,12 +22,12 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.CommandText = "insertar_administrador";
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = oAdministrador.NombreAdmin;
-            cmd.Parameters.Add("@Apellidos", SqlDbType.VarChar).Value = oAdministrador.ApellidoAdmin;
+            cmd.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = oAdministrador.Nombreadmin;
+            cmd.Parameters.Add("@Apellidos", SqlDbType.VarChar).Value = oAdministrador.Apellidosadmin;
             cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = oAdministrador.Email;
-            cmd.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = oAdministrador.Contraseña;
-            cmd.Parameters.Add("@TelefonoCelular", SqlDbType.VarChar).Value = oAdministrador.Telefono;
-            cmd.Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = oAdministrador.FechaNacimiento;
+            cmd.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = oAdministrador.Contraseñaadmin;
+            cmd.Parameters.Add("@TelefonoCelular", SqlDbType.VarChar).Value = oAdministrador.Telefonoadmin;
+            cmd.Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = oAdministrador.Fechanacimiento;
 
 
             conn.Abrir();
@@ -55,13 +55,13 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.CommandText = "actualizar_administrador";
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@IdAdminstrador ", SqlDbType.Int).Value = oAdministrador.IdAdmin;
-            cmd.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = oAdministrador.NombreAdmin;
-            cmd.Parameters.Add("@Apellidos", SqlDbType.VarChar).Value = oAdministrador.ApellidoAdmin;
+            cmd.Parameters.Add("@IdAdminstrador ", SqlDbType.Int).Value = oAdministrador.IdAdministrador;
+            cmd.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = oAdministrador.Nombreadmin;
+            cmd.Parameters.Add("@Apellidos", SqlDbType.VarChar).Value = oAdministrador.Apellidosadmin;
             cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = oAdministrador.Email;
-            cmd.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = oAdministrador.Contraseña;
-            cmd.Parameters.Add("@TelefonoCelular", SqlDbType.VarChar).Value = oAdministrador.Telefono;
-            cmd.Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = oAdministrador.FechaNacimiento;
+            cmd.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = oAdministrador.Contraseñaadmin;
+            cmd.Parameters.Add("@TelefonoCelular", SqlDbType.VarChar).Value = oAdministrador.Telefonoadmin;
+            cmd.Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = oAdministrador.Fechanacimiento;
 
 
             conn.Abrir();
@@ -89,7 +89,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.CommandText = "eliminar_administrador";
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@IdAdministradoe ", SqlDbType.Int).Value = oAdministrador.IdAdmin;
+            cmd.Parameters.Add("@IdAdministradoe ", SqlDbType.Int).Value = oAdministrador.IdAdministrador;
 
             conn.Abrir();
             int retorno = cmd.ExecuteNonQuery();
@@ -105,6 +105,43 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
             return retorno;
         }
+        public DataTable Login(object obj)
+        {
+            DataTable DtResultado = new DataTable("Administrador");
+            try
+            {
+                cmd = new SqlCommand();
+                conn = new Conexion();
+                oAdministrador = (BO.AdministradorBO)obj;
 
+                cmd.Connection = conn.Establecer();
+                conn.Abrir();
+                cmd.CommandText = "login_user";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter Usuario = new SqlParameter();
+                Usuario.ParameterName = "@email";
+                Usuario.SqlDbType = SqlDbType.VarChar;
+                Usuario.Size = 20;
+                Usuario.Value = oAdministrador.Email;
+                cmd.Parameters.Add(Usuario);
+
+                SqlParameter Password = new SqlParameter();
+                Password.ParameterName = "@password";
+                Password.SqlDbType = SqlDbType.VarChar;
+                Password.Size = 20;
+                Password.Value = oAdministrador.Contraseñaadmin;
+                cmd.Parameters.Add(Password);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(cmd);
+                SqlDat.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
     }
 }

@@ -18,23 +18,24 @@ namespace MCTuristic_Centro_Historico.GUI
         [WebMethod]
         private void BuscarUsuario()
         {
-            DataTable Datos = new DataTable();
-            Datos = Services.CtrlAdmin.LoginUsuario(this.txtUsuario.Text.Trim(), this.txtContraseña.Text.Trim());
 
-            if (txtUsuario.Text.Trim() != string.Empty || txtContraseña.Text.Trim() != string.Empty)
-            {
-                if (Datos.Rows.Count == 0)
-                {
-                    Mensaje("Usted Notiene acceso al Sistema");
-                }
-                else
-                {
-                    Session["idDueño"] = Datos.Rows[0][1].ToString();
-                    Server.Transfer("Inicio.aspx");
-                    Mensaje("Bienvenido");
+            //DataTable Datos = new DataTable();
+            //Datos = Services.CtrlAdmin.LoginUsuario(this.txtUsuario.Text.Trim(), this.txtContraseña.Text.Trim());
 
-                }
-            }
+            //if (txtUsuario.Text.Trim() != string.Empty || txtContraseña.Text.Trim() != string.Empty)
+            //{
+            //    if (Datos.Rows.Count == 0)
+            //    {
+            //        Mensaje("Usted Notiene acceso al Sistema");
+            //    }
+            //    else
+            //    {
+            //        Session["idDueño"] = Datos.Rows[0][1].ToString();
+            //        Server.Transfer("Inicio.aspx");
+            //        Mensaje("Bienvenido");
+
+            //    }
+            //}
 
 
         }
@@ -43,7 +44,7 @@ namespace MCTuristic_Centro_Historico.GUI
             if(txtEmail.Text=="josechan211@gmail.com" && txtContraseña.Text=="12345")
             {
                 Response.Redirect("GestionUsuariosGUI.aspx");
-            }
+            } 
         }
     }
 }

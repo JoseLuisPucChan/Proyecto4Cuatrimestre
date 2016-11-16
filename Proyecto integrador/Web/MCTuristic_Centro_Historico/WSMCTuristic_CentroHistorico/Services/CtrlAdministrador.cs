@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -24,6 +25,14 @@ namespace WSMCTuristic_CentroHistorico.Services
         {
             oAdministrador = new DAO.AdministradorDAO();
             return oAdministrador.EliminarAdministrador(obj);
+        }
+
+
+        public DataTable LoginUsuario(object obj)
+        {
+            oAdministrador = new DAO.AdministradorDAO();
+            BO.AdministradorBO Obj = new BO.AdministradorBO();
+            return oAdministrador.Login(Obj);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
@@ -337,6 +338,17 @@ namespace WSMCTuristic_CentroHistorico.UI
         }
 
         //---------------------ABC Administrador-----------------
+
+        [WebMethod]
+        public DataTable Login(AdministradorBO obj)
+        {
+            AdministradorBO oAdministrador = obj;
+            oAdministradorCTRL = new Services.CtrlAdministrador();
+            return oAdministradorCTRL.LoginUsuario(oAdministrador);
+        }
+
+
+
         [WebMethod]
         public int InsertarAdministrador(AdministradorBO obj)
         {
