@@ -30,6 +30,7 @@ namespace WSMCTuristic_CentroHistorico.UI
         Services.CtrlTipoSuscripcion oTipoSuscripcionCTRL;
         Services.CtrlContactanos oContactanosCTRL;
         Services.CtrlAdministrador oAdministradorCTRL;
+        Services.CtrlComentario oComentariosCTRL;
         //--------------------------ABC Usuarios-----------------------------
          [WebMethod]
         public int InsertarUsuario( UsuarioBO obj )
@@ -388,6 +389,29 @@ namespace WSMCTuristic_CentroHistorico.UI
             AdministradorBO oAdministrador = obj;
             oAdministradorCTRL = new Services.CtrlAdministrador();
             return oAdministradorCTRL.EliminarAdministrador(oAdministrador);
+        }
+
+        //------------- ABC Comentarios -----------------------
+        [WebMethod]
+        public int InsertarComentarios(ComentariosBO obj)
+        {
+            ComentariosBO oComentarios = obj;
+            oComentariosCTRL = new Services.CtrlComentario();
+            return oComentariosCTRL.InsertarComentarios(oComentarios);
+        }
+        [WebMethod]
+        public int ModificarComentarios(ComentariosBO obj)
+        {
+            ComentariosBO oComentarios = obj;
+            oComentariosCTRL = new Services.CtrlComentario();
+            return oComentariosCTRL.ModificarComentarios(oComentarios);
+        }
+        [WebMethod]
+        public int EliminarComentarios(ComentariosBO obj)
+        {
+            ComentariosBO oComentarios = obj;
+            oComentariosCTRL = new Services.CtrlComentario();
+            return oComentariosCTRL.EliminarComentarios(oComentarios);
         }
 
     }
