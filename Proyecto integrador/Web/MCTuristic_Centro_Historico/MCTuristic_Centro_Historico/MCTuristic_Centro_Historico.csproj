@@ -58,7 +58,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GUI\Contactanos1.aspx" />
     <Content Include="GUI\DetalleProducto.aspx" />
     <Content Include="GUI\GestionDireccion.aspx" />
     <Content Include="GUI\GestionEstablecimientos.aspx" />
@@ -69,7 +68,6 @@
     <Content Include="GUI\GestionUsuariosGUI.aspx" />
     <Content Include="GUI\Principal.aspx" />
     <Content Include="GUI\Productos.aspx" />
-    <Content Include="GUI\Productos1.aspx" />
     <Content Include="GUI\QuieneSomo.aspx" />
     <Content Include="GUI\Registro.aspx" />
     <Content Include="GUI\Suscripciones.aspx" />
@@ -242,6 +240,7 @@
     <Content Include="Recursos\hts-cache\new.zip" />
     <Content Include="Recursos\hts-cache\winprofile.ini" />
     <Content Include="MasterPage\mpBase.Master" />
+    <Content Include="MasterPage\UsuarioVista.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -529,13 +528,6 @@
     <Compile Include="GUI\Contactanos.aspx.designer.cs">
       <DependentUpon>Contactanos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Contactanos1.aspx.cs">
-      <DependentUpon>Contactanos1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUI\Contactanos1.aspx.designer.cs">
-      <DependentUpon>Contactanos1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="GUI\DetalleProducto.aspx.cs">
       <DependentUpon>DetalleProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -620,13 +612,6 @@
     <Compile Include="GUI\Productos.aspx.designer.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Productos1.aspx.cs">
-      <DependentUpon>Productos1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUI\Productos1.aspx.designer.cs">
-      <DependentUpon>Productos1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="GUI\QuieneSomo.aspx.cs">
       <DependentUpon>QuieneSomo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -661,6 +646,13 @@
     </Compile>
     <Compile Include="MasterPage\PaginaPrincipal.Master.designer.cs">
       <DependentUpon>PaginaPrincipal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\UsuarioVista.Master.cs">
+      <DependentUpon>UsuarioVista.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\UsuarioVista.Master.designer.cs">
+      <DependentUpon>UsuarioVista.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

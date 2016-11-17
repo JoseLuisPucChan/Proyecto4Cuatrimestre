@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="PagPrincipal.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.PagPrincipal" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile ="~/MasterPage/UsuarioVista.Master" AutoEventWireup="true" CodeBehind="PagPrincipal.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.PagPrincipal" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
 </asp:Content>
@@ -84,7 +84,7 @@
                                                 <li class="dropdown">
                                                     <a href="Productos.aspx" data-toggle="dropdown" class="dropdown-toggle">Productos<b class="caret"></b></a>
                                                     <ul role="menu" class="dropdown-menu">
-                                                       <li><a tabindex="-1"  href="Productos1.aspx"> Lista Productos </a></li>
+                                                       <li><a tabindex="-1"  href="Productos.aspx"> Lista Productos </a></li>
                                                        <%-- <li><a tabindex="-1" href="product-details.html"> Product Details</a></li>
                                                         <li><a tabindex="-1" href="cart.html"> Cart </a></li>
                                                         <li><a tabindex="-1" href="checkout.html"> Check Out</a></li>
@@ -106,7 +106,7 @@
 
 
                                                 <li>
-                                                    <a href="Contactanos1.aspx">Contactanos<b></b></a>
+                                                    <a href="Contactanos.aspx">Contactanos<b></b></a>
                                                 </li>
 
                                             </ul>

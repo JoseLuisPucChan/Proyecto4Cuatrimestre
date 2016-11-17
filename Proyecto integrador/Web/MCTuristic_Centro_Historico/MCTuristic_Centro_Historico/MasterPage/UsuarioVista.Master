@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaPrincipal.master.cs" Inherits="MCTuristic_Centro_Historico.MasterPage.PaginaPrincipal" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UsuarioVista.master.cs" Inherits="MCTuristic_Centro_Historico.MasterPage.UsuarioVista" %>
 
 <!DOCTYPE html>
 
@@ -27,7 +27,25 @@
        <script src="../Recursos/js/jquery-3.1.1.min.js"></script>
     <link href="../Recursos/css/StyleSheet1.css" rel="stylesheet" />
 
-    </head>
+<%--    <link  rel='stylesheet' href="../Recursos/slider/settings.css" type="text/css" media="all" />--%>
+<%--   <link rel='stylesheet' href="../Recursos/slider/main.css" type="text/css" media="all" />--%>
+ <%--   <link  rel='stylesheet' href="../Recursos/slider/style.css"  type="text/css" media="all"/>--%>
+<%--    <script type="text/javascript" src="../Recursos/slider/jquery.js"></script>
+    <script type="text/javascript" src="../Recursos/slider/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="../Recursos/slider/jquery.themepunch.revolution.min.js"></script>
+    <script  type="text/javascript" src="../Recursos/slider/comment-reply.min.js"></script>--%>
+
+     <link rel='stylesheet'   href='http://www.hogarreparacion.com/wp-content/plugins/revslider/rs-plugin/css/settings.css' type='text/css' media='all' />
+     <link rel='stylesheet'   href='http://www.hogarreparacion.com/wp-content/themes/Circles/css/main.css' type='text/css' media='all' />
+     <link rel='stylesheet'  href='http://www.hogarreparacion.com/wp-content/themes/Circles/style.css' type='text/css' media='all' />
+    <script type='text/javascript' src='http://www.hogarreparacion.com/wp-includes/js/jquery/jquery.js'>
+   </script>
+    <script type='text/javascript' src='http://www.hogarreparacion.com/wp-includes/js/jquery/jquery-migrate.min.js'>
+    </script>
+     <script type='text/javascript' src='http://www.hogarreparacion.com/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js'>
+     </script>
+     <script type='text/javascript' src='http://www.hogarreparacion.com/wp-includes/js/comment-reply.min.js'></script>
+</head>
 <body>
     <form id="form1" runat="server">
     <div>
@@ -183,3 +201,4 @@ Somos un grupo de personas que Conscientes de que la cultura de nuestros ancestr
     
 </body>
 </html>
+
