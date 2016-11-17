@@ -87,17 +87,22 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h3 class="modal-title"><b>Registrar tipo de servicio</b></h3>
+                                        <h3 class="modal-title"><b>Seleccionar foto del establecimiento</b></h3>
                                     </div>
                                     <div class="modal-body">
                                         <div class="col-lg-6">
-                                            <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
-                                            <asp:TextBox ID="txtNombreTipo" runat="server" CssClass="form-control border-blue"></asp:TextBox>
+                                            <h3><i class="glyph-icon icon-tag"></i>Foto</h3>
+                                            <center>
+                                            <asp:Image ID="imgEstablecimiento" runat="server" ImageUrl="~/Recursos/images/Establecimiento.png"/>
+                                                </center>
+                                            <br />
+                                            <asp:FileUpload ID="fuFoto" CssClass="btn-primary" runat="server" Visible="true"/>
+                                            <asp:Button ID="btnSubir"  runat="server" CssClass="btn btn-primary" Text="Subir foto" />
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="pull-right">
                                                 <asp:Button ID="btnAceptar" CssClass="btn btn-primary" runat="server" Text="Aceptar" />
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                                                <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
                                             </div>
                                         </div>
                                     </div>

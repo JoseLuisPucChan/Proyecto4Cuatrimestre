@@ -75,6 +75,7 @@
     <Content Include="GUI\VistaProducto.aspx" />
     <Content Include="images1\hombre.png" />
     <Content Include="Recursos\03.png" />
+    <Content Include="Recursos\images\Establecimiento.png" />
     <Content Include="Recursos\Imagenes\fotos-panoramicas-12.jpg" />
     <Content Include="Recursos\Imagenes\17411434.jpg" />
     <Content Include="Recursos\agileui.com\demo\image-resources\logo-admin.png" />
