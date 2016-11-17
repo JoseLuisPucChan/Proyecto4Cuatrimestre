@@ -25,7 +25,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = oAdministrador.Nombreadmin;
             cmd.Parameters.Add("@Apellidos", SqlDbType.VarChar).Value = oAdministrador.Apellidosadmin;
             cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = oAdministrador.Email;
-            cmd.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = oAdministrador.Contraseñaadmin;
+            cmd.Parameters.Add("@Contrasena", SqlDbType.VarChar).Value = oAdministrador.Contraseñaadmin;
             cmd.Parameters.Add("@TelefonoCelular", SqlDbType.VarChar).Value = oAdministrador.Telefonoadmin;
             cmd.Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = oAdministrador.Fechanacimiento;
 
@@ -59,7 +59,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = oAdministrador.Nombreadmin;
             cmd.Parameters.Add("@Apellidos", SqlDbType.VarChar).Value = oAdministrador.Apellidosadmin;
             cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = oAdministrador.Email;
-            cmd.Parameters.Add("@Contraseña", SqlDbType.VarChar).Value = oAdministrador.Contraseñaadmin;
+            cmd.Parameters.Add("@Contrasena", SqlDbType.VarChar).Value = oAdministrador.Contraseñaadmin;
             cmd.Parameters.Add("@TelefonoCelular", SqlDbType.VarChar).Value = oAdministrador.Telefonoadmin;
             cmd.Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = oAdministrador.Fechanacimiento;
 

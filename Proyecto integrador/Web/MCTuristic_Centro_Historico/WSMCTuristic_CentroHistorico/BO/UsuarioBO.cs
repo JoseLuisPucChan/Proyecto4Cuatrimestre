@@ -14,6 +14,7 @@ namespace WSMCTuristic_CentroHistorico.BO
         private string _contraseñaUsuario;
         private string _telefonoUsuario;
         private DateTime _fecharNacUsuario;
+        private byte[] _foto;
 
         public int IdUsuario
         {
@@ -56,5 +57,17 @@ namespace WSMCTuristic_CentroHistorico.BO
             set { _nombreUsuario = value; }
         }
 
+        public byte[] Foto
+        {
+            get
+            {
+                return _foto;
+            }
+
+            set
+            {
+                _foto = value;
+            }
+        }
     }
 }

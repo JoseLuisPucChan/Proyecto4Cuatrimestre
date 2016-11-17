@@ -130,7 +130,7 @@ namespace WSMCTuristic_CentroHistorico.UI
             BO.EventoBO oEventoBO = new BO.EventoBO();
             oEventoBO = obj;
             oEventoCTRL = new Services.CtrlEvento();
-            return oEventoCTRL.EliminarEvento(oEventoBO);
+            return oEventoCTRL.InsertarEvento(oEventoBO);
         }
 
         [WebMethod]
@@ -142,7 +142,7 @@ namespace WSMCTuristic_CentroHistorico.UI
             oEventoCTRL = new Services.CtrlEvento();
             return oEventoCTRL.ModificarEvento(oEventoBO);
         }
-
+        [WebMethod]
         public int EliminarEvento(BO.EventoBO obj)
         {
             BO.EventoBO oEventoBO = new BO.EventoBO();
@@ -332,7 +332,7 @@ namespace WSMCTuristic_CentroHistorico.UI
             oTipoSuscripcionCTRL = new Services.CtrlTipoSuscripcion();
             return oTipoSuscripcionCTRL.EliminarTipoSuscripcion(oTipoSuscripcion);
         }
-        //---------------------ABC TipoSuscripcion --------------
+        //---------------------ABC Contactanos --------------
 
         [WebMethod]
         public int InsertarContactanos(ContactanosBO obj)

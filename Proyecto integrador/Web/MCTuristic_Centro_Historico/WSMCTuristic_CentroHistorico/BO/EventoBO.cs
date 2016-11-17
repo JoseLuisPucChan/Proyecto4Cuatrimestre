@@ -14,6 +14,7 @@ namespace WSMCTuristic_CentroHistorico.BO
         private string _horaFinalizacion;
         private DateTime _fechaInicio;
         private DateTime _fechaFinalizacion;
+        private byte[] _foto;
         private int _idUsuario;
         private int _idSitio;
 
@@ -63,6 +64,19 @@ namespace WSMCTuristic_CentroHistorico.BO
         {
             get { return _idEvento; }
             set { _idEvento = value; }
+        }
+
+        public byte[] Foto
+        {
+            get
+            {
+                return _foto;
+            }
+
+            set
+            {
+                _foto = value;
+            }
         }
     }
 }

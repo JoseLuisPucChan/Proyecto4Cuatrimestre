@@ -30,6 +30,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@PagFacebook", SqlDbType.VarChar).Value = oEstablecimiento.PagFacebook;
             cmd.Parameters.Add("@Longitud", SqlDbType.Decimal).Value = oEstablecimiento.Longitud;
             cmd.Parameters.Add("@Latitud", SqlDbType.Decimal).Value = oEstablecimiento.Latitud;
+            cmd.Parameters.Add("@Foto", SqlDbType.Image).Value = oEstablecimiento.Foto;
             cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = oEstablecimiento.IdUsuario;
 
             conn.Abrir();
@@ -65,6 +66,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@PagFacebook", SqlDbType.VarChar).Value = oEstablecimiento.PagFacebook;
             cmd.Parameters.Add("@Longitud", SqlDbType.Decimal).Value = oEstablecimiento.Longitud;
             cmd.Parameters.Add("@Latitud", SqlDbType.Decimal).Value = oEstablecimiento.Latitud;
+            cmd.Parameters.Add("@Foto", SqlDbType.Image).Value = oEstablecimiento.Foto;
             cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = oEstablecimiento.IdUsuario;
 
             conn.Abrir();

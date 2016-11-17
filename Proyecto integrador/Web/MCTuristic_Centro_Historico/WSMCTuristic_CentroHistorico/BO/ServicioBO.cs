@@ -14,6 +14,8 @@ namespace WSMCTuristic_CentroHistorico.BO
         private int _idEstablecimiento;
         private int _idTipoServicio;
         private string _nombreServicio;
+        private byte[] _foto;
+        private int _popularidad;
 
         public int IdTipoServicio
         {
@@ -68,6 +70,32 @@ namespace WSMCTuristic_CentroHistorico.BO
             set
             {
                 _nombreServicio = value;
+            }
+        }
+
+        public byte[] Foto
+        {
+            get
+            {
+                return _foto;
+            }
+
+            set
+            {
+                _foto = value;
+            }
+        }
+
+        public int Popularidad
+        {
+            get
+            {
+                return _popularidad;
+            }
+
+            set
+            {
+                _popularidad = value;
             }
         }
     }

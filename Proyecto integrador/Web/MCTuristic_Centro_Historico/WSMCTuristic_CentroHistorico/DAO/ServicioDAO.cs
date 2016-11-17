@@ -27,6 +27,10 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@DescripServicio", SqlDbType.VarChar).Value = oServicio.DescripcionServicio;
             cmd.Parameters.Add("@idEstablecimiento", SqlDbType.Int).Value = oServicio.IdEstablecimiento;
             cmd.Parameters.Add("@idTipoServi", SqlDbType.Int).Value = oServicio.IdTipoServicio;
+            cmd.Parameters.Add("@Foto", SqlDbType.Image).Value = oServicio.Foto;
+            cmd.Parameters.Add("@Popularidad", SqlDbType.Int).Value = oServicio.Foto;
+
+
 
 
             conn.Abrir();
@@ -60,6 +64,8 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@DescripServicio", SqlDbType.VarChar).Value = oServicio.DescripcionServicio;
             cmd.Parameters.Add("@idEstablecimiento", SqlDbType.Int).Value = oServicio.IdEstablecimiento;
             cmd.Parameters.Add("@idTipoServi", SqlDbType.Int).Value = oServicio.IdTipoServicio;
+            cmd.Parameters.Add("@Foto", SqlDbType.Image).Value = oServicio.Foto;
+            cmd.Parameters.Add("@Popularidad", SqlDbType.Int).Value = oServicio.Foto;
 
 
             conn.Abrir();
