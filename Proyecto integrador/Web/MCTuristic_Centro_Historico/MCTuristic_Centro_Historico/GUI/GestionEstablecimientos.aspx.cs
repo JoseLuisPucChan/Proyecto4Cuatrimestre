@@ -21,17 +21,18 @@ namespace MCTuristic_Centro_Historico.GUI
             Response.Redirect("GestionServicios.aspx");
         }
 
-        public static string Guardar(string nombre, string apellido, string email, string contraseña, string numero)
+        public static string GuardarEstablecimiento(string nombre, string telefono, string facebook, string abrir, string cerrar, string ubicacion, decimal latitud, decimal longitud)
         {
             localhost.WsMCTuristic owebService = new WsMCTuristic();
-            localhost.UsuarioBO oUsuariosBO = new UsuarioBO();
-            oUsuariosBO.NombreUsuario = nombre;
-            oUsuariosBO.ApellidosUsuario = apellido;
-            oUsuariosBO.EmailUsuario = email;
-            oUsuariosBO.ContraseñaUsuario = contraseña;
-            oUsuariosBO.TelefonoUsuario = numero;
-            oUsuariosBO.FecharNacUsuario = DateTime.Now;
-            int i = owebService.InsertarUsuario(oUsuariosBO);
+            localhost.EstablecimientoBO oEstablecimientoBO = new EstablecimientoBO();
+            oEstablecimientoBO.NombreEstable = nombre;
+            oEstablecimientoBO.TelefonoEstable = telefono;
+            oEstablecimientoBO.PagFacebook = facebook;
+            oEstablecimientoBO.HoraInicioEstable = abrir;
+            oEstablecimientoBO.HoraCierreEstable = cerrar;
+            oEstablecimientoBO.Latitud = latitud;
+            oEstablecimientoBO.Longitud = longitud;
+            int i = owebService.InsertarEstablecimiento(oEstablecimientoBO);
             if (i > 0)
             {
                 return "Operación exitosa";

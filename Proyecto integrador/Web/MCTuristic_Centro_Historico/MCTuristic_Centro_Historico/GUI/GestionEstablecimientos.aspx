@@ -80,6 +80,37 @@
                         </div>
                     </div>
                     <div class="col-lg-12 form-group">
+                        <h3><i class="glyph-icon icon-image"></i>Foto</h3>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#Direccion" type="button">Seleccionar foto</button>
+                        <div class="modal fade bs-example-modal-lg" id="Direccion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h3 class="modal-title"><b>Registrar tipo de servicio</b></h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="col-lg-6">
+                                            <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
+                                            <asp:TextBox ID="txtNombreTipo" runat="server" CssClass="form-control border-blue"></asp:TextBox>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="pull-right">
+                                                <asp:Button ID="btnAceptar" CssClass="btn btn-primary" runat="server" Text="Aceptar" />
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer no-border">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 form-group">
+                        <asp:TextBox ID="txtLatitud" runat="server" Visible="false"></asp:TextBox>
+                        <asp:TextBox ID="txtLongitud" runat="server" Visible="false"></asp:TextBox>
+                        
                         <h3><i class="glyph-icon icon-file-text"></i>Ubicación</h3>
                         <div class="example-box-wrapper">
                             <div id="map-basic" style="height: 300px;"></div>
@@ -91,6 +122,25 @@
                     </div>
                     <div class="col-lg-12 form-group">
                         <div class="divider"></div>
+        <script type="text/javascript">
+            function GurdarEstablecimiento() {
+                var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'telefono': '" + $("#<%=txtTelefono.ClientID%>")[0].value + "', 'facebook': '" + $("#<%=txtFacebook.ClientID%>")[0].value + "', 'abrir': '" + $("#<%=txtAbrir.ClientID%>")[0].value + "', 'cerrar': '" + $("#<%=txtCerrar.ClientID%>")[0].value + "', 'latitud': '" + $("#<%=txtLatitud.ClientID%>")[0].value + "', 'longitud': '" + $("#<%=txtLongitud.ClientID%>")[0].value + "'}  ";
+            $.ajax({
+                type: "POST",
+                url: "GestionServivios.aspx/GuardarEstablecimiento",
+                data: actionData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccess,
+                failure: function (response) {
+                    alert(response.d);
+                }
+            });
+        }
+        function OnSuccess(response) {
+            alert("Respuesta " + response.d);
+        }
+        </script>
                         <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
