@@ -40,18 +40,27 @@
  <div class="content_slider_wrapper" id="slider1" style="width: 1078px; height: 600px; left: 0px;"><div class="circle_slider" style="left: 2px; width: 1078px; height: 212px; transform: scale(1, 1);">
  <div class="image_more_info" style="box-shadow: rgb(255, 255, 255) 0px 0px 0px; left: 613px; top: 187px;">
   <a href="#" rel="" target="_self">
-   <img alt="" src="images/more.png" style="padding: 0px; background-color: rgb(26, 185, 155); width: 0px;"></a></div>
- <div class="circle_slider_thumb all_around_circle_3" style="left: 1078px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 100px; border: 0px solid rgb(40, 40, 40);">
- <img src="images/team-img2.png" class="all_around_img_3" style="width: 100px; height: 100px; border-radius: 100px; display: inline-block;"></div><div class="circle_slider_thumb all_around_circle_4" style="left: -124px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
- <img src="images/team-img1.png" class="all_around_img_4" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"></div><div class="circle_slider_thumb all_around_circle_5" style="left: 0px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);"><img src="images/team-img2.png" class="all_around_img_5" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"></div><div class="circle_slider_thumb all_around_circle_6" style="left: 124px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
-<img src="images/team-img3.png" class="all_around_img_6" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"></div><div class="circle_slider_thumb all_around_circle_0" style="left: 248px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
- <img src="images/team-img1.png" class="all_around_img_0" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"></div><div class="circle_slider_thumb all_around_circle_1" style="left: 427px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 1px; width: 200px; height: 200px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
- <img src="images/team-img2.png" class="all_around_img_1" style="width: 200px; height: 200px; border-radius: 200px; display: inline-block;"></div><div class="circle_slider_thumb all_around_circle_2" style="left: 706px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);"><img src="images/team-img3.png" class="all_around_img_2" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"></div><div class="circle_slider_thumb all_around_circle_3" style="left: 830px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);"><img src="images/team-img4.png" class="all_around_img_3" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"></div><div class="circle_slider_thumb all_around_circle_4" style="left: 954px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);"><img src="images/team-img1.png" class="all_around_img_4" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"></div><div class="circle_slider_nav_left circle_slider_no_border" style="left: 364px; top: 75px;"><img src="images/left2.png" alt="left" style="z-index: 1000; margin-top: 15px; left: 0px;"></div><div class="circle_slider_nav_right circle_slider_no_border" style="left: 627px; top: 75px;"><img src="images/right2.png" alt="right" style="z-index: 1000; margin-top: 15px; left: 4px;"></div></div>
+   <img alt="" src="../Recursos/images/more.png" style="padding: 0px; background-color: rgb(26, 185, 155); width: 0px;"/></a></div>
+ <div class="circle_slider_thumb all_around_circle_3" style="left: 1078px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 100px; border: 0px solid rgb(40, 40, 40);"/>
+ <img src="../Recursos/images/team-img2.png" class="all_around_img_3" style="width: 100px; height: 100px; border-radius: 100px; display: inline-block;"/></div>
+   <div class="circle_slider_thumb all_around_circle_4" style="left: -124px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
+ <img src="../Recursos/images/team-img1.png" class="all_around_img_4" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"/></div>
+  <div class="circle_slider_thumb all_around_circle_5" style="left: 0px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
+      <img src="../Recursos/images/team-img2.png" class="all_around_img_5" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"/>
+  </div><div class="circle_slider_thumb all_around_circle_6" style="left: 124px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
+<img src="../Recursos/images/team-img3.png" class="all_around_img_6" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"/></div>
+  <div class="circle_slider_thumb all_around_circle_0" style="left: 248px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
+ <img src="../Recursos/images/team-img1.png" class="all_around_img_0" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"/></div>
+   <div class="circle_slider_thumb all_around_circle_1" style="left: 427px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 1px; width: 200px; height: 200px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
+ <img src="../Recursos/images/team-img2.png" class="all_around_img_1" style="width: 200px; height: 200px; border-radius: 200px; display: inline-block;"/></div>
+  <div class="circle_slider_thumb all_around_circle_2" style="left: 706px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
+    <img src="../Recursos/images/team-img3.png" class="all_around_img_2" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"/></div><div class="circle_slider_thumb all_around_circle_3" style="left: 830px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);">
+     <img src="../Recursos/images/team-img4.png" class="all_around_img_3" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"/></div><div class="circle_slider_thumb all_around_circle_4" style="left: 954px; box-shadow: rgb(255, 255, 255) 0px 0px 0px; top: 51px; width: 100px; height: 100px; border-radius: 200px; border: 0px solid rgb(40, 40, 40);"><img src="images/team-img1.png" class="all_around_img_4" style="width: 100px; height: 100px; border-radius: 200px; display: inline-block;"></div><div class="circle_slider_nav_left circle_slider_no_border" style="left: 364px; top: 75px;"><img src="images/left2.png" alt="left" style="z-index: 1000; margin-top: 15px; left: 0px;"></div><div class="circle_slider_nav_right circle_slider_no_border" style="left: 627px; top: 75px;"><img src="images/right2.png" alt="right" style="z-index: 1000; margin-top: 15px; left: 4px;"></div></div>
 <div class="circle_slider_text_wrapper" id="sw0" style="width: 1056px; top: 0px; left: 0px; display: none;">
  
 <div class="content_slider_text_block_wrap">
  
-<h3>Eliza Jonsep</h3><br>
+<h3>José Luis Puc Chan</h3><br>
 <span>Manager <i>at</i> Relax Spa Palace</span><br>
 <div class="rev-text">
 <span><i class="fa fa-quote-left"></i></span>
@@ -173,9 +182,10 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 </div>
  
 <div class="gap-50"></div>
-</div>
+
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Contenido" runat="server">
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="scrip" runat="server">
+
 </asp:Content>
