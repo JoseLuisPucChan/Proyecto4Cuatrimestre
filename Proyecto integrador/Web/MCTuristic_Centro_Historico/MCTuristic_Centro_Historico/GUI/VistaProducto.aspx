@@ -144,24 +144,41 @@
                                 <%--Modulo 1--%>
                           <div class="col-lg-4 col-md-4 col-sm-4">
                                     <ul class="pro-box">
-                                        <li class="pro">
-                                            <div class="block-image">
-                                                <img class="img-responsive" src="../Recursos/Imagenes/1.jpg" alt="" />
-                                                <div class="img-overlay-3-up pat-override"></div>
-                                                <div class="img-overlay-3-down pat-override"></div>
-                                                <ol class="static-style">
-                                                    <li class="white-rounded">
-                                                        <a href="DetalleProducto.aspx"><i class="fa fa-link"></i></a></li>
-                                                    <li class="white-rounded">
-                                                        <a href="images/large/large1.gif" rel="prettyPhoto[gallery1]"><i class="fa fa-plus"></i></a></li>
-                                                </ol>
-                                            </div>
-                                            <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
-                                        <li>
-                                            <h4><a href="DetalleProducto.aspx">Conchinita</a></h4>
+                                            <li class="pro">
+                                                        <div class="block-image">
+                                                            <img class="img-responsive" src="../Recursos/Imagenes/1.jpg" alt="" />
+                                                            <div class="img-overlay-3-up pat-override"></div>
+                                                            <div class="img-overlay-3-down pat-override"></div>
+                                                            <ol class="static-style">
+                                                                <li class="white-rounded">
+                                                                    <a href="DetalleProducto.aspx"><i class="fa fa-link"></i></a></li>
+                                                                <li class="white-rounded">
+                                                                    <a href="images/large/large1.gif" rel="prettyPhoto[gallery1]">
+                                                                  <i class="fa fa-plus"></i></a></li>
+                                                            </ol>
+                                                        </div>
+                                                <span class="addtocart">
+                                                <a href="DetalleProducto.aspx">Ver Detalles</a>
+                                                </span> 
+                                            </li>
+                                            <li>
+                                                <h4><a href="DetalleProducto.aspx">Conchinita</a></h4>
+                                            </li>
+
+                                    <li>Restaurante flor</li>
+                                        <li class="pro-footer">
+                                            <span class="price">$40.00</span>
+                                                <span class="rating">
+                                                <a href="#">
+                                                 <i class="fa fa-star">
+                                                 </i></a>
+                                                <a href="#"><i class="fa fa-star"></i></a>
+                                                 <a href="#"><i class="fa fa-star"></i></a>
+                                                 <a href="#"><i class="fa fa-star-o"></i></a>
+                                                <a href="#">
+                                                <i class="fa fa-star-o"></i></a>
+                                                </span>
                                         </li>
-                                        <li>Restaurante flor</li>
-                                        <li class="pro-footer"><span class="price">$40.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
 
