@@ -71,6 +71,7 @@
     <Content Include="GUI\QuieneSomo.aspx" />
     <Content Include="GUI\Registro.aspx" />
     <Content Include="GUI\Suscripciones.aspx" />
+    <Content Include="GUI\VistaEquipo.aspx" />
     <Content Include="GUI\VistaProducto.aspx" />
     <Content Include="images1\hombre.png" />
     <Content Include="Recursos\03.png" />
@@ -636,6 +637,13 @@
     </Compile>
     <Compile Include="GUI\Suscripciones.aspx.designer.cs">
       <DependentUpon>Suscripciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\VistaEquipo.aspx.cs">
+      <DependentUpon>VistaEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\VistaEquipo.aspx.designer.cs">
+      <DependentUpon>VistaEquipo.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\VistaProducto.aspx.cs">
       <DependentUpon>VistaProducto.aspx</DependentUpon>
