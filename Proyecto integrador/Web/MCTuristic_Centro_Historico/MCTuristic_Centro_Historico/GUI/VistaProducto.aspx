@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/UsuarioVista.Master" AutoEventWireup="true" CodeBehind="VistaProducto.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.VistaProducto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="VistaProducto.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.VistaProducto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -139,10 +139,10 @@
                         </div>
 
                         <div class="gallery">
-
-                            <div class="row">
-
-                                <div class="col-lg-4 col-md-4 col-sm-4">
+                        <%--Sección 1--%>
+                       <div class="row">
+                                <%--Modulo 1--%>
+                          <div class="col-lg-4 col-md-4 col-sm-4">
                                     <ul class="pro-box">
                                         <li class="pro">
                                             <div class="block-image">
@@ -165,8 +165,8 @@
                                     </ul>
                                 </div>
 
-
-                                <div class="col-lg-4 col-md-4 col-sm-4">
+                            <%--Modulo 2--%>
+                          <%--<div class="col-lg-4 col-md-4 col-sm-4">
                                     <ul class="pro-box">
                                         <li class="pro">
                                             <div class="block-image">
@@ -185,10 +185,10 @@
                                         <li>Camiseria Canul</li>
                                         <li class="pro-footer"><span class="price">$299.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
-                                </div>
+                                </div>--%>
 
-
-                                <div class="col-lg-4 col-md-4 col-sm-4">
+                              <%--Modulo 3--%>
+                          <%--<div class="col-lg-4 col-md-4 col-sm-4">
                                     <ul class="pro-box">
                                         <li class="pro">
                                             <div class="block-image">
@@ -207,13 +207,13 @@
                                         <li>Camiseria Canul</li>
                                         <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
-                                </div>
+                                </div>--%>
 
-                            </div>
+                        </div>
 
                             <div class="gap-30"></div>
-
-                            <div class="row">
+                             <%--Sección 2--%>
+                            <%--<div class="row">
 
                                 <div class="col-lg-4 col-md-4 col-sm-4 cp_load fadeInUp">
                                     <ul class="pro-box">
@@ -280,11 +280,11 @@
                                     </ul>
                                 </div>
 
-                            </div>
+                            </div>--%>
 
                             <div class="gap-30"></div>
-
-                            <div class="row">
+                             <%--Sección 3--%>
+                            <%--<div class="row">
 
                                 <div class="col-lg-4 col-md-4 col-sm-4 cp_load fadeInUp">
                                     <ul class="pro-box">
@@ -352,7 +352,7 @@
                                     </ul>
                                 </div>
 
-                            </div>
+                            </div>--%>
 
                             <div class="gap-30"></div>
 
