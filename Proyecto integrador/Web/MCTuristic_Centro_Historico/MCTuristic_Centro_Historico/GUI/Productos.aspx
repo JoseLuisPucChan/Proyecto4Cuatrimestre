@@ -87,7 +87,7 @@
                                                 <li class="dropdown">
                                                     <a href="Productos.aspx" data-toggle="dropdown" class="dropdown-toggle">Productos<b class="caret"></b></a>
                                                     <ul role="menu" class="dropdown-menu">
-                                                        <li><a tabindex="-1" href="Productos.aspx">Lista Productos </a></li>
+                                                        <li><a tabindex="-1" href="Productos1.aspx">Lista Productos </a></li>
                                                         <%--      <li><a tabindex="-1" href="DetalleProducto.aspx"> Product Details</a></li>
                                                         <li><a tabindex="-1" href="cart.html"> Cart </a></li>
                                                         <li><a tabindex="-1" href="checkout.html"> Check Out</a></li>
@@ -109,7 +109,7 @@
 
 
                                                 <li>
-                                                    <a href="Contactanos.aspx">Contactanos<b></b></a>
+                                                    <a href="Contactanos1.aspx">Contactanos<b></b></a>
                                                 </li>
 
                                             </ul>
@@ -155,10 +155,10 @@
                                             </div>
                                             <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
                                         <li>
-                                            <h4><a href="DetalleProducto.aspx">Cosmeticos bellizima</a></h4>
+                                            <h4><a href="DetalleProducto.aspx">Conchinita</a></h4>
                                         </li>
-                                        <li>We have many equipments of massage</li>
-                                        <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
+                                        <li>Restaurante flor</li>
+                                        <li class="pro-footer"><span class="price">$40.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
 
@@ -177,10 +177,10 @@
                                             </div>
                                             <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
                                         <li>
-                                            <h4><a href="DetalleProducto.aspx">Cosmeticos bellizima</a></h4>
+                                            <h4><a href="DetalleProducto.aspx">guayaberas</a></h4>
                                         </li>
-                                        <li>We have many equipments of massage</li>
-                                        <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
+                                        <li>Camiseria Canul</li>
+                                        <li class="pro-footer"><span class="price">$299.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
 
@@ -199,9 +199,9 @@
                                             </div>
                                             <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
                                         <li>
-                                            <h4><a href="DetalleProducto.aspx">Massage Equipments</a></h4>
+                                            <h4><a href="DetalleProducto.aspx">Bluza bordada</a></h4>
                                         </li>
-                                        <li>We have many equipments of massage</li>
+                                        <li>Camiseria Canul</li>
                                         <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
@@ -226,10 +226,10 @@
                                             </div>
                                             <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
                                         <li>
-                                            <h4><a href="DetalleProducto.aspx">Massage Equipments</a></h4>
+                                            <h4><a href="DetalleProducto.aspx">Hamacas</a></h4>
                                         </li>
-                                        <li>We have many equipments of massage</li>
-                                        <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
+                                        <li>Hamacas El Aguacate</li>
+                                        <li class="pro-footer"><span class="price">$599.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
 
@@ -248,10 +248,10 @@
                                             </div>
                                             <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
                                         <li>
-                                            <h4><a href="DetalleProducto.aspx">Massage Equipments</a></h4>
+                                            <h4><a href="DetalleProducto.aspx">cerámica</a></h4>
                                         </li>
-                                        <li>We have many equipments of massage</li>
-                                        <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
+                                        <li>Casa san josé Cerámica</li>
+                                        <li class="pro-footer"><span class="price">$89.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
 
@@ -270,10 +270,10 @@
                                             </div>
                                             <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
                                         <li>
-                                            <h4><a href="DetalleProducto.aspx">Massage Equipments</a></h4>
+                                            <h4><a href="DetalleProducto.aspx">Tortillas</a></h4>
                                         </li>
-                                        <li>We have many equipments of massage</li>
-                                        <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
+                                        <li>Monino Reyes</li>
+                                        <li class="pro-footer"><span class="price">$14.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
 
@@ -298,10 +298,10 @@
                                             </div>
                                             <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
                                         <li>
-                                            <h4><a href="DetalleProducto.aspx">Massage Equipments</a></h4>
+                                            <h4><a href="DetalleProducto.aspx">Empanadas</a></h4>
                                         </li>
-                                        <li>We have many equipments of massage</li>
-                                        <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
+                                        <li>Fonda lucas</li>
+                                        <li class="pro-footer"><span class="price">$9.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
 
@@ -320,9 +320,9 @@
                                             </div>
                                             <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
                                         <li>
-                                            <h4><a href="DetalleProducto.aspx">Massage Equipments</a></h4>
+                                            <h4><a href="DetalleProducto.aspx">Hotel</a></h4>
                                         </li>
-                                        <li>We have many equipments of massage</li>
+                                        <li>Holtel Reyes</li>
                                         <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
@@ -342,10 +342,10 @@
                                             </div>
                                             <span class="addtocart"><a href="DetalleProducto.aspx">Ver Detalles</a></span> </li>
                                         <li>
-                                            <h4><a href="DetalleProducto.aspx">Massage Equipments</a></h4>
+                                            <h4><a href="DetalleProducto.aspx">Hotel</a></h4>
                                         </li>
-                                        <li>We have many equipments of massage</li>
-                                        <li class="pro-footer"><span class="price">$199.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
+                                        <li>Hotel Gobernador</li>
+                                        <li class="pro-footer"><span class="price">$499.00</span> <span class="rating"><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star"></i></a><a href="#"><i class="fa fa-star-star"></i></a><a href="#"><i class="fa fa-star-star"></i></a><a href="#"><i class="fa fa-star-o"></i></a></span></li>
                                     </ul>
                                 </div>
 
@@ -353,7 +353,7 @@
 
                             <div class="gap-30"></div>
 
-                            <div class="row">
+                            <%--<div class="row">
 
                                 <div class="col-lg-4 col-md-4 col-sm-4 cp_load fadeInUp">
                                     <ul class="pro-box">
@@ -421,7 +421,7 @@
                                     </ul>
                                 </div>
 
-                            </div>
+                            </div>--%>
 
                         </div>
 
@@ -434,10 +434,7 @@
                             <ul class="pagination">
                                 <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
                                 <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
+                                
                                 <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                             </ul>
                         </div>

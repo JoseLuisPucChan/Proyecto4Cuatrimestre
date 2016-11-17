@@ -26,22 +26,20 @@
 <div class="wrapper inner">
 <header id="header">
 <div class="container">
-<div class="row">
-<div class="col-lg-3 col-md-3">
-<logo class="logo">
-<a href="index.html">
-<img src="../Recursos/images/inner-logo.png" alt="Logo" title="Relax Spa Palace"/>
-</a>
-</logo>
-</div>
-<div class="col-lg-9 col-md-9">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <logo class="logo"><a href="PagPrincipal.aspx" ><img src="../Recursos/images/inner-logo.png" alt="Logo" title="Relax Spa Palace"/></a></logo>
+                    </div>
+                    <div class="col-lg-9 col-md-9">
+
+
                         <div class="home-menu">
                             <div class="navbar mm">
                                 <div>
                                     <nav class="navbar navbar-default" role="navigation">
 
                                         <div class="navbar-header">
-                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                                         </div>
                                         <div id="navbar-collapse-1" class="collapse navbar-collapse pull-right">
                                             <ul class="nav navbar-nav">
@@ -54,7 +52,7 @@
                                                             <div class="mm-content">
                                                                 <div class="row">
                                                                     <ul class="col-sm-4 list-unstyled">
-                                                                         <li>
+                                                                        <li>
                                                                             <p><strong>Empresa</strong></p>
                                                                         </li>
                                                                         <li><a href="QuieneSomo.aspx">Misión</a></li>
@@ -62,7 +60,7 @@
                                                                         <li><a href="QuieneSomo.aspx">Valores </a></li>
                                                                         <li><a href="QuieneSomo.aspx">¿Quiénes somos?</a></li>
                                                                     </ul>
-                                                                    <ul class="col-sm-4 list-unstyled">
+                                                                    <%-- <ul class="col-sm-4 list-unstyled">
                                                                         <li>
                                                                             <p><strong>Section Title</strong></p>
                                                                         </li>
@@ -83,47 +81,50 @@
                                                                         <li><a href="#">Special Facial</a></li>
                                                                         <li><a href="#">Manicure</a></li>
                                                                         <li><a href="#">Pedicure</a></li>
-                                                                    </ul>
+                                                                    </ul>--%>
                                                                 </div>
                                                             </div>
                                                         </li>
                                                     </ul>
                                                 </li>
 
+
                                                 <li class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">BLOG<b class="caret"></b></a>
+
+                                                    <asp:HyperLink ID="HyperLink1" data-toggle="dropdown" class="dropdown-toggle" Visible="false" NavigateUrl="~/GUI/Principal.aspx" runat="server">Blog</asp:HyperLink>
+                                                    <%--                                                    <a href="Principal.aspx"  data-toggle="dropdown" class="dropdown-toggle"> Blog<b class="caret"></b></a>--%>
+                                                   -
                                                     <ul role="menu" class="dropdown-menu">
-                                                        <li><a tabindex="-1" href="blog-full.html"> Full Width </a></li>
-                                                        <li><a tabindex="-1" href="blog-masanary.html"> Masonry Style </a></li>
-                                                        <li><a tabindex="-1" href="blog.html"> Single Column (With Sidebar) </a></li>
-                                                        <li><a tabindex="-1" href="blog-02-column.html"> Double Column</a></li>
-                                                        <li><a tabindex="-1" href="blog-03-column.html"> Three Column</a></li>
+                                                        <li><a tabindex="-1" href="Principal.aspx">Página principal </a></li>
+                                                        <li>
+                                                            <asp:Button TabIndex="-1" ID="btnCerrarSecion" runat="server" Text=" Cerrar sesión" />
+                                                        </li>
                                                     </ul>
                                                 </li>
 
 
                                                 <li class="dropdown">
-                                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Products<b class="caret"></b></a>
+                                                    <a href="Productos.aspx" data-toggle="dropdown" class="dropdown-toggle">Productos<b class="caret"></b></a>
                                                     <ul role="menu" class="dropdown-menu">
-                                                        <li><a tabindex="-1" href="products.html"> Product Listing </a></li>
-                                                        <li><a tabindex="-1" href="product-details.html"> Product Details</a></li>
+                                                        <li><a tabindex="-1" href="Productos.aspx">Lista Productos </a></li>
+                                                        <%--      <li><a tabindex="-1" href="DetalleProducto.aspx"> Product Details</a></li>
                                                         <li><a tabindex="-1" href="cart.html"> Cart </a></li>
                                                         <li><a tabindex="-1" href="checkout.html"> Check Out</a></li>
                                                         <li><a tabindex="-1" href="register.html"> Login</a></li>
-                                                        <li><a tabindex="-1" href="register.html"> Register</a></li>
+                                                        <li><a tabindex="-1" href="register.html"> Register</a></li>--%>
                                                     </ul>
                                                 </li>
 
 
-                                                <li class="dropdown">
+                                               <%-- <li class="dropdown">
                                                     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Gallery<b class="caret"></b></a>
                                                     <ul role="menu" class="dropdown-menu">
-                                                        <li><a tabindex="-1" href="galletry01.html"> Double Column </a></li>
-                                                        <li><a tabindex="-1" href="galletry02.html"> Three Column</a></li>
-                                                        <li><a tabindex="-1" href="galletry03.html"> Four Column</a></li>
-                                                        <li><a tabindex="-1" href="galletry04.html"> Masonry Style</a></li>
+                                                        <li><a tabindex="-1" href="galletry01.html">Double Column </a></li>
+                                                        <li><a tabindex="-1" href="galletry02.html">Three Column</a></li>
+                                                        <li><a tabindex="-1" href="galletry03.html">Four Column</a></li>
+                                                        <li><a tabindex="-1" href="galletry04.html">Masonry Style</a></li>
                                                     </ul>
-                                                </li>
+                                                </li>--%>
 
 
                                                 <li>
@@ -138,8 +139,8 @@
                         </div>
 
                     </div>
-</div>
-</div>
+                </div>
+            </div>
 </header>
 <div class="gap"></div>
 <section class="signup">

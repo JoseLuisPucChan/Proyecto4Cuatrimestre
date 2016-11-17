@@ -2022,6 +2022,8 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private int idEstablecimientoField;
         
+        private string nombreServicioField;
+        
         /// <comentarios/>
         public int IdTipoServicio {
             get {
@@ -2079,6 +2081,16 @@ namespace MCTuristic_Centro_Historico.localhost {
             }
             set {
                 this.idEstablecimientoField = value;
+            }
+        }
+        
+        /// <comentarios/>
+        public string NombreServicio {
+            get {
+                return this.nombreServicioField;
+            }
+            set {
+                this.nombreServicioField = value;
             }
         }
     }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MCTuristic_Centro_Historico.GUI;
+using MCTuristic_Centro_Historico.localhost;
 
 namespace MCTuristic_Centro_Historico.GUI
 {
@@ -19,5 +20,26 @@ namespace MCTuristic_Centro_Historico.GUI
         {
             Response.Redirect("GestionServicios.aspx");
         }
+
+        public static string Guardar(string nombre, string apellido, string email, string contraseña, string numero)
+        {
+            localhost.WsMCTuristic owebService = new WsMCTuristic();
+            localhost.UsuarioBO oUsuariosBO = new UsuarioBO();
+            oUsuariosBO.NombreUsuario = nombre;
+            oUsuariosBO.ApellidosUsuario = apellido;
+            oUsuariosBO.EmailUsuario = email;
+            oUsuariosBO.ContraseñaUsuario = contraseña;
+            oUsuariosBO.TelefonoUsuario = numero;
+            oUsuariosBO.FecharNacUsuario = DateTime.Now;
+            int i = owebService.InsertarUsuario(oUsuariosBO);
+            if (i > 0)
+            {
+                return "Operación exitosa";
+            }
+            return "Fallo la operación";
+
+        }
+
+
     }
 }
