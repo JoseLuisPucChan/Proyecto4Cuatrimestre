@@ -10,20 +10,8 @@ namespace MCTuristic_Centro_Historico.GUI
 {
     public partial class GestionServicios : System.Web.UI.Page
     {
-        private int establecimiento;
-
-        public int Establecimiento
-        {
-            get
-            {
-                return establecimiento;
-            }
-
-            set
-            {
-                establecimiento = value;
-            }
-        }
+        public int establecimiento;
+        public int tipoServicio;
 
         protected void Page_Load(object sender, EventArgs e)
         {

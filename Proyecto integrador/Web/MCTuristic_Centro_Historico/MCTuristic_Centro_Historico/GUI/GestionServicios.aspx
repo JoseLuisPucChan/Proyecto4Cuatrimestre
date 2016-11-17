@@ -47,6 +47,8 @@
     </asp:PlaceHolder>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphBody" runat="server">
+        <asp:TextBox ID="txtIdEstablecimiento" runat="server" Visible="false"></asp:TextBox>  
+        <asp:TextBox ID="txtIdTipoServicio" runat="server" Visible="false"></asp:TextBox>
     <div class="row">
         <div class="col-lg-12">
             <div class="panel">
@@ -56,8 +58,8 @@
                     <asp:LinkButton ID="lbtnNuevo" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-plus-circle"></i> Nuevo</asp:LinkButton>
                     <div class="divider"></div>
                     <div class="col-lg-6">
-                        <h3><i class="glyph-icon icon-tag"></i>Oferta</h3>
-                        <asp:TextBox ID="txtOferta" runat="server" CssClass="form-control border-blue"></asp:TextBox>
+                        <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
+                        <asp:TextBox ID="txtNombreServicio" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                         <br />
                         <h3><i class="glyph-icon icon-money"></i>Precio</h3>
                         <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control border-blue"></asp:TextBox>
@@ -82,7 +84,7 @@
                                         <div class="col-lg-12">
                                             <div class="pull-right">
         <script type="text/javascript">
-            function GuardarTipoServicio() {
+            function GurdarTipoServicio() {
                 var actionData = " { 'nombre': '" + $("#<%=txtNombreTipo.ClientID%>")[0].value + "'}  ";
             $.ajax({
                 type: "POST",
@@ -110,19 +112,22 @@
                                 </div>
                             </div>
                         </div>
+                        <br />
+                        <h3><i class="glyph-icon icon-list"></i>Oferta</h3>
+                        <asp:TextBox ID="txtOferta" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                     </div>
                     <div class="col-lg-12">
                         <h3><i class="glyph-icon icon-tags"></i>Descripción</h3>
-                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control border-blue" TextMode="MultiLine"></asp:TextBox>
+                        <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control border-blue" TextMode="MultiLine"></asp:TextBox>
                     </div>
                     <div class="col-lg-12">
                         <div class="divider"></div>
-        <%--<script type="text/javascript">
-            function Gurdar() {
-                var actionData = " { 'nombre': '" + $("#<%=txtOferta.ClientID%>")[0].value   + "' , 'apellido': '" + $("#<%=txtApellidos.ClientID%>")[0].value + "' , 'email': '" + $("#<%=txtDireccionCorreo.ClientID%>")[0].value  + "' , 'contraseña': '" + $("#<%=txtContraseña.ClientID%>")[0].value + "' , 'numero': '" + $("#<%=txtTelefono.ClientID%>")[0].value + "'}  ";
+        <script type="text/javascript">
+            function GurdarServicio() {
+                var actionData = " { 'establecimiento': '" + $("#<%=txtIdEstablecimiento.ClientID%>")[0].value + "' , 'tipoServicio': '" + $("#<%=txtIdTipoServicio.ClientID%>")[0].value + "' , 'nombre': '" + $("#<%=txtNombreServicio.ClientID%>")[0].value + "' , 'oferta': '" + $("#<%=txtOferta.ClientID%>")[0].value + "' , 'descripcion': '" + $("#<%=txtDescripcion.ClientID%>")[0].value + "' , 'precio': '" + $("#<%=txtPrecio.ClientID%>")[0].value + "'}  ";
             $.ajax({
                 type: "POST",
-                url: "Registro.aspx/Guardar",
+                url: "Registro.aspx/GuardarServicio",
                 data: actionData,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -135,7 +140,7 @@
         function OnSuccess(response) {
             alert("Respuesta " + response.d);
         }
-        </script>--%>
+        </script>
                         <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
