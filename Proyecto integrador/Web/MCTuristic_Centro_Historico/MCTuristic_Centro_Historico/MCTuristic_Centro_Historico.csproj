@@ -72,6 +72,8 @@
     <Content Include="GUI\Registro.aspx" />
     <Content Include="GUI\Suscripciones.aspx" />
     <Content Include="images1\hombre.png" />
+    <Content Include="Recursos\03.png" />
+    <Content Include="Recursos\Imagenes\fotos-panoramicas-12.jpg" />
     <Content Include="Recursos\Imagenes\17411434.jpg" />
     <Content Include="Recursos\agileui.com\demo\image-resources\logo-admin.png" />
     <Content Include="Recursos\agileui.com\demo\images\animated-overlay.gif" />
@@ -292,6 +294,7 @@
     <Content Include="Recursos\Imagenes\8.jpg" />
     <Content Include="Recursos\Imagenes\9.jpg" />
     <Content Include="Recursos\Imagenes\app-hogar-reparacion4.png" />
+    <Content Include="Recursos\Imagenes\fotos-panoramicas-12.png" />
     <Content Include="Recursos\Imagenes\logo-blue.png" />
     <Content Include="Recursos\Imagenes\inner-logo.png" />
     <Content Include="Recursos\Imagenes\Mapa.png" />
