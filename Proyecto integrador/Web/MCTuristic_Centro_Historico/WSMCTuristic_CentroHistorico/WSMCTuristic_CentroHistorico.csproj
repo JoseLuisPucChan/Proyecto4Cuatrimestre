@@ -72,6 +72,7 @@
     <Compile Include="BO\ServicioBO.cs" />
     <Compile Include="BO\SitioBO.cs" />
     <Compile Include="BO\SoporteBO.cs" />
+    <Compile Include="BO\SuscripcionBO.cs" />
     <Compile Include="BO\TipoServicioBO.cs" />
     <Compile Include="BO\TipoSitioBO.cs" />
     <Compile Include="BO\TipoSuscripcionBO.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="DAO\ServicioDAO.cs" />
     <Compile Include="DAO\SitioDAO.cs" />
     <Compile Include="DAO\SoporteDAO.cs" />
+    <Compile Include="DAO\SuscripcionDAO.cs" />
     <Compile Include="DAO\TipoServicioDAO.cs" />
     <Compile Include="DAO\TipoSitioDAO.cs" />
     <Compile Include="DAO\TipoSuscripcionDAO.cs" />
@@ -109,6 +111,7 @@
     <Compile Include="Services\CtrlServicio.cs" />
     <Compile Include="Services\CtrlSitio.cs" />
     <Compile Include="Services\CtrlSoporte.cs" />
+    <Compile Include="Services\CtrlSuscripcion.cs" />
     <Compile Include="Services\CtrlTipoServicio.cs" />
     <Compile Include="Services\CtrlTipoSitio.cs" />
     <Compile Include="Services\CtrlTipoSuscripcion.cs" />
