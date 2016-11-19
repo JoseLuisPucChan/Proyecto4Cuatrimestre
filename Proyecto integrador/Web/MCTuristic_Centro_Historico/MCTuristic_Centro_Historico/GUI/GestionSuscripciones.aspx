@@ -57,11 +57,7 @@
                     <div class="divider"></div>
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
-                            <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
-                            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control border-blue"></asp:TextBox>
-                            <br />
                             <h3><i class="glyph-icon icon-calendar"></i>Fecha de pago</h3>
-                            <br />
                             <div class="input-prepend input-group">
                                 <asp:TextBox ID="txtFecha" class="bootstrap-datepicker form-control" runat="server"></asp:TextBox>
                             </div>
@@ -69,8 +65,9 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
+                            <asp:TextBox ID="txtIdTipo" runat="server" Visible="false"></asp:TextBox>                            
                             <h3><i class="glyph-icon icon-cutlery"></i>Tipo de suscripción</h3>
-                            <asp:DropDownList ID="ddlSuscripcion" runat="server" CssClass="form-control border-blue"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlSuscripcion" runat="server" CssClass="form-control border-blue" OnSelectedIndexChanged="ddlSuscripcion_SelectedIndexChanged"></asp:DropDownList>
                             <button class="btn btn-primary" data-toggle="modal" data-target="#Direccion" type="button">Agregar nuevo tipo de suscripción</button>
                             <div class="modal fade bs-example-modal-lg" id="Direccion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
@@ -97,6 +94,25 @@
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="pull-right">
+            <script type="text/javascript">
+                function GurdarTipoSuscripcion() {
+                var actionData = " { 'nombre': '" + $("#<%=txtNombreTipo.ClientID%>")[0].value + "', 'monto': '" + $("#<%=txtMonto.ClientID%>")[0].value + "', 'tiempo': '" + $("#<%=ddlTiempo.ClientID%>")[0].value + "'}  ";
+            $.ajax({
+                type: "POST",
+                url: "GestionSuscripciones.aspx/GuardarTipoSuscripcion",
+                data: actionData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccess,
+                failure: function (response) {
+                    alert(response.d);
+                }
+            });
+        }
+        function OnSuccess(response) {
+            alert("Respuesta " + response.d);
+        }
+            </script>
                                                     <asp:Button ID="btnAceptar" CssClass="btn btn-primary" runat="server" Text="Aceptar" />
                                                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
                                                 </div>
@@ -111,6 +127,25 @@
                     </div>
                     <div class="col-lg-12 form-group">
                         <div class="divider"></div>
+        <script type="text/javascript">
+                function GurdarSuscripcion() {
+                    var actionData = " { 'idTipo': '" + $("#<%=txtIdTipo.ClientID%>")[0].value + "', 'fecha': '" + $("#<%=txtFecha.ClientID%>")[0].value + "', 'usuario': '" + $("#<%=ddlTiempo.ClientID%>")[0].value + "'}  ";
+            $.ajax({
+                type: "POST",
+                url: "GestionSuscripciones.aspx/GuardarSuscripcion",
+                data: actionData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccess,
+                failure: function (response) {
+                    alert(response.d);
+                }
+            });
+        }
+        function OnSuccess(response) {
+            alert("Respuesta " + response.d);
+        }
+        </script>
                         <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>

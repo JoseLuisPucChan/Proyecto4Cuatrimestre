@@ -104,6 +104,25 @@
                                                 <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control border-blue" TextMode="MultiLine"></asp:TextBox>
                                                 <br />
                                                 <div class="pull-right">
+        <script type="text/javascript">
+                function GurdarDireccion() {
+                    var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'descripcion': '" + $("#<%=txtDescripcion.ClientID%>")[0].value + "'}  ";
+            $.ajax({
+                type: "POST",
+                url: "GestionUsuariosGUI.aspx/GuardarTipoSitio",
+                data: actionData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccess,
+                failure: function (response) {
+                    alert(response.d);
+                }
+            });
+        }
+        function OnSuccess(response) {
+            alert("Respuesta " + response.d);
+        }
+        </script>
                                                     <asp:Button ID="btnAceptar" CssClass="btn btn-primary" runat="server" Text="Aceptar" />
                                                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
                                                 </div>

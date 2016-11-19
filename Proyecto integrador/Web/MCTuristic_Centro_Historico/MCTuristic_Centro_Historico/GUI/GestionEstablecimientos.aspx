@@ -57,6 +57,7 @@
                     <div class="divider"></div>
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
+                            <asp:TextBox ID="txtIdEstablecimiento" runat="server" Visible="false"></asp:TextBox>
                             <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
                             <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
@@ -132,7 +133,7 @@
                 var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'telefono': '" + $("#<%=txtTelefono.ClientID%>")[0].value + "', 'facebook': '" + $("#<%=txtFacebook.ClientID%>")[0].value + "', 'abrir': '" + $("#<%=txtAbrir.ClientID%>")[0].value + "', 'cerrar': '" + $("#<%=txtCerrar.ClientID%>")[0].value + "', 'latitud': '" + $("#<%=txtLatitud.ClientID%>")[0].value + "', 'longitud': '" + $("#<%=txtLongitud.ClientID%>")[0].value + "'}  ";
             $.ajax({
                 type: "POST",
-                url: "GestionServivios.aspx/GuardarEstablecimiento",
+                url: "GestionEstablecimientos.aspx/GuardarEstablecimiento",
                 data: actionData,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",

@@ -18,10 +18,11 @@ namespace MCTuristic_Centro_Historico.GUI
 
         protected void btnServicios_Click(object sender, EventArgs e)
         {
+            Session["IdEstablecimiento"] = txtIdEstablecimiento.Text;
             Response.Redirect("GestionServicios.aspx");
         }
 
-        public static string GuardarEstablecimiento(string nombre, string telefono, string facebook, string abrir, string cerrar, string ubicacion, decimal latitud, decimal longitud)
+        public static string GuardarEstablecimiento(string nombre, string telefono, string facebook, string abrir, string cerrar, decimal latitud, decimal longitud,Image foto)
         {
             localhost.WsMCTuristic owebService = new WsMCTuristic();
             localhost.EstablecimientoBO oEstablecimientoBO = new EstablecimientoBO();

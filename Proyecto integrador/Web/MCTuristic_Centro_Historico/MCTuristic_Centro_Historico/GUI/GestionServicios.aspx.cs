@@ -15,7 +15,7 @@ namespace MCTuristic_Centro_Historico.GUI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtIdEstablecimiento.Text = (string)Session["IdEstablecimiento"];
         }
 
         public static string GuardarServicio(int establecimiento, int tipoServicio, string nombre, string oferta, string descripcion, decimal precio)
@@ -51,5 +51,9 @@ namespace MCTuristic_Centro_Historico.GUI
 
         }
 
+        protected void ddlTipoServicio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtIdTipoServicio.Text = ddlTipoServicio.SelectedIndex.ToString();
+        }
     }
 }
