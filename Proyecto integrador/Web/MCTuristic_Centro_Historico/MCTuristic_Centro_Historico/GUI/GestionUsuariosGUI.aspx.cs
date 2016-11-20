@@ -74,11 +74,6 @@ namespace MCTuristic_Centro_Historico.GUI
             return "Fallo la operación";
 
         }
-
-        protected void btnAceptarFoto_Click(object sender, EventArgs e)
-        {
-        }
-
         
     }
 }

@@ -61,6 +61,7 @@
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
                             <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
+                            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
                             <h3><i class="glyph-icon icon-tags"></i>Apellidos</h3>
                             <asp:TextBox ID="txtApellidos" runat="server" CssClass="form-control border-blue"></asp:TextBox>
