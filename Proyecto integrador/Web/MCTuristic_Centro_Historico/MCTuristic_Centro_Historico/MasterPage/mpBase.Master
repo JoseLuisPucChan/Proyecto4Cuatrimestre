@@ -28,14 +28,29 @@
     <script src="../Recursos/ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
     <script src="../Recursos/agileui.com/demo/monarch/assets/angular/app.js"></script>
     <script src="../Recursos/agileui.com/demo/monarch/assets/angular/bootstrap-datepicker.js"></script>
-    
+    <script type="text/javascript">  
+  
+        function VerImagen(input) {  
+  
+            if (input.files && input.files[0]) {  
+                var reader = new FileReader();  
+                reader.onload = function (e) {  
+  
+                    $('#imgFoto').attr('src', e.target.result);
+                    document.getElementsById("imgFoto")[0].setAttribute("src", e.target.result);
+                }  
+                reader.readAsDataURL(input.files[0]);  
+            }  
+        }  
+    </script>
+
     <script type="text/javascript">
         /* Datepicker bootstrap */
 
         $(function () {
             "use strict";
             $('.bootstrap-datepicker').bsdatepicker({
-                format: 'mm-dd-yyyy'
+                format: 'dd-mm-yyyy'
             });
         });
 
@@ -48,9 +63,15 @@
     <script src="../Recursos/agileui.com/demo/monarch/assets/angular/datepicker-demo.js"></script>
 
     <link href="../Recursos/agileui.com/demo/monarch/assets/angular/page-animations.css" rel="stylesheet" />
+    
 </head>
 <body ng-controller="indexController">
-    <form id="form1" runat="server">        
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true">
+            <Scripts>
+                <asp:ScriptReference Path="~/Recursos/ComponentesAjax" />
+            </Scripts>
+        </asp:ScriptManager>        
         <div id="page-wrapper">
             <div id="page-header" class="bg-gradient-9">
                 <div id="header-logo" class="logo-bg">
@@ -543,7 +564,7 @@
 
         <!-- JS Demo -->
         <script src="../Recursos/agileui.com/demo/monarch/assets-minified/admin-all-demo.js"></script>
-
+        
         
     </form>
 </body>

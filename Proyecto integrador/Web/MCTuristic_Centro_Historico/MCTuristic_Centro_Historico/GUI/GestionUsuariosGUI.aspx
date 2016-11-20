@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/mpBase.Master" AutoEventWireup="true" CodeBehind="GestionUsuariosGUI.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.GestionUsuarios" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphTituloPagina" runat="server">
     Gestion de usuarios
 </asp:Content>
@@ -59,7 +61,6 @@
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
                             <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
-                            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
                             <h3><i class="glyph-icon icon-tags"></i>Apellidos</h3>
                             <asp:TextBox ID="txtApellidos" runat="server" CssClass="form-control border-blue"></asp:TextBox>
@@ -68,7 +69,7 @@
                             <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
                             <h3><i class="glyph-icon icon-language"></i>Dirección</h3>
-                            <asp:TextBox ID="txtTipoSitio" runat="server" CssClass="form-control border-blue"></asp:TextBox>
+                            <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <button class="btn btn-primary" data-toggle="modal" data-target="#Direccion" type="button">Agregar dirección</button>
                             <div class="modal fade bs-example-modal-lg" id="Direccion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
@@ -106,10 +107,10 @@
                                                 <div class="pull-right">
         <script type="text/javascript">
                 function GurdarDireccion() {
-                    var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'descripcion': '" + $("#<%=txtDescripcion.ClientID%>")[0].value + "'}  ";
+                    var actionData = " { 'calle': '" + $("#<%=txtCalle.ClientID%>")[0].value + "', 'numero': '" + $("#<%=txtNumero.ClientID%>")[0].value + "', 'estado': '" + $("#<%=txtEstado.ClientID%>")[0].value + "', 'cruz': '" + $("#<%=txtCruzamiento.ClientID%>")[0].value + "', 'cp': '" + $("#<%=txtCP.ClientID%>")[0].value + "', 'col': '" + $("#<%=txtColonia.ClientID%>")[0].value + "', 'descripcion': '" + $("#<%=txtDescripcion.ClientID%>")[0].value + "'}  ";
             $.ajax({
                 type: "POST",
-                url: "GestionUsuariosGUI.aspx/GuardarTipoSitio",
+                url: "GestionUsuariosGUI.aspx/GuardarDireccion",
                 data: actionData,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -147,11 +148,57 @@
                             <div class="input-prepend input-group">
                                 <asp:TextBox ID="txtFecha" class="bootstrap-datepicker form-control border-blue" runat="server"></asp:TextBox>
                             </div>
+                            <br />
+        
+                            <h3><i class="glyph-icon icon-image"></i>Foto</h3>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#Foto" type="button">Agregar Foto</button>
+                            <div class="modal fade bs-example-modal-lg" id="Foto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h3 class="modal-title"><b>Selección de foto</b></h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="col-lg-12">
+                                                <img ID="imgFoto" Width="700" Height="400" alt="" src="" />
+                                                <asp:FileUpload ID="fuFoto" runat="server" accept=" image/jpeg, image/png" onchange="VerImagen(this)" />
+                                                <br />
+                                                <div class="pull-right">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"></button>>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer no-border">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="divider"></div>
-                        <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
+        <script type="text/javascript">
+                function GurdarUsuario() {
+                    var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'apellido': '" + $("#<%=txtApellidos.ClientID%>")[0].value + "', 'correo': '" + $("#<%=txtCorreo.ClientID%>")[0].value + "', 'direccion': '" + $("#<%=txtDireccion.ClientID%>")[0].value + "', 'contra': '" + $("#<%=txtContrasena.ClientID%>")[0].value + "', 'telefono': '" + $("#<%=txtTelefono.ClientID%>")[0].value + "', 'fecha': '" + $("#<%=txtFecha.ClientID%>")[0].value + "', 'fu': '" + $("#<%=fuFoto.ClientID%>")[0].value + "'}  ";
+            $.ajax({
+                type: "POST",
+                url: "GestionUsuariosGUI.aspx/GuardarUsuario",
+                data: actionData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccess,
+                failure: function (response) {
+                    alert(response.d);
+                }
+            });
+        }
+        function OnSuccess(response) {
+            alert("Respuesta " + response.d);
+        }
+        </script>
+                        <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClientClick="GurdarUsuario()"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
                         <div class="divider"></div>
