@@ -33,6 +33,11 @@
     </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true">
+            <Scripts>
+                <asp:ScriptReference Path="~/Recursos/ComponentesAjax" />
+            </Scripts>
+        </asp:ScriptManager>
     <div>
         
      
