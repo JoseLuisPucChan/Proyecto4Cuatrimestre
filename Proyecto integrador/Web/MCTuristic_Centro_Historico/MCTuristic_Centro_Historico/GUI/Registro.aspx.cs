@@ -43,7 +43,7 @@ namespace MCTuristic_Centro_Historico.GUI
                 oUsuariosBO.ContraseñaUsuario = txtConfirmarContraseña.Text.Trim();
             }
             oUsuariosBO.TelefonoUsuario = txtNumero.Text.Trim();
-            oUsuariosBO.FecharNacUsuario = DCalender.Text;
+            oUsuariosBO.FecharNacUsuario = Calender.Text;
             return oUsuariosBO;
 
         }

@@ -13,14 +13,14 @@ namespace WSMCTuristic_CentroHistorico.BO
         private string _email;
         private string _contraseñaadmin;
         private string _telefonoadmin;
-        private DateTime _fechanacimiento;
+        private string _fechanacimiento;
 
         public int IdAdministrador
         {
             get { return _idAdministrador; }
             set { _idAdministrador = value; }
         }
-        public DateTime Fechanacimiento
+        public string Fechanacimiento
         {
             get { return _fechanacimiento; }
             set { _fechanacimiento = value; }
