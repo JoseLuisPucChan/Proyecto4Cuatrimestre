@@ -28,6 +28,7 @@ namespace MCTuristic_Centro_Historico.GUI
             oServicioBO.OfertaServicio = oferta;
             oServicioBO.NombreServicio = nombre;
             oServicioBO.PrecioServicio = precio;
+            
             int i = owebService.InsertarServicio(oServicioBO);
             if (i > 0)
             {

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MCTuristic_Centro_Historico.localhost;
+using System.Web.Services;
 
 namespace MCTuristic_Centro_Historico.GUI
 {
@@ -29,8 +30,8 @@ namespace MCTuristic_Centro_Historico.GUI
         {
 
         }
-        
 
+        [WebMethod]
         public static string GuardarDireccion(string calle, string numero, string estado, string cruz, string cp, string col, string descripcion)
         {
             localhost.WsMCTuristic owebService = new WsMCTuristic();
@@ -51,6 +52,7 @@ namespace MCTuristic_Centro_Historico.GUI
 
         }
 
+        [WebMethod]
         public static string GuardarUsuario(string nombre, string apellido, string correo, string direccion, string contra, string telefono, string fecha, FileUpload fu)
         {
             localhost.WsMCTuristic owebService = new WsMCTuristic();
@@ -74,6 +76,13 @@ namespace MCTuristic_Centro_Historico.GUI
             return "Fallo la operación";
 
         }
-        
+
+        protected void lbtnModificar_Click(object sender, EventArgs e)
+        {
+            string script = @"<script type='text/javascript'>GurdarUsuario();</script>";
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "GurdarUsuario", script, false);
+            //if (!Page.ClientScript.IsClientScriptBlockRegistered("GurdarUsuario")) { Page.ClientScript.RegisterStartupScript(Page.GetType(),"GurdarUsuario", script); }
+            //if (!Page.ClientScript.IsClientScriptBlockRegistered("GurdarUsuario")) { Page.ClientScript.RegisterStartupScript(, "GurdarUsuario", script); }
+        }
     }
 }

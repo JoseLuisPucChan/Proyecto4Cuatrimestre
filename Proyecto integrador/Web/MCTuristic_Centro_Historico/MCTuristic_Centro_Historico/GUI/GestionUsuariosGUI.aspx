@@ -166,7 +166,7 @@
                                                 <asp:FileUpload ID="fuFoto" runat="server" accept=" image/jpeg, image/png" onchange="VerImagen(this)" />
                                                 <br />
                                                 <div class="pull-right">
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"></button>>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
                                                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
                                                 </div>
                                             </div>
@@ -181,7 +181,8 @@
                     <div class="col-lg-12">
                         <div class="divider"></div>
         <script type="text/javascript">
-                function GurdarUsuario() {
+            function GurdarUsuario() {
+                alert('Se ha presionado el boton: ' + numero);
                     var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'apellido': '" + $("#<%=txtApellidos.ClientID%>")[0].value + "', 'correo': '" + $("#<%=txtCorreo.ClientID%>")[0].value + "', 'direccion': '" + $("#<%=txtDireccion.ClientID%>")[0].value + "', 'contra': '" + $("#<%=txtContrasena.ClientID%>")[0].value + "', 'telefono': '" + $("#<%=txtTelefono.ClientID%>")[0].value + "', 'fecha': '" + $("#<%=txtFecha.ClientID%>")[0].value + "', 'fu': '" + $("#<%=fuFoto.ClientID%>")[0].value + "'}  ";
             $.ajax({
                 type: "POST",
@@ -199,8 +200,8 @@
             alert("Respuesta " + response.d);
         }
         </script>
-                        <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClientClick="GurdarUsuario()"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
-                        <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
+                        <input type="button" class="btn btn-blue-alt" onclick="GurdarUsuario()" value="Guardar" />
+                        <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnModificar_Click"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
                         <div class="divider"></div>
                         <h3><i class="glyph-icon icon-table"></i>Tabla de datos</h3>
