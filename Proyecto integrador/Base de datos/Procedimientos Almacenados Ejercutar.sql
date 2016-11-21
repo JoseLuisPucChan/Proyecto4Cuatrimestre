@@ -23,7 +23,6 @@ INSERT INTO Administrador (Nombre,Apellidos,Email,Contrasena,TelefonoCelular,Fec
 VALUES (@Nombre,@Apellidos,@Email,@Contrasena,@TelefonoCelular,@FechaNacimiento)
 Go
 --Actualizar Administrador
-
 CREATE PROC actualizar_administrador
 (
 	@IdAdminstrador int,
@@ -48,6 +47,15 @@ Create proc eliminar_administrador
 as
 DELETE FROM Administrador WHERE IdAdministrador = @IdAdministrador
 GO
+
+Create procedure ver_administrador
+as
+SELECT     dbo.Administrador.IdAdministrador,  dbo.Administrador.Nombre, dbo.Administrador.Apellidos, dbo.Administrador.Email, dbo.Administrador.TelefonoCelular, dbo.Administrador.FechaNacimiento, dbo.Direccion.idDireccion ,dbo.Direccion.Calle, dbo.Direccion.Cruzamiento, 
+                         dbo.Direccion.Numero, dbo.Direccion.Colonia, dbo.Direccion.Descripcion, dbo.Direccion.Estado, dbo.Direccion.CodPostal
+FROM            dbo.Administrador INNER JOIN
+                         dbo.Direccion ON dbo.Administrador.IdAdministrador = dbo.Direccion.IdAdministrador
+GO
+
 --------------------------------Procedimiento Almacenado usuario-----------------------------------
 --Select * from Usuario
 --Insetar Administrador
@@ -94,12 +102,13 @@ as
 DELETE FROM Usuario WHERE IdUsuario = @IdUsuario
 GO
 
-EXEC insertar_usuario'JOSE','Puc','josechan211@gmail.com','12345','999135','1996-07-29'
-
-EXEC actualizar_usuario 1, 'JOSE','Puc','PRIMO@HOTMAIL','12345','999135','1996-07-29'
-
-EXEC eliminar_usaurio 1
-go
+create procedure ver_usuario
+as
+SELECT        dbo.Usuario.IdUsuario, dbo.Usuario.Nombre, dbo.Usuario.Apellidos, dbo.Usuario.Email, dbo.Usuario.TelefonoCelular, dbo.Usuario.FechaNacimiento, dbo.Direccion.Calle, dbo.Direccion.idDireccion, 
+                         dbo.Direccion.Cruzamiento, dbo.Direccion.Numero, dbo.Direccion.Descripcion, dbo.Direccion.Estado, dbo.Direccion.CodPostal
+FROM            dbo.Direccion INNER JOIN
+                         dbo.Usuario ON dbo.Direccion.IdUsuario = dbo.Usuario.IdUsuario
+GO
 ---------------------------------Procedimiento Almacenado Dirección----------------------------------------
 Select * from Direccion
 go
@@ -198,8 +207,6 @@ create procedure eliminar_establecimiento
 as
 DELETE FROM Establecimiento WHERE idEstablecimiento = @IdEstablecimiento
 go
-
-
 --------------------------------Procedimiento Almacenado tipo de servicio-----------------------------------
 create procedure insertar_tiposervicio
 (
@@ -227,9 +234,6 @@ create procedure eliminar_tiposervicio
 as
 DELETE  FROM TipoServicio WHERE idTipoServ = @idTipoServ
 go
-
-
-
 
 --------------------------------Procedimiento Almacenado servicio-----------------------------------
 --Insertar servicio
@@ -281,6 +285,19 @@ GO
 
 --------------------------------Procedimiento Almacenado tipoSuscripcion-----------------------------------
 
+
+insert into  TipoSuscripcion (Nombre,Monto,TiempoSuscripcion)  VALUES ('Gratis','0','3') 
+go
+
+
+insert into  TipoSuscripcion (Nombre,Monto,TiempoSuscripcion)  VALUES ('Medium','100','1') 
+go
+
+insert into  TipoSuscripcion (Nombre,Monto,TiempoSuscripcion)  VALUES ('Premium','400','6') 
+go
+
+insert into  TipoSuscripcion (Nombre,Monto,TiempoSuscripcion)  VALUES ('Gold','1000','12') 
+go
 -------------insertar tisuscripcion-------
 create procedure insertar_tiposuscripcion
 (
