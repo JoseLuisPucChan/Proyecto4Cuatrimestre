@@ -11,21 +11,7 @@ namespace MCTuristic_Centro_Historico.GUI
 {
     public partial class GestionUsuarios : System.Web.UI.Page
     {
-        private Byte[] imagenUs;
-
-        public byte[] ImagenUs
-        {
-            get
-            {
-                return imagenUs;
-            }
-
-            set
-            {
-                imagenUs = value;
-            }
-        }
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -79,10 +65,7 @@ namespace MCTuristic_Centro_Historico.GUI
 
         protected void lbtnModificar_Click(object sender, EventArgs e)
         {
-            string script = @"<script type='text/javascript'>GurdarUsuario();</script>";
-            ScriptManager.RegisterStartupScript(this, typeof(Page), "GurdarUsuario", script, false);
-            //if (!Page.ClientScript.IsClientScriptBlockRegistered("GurdarUsuario")) { Page.ClientScript.RegisterStartupScript(Page.GetType(),"GurdarUsuario", script); }
-            //if (!Page.ClientScript.IsClientScriptBlockRegistered("GurdarUsuario")) { Page.ClientScript.RegisterStartupScript(, "GurdarUsuario", script); }
+            
         }
     }
 }
