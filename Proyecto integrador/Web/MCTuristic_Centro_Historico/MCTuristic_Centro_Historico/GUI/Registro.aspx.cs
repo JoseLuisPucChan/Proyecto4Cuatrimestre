@@ -30,11 +30,20 @@ namespace MCTuristic_Centro_Historico.GUI
             oUsuariosBO.NombreUsuario = txtNombre.Text.Trim();
             oUsuariosBO.ApellidosUsuario = txtApellidos.Text.Trim();
             oUsuariosBO.EmailUsuario = txtDireccionCorreo.Text.Trim();
+            if(FileUpload1.HasFile)
+            {
+                HttpPostedFile ImgFile = FileUpload1.PostedFile;
+                Byte[] byteImage = new Byte[FileUpload1.PostedFile.ContentLength];
+                ImgFile.InputStream.Read(byteImage, 0, FileUpload1.PostedFile.ContentLength);
+                oUsuariosBO.Foto = byteImage;
+            }
+            
             if (txtContraseña.Text == txtConfirmarContraseña.Text)
             {
                 oUsuariosBO.ContraseñaUsuario = txtConfirmarContraseña.Text.Trim();
             }
             oUsuariosBO.TelefonoUsuario = txtNumero.Text.Trim();
+            oUsuariosBO.FecharNacUsuario = DCalender.Text;
             return oUsuariosBO;
 
         }
@@ -62,7 +71,14 @@ namespace MCTuristic_Centro_Historico.GUI
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Suscripciones.aspx");
+            localhost.WsMCTuristic owebService = new WsMCTuristic();
+            int i = owebService.InsertarUsuario(RecuperarInformacion());
+            if (i > 0)
+            {
+                Response.Redirect("Suscripciones.aspx");
+            }
+
+           
         }
 
       

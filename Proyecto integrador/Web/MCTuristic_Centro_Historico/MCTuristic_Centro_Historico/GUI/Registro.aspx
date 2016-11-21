@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Registro" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -236,22 +238,38 @@
  
 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 <div class="login">
-<h2><font><font>Ya registrado</font></font></h2>
+<h2><font><font>Agregar Foto</font></font></h2>
 <form method="post" action="#">
 <ul>
+
 <li>
-<label><font><font>Nombre de usuario *</font></font></label>
-<input name="" type="text">
+<label><font><font>Selecciona una foto*</font></font></label>
+
+    <asp:FileUpload ID="FileUpload1"  accept="image/jpeg, image/png" onchange="showimagepreview(this)" runat="server" />
+      <script type="text/javascript">
+
+          function showimagepreview(input) {
+
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+                  reader.onload = function (e) {
+
+                      $('#imagend').attr('src', e.target.result);
+                      document.getElementsById("imagend")[0].setAttribute("src", e.target.result);
+                  }
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+             </script> 
+             <img id="imagend" alt="" width="250" height="220" src="" />
 </li>
-<li>
-<label><font><font>Email*</font></font></label>
-<input name="" type="text">
+    <li>
+<label><font>Fecha de Nacimiento<font></font></font></label>
+    <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="Calender" Format="dd/MM/yyyy" />
+    <asp:TextBox ID="Calender" runat="server"></asp:TextBox>
 </li>
-<li>
-<label><font><font>Contraseña *</font></font></label>
-<input name="" type="text">
-</li>
-<li><font><font><input type="submit" value="INICIAR SESIÓN"></font></font></li>
+
 </ul>
 </form>
 </div>
@@ -261,6 +279,7 @@
 </div>
 </section>
 </div>
+    
 <div class="gap"></div>
 
      
