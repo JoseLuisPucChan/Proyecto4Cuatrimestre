@@ -16,7 +16,7 @@ CREATE PROC insertar_administrador
 	@Email varchar(50),
 	@Contrasena varchar(20),
 	@TelefonoCelular   varchar(25),
-	@FechaNacimiento date
+	@FechaNacimiento varchar(25)
 )
 as
 INSERT INTO Administrador (Nombre,Apellidos,Email,Contrasena,TelefonoCelular,FechaNacimiento) 
@@ -32,7 +32,7 @@ CREATE PROC actualizar_administrador
 	@Email varchar(50),
 	@Contrasena varchar(20),
 	@TelefonoCelular   varchar(25),
-	@FechaNacimiento date
+	@FechaNacimiento varchar(25)
 )
 as
 UPDATE Administrador 
@@ -59,7 +59,7 @@ CREATE PROC insertar_usuario
 	@Email varchar(50),
 	@Contrasena varchar(20),
 	@TelefonoCelular   varchar(25),
-	@FechaNacimiento date,
+	@FechaNacimiento varchar(25),
 	@Foto image
 )
 as
@@ -76,7 +76,7 @@ CREATE PROC actualizar_usuario
 	@Email varchar(50),
 	@Contrasena varchar(20),
 	@TelefonoCelular   varchar(50),
-	@FechaNacimiento date,
+	@FechaNacimiento varchar(25),
 	@Foto image
 )
 as

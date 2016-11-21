@@ -1661,7 +1661,7 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private int idUsuarioField;
         
-        private System.DateTime fecharNacUsuarioField;
+        private string fecharNacUsuarioField;
         
         private string telefonoUsuarioField;
         
@@ -1686,7 +1686,7 @@ namespace MCTuristic_Centro_Historico.localhost {
         }
         
         /// <comentarios/>
-        public System.DateTime FecharNacUsuario {
+        public string FecharNacUsuario {
             get {
                 return this.fecharNacUsuarioField;
             }
@@ -1881,7 +1881,7 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private int idAdministradorField;
         
-        private System.DateTime fechanacimientoField;
+        private string fechanacimientoField;
         
         private string telefonoadminField;
         
@@ -1904,7 +1904,7 @@ namespace MCTuristic_Centro_Historico.localhost {
         }
         
         /// <comentarios/>
-        public System.DateTime Fechanacimiento {
+        public string Fechanacimiento {
             get {
                 return this.fechanacimientoField;
             }
@@ -2530,9 +2530,9 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private int idUsuarioField;
         
-        private System.DateTime fechaFinalizacionField;
+        private string fechaFinalizacionField;
         
-        private System.DateTime fechaInicioField;
+        private string fechaInicioField;
         
         private string horaFinalizacionField;
         
@@ -2565,7 +2565,7 @@ namespace MCTuristic_Centro_Historico.localhost {
         }
         
         /// <comentarios/>
-        public System.DateTime FechaFinalizacion {
+        public string FechaFinalizacion {
             get {
                 return this.fechaFinalizacionField;
             }
@@ -2575,7 +2575,7 @@ namespace MCTuristic_Centro_Historico.localhost {
         }
         
         /// <comentarios/>
-        public System.DateTime FechaInicio {
+        public string FechaInicio {
             get {
                 return this.fechaInicioField;
             }

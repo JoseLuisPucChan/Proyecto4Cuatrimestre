@@ -27,9 +27,9 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = oUsuario.EmailUsuario;
             cmd.Parameters.Add("@Contrasena", SqlDbType.VarChar).Value = oUsuario.ContraseñaUsuario;
             cmd.Parameters.Add("@TelefonoCelular", SqlDbType.VarChar).Value = oUsuario.TelefonoUsuario;
-            cmd.Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = oUsuario.FecharNacUsuario;
+            cmd.Parameters.Add("@FechaNacimiento", SqlDbType.VarChar).Value = oUsuario.FecharNacUsuario;
             cmd.Parameters.Add("@Foto", SqlDbType.Image).Value = oUsuario.Foto;
-
+            
             conn.Abrir();
             int retorno = cmd.ExecuteNonQuery();
 

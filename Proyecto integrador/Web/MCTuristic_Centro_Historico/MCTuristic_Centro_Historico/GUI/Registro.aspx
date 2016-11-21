@@ -244,9 +244,11 @@
 
 <li>
 <label><font><font>Selecciona una foto*</font></font></label>
+   
+      <asp:FileUpload ID="fuFoto" runat="server" accept=" image/jpeg, image/png" />
 
-    <asp:FileUpload ID="FileUpload1"  accept="image/jpeg, image/png" onchange="showimagepreview(this)" runat="server" />
-      <script type="text/javascript">
+   <br />
+     <%-- <script type="text/javascript">
 
           function showimagepreview(input) {
 
@@ -261,8 +263,10 @@
               }
           }
 
-             </script> 
-             <img id="imagend" alt="" width="250" height="220" src="" />
+             </script>--%>
+
+
+        
 </li>
     <li>
 <label><font>Fecha de Nacimiento<font></font></font></label>

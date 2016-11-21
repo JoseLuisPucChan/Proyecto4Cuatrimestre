@@ -62,7 +62,7 @@ namespace MCTuristic_Centro_Historico.GUI
             oUsuarioBO.EmailUsuario = correo;
             oUsuarioBO.ContraseñaUsuario = contra;
             oUsuarioBO.TelefonoUsuario = telefono;
-            oUsuarioBO.FecharNacUsuario = Convert.ToDateTime(fecha);
+            oUsuarioBO.FecharNacUsuario = fecha;
             if (fu.HasFile)
             {
                 oUsuarioBO.Foto = new Byte[fu.PostedFile.ContentLength];

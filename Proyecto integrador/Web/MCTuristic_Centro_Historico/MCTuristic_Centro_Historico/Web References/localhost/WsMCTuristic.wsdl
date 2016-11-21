@@ -12,7 +12,7 @@
       <s:complexType name="UsuarioBO">
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="IdUsuario" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="FecharNacUsuario" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FecharNacUsuario" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="TelefonoUsuario" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="ContraseñaUsuario" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="EmailUsuario" type="s:string" />
@@ -179,8 +179,8 @@
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="IdSitio" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="IdUsuario" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="FechaFinalizacion" type="s:dateTime" />
-          <s:element minOccurs="1" maxOccurs="1" name="FechaInicio" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaFinalizacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaInicio" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="HoraFinalizacion" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="HoraInicioEvento" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="NombreEvento" type="s:string" />
@@ -641,7 +641,7 @@
       <s:complexType name="AdministradorBO">
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="IdAdministrador" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Fechanacimiento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fechanacimiento" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Telefonoadmin" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Contraseñaadmin" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />

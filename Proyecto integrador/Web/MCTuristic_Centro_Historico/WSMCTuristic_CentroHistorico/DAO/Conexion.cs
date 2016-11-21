@@ -13,7 +13,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
         public SqlConnection Establecer()
         {
-            sql = "Data source = ANDRE-PC\\SQLSERVER; Initial Catalog=MCTuristic; Integrated Security=True";
+            sql = "Data source = LAPTOP-U1DIF2PF\\SQLSERVER; Initial Catalog=MCTuristic; Integrated Security=True";
             conn = new SqlConnection(sql);
             return conn;
         }
