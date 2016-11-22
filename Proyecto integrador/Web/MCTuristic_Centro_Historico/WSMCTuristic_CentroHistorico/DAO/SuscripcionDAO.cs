@@ -19,9 +19,10 @@ namespace WSMCTuristic_CentroHistorico.DAO
             oSuscripcion = (BO.SuscripcionBO)obj;
 
             cmd.Connection = conn.Establecer();
-            cmd.CommandText = "insertar_suscripcion";
+            cmd.CommandText = "insertar_Suscripcion";
             cmd.CommandType = CommandType.StoredProcedure;
 
+            cmd.Parameters.Add("@idSuscripcion ", SqlDbType.Int).Value = oSuscripcion.IdSuscripcion;
             cmd.Parameters.Add("@FechaPago", SqlDbType.Date).Value = oSuscripcion.FechaPago;
             cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = oSuscripcion.IdUsuario;
 
@@ -50,7 +51,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             oSuscripcion = (BO.SuscripcionBO)obj;
 
             cmd.Connection = conn.Establecer();
-            cmd.CommandText = "actualizar_suscripcion";
+            cmd.CommandText = "actualizar_Suscripcion";
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@idSuscripcion ", SqlDbType.Int).Value = oSuscripcion.IdSuscripcion;

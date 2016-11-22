@@ -577,13 +577,14 @@ go
 
 create proc insertar_Suscripcion
 (
+	@idSuscripcion int,
 	@FechaPago date,
 	@IdUsuario int
 	
 )
 as
-insert into Suscripcion (FechaPago,IdUsuario) 
-VALUES (@FechaPago,@IdUsuario)
+insert into Suscripcion (idSuscripcion,FechaPago,IdUsuario) 
+VALUES (@idSuscripcion,@FechaPago,@IdUsuario)
 GO
 --ActualizarSuscripcion
 
