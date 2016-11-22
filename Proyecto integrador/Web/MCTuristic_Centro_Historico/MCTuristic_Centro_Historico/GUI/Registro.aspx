@@ -201,7 +201,7 @@
 </li>
 <li class="col-lg-6">
 <label><font><font>Número*</font></font></label>
-     <asp:TextBox ID="txtNumero" type="text"  placeholder="Número" runat="server"></asp:TextBox>
+     <asp:TextBox ID="txtNumeroCalle" type="text"  placeholder="Número" runat="server"></asp:TextBox>
 </li>
 </ul>
 <ul class="row">

@@ -43,7 +43,7 @@ namespace MCTuristic_Centro_Historico.GUI
             {
                 oUsuariosBO.ContraseñaUsuario = txtConfirmarContraseña.Text.Trim();
             }
-            oUsuariosBO.TelefonoUsuario = txtNumero.Text.Trim();
+            oUsuariosBO.TelefonoUsuario = txtTelefono.Text.Trim();
             return oUsuariosBO;
         }
        private localhost.DireccionBO RecuperarDireccion()
@@ -51,7 +51,7 @@ namespace MCTuristic_Centro_Historico.GUI
            oDireccionUser = new DireccionBO();
            oDireccionUser.Calle = txtCalle.Text.Trim();
            oDireccionUser.Cruzamiento = txtCruzamiento.Text.Trim();
-           oDireccionUser.Numero = txtNumero.Text.Trim();
+           oDireccionUser.Numero = txtNumeroCalle.Text.Trim();
            oDireccionUser.DescripcionDireccion = txtDescripción.Text.Trim();
            oDireccionUser.Colonia = txtColonia.Text.Trim();
            oDireccionUser.Estado = txtEstado.Text.Trim();
