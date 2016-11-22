@@ -1,3 +1,3 @@
 Las actualizaciones para el proyecto MCTuristic_Centro_Historico
 Se realizaran para el proyecto que esta situado en la carpeta 
-proyectointegrador/web
+proyectointegrador/web q

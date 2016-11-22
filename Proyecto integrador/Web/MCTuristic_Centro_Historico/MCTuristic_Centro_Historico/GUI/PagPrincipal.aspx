@@ -233,7 +233,8 @@
 
                    </li>
                   <li data-transition="papercut,3dcurtain-horizontal,3dcurtain-vertical,flyin,turnoff,cubic" data-slotamount="7" data-masterspeed="300" > 
-                      <img src="../Recursos/Imagenes/17411434.jpg" alt="wall-slider2"  data-fullwidthcentering="on"/>
+                      <img src="../Recursos/Imagenes/fotos-panoramicas-12.jpg" alt="wall-slider2"  data-fullwidthcentering="on" />
+
 
                          <div class="tp-caption lfb" data-x="7" data-y="12" 	 data-speed="500" data-start="1400" data-easing="easeOutExpo"  >
                              <img src="../Recursos/Imagenes/Mapa.png" alt="Image 6" />

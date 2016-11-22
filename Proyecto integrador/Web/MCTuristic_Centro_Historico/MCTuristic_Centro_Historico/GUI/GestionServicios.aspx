@@ -67,7 +67,7 @@
                     </div>
                     <div class="col-lg-6">
                         <h3><i class="glyph-icon icon-cutlery"></i>Tipo de servicio</h3>
-                        <asp:DropDownList ID="ddlTipoServicio" runat="server" CssClass="form-control border-blue"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlTipoServicio" runat="server" CssClass="form-control border-blue" OnSelectedIndexChanged="ddlTipoServicio_SelectedIndexChanged"></asp:DropDownList>
                         <button class="btn btn-primary" data-toggle="modal" data-target="#Direccion" type="button">Agregar tipo de servicio</button>
                         <div class="modal fade bs-example-modal-lg" id="Direccion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
@@ -127,7 +127,7 @@
                 var actionData = " { 'establecimiento': '" + $("#<%=txtIdEstablecimiento.ClientID%>")[0].value + "' , 'tipoServicio': '" + $("#<%=txtIdTipoServicio.ClientID%>")[0].value + "' , 'nombre': '" + $("#<%=txtNombreServicio.ClientID%>")[0].value + "' , 'oferta': '" + $("#<%=txtOferta.ClientID%>")[0].value + "' , 'descripcion': '" + $("#<%=txtDescripcion.ClientID%>")[0].value + "' , 'precio': '" + $("#<%=txtPrecio.ClientID%>")[0].value + "'}  ";
             $.ajax({
                 type: "POST",
-                url: "Registro.aspx/GuardarServicio",
+                url: "GestionServicios.aspx/GuardarServicio",
                 data: actionData,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -194,6 +194,12 @@
                         <a href="../GUI/GestionDireccion.aspx" title="Direcciones">
                             <i class="glyph-icon icon-road"></i>
                             <span>Direcciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionAdministrador.aspx" title="Administradores">
+                            <i class="glyph-icon icon-key"></i>
+                            <span>Administradores</span>
                         </a>
                     </li>
                 </asp:PlaceHolder>

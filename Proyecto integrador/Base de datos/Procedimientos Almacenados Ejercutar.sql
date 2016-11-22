@@ -16,14 +16,13 @@ CREATE PROC insertar_administrador
 	@Email varchar(50),
 	@Contrasena varchar(20),
 	@TelefonoCelular   varchar(25),
-	@FechaNacimiento date
+	@FechaNacimiento varchar(25)
 )
 as
 INSERT INTO Administrador (Nombre,Apellidos,Email,Contrasena,TelefonoCelular,FechaNacimiento) 
 VALUES (@Nombre,@Apellidos,@Email,@Contrasena,@TelefonoCelular,@FechaNacimiento)
 Go
 --Actualizar Administrador
-
 CREATE PROC actualizar_administrador
 (
 	@IdAdminstrador int,
@@ -32,7 +31,7 @@ CREATE PROC actualizar_administrador
 	@Email varchar(50),
 	@Contrasena varchar(20),
 	@TelefonoCelular   varchar(25),
-	@FechaNacimiento date
+	@FechaNacimiento varchar(25)
 )
 as
 UPDATE Administrador 
@@ -48,9 +47,28 @@ Create proc eliminar_administrador
 as
 DELETE FROM Administrador WHERE IdAdministrador = @IdAdministrador
 GO
+
+Create procedure ver_administrador
+as
+SELECT     dbo.Administrador.IdAdministrador,  dbo.Administrador.Nombre, dbo.Administrador.Apellidos, dbo.Administrador.Email, dbo.Administrador.TelefonoCelular, dbo.Administrador.FechaNacimiento, dbo.Direccion.idDireccion ,dbo.Direccion.Calle, dbo.Direccion.Cruzamiento, 
+                         dbo.Direccion.Numero, dbo.Direccion.Colonia, dbo.Direccion.Descripcion, dbo.Direccion.Estado, dbo.Direccion.CodPostal
+FROM            dbo.Administrador INNER JOIN
+                         dbo.Direccion ON dbo.Administrador.IdAdministrador = dbo.Direccion.IdAdministrador
+GO
+
 --------------------------------Procedimiento Almacenado usuario-----------------------------------
 --Select * from Usuario
---Insetar Administrador
+
+
+
+---Seleccionar el usuario actual insertado
+
+create procedure usuario_reciente
+as
+select MAX([IdUsuario]) as Maximo from Usuario
+
+
+--Insetar Usuario
 
 CREATE PROC insertar_usuario
 (
@@ -59,32 +77,34 @@ CREATE PROC insertar_usuario
 	@Email varchar(50),
 	@Contrasena varchar(20),
 	@TelefonoCelular   varchar(25),
-	@FechaNacimiento date
+	@FechaNacimiento varchar(25),
+	@Foto image
 )
 as
-INSERT INTO Usuario(Nombre,Apellidos,Email,Contrasena,TelefonoCelular,FechaNacimiento) 
-VALUES (@Nombre,@Apellidos,@Email,@Contrasena,@TelefonoCelular,@FechaNacimiento)
+INSERT INTO Usuario(Nombre,Apellidos,Email,Contrasena,TelefonoCelular,FechaNacimiento,Foto) 
+VALUES (@Nombre,@Apellidos,@Email,@Contrasena,@TelefonoCelular,@FechaNacimiento,@Foto)
 Go
 --Actualizar usuario
 
 CREATE PROC actualizar_usuario
 (
 	@IdUsuario int,
-	@Nombre varchar(25),
-	@Apellidos varchar(25),
+	@Nombre varchar(50),
+	@Apellidos varchar(50),
 	@Email varchar(50),
 	@Contrasena varchar(20),
-	@TelefonoCelular   varchar(25),
-	@FechaNacimiento date
+	@TelefonoCelular   varchar(50),
+	@FechaNacimiento varchar(25),
+	@Foto image
 )
 as
 UPDATE Usuario 
-SET Nombre = @Nombre,Apellidos= @Apellidos,Email = @Email,Contrasena = @Contrasena,TelefonoCelular = @TelefonoCelular,FechaNacimiento= @FechaNacimiento 
+SET Nombre = @Nombre,Apellidos= @Apellidos,Email = @Email,Contrasena = @Contrasena,TelefonoCelular = @TelefonoCelular,FechaNacimiento= @FechaNacimiento, Foto = @Foto
 WHERE IdUsuario = @IdUsuario
 Go
 --Eliminar usuario
 
-Create proc eliminar_usaurio
+Create proc eliminar_usuario
 (
 	@IdUsuario int
 )
@@ -92,15 +112,52 @@ as
 DELETE FROM Usuario WHERE IdUsuario = @IdUsuario
 GO
 
-EXEC insertar_usuario'JOSE','Puc','josechan211@gmail.com','12345','999135','1996-07-29'
-
-EXEC actualizar_usuario 1, 'JOSE','Puc','PRIMO@HOTMAIL','12345','999135','1996-07-29'
-
-EXEC eliminar_usaurio 1
-go
+create procedure ver_usuario
+as
+SELECT        dbo.Usuario.IdUsuario, dbo.Usuario.Nombre, dbo.Usuario.Apellidos, dbo.Usuario.Email, dbo.Usuario.TelefonoCelular, dbo.Usuario.FechaNacimiento, dbo.Direccion.Calle, dbo.Direccion.idDireccion, 
+                         dbo.Direccion.Cruzamiento, dbo.Direccion.Numero, dbo.Direccion.Descripcion, dbo.Direccion.Estado, dbo.Direccion.CodPostal
+FROM            dbo.Direccion INNER JOIN
+                         dbo.Usuario ON dbo.Direccion.IdUsuario = dbo.Usuario.IdUsuario
+GO
 ---------------------------------Procedimiento Almacenado Dirección----------------------------------------
-Select * from Direccion
+-----***Dirección Usuario-----------
+
+Create procedure insertar_direccion_usuario
+(
+	@Calle varchar(50),
+	@Cruzamiento varchar(50),
+	@Numero varchar(50),
+	@Descripcion varchar(50),
+	@Colonia varchar(50),
+	@Estado varchar(50),
+	@CodPostal varchar(50),
+	@IdUsuario int
+)
+as
+INSERT INTO Direccion (Calle,Cruzamiento,Numero,Descripcion,Colonia,Estado,CodPostal,IdUsuario,IdAdministrador)
+VALUES (@Calle,@Cruzamiento,@Numero,@Descripcion,@Colonia,@Estado,@CodPostal,@IdUsuario,null)
 go
+-- Actualizar direccion
+Create procedure actualizar_direccion_usuario
+(
+	@idDireccion int,
+	@Calle varchar(50),
+	@Cruzamiento varchar(50),
+	@Numero varchar(50),
+	@Descripcion varchar(50),
+	@Colonia varchar(50),
+	@Estado varchar(50),
+	@CodPostal varchar(50),
+	@IdUsuario int
+	
+)
+as
+UPDATE Direccion SET  Calle = @Calle,Cruzamiento = @Cruzamiento,Numero = @Numero,Descripcion = @Descripcion,Colonia = @Colonia,Estado = @Estado,CodPostal = @CodPostal,IdUsuario = @IdUsuario,IdAdministrador = null
+where idDireccion = @idDireccion
+go
+
+
+
 --Insetar Administrador
 
 Create procedure insertar_direccion
@@ -157,12 +214,13 @@ Create procedure insertar_establecimiento
 	@PagFacebook varchar(50),
 	@Longitud Decimal(10,2),
 	@Latitud Decimal(10,2),
+	@Foto image,
 	@IdUsuario int
 
 )
 as
-INSERT INTO Establecimiento (NomEstable,Telefono,HoraInicio,HoraCierre,PagFacebook,Latitud,Longitud,IdUsuario) 
-VALUES(@NomEstable,@Telefono,@HoraInicio,@HoraCierre,@PagFacebook,@Latitud,@Longitud,@IdUsuario)
+INSERT INTO Establecimiento (NomEstable,Telefono,HoraInicio,HoraCierre,PagFacebook,Latitud,Longitud,Foto,IdUsuario) 
+VALUES(@NomEstable,@Telefono,@HoraInicio,@HoraCierre,@PagFacebook,@Latitud,@Longitud,@Foto,@IdUsuario)
 go
 ----Actualizar Establecimiento
 
@@ -176,12 +234,13 @@ Create procedure	actualizar_establecimiento
 	@PagFacebook varchar(50),
 	@Longitud Decimal(10,2),
 	@Latitud Decimal(10,2),
+	@Foto image,
 	@IdUsuario int
 
 )
 as
 UPDATE Establecimiento SET NomEstable =@NomEstable,Telefono =@Telefono,HoraInicio = @HoraInicio,HoraCierre =@HoraCierre
-,PagFacebook =@PagFacebook ,Latitud = @Latitud,Longitud = @Longitud,IdUsuario  = @IdUsuario
+,PagFacebook =@PagFacebook ,Latitud = @Latitud,Longitud = @Longitud,Foto = @Foto,IdUsuario  = @IdUsuario
 WHERE idEstablecimiento  = @IdEstablecimiento
 Go
 
@@ -194,8 +253,6 @@ create procedure eliminar_establecimiento
 as
 DELETE FROM Establecimiento WHERE idEstablecimiento = @IdEstablecimiento
 go
-
-
 --------------------------------Procedimiento Almacenado tipo de servicio-----------------------------------
 create procedure insertar_tiposervicio
 (
@@ -224,22 +281,22 @@ as
 DELETE  FROM TipoServicio WHERE idTipoServ = @idTipoServ
 go
 
-
-
-
 --------------------------------Procedimiento Almacenado servicio-----------------------------------
 --Insertar servicio
 create procedure insertar_servicios
 (
+    @NombreServ varchar(30),
 	@OfertaServicio varchar(50),
 	@PrecioServicio decimal(10,2),
 	@DescripServicio varchar(50),
+	@Foto image,
+	@Popularidad int,
 	@idEstablecimiento int,
 	@idTipoServi int
 )
 as
-Insert INTO Servicios (OfertaServicio,PreciosServicio,DescripServicio,idEstablecimiento,idTipoServ)
-VALUES(@OfertaServicio,@PrecioServicio,@DescripServicio,@idEstablecimiento,@idTipoServi) 
+Insert INTO Servicios (NombreServ,OfertaServicio,PreciosServicio,DescripServicio,Foto,Popularidad,idEstablecimiento,idTipoServ)
+VALUES(@NombreServ,@OfertaServicio,@PrecioServicio,@DescripServicio,@Foto,@Popularidad,@idEstablecimiento,@idTipoServi) 
 go
 
 ---ActualizarServicio---
@@ -247,15 +304,18 @@ go
 create procedure actualizar_servicios
 (
 	@idServicio int,
+	@NombreServ varchar(50),
 	@OfertaServicio varchar(50),
 	@PrecioServicio decimal(10,2),
 	@DescripServicio varchar(50),
+	@Foto image,
+	@Popularidad int,
 	@idEstablecimiento int,
 	@idTipoServi int
 )
 as
-UPDATE Servicios  SET OfertaServicio =  @OfertaServicio,PreciosServicio = @PrecioServicio,
-DescripServicio =	@DescripServicio,idEstablecimiento= @idEstablecimiento,idTipoServ = @idTipoServi
+UPDATE Servicios  SET NombreServ =@NombreServ, OfertaServicio =  @OfertaServicio,PreciosServicio = @PrecioServicio,
+DescripServicio =	@DescripServicio,Foto=@Foto,Popularidad=@Popularidad,idEstablecimiento= @idEstablecimiento,idTipoServ = @idTipoServi
 where idServicio = @idServicio
 go
 
@@ -271,6 +331,19 @@ GO
 
 --------------------------------Procedimiento Almacenado tipoSuscripcion-----------------------------------
 
+
+insert into  TipoSuscripcion (Nombre,Monto,TiempoSuscripcion)  VALUES ('Gratis','0','3') 
+go
+
+
+insert into  TipoSuscripcion (Nombre,Monto,TiempoSuscripcion)  VALUES ('Medium','100','1') 
+go
+
+insert into  TipoSuscripcion (Nombre,Monto,TiempoSuscripcion)  VALUES ('Premium','400','6') 
+go
+
+insert into  TipoSuscripcion (Nombre,Monto,TiempoSuscripcion)  VALUES ('Gold','1000','12') 
+go
 -------------insertar tisuscripcion-------
 create procedure insertar_tiposuscripcion
 (
@@ -433,12 +506,13 @@ create procedure insertar_evento
 	@HoraFinalizacion varchar(50),
 	@FechaIncio date,
 	@FechaFinalizacion date,
+	@Foto image,
 	@IdUsuario int,
 	@IdSitio int 
 )
 as
-insert into Eventos  (NombreEvent,HoroInicio,HoraFinalizacion,FechaIncio,FechaFinalizacion,IdUsuario,IdSitio)
-VALUES (@NombreEvent,@HoraIncio,@HoraFinalizacion,@FechaIncio,@FechaFinalizacion,@IdUsuario,@IdSitio)
+insert into Eventos  (NombreEvent,HoroInicio,HoraFinalizacion,FechaIncio,FechaFinalizacion,Foto,IdUsuario,IdSitio)
+VALUES (@NombreEvent,@HoraIncio,@HoraFinalizacion,@FechaIncio,@FechaFinalizacion,@Foto,@IdUsuario,@IdSitio)
 go
 --actualizar  evento
 create procedure actualizar_evento
@@ -449,13 +523,14 @@ create procedure actualizar_evento
 	@HoraFinalizacion varchar(50),
 	@FechaIncio date,
 	@FechaFinalizacion date,
+	@Foto image,
 	@IdUsuario int,
 	@IdSitio int 
 )
 as
 UPDATE Eventos SET  
 NombreEvent = @NombreEvent,HoroInicio = @HoraIncio,
-HoraFinalizacion = @HoraFinalizacion,FechaIncio = @FechaIncio,FechaFinalizacion = @FechaFinalizacion
+HoraFinalizacion = @HoraFinalizacion,FechaIncio = @FechaIncio,FechaFinalizacion = @FechaFinalizacion,Foto=@Foto
 ,IdUsuario = @IdUsuario,IdSitio = @IdSitio WHERE idEvento= @idEvento
 go
 --actualizar  evento
@@ -543,6 +618,82 @@ as
 Delete from Contactanos where IdContactanos = @IdContactanos
 go
 
+-----------------------------Procedimiento Almacenado Suscripcion --------------------------------
+--InsertarSuscripcion
+
+create proc insertar_Suscripcion
+(
+	@idSuscripcion int,
+	@FechaPago date,
+	@IdUsuario int
+	
+)
+as
+insert into Suscripcion (idSuscripcion,FechaPago,IdUsuario) 
+VALUES (@idSuscripcion,@FechaPago,@IdUsuario)
+GO
+--ActualizarSuscripcion
+
+
+
+Create proc actualizar_suscripcion
+(
+	@idSuscripcion int,
+	@FechaPago date,
+	@IdUsuario int
+	
+)
+as
+UPDATE Suscripcion SET FechaPago = @FechaPago, IdUsuario =@IdUsuario  WHERE idSuscripcion = @idSuscripcion
+GO
+--EliminarContactanos 
+Create proc eliminar_suscripcion
+(
+	@idSuscripcion  int
+)
+as
+Delete from Suscripcion where idSuscripcion = @idSuscripcion
+go
+
+---------------------------Procedimiento almacenado comentarios ------------------------
+--InsertarComentarios
+
+create proc insertar_comentarios
+(
+	@Nombre varchar(50),
+	@Contenido varchar(100),
+	@Status int,
+	@IdUsuario int
+	
+)
+as
+insert into Comentarios (Nombre,Contenido,Status,IdUsuario) 
+VALUES (@Nombre,@Contenido,@Status,@IdUsuario)
+GO
+--ActualizarComentario
+
+
+
+Create proc actualizar_comentarios
+(
+	@IdComentario int,
+	@Nombre varchar(50),
+	@Contenido varchar(100),
+	@Status int,
+	@IdUsuario int
+	
+)
+as
+UPDATE Comentarios SET Nombre=@Nombre, Contenido=@Contenido, Status = @Status, IdUsuario = @IdUsuario WHERE IdComentario = @IdComentario
+GO
+--EliminarComentario 
+Create proc eliminar_comentario
+(
+	@IdComentario  int
+)
+as
+Delete from Comentarios where IdComentario = @IdComentario
+go
 ------------------------------Login User------------------------------
 create proc login_user
 @email varchar(20),

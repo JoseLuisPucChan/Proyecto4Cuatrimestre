@@ -27,9 +27,17 @@
        <script src="../Recursos/js/jquery-3.1.1.min.js"></script>
     <link href="../Recursos/css/StyleSheet1.css" rel="stylesheet" />
 
+    <link href="../Recursos/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="../Recursos/css/content_slider_style.css" rel="stylesheet" />
+
     </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true">
+            <Scripts>
+                <asp:ScriptReference Path="~/Recursos/ComponentesAjax" />
+            </Scripts>
+        </asp:ScriptManager>
     <div>
         
      
@@ -178,6 +186,44 @@ Somos un grupo de personas que Conscientes de que la cultura de nuestros ancestr
     <script src="../Recursos/js/jquery-scrolltofixed-min.js" type="text/javascript"></script>
     <script src="../Recursos/js/custom.js"></script>
     <script type="text/javascript">/* <![CDATA[ */(function (d, s, a, i, j, r, l, m, t) { try { l = d.getElementsByTagName('a'); t = d.createElement('textarea'); for (i = 0; l.length - i; i++) { try { a = l[i].href; s = a.indexOf('/cdn-cgi/l/email-protection'); m = a.length; if (a && s > -1 && m > 28) { j = 28 + s; s = ''; if (j < m) { r = '0x' + a.substr(j, 2) | 0; for (j += 2; j < m && a.charAt(j) != 'X'; j += 2) s += '%' + ('0' + ('0x' + a.substr(j, 2) ^ r).toString(16)).slice(-2); j++; s = decodeURIComponent(s) + a.substr(j, m - j) } t.innerHTML = s.replace(/</g, '&lt;').replace(/>/g, '&gt;'); l[i].href = 'mailto:' + t.value } } catch (e) { } } } catch (e) { } })(document);/* ]]> */</script>
+<script src="../Recursos/js/jquery.content_slider.min.js" type="text/javascript"></script>
+<script src="../Recursos/js/jquery.mousewheel.js" type="text/javascript"></script>
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {
+            var image_array = new Array();
+            image_array = [
+				{ image: '../Recursos/images/team-img1.png' },
+					// image for the first layer, goes with the text from id="sw0"
+				{ image: '../Recursos/images/team-img2.png' },
+					// image for the second layer, goes with the text from id="sw1"
+				{ image: '../Recursos/images/team-img3.png' },
+					// image for the third layer, goes with the text from id="sw2"
+				{ image: '../Recursos/images/team-img4.png' },
+					// ...
+				{ image: '../Recursos/images/team-img1.png' },
+				{ image: '../Recursos/images/team-img2.png' },
+				{ image: '../Recursos/images/team-img3.png' }
+            ];
+            $('#slider1').content_slider({		// bind plugin to div id="slider1"
+                map: image_array,				// pointer to the image map
+                max_shown_items: 7,				// number of visible circles
+                hv_switch: 0,					// 0 = horizontal slider, 1 = vertical
+                active_item: 0,					// layer that will be shown at start, 0=first, 1=second...
+                wrapper_text_max_height: 600,	// height of widget, displayed in pixels
+                middle_click: 1,				// when main circle is clicked: 1 = slider will go to the previous layer/circle, 2 = to the next
+                under_600_max_height: 1200,		// if resolution is below 600 px, set max height of content
+                border_radius: -1,				// -1 = circle, 0 and other = radius
+                automatic_height_resize: 1,
+                border_on_off: 0,
+                allow_shadow: 0
+            });
+        });
+    })(jQuery);
+</script>
+<script src="../Recursos/js/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+<script src="../Recursos/js/custom.js"></script> 
+    
     </form>
     <asp:ContentPlaceHolder ID="scrip" runat="server"></asp:ContentPlaceHolder>
     

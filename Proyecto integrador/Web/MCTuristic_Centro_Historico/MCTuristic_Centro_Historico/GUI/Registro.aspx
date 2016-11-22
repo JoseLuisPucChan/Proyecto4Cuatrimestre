@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.Registro" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -199,7 +201,7 @@
 </li>
 <li class="col-lg-6">
 <label><font><font>Número*</font></font></label>
-     <asp:TextBox ID="txtNumero" type="text"  placeholder="Número" runat="server"></asp:TextBox>
+     <asp:TextBox ID="txtNumeroCalle" type="text"  placeholder="Número" runat="server"></asp:TextBox>
 </li>
 </ul>
 <ul class="row">
@@ -224,36 +226,56 @@
 <li>
 <font>
 <font>
-<asp:Button ID="Button1" class="btn btn-info boton1" runat="server" Text="Crear Cuenta" OnClick="Button1_Click"></asp:Button>
+ <asp:Button ID="btnAgregar" class="btn btn-info boton1" runat="server" Text="Regístrace" OnClick="btnAgregar_Click"></asp:Button>
 <%--<input id="Button1" type="button" class="btn btn-info boton1" onclick="Gurdar();" value="CREAR CUENTA" />--%>
 </font>
 </font>
 </li>
 </ul>
-</form>
 </div>
 </div>
  
 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 <div class="login">
-<h2><font><font>Ya registrado</font></font></h2>
+<h2><font><font>Agregar Foto</font></font></h2>
 <form method="post" action="#">
 <ul>
+
 <li>
-<label><font><font>Nombre de usuario *</font></font></label>
-<input name="" type="text">
+<label><font><font><h3><i class="glyph-icon icon-image"></i>Foto*</h3></font></font></label>
+   
+                            <asp:Image ID="imgFoto" runat="server" Width="450" Height="300" alt="" />
+                            <asp:FileUpload ID="fuFoto" runat="server" accept=" image/jpeg, image/png" />
+
+    <asp:Button ID="btnVer" runat="server" Text="Visualizar imagen" CssClass="btn btn-purple" OnClick="btnVer_Click1" />
+   <br />
+     <%-- <script type="text/javascript">
+          function showimagepreview(input) {
+
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+                  reader.onload = function (e) {
+
+                      $('#imagend').attr('src', e.target.result);
+                      document.getElementsById("imagend")[0].setAttribute("src", e.target.result);
+                  }
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+             </script>--%>
+
+
+        
 </li>
-<li>
-<label><font><font>Email*</font></font></label>
-<input name="" type="text">
+    <li>
+<label><font>Fecha de Nacimiento<font></font></font></label>
+ <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="Calender" Format="dd-MM-yyyy" />
+ <asp:TextBox ID="Calender" runat="server"></asp:TextBox>
 </li>
-<li>
-<label><font><font>Contraseña *</font></font></label>
-<input name="" type="text">
-</li>
-<li><font><font><input type="submit" value="INICIAR SESIÓN"></font></font></li>
+         
+                            
 </ul>
-</form>
 </div>
 </div>
  
@@ -261,6 +283,7 @@
 </div>
 </section>
 </div>
+    
 <div class="gap"></div>
 
      

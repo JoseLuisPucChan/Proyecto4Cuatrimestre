@@ -81,6 +81,25 @@
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="pull-right">
+        <script type="text/javascript">
+                function GurdarTipoSitio() {
+                    var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'descripcion': '" + $("#<%=txtDescripcion.ClientID%>")[0].value + "'}  ";
+            $.ajax({
+                type: "POST",
+                url: "GestionSitios.aspx/GuardarTipoSitio",
+                data: actionData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccess,
+                failure: function (response) {
+                    alert(response.d);
+                }
+            });
+        }
+        function OnSuccess(response) {
+            alert("Respuesta " + response.d);
+        }
+        </script>
                                                     <asp:Button ID="btnAceptar" CssClass="btn btn-primary" runat="server" Text="Aceptar" />
                                                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
                                                 </div>
@@ -101,6 +120,9 @@
                     </div>
                     <div class="col-lg-12 form-group">
                         <h3><i class="glyph-icon icon-language"></i>Dirección</h3>
+                        <asp:TextBox ID="txtDireccion" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtLat" runat="server" Visible="false"></asp:TextBox>
+                        <asp:TextBox ID="txtlon" runat="server" Visible="false"></asp:TextBox>
                         <div class="example-box-wrapper">
                             <div id="map-basic" style="height: 300px;"></div>
                         </div>
@@ -119,6 +141,26 @@
                     </div>
                     <div class="col-lg-12 form-group">
                         <div class="divider"></div>
+
+        <script type="text/javascript">
+                function GurdarSitio() {
+                var actionData = " { 'nombre': '" + $("#<%=txtNombreTipo.ClientID%>")[0].value + "', 'idTipo': '" + $("#<%=ddlTipoSitio.ClientID%>")[0].value + "', 'direccion': '"+$("#<%=txtDireccion.ClientID%>")+"', 'latitud': '"+$("#<%=txtLat.ClientID%>")+"', 'longitud': '"+$("#<%=txtlon.ClientID%>")+"', 'historia': '"+$("#<%=txtHistoria.ClientID%>")+"', 'suceso': '"+$("#<%=txtSucesos.ClientID%>")+"', 'descripcion': '"+$("#<%=txtDescripcion.ClientID%>")+"'}  ";
+            $.ajax({
+                type: "POST",
+                url: "GestionSitios.aspx/GuardarSitio",
+                data: actionData,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccess,
+                failure: function (response) {
+                    alert(response.d);
+                }
+            });
+        }
+        function OnSuccess(response) {
+            alert("Respuesta " + response.d);
+        }
+        </script>
                         <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
@@ -171,6 +213,12 @@
                         <a href="../GUI/GestionDireccion.aspx" title="Direcciones">
                             <i class="glyph-icon icon-road"></i>
                             <span>Direcciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../GUI/GestionAdministrador.aspx" title="Administradores">
+                            <i class="glyph-icon icon-key"></i>
+                            <span>Administradores</span>
                         </a>
                     </li>
                 </asp:PlaceHolder>

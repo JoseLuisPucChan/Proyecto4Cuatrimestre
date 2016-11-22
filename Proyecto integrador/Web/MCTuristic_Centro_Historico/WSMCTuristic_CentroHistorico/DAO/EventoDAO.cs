@@ -29,6 +29,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@HoraFinalizacion", SqlDbType.VarChar).Value = oEventoBO.HoraFinalizacion;
             cmd.Parameters.Add("@FechaIncio", SqlDbType.VarChar).Value = oEventoBO.FechaInicio;
             cmd.Parameters.Add("@FechaFinalizacion", SqlDbType.Date).Value = oEventoBO.FechaFinalizacion;
+            cmd.Parameters.Add("@Foto", SqlDbType.Image).Value = oEventoBO.Foto;
             cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = oEventoBO.IdUsuario;
             cmd.Parameters.Add("@IdSitio", SqlDbType.Int).Value = oEventoBO.IdSitio;
 
@@ -63,6 +64,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@HoraFinalizacion", SqlDbType.VarChar).Value = oEventoBO.HoraFinalizacion;
             cmd.Parameters.Add("@FechaIncio", SqlDbType.Date).Value = oEventoBO.FechaInicio;
             cmd.Parameters.Add("@FechaFinalizacion", SqlDbType.Date).Value = oEventoBO.FechaFinalizacion;
+            cmd.Parameters.Add("@Foto", SqlDbType.Image).Value = oEventoBO.Foto;
             cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = oEventoBO.IdUsuario;
             cmd.Parameters.Add("@IdSitio", SqlDbType.Int).Value = oEventoBO.IdSitio;
 

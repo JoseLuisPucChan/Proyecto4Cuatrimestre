@@ -57,13 +57,13 @@
 
 
 <li class="last" >
-<asp:Button ID="Button1" Width="264"  OnClick="Button3_Click" runat="server" Text="Adquirir ahora" />
+<asp:Button ID="btnGratis" Width="264"  runat="server" Text="Adquirir ahora" OnClick="btnGratis_Click" />
 </li>
 </ul>
 <ul class="col-lg-3 col-md-3 col-sm-6 price-col-2">
 <li>Medium</li>
 <li>
-<h2>$300.00</h2>
+<h2>$100.00</h2>
 <span>Durante 1 meses</span> </li> 
 <li>Visualizar sitios</li>
 <li class="odd">Publicar eventos</li>
@@ -78,7 +78,7 @@
 <ul class="col-lg-3 col-md-3 col-sm-6 price-col-3">
 <li>Premium</li>
 <li>
-<h2>$1400.00</h2>
+<h2>$400.00</h2>
 <span>Durante 6 meses</span> </li>
 <li>Visualizar sitios</li>
 <li class="odd">Publicar eventos</li>
@@ -93,7 +93,7 @@
 <ul class="col-lg-3 col-md-3 col-sm-6 price-col-4">
 <li>Gold</li>
 <li>
-<h2>$2500.00</h2>
+<h2>$1000.00</h2>
 <span>Durante 1 año</span> </li>
 <li>Visualizar sitios</li>
 <li class="odd">Publicar eventos</li>

@@ -30,6 +30,8 @@ namespace WSMCTuristic_CentroHistorico.UI
         Services.CtrlTipoSuscripcion oTipoSuscripcionCTRL;
         Services.CtrlContactanos oContactanosCTRL;
         Services.CtrlAdministrador oAdministradorCTRL;
+        Services.CtrlComentario oComentariosCTRL;
+        Services.CtrlSuscripcion oSuscripcionCTRL;
         //--------------------------ABC Usuarios-----------------------------
          [WebMethod]
         public int InsertarUsuario( UsuarioBO obj )
@@ -59,6 +61,12 @@ namespace WSMCTuristic_CentroHistorico.UI
             oUsuarioCTRL = new Services.CtrlUsuario();
             return oUsuarioCTRL.EliminarUsuario(oUsuario);
         }
+         [WebMethod]
+        public string obtener_usuarioid()
+        {
+            oUsuarioCTRL = new Services.CtrlUsuario();
+            return oUsuarioCTRL.id_usuario();
+        }
 
         //--------------------------ABC Direcciones-----------------------------
         [WebMethod]
@@ -66,7 +74,6 @@ namespace WSMCTuristic_CentroHistorico.UI
         {
             DireccionBO oDireccion = new DireccionBO();
             oDireccion = obj;
-
             oDireccionCTRL = new Services.CtrlDireccion();
             return oDireccionCTRL.EliminarDireccion(oDireccion);
         }
@@ -96,7 +103,6 @@ namespace WSMCTuristic_CentroHistorico.UI
         {
             BO.EstablecimientoBO oEstablecimientoBO = new BO.EstablecimientoBO();
             oEstablecimientoBO = obj;
-
             oEstablecimiento = new Services.CtrlEstablecimiento();
             return oEstablecimiento.insertarEstablecimiento(oEstablecimientoBO);
         }
@@ -106,7 +112,6 @@ namespace WSMCTuristic_CentroHistorico.UI
         {
             BO.EstablecimientoBO oEstablecimientoBO = new BO.EstablecimientoBO();
             oEstablecimientoBO = obj;
-
             oEstablecimiento = new Services.CtrlEstablecimiento();
             return oEstablecimiento.ModificarEstablecimiento(oEstablecimientoBO);
         }
@@ -116,7 +121,6 @@ namespace WSMCTuristic_CentroHistorico.UI
         {
             BO.EstablecimientoBO oEstablecimientoBO = new BO.EstablecimientoBO();
             oEstablecimientoBO = obj;
-
             oEstablecimiento = new Services.CtrlEstablecimiento();
             return oEstablecimiento.EliminarEstablecimiento(oEstablecimientoBO);
         }
@@ -130,7 +134,7 @@ namespace WSMCTuristic_CentroHistorico.UI
             BO.EventoBO oEventoBO = new BO.EventoBO();
             oEventoBO = obj;
             oEventoCTRL = new Services.CtrlEvento();
-            return oEventoCTRL.EliminarEvento(oEventoBO);
+            return oEventoCTRL.InsertarEvento(oEventoBO);
         }
 
         [WebMethod]
@@ -142,7 +146,7 @@ namespace WSMCTuristic_CentroHistorico.UI
             oEventoCTRL = new Services.CtrlEvento();
             return oEventoCTRL.ModificarEvento(oEventoBO);
         }
-
+        [WebMethod]
         public int EliminarEvento(BO.EventoBO obj)
         {
             BO.EventoBO oEventoBO = new BO.EventoBO();
@@ -332,7 +336,7 @@ namespace WSMCTuristic_CentroHistorico.UI
             oTipoSuscripcionCTRL = new Services.CtrlTipoSuscripcion();
             return oTipoSuscripcionCTRL.EliminarTipoSuscripcion(oTipoSuscripcion);
         }
-        //---------------------ABC TipoSuscripcion --------------
+        //---------------------ABC Contactanos --------------
 
         [WebMethod]
         public int InsertarContactanos(ContactanosBO obj)
@@ -388,6 +392,53 @@ namespace WSMCTuristic_CentroHistorico.UI
             AdministradorBO oAdministrador = obj;
             oAdministradorCTRL = new Services.CtrlAdministrador();
             return oAdministradorCTRL.EliminarAdministrador(oAdministrador);
+        }
+
+        //------------- ABC Comentarios -----------------------
+        [WebMethod]
+        public int InsertarComentarios(ComentariosBO obj)
+        {
+            ComentariosBO oComentarios = obj;
+            oComentariosCTRL = new Services.CtrlComentario();
+            return oComentariosCTRL.InsertarComentarios(oComentarios);
+        }
+        [WebMethod]
+        public int ModificarComentarios(ComentariosBO obj)
+        {
+            ComentariosBO oComentarios = obj;
+            oComentariosCTRL = new Services.CtrlComentario();
+            return oComentariosCTRL.ModificarComentarios(oComentarios);
+        }
+        [WebMethod]
+        public int EliminarComentarios(ComentariosBO obj)
+        {
+            ComentariosBO oComentarios = obj;
+            oComentariosCTRL = new Services.CtrlComentario();
+            return oComentariosCTRL.EliminarComentarios(oComentarios);
+        }
+
+        //------------- ABC Suscripción -----------------------
+
+        [WebMethod]
+        public int InsertarSuscripcion(SuscripcionBO obj)
+        {
+            SuscripcionBO oSuscripcion = obj;
+            oSuscripcionCTRL = new Services.CtrlSuscripcion();
+            return oSuscripcionCTRL.InsertarSuscripcion(oSuscripcion);
+        }
+        [WebMethod]
+        public int ModificarSuscripcion(SuscripcionBO obj)
+        {
+            SuscripcionBO oSuscripcion = obj;
+            oSuscripcionCTRL = new Services.CtrlSuscripcion();
+            return oSuscripcionCTRL.ModificarSuscripcion(oSuscripcion);
+        }
+        [WebMethod]
+        public int EliminarSuscripcion(SuscripcionBO obj)
+        {
+            SuscripcionBO oSuscripcion = obj;
+            oSuscripcionCTRL = new Services.CtrlSuscripcion();
+            return oSuscripcionCTRL.EliminarSuscripcion(oSuscripcion);
         }
 
     }

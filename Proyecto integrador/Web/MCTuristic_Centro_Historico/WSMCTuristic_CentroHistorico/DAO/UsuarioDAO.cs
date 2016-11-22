@@ -28,7 +28,8 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@Contrasena", SqlDbType.VarChar).Value = oUsuario.ContraseñaUsuario;
             cmd.Parameters.Add("@TelefonoCelular", SqlDbType.VarChar).Value = oUsuario.TelefonoUsuario;
             cmd.Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = oUsuario.FecharNacUsuario;
-
+            cmd.Parameters.Add("@Foto", SqlDbType.Image).Value = oUsuario.Foto;
+            
             conn.Abrir();
             int retorno = cmd.ExecuteNonQuery();
 
@@ -61,6 +62,8 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@Contrasena", SqlDbType.VarChar).Value = oUsuario.ContraseñaUsuario;
             cmd.Parameters.Add("@TelefonoCelular", SqlDbType.VarChar).Value = oUsuario.TelefonoUsuario;
             cmd.Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = oUsuario.FecharNacUsuario;
+            cmd.Parameters.Add("@Foto", SqlDbType.Image).Value = oUsuario.Foto;
+
 
             conn.Abrir();
             int retorno = cmd.ExecuteNonQuery();
@@ -103,5 +106,26 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
             return retorno;
         }
+        //Obtener el usuario que se acaba de agregar en la base de datos
+        public string Obtenerid_user()
+        {
+            string id = "";
+            cmd = new SqlCommand();
+            conn = new Conexion();
+            cmd.Connection = conn.Establecer();
+            cmd.CommandText = "usuario_reciente";
+            cmd.CommandType = CommandType.StoredProcedure;
+            conn.Abrir();
+            SqlDataReader Leer = cmd.ExecuteReader();
+            if (Leer.Read() == true)
+            {
+                id = Leer["Maximo"].ToString();
+            }
+            return id;
+        }
+     
+  
+
+
     }
 }

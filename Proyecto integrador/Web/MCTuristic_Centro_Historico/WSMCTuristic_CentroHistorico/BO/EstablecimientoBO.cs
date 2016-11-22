@@ -15,7 +15,9 @@ namespace WSMCTuristic_CentroHistorico.BO
         private string _pagFacebook;
         private decimal _longitud;
         private decimal _latitud;
+        private byte[] _foto;
         private int _idUsuario;
+        
 
 
         public int IdEstablecimiento
@@ -70,6 +72,19 @@ namespace WSMCTuristic_CentroHistorico.BO
         {
             get { return _nombreEstable; }
             set { _nombreEstable = value; }
+        }
+
+        public byte[] Foto
+        {
+            get
+            {
+                return _foto;
+            }
+
+            set
+            {
+                _foto = value;
+            }
         }
     }
 }
