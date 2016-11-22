@@ -196,6 +196,12 @@
                             <span>Direcciones</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="../GUI/GestionAdministrador.aspx" title="Administradores">
+                            <i class="glyph-icon icon-key"></i>
+                            <span>Administradores</span>
+                        </a>
+                    </li>
                 </asp:PlaceHolder>
 
                 <asp:PlaceHolder ID="phUsuario" runat="server" Visible="false">

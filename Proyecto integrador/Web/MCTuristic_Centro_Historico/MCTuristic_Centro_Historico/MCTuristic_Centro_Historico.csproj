@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GUI\DetalleProducto.aspx" />
+    <Content Include="GUI\GestionAdministrador.aspx" />
     <Content Include="GUI\GestionDireccion.aspx" />
     <Content Include="GUI\GestionEstablecimientos.aspx" />
     <Content Include="GUI\GestionEventos.aspx" />
@@ -700,6 +701,13 @@
     </Compile>
     <Compile Include="GUI\DetalleProducto.aspx.designer.cs">
       <DependentUpon>DetalleProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GestionAdministrador.aspx.cs">
+      <DependentUpon>GestionAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GestionAdministrador.aspx.designer.cs">
+      <DependentUpon>GestionAdministrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\GestionDireccion.aspx.cs">
       <DependentUpon>GestionDireccion.aspx</DependentUpon>
