@@ -94,7 +94,7 @@ WHERE IdUsuario = @IdUsuario
 Go
 --Eliminar usuario
 
-Create proc eliminar_usaurio
+Create proc eliminar_usuario
 (
 	@IdUsuario int
 )
