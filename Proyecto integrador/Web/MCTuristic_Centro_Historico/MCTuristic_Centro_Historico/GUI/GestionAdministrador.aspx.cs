@@ -37,16 +37,12 @@ namespace MCTuristic_Centro_Historico.GUI
 
         protected void lbtnGuardar_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            GuardarAdmin("José Luis","Puc Chan","josechan211@hotmail.com","josecha211@","9992142371","29/05/1997");
-=======
             try
             {
                 GuardarAdmin(txtNombre.Text.Trim(), txtApellidos.Text.Trim(), txtCorreo.Text.Trim(), txtContrasena.Text.Trim(), txtTelefono.Text.Trim(), txtFecha.Text.Trim());
             }
             catch { }
 
->>>>>>> refs/remotes/origin/Modulos
         }
     }
 }
