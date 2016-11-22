@@ -25,5 +25,12 @@ namespace WSMCTuristic_CentroHistorico.Services
             oUsuario = new DAO.UsuarioDAO();
             return oUsuario.EliminarUsuario(obj);
         }
+        public string id_usuario()
+        {
+            string res = "";
+            oUsuario = new DAO.UsuarioDAO();
+            res = oUsuario.Obtenerid_user();
+            return res;
+        }
     }
 }

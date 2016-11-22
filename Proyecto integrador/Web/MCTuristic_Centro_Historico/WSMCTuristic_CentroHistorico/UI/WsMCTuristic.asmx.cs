@@ -61,6 +61,12 @@ namespace WSMCTuristic_CentroHistorico.UI
             oUsuarioCTRL = new Services.CtrlUsuario();
             return oUsuarioCTRL.EliminarUsuario(oUsuario);
         }
+         [WebMethod]
+        public string obtener_usuarioid()
+        {
+            oUsuarioCTRL = new Services.CtrlUsuario();
+            return oUsuarioCTRL.id_usuario();
+        }
 
         //--------------------------ABC Direcciones-----------------------------
         [WebMethod]

@@ -232,7 +232,6 @@
 </font>
 </li>
 </ul>
-</form>
 </div>
 </div>
  
@@ -243,10 +242,12 @@
 <ul>
 
 <li>
-<label><font><font>Selecciona una foto*</font></font></label>
-    <asp:FileUpload ID="FileUpload1" runat="server"  accept="image/jpeg, image/png"/>
-    
+<label><font><font><h3><i class="glyph-icon icon-image"></i>Foto*</h3></font></font></label>
+   
+                            <asp:Image ID="imgFoto" runat="server" Width="450" Height="300" alt="" />
+                            <asp:FileUpload ID="fuFoto" runat="server" accept=" image/jpeg, image/png" />
 
+    <asp:Button ID="btnVer" runat="server" Text="Visualizar imagen" CssClass="btn btn-purple" OnClick="btnVer_Click1" />
    <br />
      <%-- <script type="text/javascript">
           function showimagepreview(input) {
@@ -269,12 +270,12 @@
 </li>
     <li>
 <label><font>Fecha de Nacimiento<font></font></font></label>
-    <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="Calender" Format="MM/dd/yyyy" />
-    <asp:TextBox ID="Calender" runat="server"></asp:TextBox>
+ <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="Calender" Format="dd-MM-yyyy" />
+ <asp:TextBox ID="Calender" runat="server"></asp:TextBox>
 </li>
-
+         
+                            
 </ul>
-</form>
 </div>
 </div>
  

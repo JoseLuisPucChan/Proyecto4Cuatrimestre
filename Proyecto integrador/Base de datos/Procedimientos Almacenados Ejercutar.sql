@@ -58,7 +58,17 @@ GO
 
 --------------------------------Procedimiento Almacenado usuario-----------------------------------
 --Select * from Usuario
---Insetar Administrador
+
+
+
+---Seleccionar el usuario actual insertado
+
+create procedure usuario_reciente
+as
+select MAX([IdUsuario]) as Maximo from Usuario
+
+
+--Insetar Usuario
 
 CREATE PROC insertar_usuario
 (
@@ -110,8 +120,44 @@ FROM            dbo.Direccion INNER JOIN
                          dbo.Usuario ON dbo.Direccion.IdUsuario = dbo.Usuario.IdUsuario
 GO
 ---------------------------------Procedimiento Almacenado Dirección----------------------------------------
-Select * from Direccion
+-----***Dirección Usuario-----------
+
+Create procedure insertar_direccion_usuario
+(
+	@Calle varchar(50),
+	@Cruzamiento varchar(50),
+	@Numero varchar(50),
+	@Descripcion varchar(50),
+	@Colonia varchar(50),
+	@Estado varchar(50),
+	@CodPostal varchar(50),
+	@IdUsuario int
+)
+as
+INSERT INTO Direccion (Calle,Cruzamiento,Numero,Descripcion,Colonia,Estado,CodPostal,IdUsuario,IdAdministrador)
+VALUES (@Calle,@Cruzamiento,@Numero,@Descripcion,@Colonia,@Estado,@CodPostal,@IdUsuario,null)
 go
+-- Actualizar direccion
+Create procedure actualizar_direccion_usuario
+(
+	@idDireccion int,
+	@Calle varchar(50),
+	@Cruzamiento varchar(50),
+	@Numero varchar(50),
+	@Descripcion varchar(50),
+	@Colonia varchar(50),
+	@Estado varchar(50),
+	@CodPostal varchar(50),
+	@IdUsuario int
+	
+)
+as
+UPDATE Direccion SET  Calle = @Calle,Cruzamiento = @Cruzamiento,Numero = @Numero,Descripcion = @Descripcion,Colonia = @Colonia,Estado = @Estado,CodPostal = @CodPostal,IdUsuario = @IdUsuario,IdAdministrador = null
+where idDireccion = @idDireccion
+go
+
+
+
 --Insetar Administrador
 
 Create procedure insertar_direccion

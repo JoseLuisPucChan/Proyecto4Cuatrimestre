@@ -51,7 +51,6 @@ namespace MCTuristic_Centro_Historico.GUI
             oUsuarioBO.FecharNacUsuario = fecha;
             oUsuarioBO.Foto = fu;
             int i = owebService.InsertarUsuario(oUsuarioBO);
-            
             if (i > 0)
             {
                 return "Operación exitosa";

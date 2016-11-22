@@ -56,6 +56,16 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="obtener_usuarioid">
+        <s:complexType />
+      </s:element>
+      <s:element name="obtener_usuarioidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtener_usuarioidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="EliminarDireccion">
         <s:complexType>
           <s:sequence>
@@ -825,6 +835,12 @@
   <wsdl:message name="EliminarUsuarioSoapOut">
     <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="obtener_usuarioidSoapIn">
+    <wsdl:part name="parameters" element="tns:obtener_usuarioid" />
+  </wsdl:message>
+  <wsdl:message name="obtener_usuarioidSoapOut">
+    <wsdl:part name="parameters" element="tns:obtener_usuarioidResponse" />
+  </wsdl:message>
   <wsdl:message name="EliminarDireccionSoapIn">
     <wsdl:part name="parameters" element="tns:EliminarDireccion" />
   </wsdl:message>
@@ -1096,6 +1112,10 @@
       <wsdl:input message="tns:EliminarUsuarioSoapIn" />
       <wsdl:output message="tns:EliminarUsuarioSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="obtener_usuarioid">
+      <wsdl:input message="tns:obtener_usuarioidSoapIn" />
+      <wsdl:output message="tns:obtener_usuarioidSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="EliminarDireccion">
       <wsdl:input message="tns:EliminarDireccionSoapIn" />
       <wsdl:output message="tns:EliminarDireccionSoapOut" />
@@ -1291,6 +1311,15 @@
     </wsdl:operation>
     <wsdl:operation name="EliminarUsuario">
       <soap:operation soapAction="http://tempuri.org/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtener_usuarioid">
+      <soap:operation soapAction="http://tempuri.org/obtener_usuarioid" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1708,6 +1737,15 @@
     </wsdl:operation>
     <wsdl:operation name="EliminarUsuario">
       <soap12:operation soapAction="http://tempuri.org/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtener_usuarioid">
+      <soap12:operation soapAction="http://tempuri.org/obtener_usuarioid" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

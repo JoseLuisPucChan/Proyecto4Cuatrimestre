@@ -20,7 +20,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             oDireccion = (BO.DireccionBO)obj;
 
             cmd.Connection = conn.Establecer();
-            cmd.CommandText = "insertar_direccion";
+            cmd.CommandText = "insertar_direccion_usuario";
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@Calle", SqlDbType.VarChar).Value = oDireccion.Calle;
@@ -31,7 +31,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@Estado", SqlDbType.VarChar).Value = oDireccion.Estado;
             cmd.Parameters.Add("@CodPostal", SqlDbType.VarChar).Value = oDireccion.CodPostal;
             cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = oDireccion.IdUsuario;
-            cmd.Parameters.Add("@IdAdministrador", SqlDbType.Int).Value = oDireccion.IdAdministrador;
+           
 
             conn.Abrir();
             int retorno = cmd.ExecuteNonQuery();
@@ -55,7 +55,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             oDireccion = (BO.DireccionBO)obj;
 
             cmd.Connection = conn.Establecer();
-            cmd.CommandText = "actualizar_direccion";
+            cmd.CommandText = "actualizar_direccion_usuario";
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@idDireccion", SqlDbType.Int).Value = oDireccion.IdDireccion;
@@ -67,7 +67,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             cmd.Parameters.Add("@Estado", SqlDbType.VarChar).Value = oDireccion.Estado;
             cmd.Parameters.Add("@CodPostal", SqlDbType.VarChar).Value = oDireccion.CodPostal;
             cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = oDireccion.IdUsuario;
-            cmd.Parameters.Add("@IdAdministrador", SqlDbType.Int).Value = oDireccion.IdAdministrador;
+           
 
             conn.Abrir();
             int retorno = cmd.ExecuteNonQuery();

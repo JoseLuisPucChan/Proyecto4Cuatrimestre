@@ -15,10 +15,14 @@ namespace MCTuristic_Centro_Historico.GUI
     public partial class Registro : System.Web.UI.Page
     {
         localhost.WsMCTuristic owebService = new WsMCTuristic();
+        localhost.DireccionBO oDireccionUser = new DireccionBO();
+        string idUser = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             localhost.DireccionBO odireccio = new DireccionBO();
             localhost.UsuarioBO oUsuario = new UsuarioBO();
+          
+
         }
         [WebMethod]
         public static int Sumar(int n1, int n2)
@@ -33,20 +37,28 @@ namespace MCTuristic_Centro_Historico.GUI
             oUsuariosBO.NombreUsuario = txtNombre.Text.Trim();
             oUsuariosBO.ApellidosUsuario = txtApellidos.Text.Trim();
             oUsuariosBO.EmailUsuario = txtDireccionCorreo.Text.Trim();
-            //HttpPostedFile ImgFile = FileUpload1.PostedFile;
-            //Byte[] byteImage = new Byte[FileUpload1.PostedFile.ContentLength];
-            //ImgFile.InputStream.Read(byteImage, 0, FileUpload1.PostedFile.ContentLength);
+            oUsuariosBO.FecharNacUsuario = Calender.Text;
+            oUsuariosBO.Foto = (Byte[])Session["arreglo"];
             if (txtContraseña.Text == txtConfirmarContraseña.Text)
             {
                 oUsuariosBO.ContraseñaUsuario = txtConfirmarContraseña.Text.Trim();
             }
             oUsuariosBO.TelefonoUsuario = txtNumero.Text.Trim();
-
-            //Fecha Nacimiento es un string se cambio en las clases 
-            oUsuariosBO.FecharNacUsuario = Calender.Text;
             return oUsuariosBO;
         }
-
+       private localhost.DireccionBO RecuperarDireccion()
+        {
+           oDireccionUser = new DireccionBO();
+           oDireccionUser.Calle = txtCalle.Text.Trim();
+           oDireccionUser.Cruzamiento = txtCruzamiento.Text.Trim();
+           oDireccionUser.Numero = txtNumero.Text.Trim();
+           oDireccionUser.DescripcionDireccion = txtDescripción.Text.Trim();
+           oDireccionUser.Colonia = txtColonia.Text.Trim();
+           oDireccionUser.Estado = txtEstado.Text.Trim();
+           oDireccionUser.CodPostal = txtCodigoPostal.Text.Trim();
+           oDireccionUser.IdUsuario =Convert.ToInt32(Session["idUsuario"]);
+           return oDireccionUser;
+        }
         //-----------------Botones-----------Con javaScrip
 
         [System.Web.Services.WebMethod]
@@ -74,12 +86,18 @@ namespace MCTuristic_Centro_Historico.GUI
         //Agregar Usuario *
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 int i = owebService.InsertarUsuario(RecuperarInformacion());
                 if (i > 0)
                 {
-                    Response.Redirect("Suscripciones.aspx");
+                    Session["idUsuario"] = owebService.obtener_usuarioid();
+                    int y = owebService.InsertarDireccion(RecuperarDireccion());
+                    if (i > 0)
+                    {
+                        Response.Redirect("Suscripciones.aspx");
+                    }
                 }
 
             }
@@ -89,7 +107,51 @@ namespace MCTuristic_Centro_Historico.GUI
             }
         }
 
-    
+
+        private bool VerificarArchivoImg()
+        {
+            if (fuFoto.HasFile)
+            {
+                string ext = System.IO.Path.GetExtension(fuFoto.FileName);
+                if (ext == ".jpeg" || ext == ".jpg" || ext == ".png")
+                {
+                    //string path = Server.MapPath(@"\Recursos\");
+                    //fu.SaveAs(path + fu.FileName);
+                    HttpPostedFile imagen = fuFoto.PostedFile;
+                    int tamaño = imagen.ContentLength;
+                    Byte[] arreglo = new Byte[tamaño];
+                    imagen.InputStream.Read(arreglo, 0, tamaño);
+                    Session["arreglo"] = arreglo;
+                    Session["Url"] = ConvertirImagenStringWebUrl(arreglo, ext);
+                }
+                return true;
+            }
+            else
+            {
+                Response.Write("<h3>Solo puedes seleccionar archivos tipo .jpeg , .jpg o .png</h3>");
+            }
+            return false;
+        }
+        public string ConvertirImagenStringWeb(Byte[] arreglo)
+        {
+            string imagen = Convert.ToBase64String(arreglo, 0, arreglo.Length);
+            return imagen;
+        }
+        public string ConvertirImagenStringWebUrl(Byte[] arreglo,
+ string extension)
+        {
+            string url = Convert.ToBase64String(arreglo, 0, arreglo.Length);
+            url = "data:image/" + extension + "jpeg;base64," + url;
+            return url;
+        }
+
+        protected void btnVer_Click1(object sender, EventArgs e)
+        {
+            if (VerificarArchivoImg() == true)
+            {
+                imgFoto.ImageUrl = (string)Session["Url"];
+            }
+        }
 
         
     //    //public Image RecuperarImagen(string Imagen)

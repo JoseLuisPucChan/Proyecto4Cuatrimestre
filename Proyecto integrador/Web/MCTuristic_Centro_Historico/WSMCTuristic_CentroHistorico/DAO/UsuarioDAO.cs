@@ -106,5 +106,26 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
             return retorno;
         }
+        //Obtener el usuario que se acaba de agregar en la base de datos
+        public string Obtenerid_user()
+        {
+            string id = "";
+            cmd = new SqlCommand();
+            conn = new Conexion();
+            cmd.Connection = conn.Establecer();
+            cmd.CommandText = "usuario_reciente";
+            cmd.CommandType = CommandType.StoredProcedure;
+            conn.Abrir();
+            SqlDataReader Leer = cmd.ExecuteReader();
+            if (Leer.Read() == true)
+            {
+                id = Leer["Maximo"].ToString();
+            }
+            return id;
+        }
+     
+  
+
+
     }
 }
