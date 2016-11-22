@@ -45,7 +45,7 @@ go
  */
 
 CREATE TABLE Comentarios(
-    IdComentario    int             NOT NULL,
+    IdComentario    int             IDENTITY(1,1),
     Nombre          varchar(50)     NOT NULL,
     Contenido       varchar(100)    NOT NULL,
     Status          int             NOT NULL,
@@ -123,8 +123,8 @@ CREATE TABLE Establecimiento(
     HoraInicio           varchar(50)       NOT NULL,
     HoraCierre           varchar(50)       NOT NULL,
     PagFacebook          varchar(50)       NOT NULL,
-    Longitud             decimal(10, 2)    NOT NULL,
-    Latitud              decimal(10, 2)    NOT NULL,
+    Longitud             decimal(10, 7)    NOT NULL,
+    Latitud              decimal(10, 7)    NOT NULL,
     Foto                 image             NOT NULL,
     IdUsuario            int               NOT NULL,
     CONSTRAINT PK6 PRIMARY KEY NONCLUSTERED (idEstablecimiento)
@@ -220,8 +220,8 @@ CREATE TABLE Sitio(
     Descripcion    varchar(400)      NOT NULL,
     Historia       varchar(500)      NOT NULL,
     Direccion      varchar(50)       NOT NULL,
-    Longitud       decimal(10, 2)    NOT NULL,
-    Latitud        decimal(10, 2)    NOT NULL,
+    Longitud       decimal(10, 7)    NOT NULL,
+    Latitud        decimal(10, 7)    NOT NULL,
     Foto           image             NOT NULL,
     SucesosImp     varchar(50)       NOT NULL,
     idTipoSitio    int               NOT NULL,
@@ -469,6 +469,14 @@ go
 ALTER TABLE Suscripcion ADD CONSTRAINT RefUsuario5 
     FOREIGN KEY (IdUsuario)
     REFERENCES Usuario(IdUsuario)
+go
+
+ALTER TABLE Usuario ADD CONSTRAINT RefCorreo 
+	Unique(Email)
+go
+
+ALTER TABLE Administrador ADD CONSTRAINT RefCorreo2
+	Unique(Email)
 go
 
 
