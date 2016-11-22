@@ -22,7 +22,7 @@ namespace MCTuristic_Centro_Historico.GUI
             {
                 localhost.SuscripcionBO oSuscripcion = new SuscripcionBO();
                 int idGratis = 1;
-                int idUser = 2;
+                int idUser = 3;
                 //Obtener id Usuario Recien registrado
                 oSuscripcion.FechaPago = DateTime.Now.Date;
                 oSuscripcion.IdSuscripcion = idGratis;
