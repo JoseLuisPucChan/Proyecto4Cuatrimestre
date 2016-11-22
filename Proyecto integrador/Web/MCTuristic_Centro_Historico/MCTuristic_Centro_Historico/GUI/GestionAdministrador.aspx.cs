@@ -37,7 +37,7 @@ namespace MCTuristic_Centro_Historico.GUI
 
         protected void lbtnGuardar_Click(object sender, EventArgs e)
         {
-            GuardarAdmin("André","Salazar","ghs_andre@hotmail.com","1234","9992142371","27/05/1997");
+            GuardarAdmin("José","Salazar","ghs_andre@hotmail.com","1234","9992142371","27/05/1997");
         }
     }
 }
