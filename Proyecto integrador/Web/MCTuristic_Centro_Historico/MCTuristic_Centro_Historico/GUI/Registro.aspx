@@ -226,7 +226,7 @@
 <li>
 <font>
 <font>
-<asp:Button ID="Button1" class="btn btn-info boton1" runat="server" Text="Crear Cuenta" OnClick="Button1_Click"></asp:Button>
+ <asp:Button ID="btnAgregar" class="btn btn-info boton1" runat="server" Text="Regístrace" OnClick="btnAgregar_Click"></asp:Button>
 <%--<input id="Button1" type="button" class="btn btn-info boton1" onclick="Gurdar();" value="CREAR CUENTA" />--%>
 </font>
 </font>
@@ -244,12 +244,11 @@
 
 <li>
 <label><font><font>Selecciona una foto*</font></font></label>
-   
-      <asp:FileUpload ID="fuFoto" runat="server" accept=" image/jpeg, image/png" />
+    <asp:FileUpload ID="FileUpload1" runat="server"  accept="image/jpeg, image/png"/>
+    
 
    <br />
      <%-- <script type="text/javascript">
-
           function showimagepreview(input) {
 
               if (input.files && input.files[0]) {
@@ -270,7 +269,7 @@
 </li>
     <li>
 <label><font>Fecha de Nacimiento<font></font></font></label>
-    <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="Calender" Format="dd/MM/yyyy" />
+    <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="Calender" Format="MM/dd/yyyy" />
     <asp:TextBox ID="Calender" runat="server"></asp:TextBox>
 </li>
 
