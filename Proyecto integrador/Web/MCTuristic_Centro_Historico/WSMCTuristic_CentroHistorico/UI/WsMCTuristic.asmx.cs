@@ -68,7 +68,6 @@ namespace WSMCTuristic_CentroHistorico.UI
         {
             DireccionBO oDireccion = new DireccionBO();
             oDireccion = obj;
-
             oDireccionCTRL = new Services.CtrlDireccion();
             return oDireccionCTRL.EliminarDireccion(oDireccion);
         }
@@ -98,7 +97,6 @@ namespace WSMCTuristic_CentroHistorico.UI
         {
             BO.EstablecimientoBO oEstablecimientoBO = new BO.EstablecimientoBO();
             oEstablecimientoBO = obj;
-
             oEstablecimiento = new Services.CtrlEstablecimiento();
             return oEstablecimiento.insertarEstablecimiento(oEstablecimientoBO);
         }
@@ -108,7 +106,6 @@ namespace WSMCTuristic_CentroHistorico.UI
         {
             BO.EstablecimientoBO oEstablecimientoBO = new BO.EstablecimientoBO();
             oEstablecimientoBO = obj;
-
             oEstablecimiento = new Services.CtrlEstablecimiento();
             return oEstablecimiento.ModificarEstablecimiento(oEstablecimientoBO);
         }
@@ -118,7 +115,6 @@ namespace WSMCTuristic_CentroHistorico.UI
         {
             BO.EstablecimientoBO oEstablecimientoBO = new BO.EstablecimientoBO();
             oEstablecimientoBO = obj;
-
             oEstablecimiento = new Services.CtrlEstablecimiento();
             return oEstablecimiento.EliminarEstablecimiento(oEstablecimientoBO);
         }
