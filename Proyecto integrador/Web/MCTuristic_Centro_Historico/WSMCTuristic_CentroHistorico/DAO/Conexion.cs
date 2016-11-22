@@ -13,7 +13,11 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
         public SqlConnection Establecer()
         {
+<<<<<<< HEAD
             sql = "Data source =DESKTOP-KDUDSML\\SQLEXPRESS; Initial Catalog=MCTuristic; Integrated Security=True";
+=======
+            sql = "Data source =192.168.100.7; Initial Catalog=MCTuristic; Integrated Security=true; user id = sa; password =1234";
+>>>>>>> origin/master
             conn = new SqlConnection(sql);
             return conn;
         }
