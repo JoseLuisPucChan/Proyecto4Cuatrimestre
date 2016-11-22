@@ -69,6 +69,12 @@
                             <h3><i class="glyph-icon icon-at"></i>Correo Electrónico</h3>
                             <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
+                            <h3><i class="glyph-icon icon-terminal"></i>Contraseña</h3>
+                            <asp:TextBox ID="txtContrasena" runat="server" CssClass="form-control border-blue"></asp:TextBox>
+                            <br />
+                            <h3><i class="glyph-icon icon-phone"></i>Teléfono celular</h3>
+                            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control border-blue"></asp:TextBox>
+                            <br />
                             <h3><i class="glyph-icon icon-language"></i>Dirección</h3>
                             <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <button class="btn btn-primary" data-toggle="modal" data-target="#Direccion" type="button">Agregar dirección</button>
@@ -139,48 +145,22 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
-                            <h3><i class="glyph-icon icon-terminal"></i>Contraseña</h3>
-                            <asp:TextBox ID="txtContrasena" runat="server" CssClass="form-control border-blue"></asp:TextBox>
-                            <br />
-                            <h3><i class="glyph-icon icon-phone"></i>Teléfono celular</h3>
-                            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control border-blue"></asp:TextBox>
-                            <br />
+                            
                             <h3><i class="glyph-icon icon-calendar"></i>Fecha de nacimiento</h3>
                             <div class="input-prepend input-group">
                                 <asp:TextBox ID="txtFecha" class="bootstrap-datepicker form-control border-blue" runat="server"></asp:TextBox>
                             </div>
                             <br />
-        
                             <h3><i class="glyph-icon icon-image"></i>Foto</h3>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#Foto" type="button">Agregar Foto</button>
-                            <div class="modal fade bs-example-modal-lg" id="Foto" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h3 class="modal-title"><b>Selección de foto</b></h3>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="col-lg-12">
-                                                <img ID="imgFoto" Width="700" Height="400" alt="" src="" />
-                                                <asp:FileUpload ID="fuFoto" runat="server" accept=" image/jpeg, image/png" onchange="VerImagen(this)" />
-                                                <br />
-                                                <div class="pull-right">
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
-                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer no-border">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <asp:Image ID="imgFoto" runat="server" Width="450" Height="300" alt="" />
+                            <asp:FileUpload ID="fuFoto" runat="server" accept=" image/jpeg, image/png" />
+                            <asp:Button ID="btnVer" runat="server" CssClass="btn btn-purple" Text="Ver imagen" OnClick="btnVer_Click" />
+                            
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="divider"></div>
-        <script type="text/javascript">
+        <%--<script type="text/javascript">
             function GurdarUsuario() {
                 alert('Se ha presionado el boton: ' + numero);
                     var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'apellido': '" + $("#<%=txtApellidos.ClientID%>")[0].value + "', 'correo': '" + $("#<%=txtCorreo.ClientID%>")[0].value + "', 'direccion': '" + $("#<%=txtDireccion.ClientID%>")[0].value + "', 'contra': '" + $("#<%=txtContrasena.ClientID%>")[0].value + "', 'telefono': '" + $("#<%=txtTelefono.ClientID%>")[0].value + "', 'fecha': '" + $("#<%=txtFecha.ClientID%>")[0].value + "', 'fu': '" + $("#<%=fuFoto.ClientID%>")[0].value + "'}  ";
@@ -200,7 +180,8 @@
             alert("Respuesta " + response.d);
         }
         </script>
-                        <input type="button" class="btn btn-blue-alt" onclick="GurdarUsuario()" value="Guardar" />
+                        <input type="button" class="btn btn-blue-alt" onclick="GurdarUsuario()" value="Guardar" />--%>
+                        <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnGuardar_Click"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnModificar_Click"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
                         <div class="divider"></div>
