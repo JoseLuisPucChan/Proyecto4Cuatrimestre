@@ -416,11 +416,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\localhost\WsMCTuristic.wsdl" />
-    <Content Include="Web References\WebService\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
-    <None Include="Web References\WebService\WsMCTuristic.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -690,7 +685,6 @@
     <Content Include="Recursos\slider\main.css" />
     <Content Include="Recursos\slider\settings.css" />
     <Content Include="Recursos\slider\style.css" />
-    <None Include="Web References\WebService\WsMCTuristic.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -859,11 +853,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\WebService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -872,17 +861,6 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://192.168.100.2/MCTuristicWebService/UI/WsMCTuristic.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\WebService\</RelPath>
-      <UpdateFromURL>http://192.168.100.2/MCTuristicWebService/UI/WsMCTuristic.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>MCTuristic_Centro_Historico_WebService_WsMCTuristic</CachedSettingsPropName>
-    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:15567/UI/WsMCTuristic.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\localhost\</RelPath>

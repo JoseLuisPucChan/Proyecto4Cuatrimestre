@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MCTuristic_Centro_Historico.WebService;
+using MCTuristic_Centro_Historico.localhost;
 
 namespace MCTuristic_Centro_Historico.GUI
 {
@@ -17,8 +17,8 @@ namespace MCTuristic_Centro_Historico.GUI
 
         public static string GuardarAdmin(string nombre, string apellido, string correo, string contra, string telefono, string fecha)
         {
-            WebService.WsMCTuristic owebService = new WsMCTuristic();
-            WebService.AdministradorBO oAdministradorBO = new AdministradorBO();
+            localhost.WsMCTuristic owebService = new WsMCTuristic();
+            localhost.AdministradorBO oAdministradorBO = new AdministradorBO();
             oAdministradorBO.Nombreadmin = nombre;
             oAdministradorBO.Apellidosadmin = apellido;
             oAdministradorBO.Email = correo;

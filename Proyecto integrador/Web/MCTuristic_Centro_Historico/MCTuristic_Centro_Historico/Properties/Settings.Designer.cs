@@ -32,15 +32,5 @@ namespace MCTuristic_Centro_Historico.Properties {
                 return ((string)(this["MCTuristic_Centro_Historico_localhost_WsMCTuristic"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.100.2/MCTuristicWebService/UI/WsMCTuristic.asmx")]
-        public string MCTuristic_Centro_Historico_WebService_WsMCTuristic {
-            get {
-                return ((string)(this["MCTuristic_Centro_Historico_WebService_WsMCTuristic"]));
-            }
-        }
     }
 }
