@@ -130,6 +130,24 @@ namespace MCTuristic_Centro_Historico.GUI {
         protected global::System.Web.UI.WebControls.TextBox txtCorreo;
         
         /// <summary>
+        /// Control txtContrasena.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
+        
+        /// <summary>
+        /// Control txtTelefono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
+        
+        /// <summary>
         /// Control txtDireccion.
         /// </summary>
         /// <remarks>
@@ -211,24 +229,6 @@ namespace MCTuristic_Centro_Historico.GUI {
         protected global::System.Web.UI.WebControls.Button btnAceptar;
         
         /// <summary>
-        /// Control txtContrasena.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
-        
-        /// <summary>
-        /// Control txtTelefono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
-        
-        /// <summary>
         /// Control txtFecha.
         /// </summary>
         /// <remarks>
@@ -238,6 +238,15 @@ namespace MCTuristic_Centro_Historico.GUI {
         protected global::System.Web.UI.WebControls.TextBox txtFecha;
         
         /// <summary>
+        /// Control imgFoto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgFoto;
+        
+        /// <summary>
         /// Control fuFoto.
         /// </summary>
         /// <remarks>
@@ -245,6 +254,24 @@ namespace MCTuristic_Centro_Historico.GUI {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload fuFoto;
+        
+        /// <summary>
+        /// Control btnVer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVer;
+        
+        /// <summary>
+        /// Control lbtnGuardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtnGuardar;
         
         /// <summary>
         /// Control lbtnModificar.
