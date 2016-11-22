@@ -5,5 +5,8 @@
     <Setting Name="MCTuristic_Centro_Historico_localhost_WsMCTuristic" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:15567/UI/WsMCTuristic.asmx</Value>
     </Setting>
+    <Setting Name="MCTuristic_Centro_Historico_WebService_WsMCTuristic" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.100.2/MCTuristicWebService/UI/WsMCTuristic.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
