@@ -66,7 +66,7 @@ GO
 create procedure usuario_reciente
 as
 select MAX([IdUsuario]) as Maximo from Usuario
-
+go
 
 --Insetar Usuario
 
