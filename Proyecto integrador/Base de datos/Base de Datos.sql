@@ -42,7 +42,7 @@ go
  */
 
 CREATE TABLE Comentarios(
-    IdComentario    int             NOT NULL,
+    IdComentario    int             IDENTITY(1,1),
     Nombre          varchar(50)     NOT NULL,
     Contenido       varchar(max)    NOT NULL,
     Status          int             NOT NULL,
@@ -117,8 +117,8 @@ CREATE TABLE Establecimiento(
     HoraInicio           varchar(50)      NOT NULL,
     HoraCierre           varchar(50)      NOT NULL,
     PagFacebook          varchar(50)      NOT NULL,
-    Longitud             decimal(7, 7)    NOT NULL,
-    Latitud              decimal(7, 7)    NOT NULL,
+    Longitud             decimal(10, 7)    NOT NULL,
+    Latitud              decimal(10, 7)    NOT NULL,
     Foto                 image            NOT NULL,
     IdUsuario            int              NOT NULL
 )
@@ -209,9 +209,9 @@ CREATE TABLE Sitio(
     Nombre         varchar(100)     NOT NULL,
     Descripcion    varchar(max)     NOT NULL,
     Historia       varchar(max)     NOT NULL,
-    Direccion      varchar(50)      NOT NULL,
-    Longitud       decimal(7, 7)    NOT NULL,
-    Latitud        decimal(7, 7)    NOT NULL,
+    Direccion      varchar(max)      NOT NULL,
+    Longitud       decimal(10, 7)    NOT NULL,
+    Latitud        decimal(10, 7)    NOT NULL,
     Foto           image            NOT NULL,
     SucesosImp     varchar(max)      NOT NULL,
     idTipoSitio    int              NOT NULL
