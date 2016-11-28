@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/PaginaPrincipal.Master" AutoEventWireup="true" CodeBehind="VistaProducto.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.VistaProducto" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -142,11 +143,22 @@
                         <%--Sección 1--%>
                        <div class="row">
                                 <%--Modulo 1--%>
-                          <div class="col-lg-4 col-md-4 col-sm-4">
+                        
+                           <asp:DataList ID="DtlProductos" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" HorizontalAlign="Center" Width="800px">
+                               
+                                 <FooterStyle VerticalAlign="Top" Wrap="True" />
+                               
+                                 <ItemTemplate>
+                                  
+                                   <asp:Label ID="lblidServicio" runat="server" Visible="true" Text='<%# Eval("idServicio") %>' ForeColor="#3399FF"></asp:Label>
+                                   
                                     <ul class="pro-box">
                                             <li class="pro">
                                                         <div class="block-image">
-                                                            <img class="img-responsive" src="../Recursos/Imagenes/1.jpg" alt="" />
+
+                                                    <asp:Image class="img-responsive" ID="Image2"  runat="server" 
+                                                    ImageUrl='<%# "GetImagen.aspx?id=" + Eval("idServicio") %>' alt=""  />
+                                                           
                                                             <div class="img-overlay-3-up pat-override"></div>
                                                             <div class="img-overlay-3-down pat-override"></div>
                                                             <ol class="static-style">
@@ -162,12 +174,11 @@
                                                 </span> 
                                             </li>
                                             <li>
-                                                <h4><a href="DetalleProducto.aspx">Conchinita</a></h4>
+                                                <h4><a href="DetalleProducto.aspx"><asp:Label ID="lbl" runat="server" Text='<%# Eval("NombreServ") %>' ForeColor="#3399FF"></asp:Label></a></h4>
                                             </li>
-
                                     <li>Restaurante flor</li>
                                         <li class="pro-footer">
-                                            <span class="price">$40.00</span>
+                                            <span class="price">$<asp:Label ID="lblPrecio" runat="server" Text='<%# Eval("PreciosServicio") %>' ForeColor="#3399FF"></asp:Label></span>
                                                 <span class="rating">
                                                 <a href="#">
                                                  <i class="fa fa-star">
@@ -180,7 +191,84 @@
                                                 </span>
                                         </li>
                                     </ul>
-                                </div>
+                              
+                                       <br />
+                                       <br />
+                                       <br />
+                                       <br />
+                               </ItemTemplate>
+                             
+                                 <SelectedItemStyle Width="200px" />
+                             
+                                 <SeparatorStyle BackColor="Yellow" Font-Bold="False" Font-Italic="False" Font-Names="Adobe Devanagari" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" VerticalAlign="Bottom" BorderWidth="30px" Font-Size="XX-Small" />
+                             
+                           </asp:DataList>
+                          
+                             
+
+                      <%--     <asp:DataList ID="dlEjemplo2" runat="server" Width="562px" OnItemCommand="dlEjemplo2_ItemCommand" OnUpdateCommand="dlEjemplo2_UpdateCommand" OnSelectedIndexChanged="dlEjemplo2_SelectedIndexChanged">         
+    <ItemTemplate>
+          
+          <asp:ImageButton ID="ImageButton1" ImageUrl="~/Recursos/images/perro (1).png" runat="server" OnClick="ImageButton1_Click1" />
+               
+                        <dx:ASPxSplitter ID="ASPxSplitter1" runat="server" Height="193px" Width="688px">
+                            <panes>
+                                <dx:SplitterPane>
+                                    <ContentCollection>
+                                        <dx:SplitterContentControl runat="server">
+                                            &nbsp;&nbsp;
+                                           <asp:Image class="img-rounded" ID="Image2"  runat="server" 
+                                             ImageUrl='<%# "GetImagen.aspx?id=" + Eval("idMascota") %>'  Height="170px" Width="213px"/>
+                                         
+                                        </dx:SplitterContentControl>
+                                    </ContentCollection>
+                                </dx:SplitterPane>
+                                <dx:SplitterPane>
+                                    <ContentCollection>
+                                        <dx:SplitterContentControl runat="server">
+                                      
+                                            <span style="font-size: medium">&nbsp;<asp:Label ID="Label2" runat="server" ForeColor="#3399FF" Text="Se extravio"></asp:Label>
+                                            <asp:Label ID="lbl" runat="server" Text='<%# Eval("Especie") %>' ForeColor="#3399FF"></asp:Label>
+                                            ,<asp:Label ID="lblRaza" runat="server" Text='<%# Eval("Raza") %>' ForeColor="#3399FF"></asp:Label>
+                                            <br />
+                                            <br />
+                                            &nbsp;<asp:Label ID="Label3" runat="server" Text="Nombre:&nbsp;"></asp:Label>
+                                            <asp:Label ID="lblNombre" runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+                                            <br />
+                                            &nbsp;<asp:Label ID="Label4" runat="server" Text="Edad:"></asp:Label>
+                                            <asp:Label ID="lblEdad" runat="server" Text='<%# Eval("Edad") %>'></asp:Label>
+                                            <br />
+                                            
+                                            <asp:Label ID="Label5" runat="server" Text="Sexo:"></asp:Label>
+                                            <asp:Label ID="lblSexo" runat="server" Text='<%# Eval("Sexo") %>'></asp:Label>
+                                            <br />
+                                            &nbsp;<asp:Label ID="Label6" runat="server" Text="Se extravio en:"></asp:Label>
+                                            <asp:Label ID="lblSextravio" runat="server" Text='<%# Eval("Ciudad") %>'></asp:Label>,&nbsp;<asp:Label ID="Label1" runat="server" Text='<%# Eval("Estado") %>'></asp:Label>
+                                      
+                                                &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            
+                                        </dx:SplitterContentControl>
+                                    </ContentCollection>
+                                </dx:SplitterPane>
+                            </panes>
+                            <Styles>
+                                <HorizontalSeparator Border-BorderStyle="None">
+                                </HorizontalSeparator>
+                            </Styles>
+                            <Border BorderStyle="None" />
+                        </dx:ASPxSplitter>
+     
+                        
+                        <br />
+                        <br />
+                    
+
+                    </ItemTemplate>
+    </asp:DataList>
+
+--%>
+
+
 
                             <%--Modulo 2--%>
                           <%--<div class="col-lg-4 col-md-4 col-sm-4">
@@ -230,7 +318,7 @@
 
                             <div class="gap-30"></div>
                              <%--Sección 2--%>
-                            <%--<div class="row">
+                            <div class="row">
 
                                 <div class="col-lg-4 col-md-4 col-sm-4 cp_load fadeInUp">
                                     <ul class="pro-box">
@@ -297,7 +385,7 @@
                                     </ul>
                                 </div>
 
-                            </div>--%>
+                            </div>
 
                             <div class="gap-30"></div>
                              <%--Sección 3--%>

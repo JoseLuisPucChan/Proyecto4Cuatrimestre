@@ -61,6 +61,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\GetImagen.aspx" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets-minified\fontawesome-webfontba72.eot" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets-minified\fontawesome-webfontba72.ttf" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets-minified\fontawesome-webfontba72.woff" />
@@ -677,10 +678,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Web References\localhost\Reference.map">
+    <None Include="Web References\localhost\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <None Include="Web References\localhost\WsMCTuristic.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -755,6 +756,13 @@
     </Compile>
     <Compile Include="GUI\GestionUsuariosGUI.aspx.designer.cs">
       <DependentUpon>GestionUsuariosGUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GetImagen.aspx.cs">
+      <DependentUpon>GetImagen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\GetImagen.aspx.designer.cs">
+      <DependentUpon>GetImagen.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

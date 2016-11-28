@@ -10,26 +10,39 @@ namespace MCTuristic_Centro_Historico.GUI
 {
     public partial class Suscripciones : System.Web.UI.Page
     {
+        int idUser;
+       
         localhost.WsMCTuristic owebService = new WsMCTuristic();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            idUser = Convert.ToInt32(Session["idUsuario"]);
         }
         protected void btnGratis_Click(object sender, EventArgs e)
+        {
+            if(idUser==0)
+            {
+                Response.Redirect("Registro.aspx");
+            }
+            else
+            {
+                int idGratis = 1;
+                GenerarNuevaSuscripcion(idGratis);
+            }
+         
+        }
+        public void GenerarNuevaSuscripcion(int idSus)
         {
             try
             {
                 localhost.SuscripcionBO oSuscripcion = new SuscripcionBO();
-                int idGratis = 1;
-                int idUser = Convert.ToInt32(Session["idUsuario"]);
                 //Obtener id Usuario Recien registrado
                 oSuscripcion.FechaPago = DateTime.Now.Date;
-                oSuscripcion.IdSuscripcion = idGratis;
+                oSuscripcion.IdSuscripcion = idSus;
                 oSuscripcion.IdUsuario = Convert.ToString(idUser);
                 int i = owebService.InsertarSuscripcion(oSuscripcion);
                 if (i > 0)
                 {
-                    Response.Write("Exito");
+                    Response.Redirect("PagPrincipal.aspx");
                 }
 
             }
@@ -38,6 +51,45 @@ namespace MCTuristic_Centro_Historico.GUI
                 Response.Write(ex.Message);
             }
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            if (idUser == 0)
+            {
+                Response.Redirect("Registro.aspx");
+            }
+            else
+            {
+                int mes = 2;
+                GenerarNuevaSuscripcion(mes);
+            }
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            if (idUser == 0)
+            {
+                Response.Redirect("Registro.aspx");
+            }
+            else
+            {
+                int seism = 3;
+                GenerarNuevaSuscripcion(seism);
+            }   
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            if (idUser == 0)
+            {
+                Response.Redirect("Registro.aspx");
+            }
+            else
+            {
+                int Año = 4;
+                GenerarNuevaSuscripcion(Año);
+            }
         }
 
     }

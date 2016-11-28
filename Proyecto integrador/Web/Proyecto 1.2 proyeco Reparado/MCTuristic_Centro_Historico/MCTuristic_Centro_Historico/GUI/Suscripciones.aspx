@@ -6,7 +6,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="Principal" runat="server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Contenido" runat="server">
- <div class="wrapper inner">
+    <div class="wrapper inner">
 <section class="inner-titlebg">
 <div class="container">
 <div class="row">
@@ -72,7 +72,7 @@
   <li>-</li>
    <li class="odd">-</li>
 <li class="last">
-<asp:Button ID="Button2" Width="264" runat="server" Text="Adquirir ahora" />
+<asp:Button ID="Button2" Width="264" runat="server" Text="Adquirir ahora" OnClick="Button2_Click" />
 </li>
 </ul>
 <ul class="col-lg-3 col-md-3 col-sm-6 price-col-3">
@@ -87,7 +87,7 @@
   <li>Soporte técnico</li>
    <li class="odd">Opciones de edición</li>
 <li class="last">
-<asp:Button ID="Button3" Width="264" runat="server" Text="Adquirir ahora" />
+<asp:Button ID="Button3" Width="264" runat="server" Text="Adquirir ahora" OnClick="Button3_Click" />
 </li>
 </ul>
 <ul class="col-lg-3 col-md-3 col-sm-6 price-col-4">
@@ -102,7 +102,7 @@
   <li>Soporte técnico</li>
    <li class="odd">Opciones de edición</li>
 <li class="last">
-<asp:Button ID="Button4" Width="264" runat="server" Text="Adquirir ahora" />
+<asp:Button ID="Button4" Width="264" runat="server" Text="Adquirir ahora" OnClick="Button4_Click" />
 </li>
 </ul>
 </div>

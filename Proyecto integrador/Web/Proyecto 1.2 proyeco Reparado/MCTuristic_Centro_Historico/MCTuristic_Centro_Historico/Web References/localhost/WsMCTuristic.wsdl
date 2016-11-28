@@ -336,6 +336,37 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="top12Servicios">
+        <s:complexType />
+      </s:element>
+      <s:element name="top12ServiciosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="top12ServiciosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verFotoServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUser" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verFotoServicioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="verFotoServicioResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="InsertarSitio">
         <s:complexType>
           <s:sequence>
@@ -931,6 +962,18 @@
   <wsdl:message name="EliminarServicioSoapOut">
     <wsdl:part name="parameters" element="tns:EliminarServicioResponse" />
   </wsdl:message>
+  <wsdl:message name="top12ServiciosSoapIn">
+    <wsdl:part name="parameters" element="tns:top12Servicios" />
+  </wsdl:message>
+  <wsdl:message name="top12ServiciosSoapOut">
+    <wsdl:part name="parameters" element="tns:top12ServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="verFotoServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:verFotoServicio" />
+  </wsdl:message>
+  <wsdl:message name="verFotoServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:verFotoServicioResponse" />
+  </wsdl:message>
   <wsdl:message name="InsertarSitioSoapIn">
     <wsdl:part name="parameters" element="tns:InsertarSitio" />
   </wsdl:message>
@@ -1175,6 +1218,14 @@
     <wsdl:operation name="EliminarServicio">
       <wsdl:input message="tns:EliminarServicioSoapIn" />
       <wsdl:output message="tns:EliminarServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="top12Servicios">
+      <wsdl:input message="tns:top12ServiciosSoapIn" />
+      <wsdl:output message="tns:top12ServiciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verFotoServicio">
+      <wsdl:input message="tns:verFotoServicioSoapIn" />
+      <wsdl:output message="tns:verFotoServicioSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="InsertarSitio">
       <wsdl:input message="tns:InsertarSitioSoapIn" />
@@ -1455,6 +1506,24 @@
     </wsdl:operation>
     <wsdl:operation name="EliminarServicio">
       <soap:operation soapAction="http://tempuri.org/EliminarServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="top12Servicios">
+      <soap:operation soapAction="http://tempuri.org/top12Servicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verFotoServicio">
+      <soap:operation soapAction="http://tempuri.org/verFotoServicio" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1881,6 +1950,24 @@
     </wsdl:operation>
     <wsdl:operation name="EliminarServicio">
       <soap12:operation soapAction="http://tempuri.org/EliminarServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="top12Servicios">
+      <soap12:operation soapAction="http://tempuri.org/top12Servicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verFotoServicio">
+      <soap12:operation soapAction="http://tempuri.org/verFotoServicio" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

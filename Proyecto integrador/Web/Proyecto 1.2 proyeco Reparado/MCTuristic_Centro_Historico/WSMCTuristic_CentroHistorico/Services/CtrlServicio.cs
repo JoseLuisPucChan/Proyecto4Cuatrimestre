@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -27,6 +28,15 @@ namespace WSMCTuristic_CentroHistorico.Services
             oServicio = new DAO.ServicioDAO();
             return oServicio.EliminarServicio(obj);
         }
-
+        public DataSet topServicios()
+        {
+            oServicio = new DAO.ServicioDAO();
+            return oServicio.Serviciostop12();
+        }
+        public byte[] verfoto(int id)
+        {
+            oServicio = new DAO.ServicioDAO();
+            return oServicio.verFoto(id);
+        }
     }
 }

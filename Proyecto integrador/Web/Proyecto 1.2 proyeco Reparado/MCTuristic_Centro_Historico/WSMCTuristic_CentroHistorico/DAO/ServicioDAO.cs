@@ -110,5 +110,35 @@ namespace WSMCTuristic_CentroHistorico.DAO
             return retorno;
         }
 
+        public DataSet Serviciostop12()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC primero12registros";
+            return conn.TablaDS(sql);
+        }
+       
+        public byte[] verFoto(int id)
+        {
+           int idUser = (int)id;
+            conn = new Conexion();
+            cmd = new SqlCommand();
+            byte[] imgData=null;
+            cmd.Connection = conn.Establecer();
+            cmd.CommandText = "verfoto";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@idServicio", SqlDbType.Int).Value = idUser;
+            conn.Abrir();
+            SqlDataReader Leer = cmd.ExecuteReader();
+            if (Leer.Read() == true)
+            {
+                 imgData = (byte[])Leer["Foto"];
+            }
+            conn.Cerrar();
+            return imgData;
+        }
+
+
+
     }
 }

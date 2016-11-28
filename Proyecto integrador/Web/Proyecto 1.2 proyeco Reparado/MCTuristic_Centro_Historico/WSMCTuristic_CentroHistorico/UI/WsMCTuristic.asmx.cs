@@ -220,6 +220,19 @@ namespace WSMCTuristic_CentroHistorico.UI
             oServicioCTRL = new Services.CtrlServicio();
             return oServicioCTRL.EliminarServicio(oServicioBO);
         }
+        [WebMethod]
+        public DataSet top12Servicios()
+        {
+             oServicioCTRL = new Services.CtrlServicio();
+             return oServicioCTRL.topServicios();
+        }
+           [WebMethod]
+        public byte[] verFotoServicio(int idUser)
+        {
+            oServicioCTRL = new Services.CtrlServicio();
+            return oServicioCTRL.verfoto(idUser);
+        }
+
         //--------------------- ABC Sitio---------------
         [WebMethod]
         public int InsertarSitio(SitioBO obj)
