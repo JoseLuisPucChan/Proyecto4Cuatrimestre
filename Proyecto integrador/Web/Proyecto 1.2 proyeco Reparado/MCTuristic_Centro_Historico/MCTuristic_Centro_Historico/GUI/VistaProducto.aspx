@@ -155,9 +155,9 @@
                                     <ul class="pro-box">
                                             <li class="pro">
                                                         <div class="block-image">
-
-                                                    <asp:Image class="img-responsive" ID="Image2"  runat="server" 
-                                                    ImageUrl='<%# "GetImagen.aspx?id=" + Eval("idServicio") %>' alt=""  />
+                                                            <img src="<%#RecuperarImagen(Eval("Foto")) %>" width="150" height="250"  class="img-responsive"/>
+                                                    <%--<asp:Image class="img-responsive" ID="Image2"  runat="server" 
+                                                    ImageUrl='<%#"GetImagen.aspx?id=" + Eval("idServicio") %>' alt=""  />--%>
                                                            
                                                             <div class="img-overlay-3-up pat-override"></div>
                                                             <div class="img-overlay-3-down pat-override"></div>

@@ -21,5 +21,17 @@ namespace MCTuristic_Centro_Historico.GUI
             DtlProductos.DataSource = DtServicios;
             DtlProductos.DataBind();
         }
+        public string RecuperarImagenWebUrl(string Imagen)
+        {
+            // Convert Base64 String to byte[]
+            byte[] imageBytes = Convert.FromBase64String(Imagen);
+            string image = Convert.ToBase64String(imageBytes, 0, imageBytes.Length);
+            image = "data:image/.jpeg" + "jpeg;base64," + image;
+            return image;
+        }
+        public string RecuperarImagen(object img)
+        {
+            return RecuperarImagenWebUrl(img.ToString());
+        }
     }
 }
