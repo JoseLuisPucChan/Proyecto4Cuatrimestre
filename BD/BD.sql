@@ -84,4 +84,4 @@ idPlanta INT IDENTITY(1,1)
 )
 GRANT SELECT, INSERT ON Jardin.Plantas TO UsuarioNuevo
 GO
-
+
