@@ -20,6 +20,8 @@ namespace MCTuristic_Centro_Historico.GUI
             DataSet DtServicios = oServicios.top12Servicios();
             DtlProductos.DataSource = DtServicios;
             DtlProductos.DataBind();
+            GridView1.DataSource = DtServicios;
+            GridView1.DataBind();
         }
         public string RecuperarImagenWebUrl(string Imagen)
         {

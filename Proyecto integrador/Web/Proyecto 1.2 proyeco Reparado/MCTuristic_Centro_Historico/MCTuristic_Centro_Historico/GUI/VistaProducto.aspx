@@ -145,20 +145,15 @@
                                 <%--Modulo 1--%>
                         
                            <asp:DataList ID="DtlProductos" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" HorizontalAlign="Center" Width="800px">
-                               
                                  <FooterStyle VerticalAlign="Top" Wrap="True" />
-                               
                                  <ItemTemplate>
-                                  
                                    <asp:Label ID="lblidServicio" runat="server" Visible="true" Text='<%# Eval("idServicio") %>' ForeColor="#3399FF"></asp:Label>
-                                   
                                     <ul class="pro-box">
                                             <li class="pro">
                                                         <div class="block-image">
-                                                            <img src="<%#RecuperarImagen(Eval("Foto")) %>" width="150" height="250"  class="img-responsive"/>
-                                                    <%--<asp:Image class="img-responsive" ID="Image2"  runat="server" 
-                                                    ImageUrl='<%#"GetImagen.aspx?id=" + Eval("idServicio") %>' alt=""  />--%>
-                                                           
+                                                         <%--   <img src="<%#RecuperarImagen(Eval("Foto")) %>" width="150" height="250"  class="img-responsive"/>--%>
+                                                   <asp:Image class="img-responsive" ID="Image2"  runat="server" 
+                                                    ImageUrl='<%#"GetImagen.aspx?id=" + Eval("idServicio") %>' alt=""  />
                                                             <div class="img-overlay-3-up pat-override"></div>
                                                             <div class="img-overlay-3-down pat-override"></div>
                                                             <ol class="static-style">
@@ -178,7 +173,7 @@
                                             </li>
                                     <li>Restaurante flor</li>
                                         <li class="pro-footer">
-                                            <span class="price">$<asp:Label ID="lblPrecio" runat="server" Text='<%# Eval("PreciosServicio") %>' ForeColor="#3399FF"></asp:Label></span>
+                                            <span class="price">$<asp:Label ID="lblPrecio" runat="server" Text='<%# Eval("PreciosServicio") %>'></asp:Label></span>
                                                 <span class="rating">
                                                 <a href="#">
                                                  <i class="fa fa-star">
@@ -316,7 +311,11 @@
 
                         </div>
 
-                            <div class="gap-30"></div>
+                            <div class="gap-30">
+                              
+                            </div>
+                              <asp:GridView ID="GridView1" runat="server">
+                                </asp:GridView>
                              <%--Sección 2--%>
                             <div class="row">
 

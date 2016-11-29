@@ -117,13 +117,13 @@ namespace WSMCTuristic_CentroHistorico.DAO
             sql = "EXEC primero12registros";
             return conn.TablaDS(sql);
         }
-       
+
         public byte[] verFoto(int id)
         {
-           int idUser = (int)id;
+            int idUser = (int)id;
             conn = new Conexion();
             cmd = new SqlCommand();
-            byte[] imgData=null;
+            byte[] imgData = null;
             cmd.Connection = conn.Establecer();
             cmd.CommandText = "verfoto";
             cmd.CommandType = CommandType.StoredProcedure;
@@ -132,13 +132,13 @@ namespace WSMCTuristic_CentroHistorico.DAO
             SqlDataReader Leer = cmd.ExecuteReader();
             if (Leer.Read() == true)
             {
-                 imgData = (byte[])Leer["Foto"];
+                imgData = (byte[])Leer["Foto"];
             }
             conn.Cerrar();
             return imgData;
         }
 
-
+  
 
     }
 }
