@@ -661,3 +661,8 @@ go
 
 insert into Administrador(Nombre, Apellidos, Email, Contrasena, TelefonoCelular, FechaNacimiento) 
 values('Jose', 'Puc', 'josechan212@gmail.com', '1234', '9999010203', '10/10/1996')
+go
+
+exec insertar_tiposervicio 'Hoteles';
+exec insertar_tiposervicio 'Restaurantes';
+exec insertar_tiposervicio 'Bares';
