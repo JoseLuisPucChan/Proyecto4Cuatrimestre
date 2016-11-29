@@ -703,4 +703,16 @@ as
 select  Nombre  , IdAdministrador 
 from  Administrador
 where Email=@email and Contrasena=@password
+go
+
+create procedure verfoto 
+@idServicio int
+as
+select Foto from Servicios where idServicio = @idServicio
+go
+
+create procedure primero12Registros
+as
+select top 12 idServicio, NombreServ ,PreciosServicio ,Foto from Servicios order by idServicio  
+go
 

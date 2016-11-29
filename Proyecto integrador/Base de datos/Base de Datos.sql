@@ -658,3 +658,6 @@ go
 ALTER TABLE Administrador ADD CONSTRAINT RefCorreo2
 	Unique(Email)
 go
+
+insert into Administrador(Nombre, Apellidos, Email, Contrasena, TelefonoCelular, FechaNacimiento) 
+values('Jose', 'Puc', 'josechan212@gmail.com', '1234', '9999010203', '10/10/1996')
