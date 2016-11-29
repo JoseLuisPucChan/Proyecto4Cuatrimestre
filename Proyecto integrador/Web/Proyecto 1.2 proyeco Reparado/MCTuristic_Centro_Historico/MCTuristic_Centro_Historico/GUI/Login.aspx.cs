@@ -42,26 +42,38 @@ namespace MCTuristic_Centro_Historico.GUI
             Session["idAdmin"] = 2;
             Server.Transfer("GestionUsuariosGUI.aspx");
         }
-        protected void btnIngresar_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         protected void Button2_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "josechan211@gmail.com" && txtContraseña.Text == "12345")
+
+            DataTable Datos = new DataTable();
+            localhost.WsMCTuristic Services = new localhost.WsMCTuristic();
+            localhost.AdministradorBO oAdmin = new localhost.AdministradorBO();
+            oAdmin.Email = txtEmail.Text;
+            oAdmin.Contraseñaadmin = txtContraseña.Text;
+            Datos = Services.Login(oAdmin);
+            if (Datos.Rows.Count != 0)
             {
-                Session["idDueño"] = 2;
-                Server.Transfer("GestionUsuariosGUI.aspx");
+                Session["idAdmin"] = Datos.Rows[0][1].ToString();
+                Server.Transfer("Principal.aspx");
             }
             else
             {
-                if (txtEmail.Text == "joseluis@gmail.com" && txtContraseña.Text == "12345678")
-                {
-                    Session["idUser"] = 3;
-                    Server.Transfer("PagPrincipal.aspx");
-                }
-            }
+               localhost.UsuarioBO oUser = new localhost.UsuarioBO();
+               oUser.EmailUsuario = txtEmail.Text;
+               oUser.ContraseñaUsuario = txtContraseña.Text;
+               Datos = Services.LoginUsuario(oUser);
+               if (Datos.Rows.Count != 0)
+               {
+                   Session["idUser"] = Datos.Rows[0][1].ToString();
+                   Server.Transfer("Principal.aspx");
+               }
+               else
+               {
+                   Response.Redirect("Registro.aspx");
+               }
+             }
+          
         }
     }
 }

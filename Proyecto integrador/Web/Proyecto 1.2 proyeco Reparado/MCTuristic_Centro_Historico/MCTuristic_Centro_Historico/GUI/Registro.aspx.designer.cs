@@ -157,6 +157,15 @@ namespace MCTuristic_Centro_Historico.GUI {
         protected global::System.Web.UI.WebControls.Button btnAgregar;
         
         /// <summary>
+        /// Control ScriptManager1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
         /// Control imgFoto.
         /// </summary>
         /// <remarks>
@@ -190,9 +199,7 @@ namespace MCTuristic_Centro_Historico.GUI {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        /// Referencia no la reconoce pero almento de compilar si,
-        //protected global::AjaxControlToolkit.CalendarExtender CalendarExtender2;
-        
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender2;
         /// <summary>
         /// Control Calender.
         /// </summary>

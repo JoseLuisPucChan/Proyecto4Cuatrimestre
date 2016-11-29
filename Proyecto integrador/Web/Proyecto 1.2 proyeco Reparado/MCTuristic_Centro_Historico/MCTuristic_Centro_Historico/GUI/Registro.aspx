@@ -233,8 +233,8 @@
 </ul>
 </div>
 </div>
- 
-<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 <div class="login">
 <h2><font><font>Agregar Foto</font></font></h2>
 <form method="post" action="#">
@@ -277,6 +277,7 @@
 </ul>
 </div>
 </div>
+    
  
 </div>
 </div>

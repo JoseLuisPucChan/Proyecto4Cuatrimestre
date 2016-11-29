@@ -68,6 +68,14 @@ namespace WSMCTuristic_CentroHistorico.UI
             return oUsuarioCTRL.id_usuario();
         }
 
+         [WebMethod]
+         public DataTable LoginUsuario(UsuarioBO obj)
+         {
+             UsuarioBO oUsuario = obj;
+             oUsuarioCTRL = new Services.CtrlUsuario();
+             return oUsuarioCTRL.LoginUsuario(oUsuario);
+         }
+
         //--------------------------ABC Direcciones-----------------------------
         [WebMethod]
         public int EliminarDireccion(DireccionBO obj)
@@ -221,18 +229,17 @@ namespace WSMCTuristic_CentroHistorico.UI
             return oServicioCTRL.EliminarServicio(oServicioBO);
         }
         [WebMethod]
-        public DataSet top12Servicios()
-        {
-             oServicioCTRL = new Services.CtrlServicio();
-             return oServicioCTRL.topServicios();
-        }
-           [WebMethod]
-        public byte[] verFotoServicio(int idUser)
+       public DataSet topServicios()
         {
             oServicioCTRL = new Services.CtrlServicio();
-            return oServicioCTRL.verfoto(idUser);
+            return oServicioCTRL.topServicios();
         }
-
+      [WebMethod]
+        public byte[] verFotoSer(int Ser)
+        {
+            oServicioCTRL = new Services.CtrlServicio();
+            return oServicioCTRL.verfoto(Ser);
+        }
         //--------------------- ABC Sitio---------------
         [WebMethod]
         public int InsertarSitio(SitioBO obj)

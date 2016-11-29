@@ -696,11 +696,18 @@ Delete from Comentarios where IdComentario = @IdComentario
 go
 ------------------------------Login User------------------------------
 create proc login_user
-@email varchar(20),
+@email varchar(50),
 @password varchar(20)
 as
-
-select  Nombre  , IdAdministrador 
-from  Administrador
+Select Nombre,IdUsuario from Usuario
 where Email=@email and Contrasena=@password
+GO
 
+------------------------------Login admin------------------------------
+create proc login_admin
+@email varchar(50),
+@password varchar(20)
+as
+Select Nombre,IdAdministrador from Administrador
+where Email=@email and Contrasena=@password
+GO

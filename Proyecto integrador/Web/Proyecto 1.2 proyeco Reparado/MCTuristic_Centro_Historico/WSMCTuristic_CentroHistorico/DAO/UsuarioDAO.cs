@@ -123,7 +123,46 @@ namespace WSMCTuristic_CentroHistorico.DAO
             }
             return id;
         }
-     
+
+        public DataTable Login(object obj)
+        {
+            BO.UsuarioBO oUsuario = (BO.UsuarioBO)obj;
+            DataTable DtResultado = new DataTable("Usuario");
+            try
+            {
+                cmd = new SqlCommand();
+                conn = new Conexion();
+
+                cmd.Connection = conn.Establecer();
+                conn.Abrir();
+                cmd.CommandText = "login_user";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter Usuario = new SqlParameter();
+                Usuario.ParameterName = "@email";
+                Usuario.SqlDbType = SqlDbType.VarChar;
+                Usuario.Size = 50;
+                Usuario.Value = oUsuario.EmailUsuario;
+                cmd.Parameters.Add(Usuario);
+
+                SqlParameter Password = new SqlParameter();
+                Password.ParameterName = "@password";
+                Password.SqlDbType = SqlDbType.VarChar;
+                Password.Size = 20;
+                Password.Value = oUsuario.ContraseñaUsuario;
+                cmd.Parameters.Add(Password);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(cmd);
+                SqlDat.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
   
 
 

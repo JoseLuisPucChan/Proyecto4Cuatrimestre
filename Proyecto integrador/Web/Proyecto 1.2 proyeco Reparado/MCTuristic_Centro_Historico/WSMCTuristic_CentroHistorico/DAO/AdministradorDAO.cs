@@ -116,18 +116,18 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
                 cmd.Connection = conn.Establecer();
                 conn.Abrir();
-                cmd.CommandText = "login_administrador";
+                cmd.CommandText = "login_admin";
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter Usuario = new SqlParameter();
-                Usuario.ParameterName = "@Email";
+                Usuario.ParameterName = "@email";
                 Usuario.SqlDbType = SqlDbType.VarChar;
-                Usuario.Size = 20;
+                Usuario.Size = 50;
                 Usuario.Value = oAdministrador.Email;
                 cmd.Parameters.Add(Usuario);
 
                 SqlParameter Password = new SqlParameter();
-                Password.ParameterName = "@Contrasena";
+                Password.ParameterName = "@password";
                 Password.SqlDbType = SqlDbType.VarChar;
                 Password.Size = 20;
                 Password.Value = oAdministrador.Contraseñaadmin;
@@ -143,5 +143,14 @@ namespace WSMCTuristic_CentroHistorico.DAO
             return DtResultado;
 
         }
+
+
+
+
+
+
+
+
+
     }
 }
