@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsReporte" targetNamespace="http://tempuri.org/DsReporte.xsd" xmlns:mstns="http://tempuri.org/DsReporte.xsd" xmlns="http://tempuri.org/DsReporte.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsReporte" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsReporte" msprop:Generator_UserDSName="DsReporte">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Alumnos_x0020_" msprop:Generator_TableClassName="Alumnos_DataTable" msprop:Generator_TableVarName="tableAlumnos_" msprop:Generator_TablePropName="Alumnos_" msprop:Generator_RowDeletingName="Alumnos_RowDeleting" msprop:Generator_RowChangingName="Alumnos_RowChanging" msprop:Generator_RowEvHandlerName="Alumnos_RowChangeEventHandler" msprop:Generator_RowDeletedName="Alumnos_RowDeleted" msprop:Generator_UserTableName="Alumnos " msprop:Generator_RowChangedName="Alumnos_RowChanged" msprop:Generator_RowEvArgName="Alumnos_RowChangeEvent" msprop:Generator_RowClassName="Alumnos_Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="matricula" msprop:Generator_ColumnVarNameInTable="columnmatricula" msprop:Generator_ColumnPropNameInRow="matricula" msprop:Generator_ColumnPropNameInTable="matriculaColumn" msprop:Generator_UserColumnName="matricula" type="xs:string" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="semestre" msprop:Generator_ColumnVarNameInTable="columnsemestre" msprop:Generator_ColumnPropNameInRow="semestre" msprop:Generator_ColumnPropNameInTable="semestreColumn" msprop:Generator_UserColumnName="semestre" type="xs:string" minOccurs="0" />
+              <xs:element name="grupo" msprop:Generator_ColumnVarNameInTable="columngrupo" msprop:Generator_ColumnPropNameInRow="grupo" msprop:Generator_ColumnPropNameInTable="grupoColumn" msprop:Generator_UserColumnName="grupo" type="xs:string" minOccurs="0" />
+              <xs:element name="curp" msprop:Generator_ColumnVarNameInTable="columncurp" msprop:Generator_ColumnPropNameInRow="curp" msprop:Generator_ColumnPropNameInTable="curpColumn" msprop:Generator_UserColumnName="curp" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

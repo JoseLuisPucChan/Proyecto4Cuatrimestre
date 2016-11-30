@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5521DEAE-A161-40EC-828C-E377B75A4C88}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UTM.SI</RootNamespace>
+    <AssemblyName>UTM.SI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\DevExpress.Data.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2.resources">
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\DevExpress.Office.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\DevExpress.Pdf.v15.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v15.2.Drawing, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.2.Core.resources">
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.2.Core.resources">
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2.resources">
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2.resources">
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\DevExpress.XtraEditors.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\DevExpress.XtraGrid.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2.resources">
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\DevExpress.XtraPrinting.v15.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.2.resources">
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\FlashControlV71.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.Common, Version=0.1.0.0, Culture=neutral, PublicKeyToken=c3c25e41a6abca42" />
+    <Reference Include="Guifreaks.NavigationBar, Version=0.1.0.0, Culture=neutral, PublicKeyToken=bf0afd6b35ed9434, processorArchitecture=MSIL" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\Practica3XML\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\..\..\Programas\MetroVisualStudio\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\..\..\..\..\Programas\MetroVisualStudio\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MT.WindowsUI, Version=2.6.4.0, Culture=neutral, PublicKeyToken=6a0e81d0b9165633, processorArchitecture=MSIL" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Practica3XML\Practica2\bin\Debug\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bin\Reporte\CrystalReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Reporte\CrystalReport11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="bin\Reporte\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport11.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Fakes Include="Fakes\CrystalDecisions.ReportAppServer.CommonObjectModel.fakes" />
+    <None Include="FakesAssemblies\CrystalDecisions.ReportAppServer.CommonObjectModel.13.0.2000.0.Fakes.messages" />
+    <None Include="GUI\Recursos\Imagenes\BarraPrincipal\Thumbs.db" />
+    <None Include="GUI\Recursos\Imagenes\Modulos\Thumbs.db" />
+    <None Include="GUI\Recursos\Imagenes\Otros\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Español.txt" />
+    <Content Include="bin\Guifreaks.Common.dll" />
+    <Content Include="bin\Guifreaks.NavigationBar.dll" />
+    <Content Include="bin\Ingles.txt" />
+    <Content Include="bin\Maya.txt" />
+    <Content Include="bin\MT.WindowsUI.dll" />
+    <Content Include="bin\System.Windows.Forms.Ribbon35.dll" />
+    <Content Include="bin\XMLAgenda.xml" />
+    <Content Include="bin\XMLBibliografia.xml" />
+    <Content Include="bin\XMLBibliografia2.xml" />
+    <Content Include="GUI\Recursos\Imagenes\BarraPrincipal\Ayuda.png" />
+    <Content Include="GUI\Recursos\Imagenes\BarraPrincipal\Cerrar.png" />
+    <Content Include="GUI\Recursos\Imagenes\BarraPrincipal\Comprimir.png" />
+    <Content Include="GUI\Recursos\Imagenes\BarraPrincipal\Comprimir2.png" />
+    <Content Include="GUI\Recursos\Imagenes\Modulos\CC.png" />
+    <Content Include="GUI\Recursos\Imagenes\Modulos\CP.png" />
+    <Content Include="GUI\Recursos\Imagenes\Modulos\Ejemplo.png" />
+    <Content Include="GUI\Recursos\Imagenes\Modulos\Herramientas.png" />
+    <Content Include="GUI\Recursos\Imagenes\Modulos\Inventario.png" />
+    <Content Include="GUI\Recursos\Imagenes\Modulos\Nomina.png" />
+    <Content Include="GUI\Recursos\Imagenes\Modulos\PV.png" />
+    <Content Include="GUI\Recursos\Imagenes\Modulos\Seguridad.png" />
+    <Content Include="GUI\Recursos\Imagenes\Otros\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Traductor\Practica_1\Practica_1.csproj">
+      <Project>{c8939d74-0bb2-40a3-9e45-762795253b2a}</Project>
+      <Name>Practica_1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Practica3XML\Practica2\Practica2.csproj">
+      <Project>{1623bd01-2c41-4d74-b90d-509670a97aa0}</Project>
+      <Name>Practica2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Practica_4\BO\BO.csproj">
+      <Project>{f92d99ce-81c1-4d43-800e-49f8c3dde0e5}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Practica_4\DAO\DAO.csproj">
+      <Project>{a9e37cd0-8791-418a-b01b-8f87fa0a56f0}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Practica_4\ManejoSQLite\ManejoSQLite.csproj">
+      <Project>{cf930fd0-6d55-494b-bafe-6efcfe873836}</Project>
+      <Name>ManejoSQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Practica_4\Services\Services.csproj">
+      <Project>{8d103ca4-7235-45c6-9ccc-eb57c6842796}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProyectoAgenda\AgendaContactos\AgendaContactos.csproj">
+      <Project>{9ef2d9c0-fd18-4604-b7b2-2f8e51bc48f8}</Project>
+      <Name>AgendaContactos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UTM.Archivo\UTM.Archivo.csproj">
+      <Project>{90483c13-2bff-4712-81ac-384af63ce6ef}</Project>
+      <Name>UTM.Archivo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UTM.SQLite\UTM.SQLite.csproj">
+      <Project>{9cff799b-5cc9-44d8-ae22-8027b809f8df}</Project>
+      <Name>UTM.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UTM.XML\UTM.XML.csproj">
+      <Project>{120d9145-b73f-4336-abc5-4e9a6d1723f7}</Project>
+      <Name>UTM.XML</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

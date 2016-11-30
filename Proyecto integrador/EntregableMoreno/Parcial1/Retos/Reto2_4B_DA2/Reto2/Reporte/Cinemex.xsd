@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Cinemex" targetNamespace="http://tempuri.org/Cinemex.xsd" xmlns:mstns="http://tempuri.org/Cinemex.xsd" xmlns="http://tempuri.org/Cinemex.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Cinemex" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Cinemex" msprop:Generator_UserDSName="Cinemex">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cinemex_x0020_Canek" msprop:Generator_TableClassName="Cinemex_CanekDataTable" msprop:Generator_TableVarName="tableCinemex_Canek" msprop:Generator_TablePropName="Cinemex_Canek" msprop:Generator_RowDeletingName="Cinemex_CanekRowDeleting" msprop:Generator_RowChangingName="Cinemex_CanekRowChanging" msprop:Generator_RowEvHandlerName="Cinemex_CanekRowChangeEventHandler" msprop:Generator_RowDeletedName="Cinemex_CanekRowDeleted" msprop:Generator_UserTableName="Cinemex Canek" msprop:Generator_RowChangedName="Cinemex_CanekRowChanged" msprop:Generator_RowEvArgName="Cinemex_CanekRowChangeEvent" msprop:Generator_RowClassName="Cinemex_CanekRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="funcion" msprop:Generator_ColumnVarNameInTable="columnfuncion" msprop:Generator_ColumnPropNameInRow="funcion" msprop:Generator_ColumnPropNameInTable="funcionColumn" msprop:Generator_UserColumnName="funcion" type="xs:string" minOccurs="0" />
+              <xs:element name="horario" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_UserColumnName="horario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cinemex_x0020_City_x0020_Center_x0020_Mérida" msprop:Generator_TableClassName="Cinemex_City_Center_MéridaDataTable" msprop:Generator_TableVarName="tableCinemex_City_Center_Mérida" msprop:Generator_TablePropName="Cinemex_City_Center_Mérida" msprop:Generator_RowDeletingName="Cinemex_City_Center_MéridaRowDeleting" msprop:Generator_RowChangingName="Cinemex_City_Center_MéridaRowChanging" msprop:Generator_RowEvHandlerName="Cinemex_City_Center_MéridaRowChangeEventHandler" msprop:Generator_RowDeletedName="Cinemex_City_Center_MéridaRowDeleted" msprop:Generator_UserTableName="Cinemex City Center Mérida" msprop:Generator_RowChangedName="Cinemex_City_Center_MéridaRowChanged" msprop:Generator_RowEvArgName="Cinemex_City_Center_MéridaRowChangeEvent" msprop:Generator_RowClassName="Cinemex_City_Center_MéridaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="funcion" msprop:Generator_ColumnVarNameInTable="columnfuncion" msprop:Generator_ColumnPropNameInRow="funcion" msprop:Generator_ColumnPropNameInTable="funcionColumn" msprop:Generator_UserColumnName="funcion" type="xs:string" minOccurs="0" />
+              <xs:element name="horario" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_UserColumnName="horario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cinemex_x0020_Galerías_x0020_Mérida" msprop:Generator_TableClassName="Cinemex_Galerías_MéridaDataTable" msprop:Generator_TableVarName="tableCinemex_Galerías_Mérida" msprop:Generator_TablePropName="Cinemex_Galerías_Mérida" msprop:Generator_RowDeletingName="Cinemex_Galerías_MéridaRowDeleting" msprop:Generator_RowChangingName="Cinemex_Galerías_MéridaRowChanging" msprop:Generator_RowEvHandlerName="Cinemex_Galerías_MéridaRowChangeEventHandler" msprop:Generator_RowDeletedName="Cinemex_Galerías_MéridaRowDeleted" msprop:Generator_UserTableName="Cinemex Galerías Mérida" msprop:Generator_RowChangedName="Cinemex_Galerías_MéridaRowChanged" msprop:Generator_RowEvArgName="Cinemex_Galerías_MéridaRowChangeEvent" msprop:Generator_RowClassName="Cinemex_Galerías_MéridaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="funcion" msprop:Generator_ColumnVarNameInTable="columnfuncion" msprop:Generator_ColumnPropNameInRow="funcion" msprop:Generator_ColumnPropNameInTable="funcionColumn" msprop:Generator_UserColumnName="funcion" type="xs:string" minOccurs="0" />
+              <xs:element name="horario" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_UserColumnName="horario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cinemex_x0020_Galerías_x0020_Mérida_x0020_Platino" msprop:Generator_TableClassName="Cinemex_Galerías_Mérida_PlatinoDataTable" msprop:Generator_TableVarName="tableCinemex_Galerías_Mérida_Platino" msprop:Generator_TablePropName="Cinemex_Galerías_Mérida_Platino" msprop:Generator_RowDeletingName="Cinemex_Galerías_Mérida_PlatinoRowDeleting" msprop:Generator_RowChangingName="Cinemex_Galerías_Mérida_PlatinoRowChanging" msprop:Generator_RowEvHandlerName="Cinemex_Galerías_Mérida_PlatinoRowChangeEventHandler" msprop:Generator_RowDeletedName="Cinemex_Galerías_Mérida_PlatinoRowDeleted" msprop:Generator_UserTableName="Cinemex Galerías Mérida Platino" msprop:Generator_RowChangedName="Cinemex_Galerías_Mérida_PlatinoRowChanged" msprop:Generator_RowEvArgName="Cinemex_Galerías_Mérida_PlatinoRowChangeEvent" msprop:Generator_RowClassName="Cinemex_Galerías_Mérida_PlatinoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="funcion" msprop:Generator_ColumnVarNameInTable="columnfuncion" msprop:Generator_ColumnPropNameInRow="funcion" msprop:Generator_ColumnPropNameInTable="funcionColumn" msprop:Generator_UserColumnName="funcion" type="xs:string" minOccurs="0" />
+              <xs:element name="horario" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_UserColumnName="horario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cinemex_x0020_Gran_x0020_Plaza_x0020_Mérida" msprop:Generator_TableClassName="Cinemex_Gran_Plaza_MéridaDataTable" msprop:Generator_TableVarName="tableCinemex_Gran_Plaza_Mérida" msprop:Generator_TablePropName="Cinemex_Gran_Plaza_Mérida" msprop:Generator_RowDeletingName="Cinemex_Gran_Plaza_MéridaRowDeleting" msprop:Generator_RowChangingName="Cinemex_Gran_Plaza_MéridaRowChanging" msprop:Generator_RowEvHandlerName="Cinemex_Gran_Plaza_MéridaRowChangeEventHandler" msprop:Generator_RowDeletedName="Cinemex_Gran_Plaza_MéridaRowDeleted" msprop:Generator_UserTableName="Cinemex Gran Plaza Mérida" msprop:Generator_RowChangedName="Cinemex_Gran_Plaza_MéridaRowChanged" msprop:Generator_RowEvArgName="Cinemex_Gran_Plaza_MéridaRowChangeEvent" msprop:Generator_RowClassName="Cinemex_Gran_Plaza_MéridaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="funcion" msprop:Generator_ColumnVarNameInTable="columnfuncion" msprop:Generator_ColumnPropNameInRow="funcion" msprop:Generator_ColumnPropNameInTable="funcionColumn" msprop:Generator_UserColumnName="funcion" type="xs:string" minOccurs="0" />
+              <xs:element name="horario" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_UserColumnName="horario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cinemex_x0020_Macroplaza_x0020_Mérida" msprop:Generator_TableClassName="Cinemex_Macroplaza_MéridaDataTable" msprop:Generator_TableVarName="tableCinemex_Macroplaza_Mérida" msprop:Generator_TablePropName="Cinemex_Macroplaza_Mérida" msprop:Generator_RowDeletingName="Cinemex_Macroplaza_MéridaRowDeleting" msprop:Generator_RowChangingName="Cinemex_Macroplaza_MéridaRowChanging" msprop:Generator_RowEvHandlerName="Cinemex_Macroplaza_MéridaRowChangeEventHandler" msprop:Generator_RowDeletedName="Cinemex_Macroplaza_MéridaRowDeleted" msprop:Generator_UserTableName="Cinemex Macroplaza Mérida" msprop:Generator_RowChangedName="Cinemex_Macroplaza_MéridaRowChanged" msprop:Generator_RowEvArgName="Cinemex_Macroplaza_MéridaRowChangeEvent" msprop:Generator_RowClassName="Cinemex_Macroplaza_MéridaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="funcion" msprop:Generator_ColumnVarNameInTable="columnfuncion" msprop:Generator_ColumnPropNameInRow="funcion" msprop:Generator_ColumnPropNameInTable="funcionColumn" msprop:Generator_UserColumnName="funcion" type="xs:string" minOccurs="0" />
+              <xs:element name="horario" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_UserColumnName="horario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cinemex_x0020_Península_x0020_Montejo_x0020_Platino" msprop:Generator_TableClassName="Cinemex_Península_Montejo_PlatinoDataTable" msprop:Generator_TableVarName="tableCinemex_Península_Montejo_Platino" msprop:Generator_TablePropName="Cinemex_Península_Montejo_Platino" msprop:Generator_RowDeletingName="Cinemex_Península_Montejo_PlatinoRowDeleting" msprop:Generator_RowChangingName="Cinemex_Península_Montejo_PlatinoRowChanging" msprop:Generator_RowEvHandlerName="Cinemex_Península_Montejo_PlatinoRowChangeEventHandler" msprop:Generator_RowDeletedName="Cinemex_Península_Montejo_PlatinoRowDeleted" msprop:Generator_UserTableName="Cinemex Península Montejo Platino" msprop:Generator_RowChangedName="Cinemex_Península_Montejo_PlatinoRowChanged" msprop:Generator_RowEvArgName="Cinemex_Península_Montejo_PlatinoRowChangeEvent" msprop:Generator_RowClassName="Cinemex_Península_Montejo_PlatinoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="funcion" msprop:Generator_ColumnVarNameInTable="columnfuncion" msprop:Generator_ColumnPropNameInRow="funcion" msprop:Generator_ColumnPropNameInTable="funcionColumn" msprop:Generator_UserColumnName="funcion" type="xs:string" minOccurs="0" />
+              <xs:element name="horario" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_UserColumnName="horario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cinemex_x0020_Rex_x0020_Mérida" msprop:Generator_TableClassName="Cinemex_Rex_MéridaDataTable" msprop:Generator_TableVarName="tableCinemex_Rex_Mérida" msprop:Generator_TablePropName="Cinemex_Rex_Mérida" msprop:Generator_RowDeletingName="Cinemex_Rex_MéridaRowDeleting" msprop:Generator_RowChangingName="Cinemex_Rex_MéridaRowChanging" msprop:Generator_RowEvHandlerName="Cinemex_Rex_MéridaRowChangeEventHandler" msprop:Generator_RowDeletedName="Cinemex_Rex_MéridaRowDeleted" msprop:Generator_UserTableName="Cinemex Rex Mérida" msprop:Generator_RowChangedName="Cinemex_Rex_MéridaRowChanged" msprop:Generator_RowEvArgName="Cinemex_Rex_MéridaRowChangeEvent" msprop:Generator_RowClassName="Cinemex_Rex_MéridaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="funcion" msprop:Generator_ColumnVarNameInTable="columnfuncion" msprop:Generator_ColumnPropNameInRow="funcion" msprop:Generator_ColumnPropNameInTable="funcionColumn" msprop:Generator_UserColumnName="funcion" type="xs:string" minOccurs="0" />
+              <xs:element name="horario" msprop:Generator_ColumnVarNameInTable="columnhorario" msprop:Generator_ColumnPropNameInRow="horario" msprop:Generator_ColumnPropNameInTable="horarioColumn" msprop:Generator_UserColumnName="horario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
