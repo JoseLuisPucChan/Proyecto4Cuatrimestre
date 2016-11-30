@@ -160,13 +160,13 @@ namespace WSMCTuristic_CentroHistorico.DAO
             return conn.TablaDS(sql);
         }
 
-        public string Obtenerid_user()
+        public string Obtenerid_admin()
         {
             string id = "";
             cmd = new SqlCommand();
             conn = new Conexion();
             cmd.Connection = conn.Establecer();
-            cmd.CommandText = "usuario_reciente";
+            cmd.CommandText = "admin_reciente";
             cmd.CommandType = CommandType.StoredProcedure;
             conn.Abrir();
             SqlDataReader Leer = cmd.ExecuteReader();

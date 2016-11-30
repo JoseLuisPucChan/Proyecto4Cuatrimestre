@@ -1,5 +1,10 @@
 DevExpress.Patch.InMemoryPatch, DevExpress.Patch.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7fc7bfca2443de66
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+DevExpress.Web.ASPxMemo, DevExpress.Web.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxImage, DevExpress.Web.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+>>>>>>> refs/remotes/origin/Administrador
 DevExpress.Web.ASPxGridView, DevExpress.Web.v16.1, Version=16.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 =======
 DevExpress.Web.ASPxGridView, DevExpress.Web.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

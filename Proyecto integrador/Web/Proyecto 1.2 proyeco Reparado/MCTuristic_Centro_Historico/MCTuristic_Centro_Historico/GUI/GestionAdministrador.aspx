@@ -257,6 +257,7 @@
             alert("Respuesta " + response.d);
         }
                         </script>--%>
+<<<<<<< HEAD
                                 <%--<input type="button" class="btn btn-blue-alt" onclick="GurdarUsuario()" value="Guardar" />--%>
 
                                 <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnGuardar_Click1"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
@@ -296,8 +297,38 @@
                             </div>
                         </ContentTemplate>
                     </asp:UpdatePanel>
+=======
+                        <%--<input type="button" class="btn btn-blue-alt" onclick="GurdarUsuario()" value="Guardar" />--%>
+                
+                                            
+               
+                        
+              <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                 <contenttemplate>
+                             <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnGuardar_Click1"  ><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
+   
+                        <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnModificar_Click"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
+                        <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
+                        <div class="divider"></div>
+                        <asp:UpdateProgress runat="server" ID="UpdateProgress" AssociatedUpdatePanelID="UpdatePanel1" DisplayAfter="0" DynamicLayout="false">
+                        <ProgressTemplate> 
+                            <img class="center" alt="Espere un momento..." src="../images1/iOS7Loader.gif"  width="500" height="80"  />
+                        </ProgressTemplate>
+                    </asp:UpdateProgress>
+                   
+                     <dx:ASPxGridView ID="ASPxGridView1"  EnableRowsCache="false"  runat="server" Theme="iOS">
+                     </dx:ASPxGridView>
+                             
+                    </contenttemplate>
+                        </asp:UpdatePanel>
+                       
+              
+                    </div>
+>>>>>>> refs/remotes/origin/Administrador
                 </div>
             </div>
         </div>
     </div>
 </asp:Content>
+
+

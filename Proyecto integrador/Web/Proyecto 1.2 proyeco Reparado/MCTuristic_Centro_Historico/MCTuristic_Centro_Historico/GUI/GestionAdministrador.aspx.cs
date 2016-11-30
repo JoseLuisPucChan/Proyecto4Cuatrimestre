@@ -12,7 +12,11 @@ namespace MCTuristic_Centro_Historico.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+
+>>>>>>> refs/remotes/origin/Administrador
         }
         [WebMethod]
         public static string GuardarAdmin(string nombre, string apellido, string correo, string contra, string telefono, string fecha)
@@ -38,6 +42,7 @@ namespace MCTuristic_Centro_Historico.GUI
         {
             localhost.WsMCTuristic owebService = new localhost.WsMCTuristic();
             localhost.DireccionBO oDireccionBO = new localhost.DireccionBO();
+
             oDireccionBO.Calle = calle;
             oDireccionBO.Numero = numero;
             oDireccionBO.Estado = estado;
@@ -45,6 +50,7 @@ namespace MCTuristic_Centro_Historico.GUI
             oDireccionBO.CodPostal = cp;
             oDireccionBO.Colonia = col;
             oDireccionBO.DescripcionDireccion = descripcion;
+            oDireccionBO.IdAdministrador = Convert.ToInt32(owebService.obtener_adminid());
             int i = owebService.InsertarDireccion_admin(oDireccionBO);
             if (i > 0)
             {
@@ -57,14 +63,17 @@ namespace MCTuristic_Centro_Historico.GUI
         {
             try
             {
-                GuardarAdmin(txtNombre.Text.Trim(), txtApellidos.Text.Trim(), txtCorreo.Text.Trim(), txtContrasena.Text.Trim(), txtTelefono.Text.Trim(), txtFecha.Text.Trim());
-                CargarAdmin();
+                if (txtNumero.Text != string.Empty)
+                {
+                    GuardarAdmin(txtNombre.Text.Trim(), txtApellidos.Text.Trim(), txtCorreo.Text.Trim(), txtContrasena.Text.Trim(), txtTelefono.Text.Trim(), txtFecha.Text.Trim());
+                    GuardarDireccion(txtCalle.Text.Trim(), txtNumero.Text.Trim(), txtEstado.Text.Trim(), txtCruzamiento.Text.Trim(), txtCP.Text.Trim(), txtColonia.Text.Trim(), txtDescripcion.Text.Trim());
+                    CargarAdmin();
+                }
+
             }
-             catch
-            {}
+            catch
+            { }
         }
-
-
         private void CargarAdmin()
         {
             localhost.WsMCTuristic owebService = new localhost.WsMCTuristic();
@@ -77,6 +86,7 @@ namespace MCTuristic_Centro_Historico.GUI
             CargarAdmin();
         }
 
+<<<<<<< HEAD
         protected void ASPxGridView1_RowCommand(object sender, DevExpress.Web.ASPxGridViewRowCommandEventArgs e)
         {
             if(e.CommandArgs.CommandArgument.ToString()=="Editar")
@@ -86,6 +96,11 @@ namespace MCTuristic_Centro_Historico.GUI
 
                 
             }
+=======
+        protected void ASPxGridView1_FocusedRowChanged(object sender, EventArgs e)
+        {
+           
+>>>>>>> refs/remotes/origin/Administrador
         }
 
     }

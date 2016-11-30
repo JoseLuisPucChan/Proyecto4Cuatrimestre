@@ -118,6 +118,8 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private System.Threading.SendOrPostCallback EliminarContactanosOperationCompleted;
         
+        private System.Threading.SendOrPostCallback obtener_adminidOperationCompleted;
+        
         private System.Threading.SendOrPostCallback LoginOperationCompleted;
         
         private System.Threading.SendOrPostCallback ver_Admin_adminOperationCompleted;
@@ -309,6 +311,9 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         /// <remarks/>
         public event EliminarContactanosCompletedEventHandler EliminarContactanosCompleted;
+        
+        /// <remarks/>
+        public event obtener_adminidCompletedEventHandler obtener_adminidCompleted;
         
         /// <remarks/>
         public event LoginCompletedEventHandler LoginCompleted;
@@ -1609,6 +1614,33 @@ namespace MCTuristic_Centro_Historico.localhost {
             if ((this.EliminarContactanosCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.EliminarContactanosCompleted(this, new EliminarContactanosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/obtener_adminid", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public string obtener_adminid() {
+            object[] results = this.Invoke("obtener_adminid", new object[0]);
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void obtener_adminidAsync() {
+            this.obtener_adminidAsync(null);
+        }
+        
+        /// <remarks/>
+        public void obtener_adminidAsync(object userState) {
+            if ((this.obtener_adminidOperationCompleted == null)) {
+                this.obtener_adminidOperationCompleted = new System.Threading.SendOrPostCallback(this.Onobtener_adminidOperationCompleted);
+            }
+            this.InvokeAsync("obtener_adminid", new object[0], this.obtener_adminidOperationCompleted, userState);
+        }
+        
+        private void Onobtener_adminidOperationCompleted(object arg) {
+            if ((this.obtener_adminidCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.obtener_adminidCompleted(this, new obtener_adminidCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -4332,6 +4364,32 @@ namespace MCTuristic_Centro_Historico.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void obtener_adminidCompletedEventHandler(object sender, obtener_adminidCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class obtener_adminidCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal obtener_adminidCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
             }
         }
     }

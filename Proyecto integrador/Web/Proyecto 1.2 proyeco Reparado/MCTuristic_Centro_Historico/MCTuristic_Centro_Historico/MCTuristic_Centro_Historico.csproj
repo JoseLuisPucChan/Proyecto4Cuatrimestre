@@ -76,8 +76,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\GestionAdministrador.aspx" />
     <Content Include="GUI\GetImagen.aspx" />
+<<<<<<< HEAD
     <Content Include="images1\iOS7Loader.gif" />
+=======
+    <Content Include="images1\01-progress.gif" />
+    <Content Include="images1\iOS7Loader.gif" />
+    <Content Include="images1\loader-2.gif" />
+    <Content Include="images1\ring-alt.gif" />
+>>>>>>> refs/remotes/origin/Administrador
     <Content Include="Recursos\agileui.com\demo\monarch\assets-minified\fontawesome-webfontba72.eot" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets-minified\fontawesome-webfontba72.ttf" />
     <Content Include="Recursos\agileui.com\demo\monarch\assets-minified\fontawesome-webfontba72.woff" />
@@ -127,7 +135,6 @@
   <ItemGroup>
     <Content Include="GUI\Contactanos.aspx" />
     <Content Include="GUI\DetalleProducto.aspx" />
-    <Content Include="GUI\GestionAdministrador.aspx" />
     <Content Include="GUI\GestionDireccion.aspx" />
     <Content Include="GUI\GestionEstablecimientos.aspx" />
     <Content Include="GUI\GestionEventos.aspx" />

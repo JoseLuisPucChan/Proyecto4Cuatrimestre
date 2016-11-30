@@ -755,6 +755,16 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="obtener_adminid">
+        <s:complexType />
+      </s:element>
+      <s:element name="obtener_adminidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtener_adminidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="Login">
         <s:complexType>
           <s:sequence>
@@ -1212,6 +1222,12 @@
   <wsdl:message name="EliminarContactanosSoapOut">
     <wsdl:part name="parameters" element="tns:EliminarContactanosResponse" />
   </wsdl:message>
+  <wsdl:message name="obtener_adminidSoapIn">
+    <wsdl:part name="parameters" element="tns:obtener_adminid" />
+  </wsdl:message>
+  <wsdl:message name="obtener_adminidSoapOut">
+    <wsdl:part name="parameters" element="tns:obtener_adminidResponse" />
+  </wsdl:message>
   <wsdl:message name="LoginSoapIn">
     <wsdl:part name="parameters" element="tns:Login" />
   </wsdl:message>
@@ -1454,6 +1470,10 @@
     <wsdl:operation name="EliminarContactanos">
       <wsdl:input message="tns:EliminarContactanosSoapIn" />
       <wsdl:output message="tns:EliminarContactanosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtener_adminid">
+      <wsdl:input message="tns:obtener_adminidSoapIn" />
+      <wsdl:output message="tns:obtener_adminidSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="Login">
       <wsdl:input message="tns:LoginSoapIn" />
@@ -1891,6 +1911,15 @@
     </wsdl:operation>
     <wsdl:operation name="EliminarContactanos">
       <soap:operation soapAction="http://tempuri.org/EliminarContactanos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtener_adminid">
+      <soap:operation soapAction="http://tempuri.org/obtener_adminid" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2389,6 +2418,15 @@
     </wsdl:operation>
     <wsdl:operation name="EliminarContactanos">
       <soap12:operation soapAction="http://tempuri.org/EliminarContactanos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtener_adminid">
+      <soap12:operation soapAction="http://tempuri.org/obtener_adminid" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
