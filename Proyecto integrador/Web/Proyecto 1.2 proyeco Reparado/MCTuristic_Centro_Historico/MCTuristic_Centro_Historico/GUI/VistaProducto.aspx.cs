@@ -17,7 +17,7 @@ namespace MCTuristic_Centro_Historico.GUI
         }
         public void BuscarServicios()
         {
-            DataSet DtServicios = oServicios.top12Servicios();
+            DataSet DtServicios = oServicios.topServicios();
             DtlProductos.DataSource = DtServicios;
             DtlProductos.DataBind();
             GridView1.DataSource = DtServicios;

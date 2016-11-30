@@ -13,7 +13,7 @@ namespace MCTuristic_Centro_Historico.GUI
         {
             localhost.WsMCTuristic oservicios = new localhost.WsMCTuristic();
             string id = Request.QueryString["id"];
-            byte[] imgData = oservicios.verFotoServicio(Convert.ToInt32(id));
+            byte[] imgData = oservicios.verFotoSer(Convert.ToInt32(id));
             Response.BinaryWrite(imgData);
         }
     }

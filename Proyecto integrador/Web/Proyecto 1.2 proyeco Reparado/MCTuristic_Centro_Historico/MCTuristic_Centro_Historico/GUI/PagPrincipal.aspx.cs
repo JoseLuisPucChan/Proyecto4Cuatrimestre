@@ -13,7 +13,7 @@ namespace MCTuristic_Centro_Historico.GUI
         int idUser;
         protected void Page_Load(object sender, EventArgs e)
         {
-            id = Convert.ToInt32(Session["idDueño"]);
+            id = Convert.ToInt32(Session["idAdmin"]);
             idUser = Convert.ToInt32(Session["idUser"]);
             if (id > 0 || idUser > 0)
             {
@@ -26,7 +26,7 @@ namespace MCTuristic_Centro_Historico.GUI
         }
         protected void btnCerrarSecion_Click1(object sender, EventArgs e)
         {
-            Session["idDueño"] = 0;
+            Session["idAdmin"] = 0;
             Session["idUser"] = 0;
             Server.Transfer("PagPrincipal.aspx");
         }

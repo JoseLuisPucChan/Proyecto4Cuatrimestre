@@ -38,6 +38,8 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private System.Threading.SendOrPostCallback obtener_usuarioidOperationCompleted;
         
+        private System.Threading.SendOrPostCallback LoginUsuarioOperationCompleted;
+        
         private System.Threading.SendOrPostCallback EliminarDireccionOperationCompleted;
         
         private System.Threading.SendOrPostCallback InsertarDireccionOperationCompleted;
@@ -68,9 +70,9 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private System.Threading.SendOrPostCallback EliminarServicioOperationCompleted;
         
-        private System.Threading.SendOrPostCallback top12ServiciosOperationCompleted;
+        private System.Threading.SendOrPostCallback topServiciosOperationCompleted;
         
-        private System.Threading.SendOrPostCallback verFotoServicioOperationCompleted;
+        private System.Threading.SendOrPostCallback verFotoSerOperationCompleted;
         
         private System.Threading.SendOrPostCallback InsertarSitioOperationCompleted;
         
@@ -179,6 +181,9 @@ namespace MCTuristic_Centro_Historico.localhost {
         public event obtener_usuarioidCompletedEventHandler obtener_usuarioidCompleted;
         
         /// <remarks/>
+        public event LoginUsuarioCompletedEventHandler LoginUsuarioCompleted;
+        
+        /// <remarks/>
         public event EliminarDireccionCompletedEventHandler EliminarDireccionCompleted;
         
         /// <remarks/>
@@ -224,10 +229,10 @@ namespace MCTuristic_Centro_Historico.localhost {
         public event EliminarServicioCompletedEventHandler EliminarServicioCompleted;
         
         /// <remarks/>
-        public event top12ServiciosCompletedEventHandler top12ServiciosCompleted;
+        public event topServiciosCompletedEventHandler topServiciosCompleted;
         
         /// <remarks/>
-        public event verFotoServicioCompletedEventHandler verFotoServicioCompleted;
+        public event verFotoSerCompletedEventHandler verFotoSerCompleted;
         
         /// <remarks/>
         public event InsertarSitioCompletedEventHandler InsertarSitioCompleted;
@@ -424,6 +429,35 @@ namespace MCTuristic_Centro_Historico.localhost {
             if ((this.obtener_usuarioidCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.obtener_usuarioidCompleted(this, new obtener_usuarioidCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/LoginUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataTable LoginUsuario(UsuarioBO obj) {
+            object[] results = this.Invoke("LoginUsuario", new object[] {
+                        obj});
+            return ((System.Data.DataTable)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void LoginUsuarioAsync(UsuarioBO obj) {
+            this.LoginUsuarioAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void LoginUsuarioAsync(UsuarioBO obj, object userState) {
+            if ((this.LoginUsuarioOperationCompleted == null)) {
+                this.LoginUsuarioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnLoginUsuarioOperationCompleted);
+            }
+            this.InvokeAsync("LoginUsuario", new object[] {
+                        obj}, this.LoginUsuarioOperationCompleted, userState);
+        }
+        
+        private void OnLoginUsuarioOperationCompleted(object arg) {
+            if ((this.LoginUsuarioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.LoginUsuarioCompleted(this, new LoginUsuarioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -863,59 +897,59 @@ namespace MCTuristic_Centro_Historico.localhost {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/top12Servicios", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet top12Servicios() {
-            object[] results = this.Invoke("top12Servicios", new object[0]);
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/topServicios", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet topServicios() {
+            object[] results = this.Invoke("topServicios", new object[0]);
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void top12ServiciosAsync() {
-            this.top12ServiciosAsync(null);
+        public void topServiciosAsync() {
+            this.topServiciosAsync(null);
         }
         
         /// <remarks/>
-        public void top12ServiciosAsync(object userState) {
-            if ((this.top12ServiciosOperationCompleted == null)) {
-                this.top12ServiciosOperationCompleted = new System.Threading.SendOrPostCallback(this.Ontop12ServiciosOperationCompleted);
+        public void topServiciosAsync(object userState) {
+            if ((this.topServiciosOperationCompleted == null)) {
+                this.topServiciosOperationCompleted = new System.Threading.SendOrPostCallback(this.OntopServiciosOperationCompleted);
             }
-            this.InvokeAsync("top12Servicios", new object[0], this.top12ServiciosOperationCompleted, userState);
+            this.InvokeAsync("topServicios", new object[0], this.topServiciosOperationCompleted, userState);
         }
         
-        private void Ontop12ServiciosOperationCompleted(object arg) {
-            if ((this.top12ServiciosCompleted != null)) {
+        private void OntopServiciosOperationCompleted(object arg) {
+            if ((this.topServiciosCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.top12ServiciosCompleted(this, new top12ServiciosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.topServiciosCompleted(this, new topServiciosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/verFotoServicio", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/verFotoSer", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] verFotoServicio(int idUser) {
-            object[] results = this.Invoke("verFotoServicio", new object[] {
-                        idUser});
+        public byte[] verFotoSer(int Ser) {
+            object[] results = this.Invoke("verFotoSer", new object[] {
+                        Ser});
             return ((byte[])(results[0]));
         }
         
         /// <remarks/>
-        public void verFotoServicioAsync(int idUser) {
-            this.verFotoServicioAsync(idUser, null);
+        public void verFotoSerAsync(int Ser) {
+            this.verFotoSerAsync(Ser, null);
         }
         
         /// <remarks/>
-        public void verFotoServicioAsync(int idUser, object userState) {
-            if ((this.verFotoServicioOperationCompleted == null)) {
-                this.verFotoServicioOperationCompleted = new System.Threading.SendOrPostCallback(this.OnverFotoServicioOperationCompleted);
+        public void verFotoSerAsync(int Ser, object userState) {
+            if ((this.verFotoSerOperationCompleted == null)) {
+                this.verFotoSerOperationCompleted = new System.Threading.SendOrPostCallback(this.OnverFotoSerOperationCompleted);
             }
-            this.InvokeAsync("verFotoServicio", new object[] {
-                        idUser}, this.verFotoServicioOperationCompleted, userState);
+            this.InvokeAsync("verFotoSer", new object[] {
+                        Ser}, this.verFotoSerOperationCompleted, userState);
         }
         
-        private void OnverFotoServicioOperationCompleted(object arg) {
-            if ((this.verFotoServicioCompleted != null)) {
+        private void OnverFotoSerOperationCompleted(object arg) {
+            if ((this.verFotoSerCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.verFotoServicioCompleted(this, new verFotoServicioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.verFotoSerCompleted(this, new verFotoSerCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3100,6 +3134,32 @@ namespace MCTuristic_Centro_Historico.localhost {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void LoginUsuarioCompletedEventHandler(object sender, LoginUsuarioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class LoginUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal LoginUsuarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataTable Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void EliminarDireccionCompletedEventHandler(object sender, EliminarDireccionCompletedEventArgs e);
     
     /// <remarks/>
@@ -3490,17 +3550,17 @@ namespace MCTuristic_Centro_Historico.localhost {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
-    public delegate void top12ServiciosCompletedEventHandler(object sender, top12ServiciosCompletedEventArgs e);
+    public delegate void topServiciosCompletedEventHandler(object sender, topServiciosCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class top12ServiciosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class topServiciosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal top12ServiciosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal topServiciosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -3516,17 +3576,17 @@ namespace MCTuristic_Centro_Historico.localhost {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
-    public delegate void verFotoServicioCompletedEventHandler(object sender, verFotoServicioCompletedEventArgs e);
+    public delegate void verFotoSerCompletedEventHandler(object sender, verFotoSerCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class verFotoServicioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class verFotoSerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal verFotoServicioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal verFotoSerCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
