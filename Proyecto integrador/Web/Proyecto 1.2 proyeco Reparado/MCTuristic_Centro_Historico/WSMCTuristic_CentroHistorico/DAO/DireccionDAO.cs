@@ -128,7 +128,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             oDireccion = (BO.DireccionBO)obj;
 
             cmd.Connection = conn.Establecer();
-            cmd.CommandText = "insertar_direcciono";
+            cmd.CommandText = "insertar_direccion";
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@Calle", SqlDbType.VarChar).Value = oDireccion.Calle;

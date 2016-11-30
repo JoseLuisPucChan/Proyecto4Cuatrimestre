@@ -45,8 +45,14 @@ namespace WSMCTuristic_CentroHistorico.Services
             oAdministrador = new DAO.AdministradorDAO();
             return oAdministrador.ver_administradro_administradro();
         }
-        
 
+        public string id_admin()
+        {
+            string res = "";
+            oAdministrador = new DAO.AdministradorDAO();
+            res = oAdministrador.Obtenerid_admin();
+            return res;
+        }
         
     }
 }
