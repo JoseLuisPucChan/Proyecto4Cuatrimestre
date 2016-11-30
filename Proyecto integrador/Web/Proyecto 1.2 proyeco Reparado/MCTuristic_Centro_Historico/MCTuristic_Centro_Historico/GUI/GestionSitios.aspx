@@ -124,7 +124,57 @@
                         <asp:TextBox ID="txtLat" runat="server" Visible="false"></asp:TextBox>
                         <asp:TextBox ID="txtlon" runat="server" Visible="false"></asp:TextBox>
                         <div class="example-box-wrapper">
-                            <div id="map-basic" style="height: 300px;"></div>
+                            <div id="map-basic" style="height: 300px;">
+                                <style>html, body, #map {width:100%;height: 100%; margin: 0; padding: 0;}</style>
+                        <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/native/core.native.css" />
+                        <script src="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/core.abstract.js" type="text/javascript">
+                        </script>
+                        <script src="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/core.abstract-helper.js" type="text/javascript">
+                        </script>
+                        <script src="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/core.js" type="text/javascript">
+                        </script>
+                        <script src="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/native/core.native.js" type="text/javascript">
+                        </script>
+                        <script src="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/native/core.native-ui.js" type="text/javascript">
+                        </script>
+                        <script src="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/native/core.native-helper.js" type="text/javascript">
+                        </script>
+                        <script src="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/native/core.native-marker.js" type="text/javascript">
+                        </script>
+                        <script src="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/native/core.native-infoWindow.js" type="text/javascript">
+                        </script>
+                        <script src="https://cdn.rawgit.com/markkr125/jsmaps/v0.0.15/library/native/core.native-vector.js" type="text/javascript">
+                        </script>
+
+                                 <script type='text/javascript'>
+                                     jsMaps.loader(function () {
+                                         var tiles = new jsMaps.Native.Tiles();
+                                         tiles.addTileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", ['a', 'b', 'c'], '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.', 'OpenStreetMap');
+                                         tiles.addTileLayer("http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png", ['otile1', 'otile2', 'otile3', 'otile4'], '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="https://developer.mapquest.com/content/osm/mq_logo.png">', 'Map Quest');
+                                         tiles.addTileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg", ['oatile1', 'oatile2', 'oatile3', 'oatile4'], '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Tiles courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="https://developer.mapquest.com/content/osm/mq_logo.png">', 'Map Quest Satellite', 19);
+
+                                         var map = jsMaps.api.init(
+                                                 '#map',
+                                                 'native',
+                                                 {
+                                                     center: {
+                                                         latitude: 20.96619031679367,
+                                                         longitude: -89.62263481166997
+                                                     },
+                                                     zoom: 16,
+                                                     mouse_scroll: true,
+                                                     zoom_control: true,
+                                                     map_type: true
+                                                 }, tiles
+                                         );
+       
+                                         jsMaps.api.marker(map, { position: { lat: 20.967131137925147, lng: -89.62250740674176 }, title: 'Catedral Merida', draggable: true });
+                                         jsMaps.api.marker(map, { position: { lat: 20.966402067250705, lng: -89.62383107689061 }, title: 'Casa Montejo', draggable: true });
+                                     });
+</script>
+
+<div id='map'>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-12 form-group">
