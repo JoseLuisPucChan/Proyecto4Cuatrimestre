@@ -233,8 +233,9 @@
 </ul>
 </div>
 </div>
-    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+   
+   
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 <div class="login">
 <h2><font><font>Agregar Foto</font></font></h2>
 <form method="post" action="#">
@@ -243,10 +244,9 @@
 <li>
 <label><font><font><h3><i class="glyph-icon icon-image"></i>Foto*</h3></font></font></label>
    
-                            <asp:Image ID="imgFoto" runat="server" Width="450" Height="300" alt="" />
-                            <asp:FileUpload ID="fuFoto" runat="server" accept=" image/jpeg, image/png" />
-
-    <asp:Button ID="btnVer" runat="server" Text="Visualizar imagen" CssClass="btn btn-purple" OnClick="btnVer_Click1" />
+                            <asp:Image ID="imgFoto1" runat="server" Width="450" Height="300" alt="" />
+        <asp:FileUpload ID="fuFoto1" runat="server" accept=" image/jpeg, image/png" />
+        <asp:Button ID="btnVer" runat="server"  Text="Visualizar imagen" CssClass="btn btn-purple" OnClick="btnVer_Click" />
    <br />
      <%-- <script type="text/javascript">
           function showimagepreview(input) {
@@ -276,17 +276,15 @@
                             
 </ul>
 </div>
-</div>
+</div>   
     
+
  
 </div>
 </div>
 </section>
 </div>
-    
 <div class="gap"></div>
-
-     
  
 </asp:Content>
 

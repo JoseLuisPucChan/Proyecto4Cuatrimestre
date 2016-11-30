@@ -106,14 +106,14 @@ namespace MCTuristic_Centro_Historico.GUI
 
         private bool VerificarArchivoImg()
         {
-            if (fuFoto.HasFile)
+            if (fuFoto1.HasFile)
             {
-                string ext = System.IO.Path.GetExtension(fuFoto.FileName);
+                string ext = System.IO.Path.GetExtension(fuFoto1.FileName);
                 if (ext == ".jpeg" || ext == ".jpg" || ext == ".png")
                 {
                     //string path = Server.MapPath(@"\Recursos\");
                     //fu.SaveAs(path + fu.FileName);
-                    HttpPostedFile imagen = fuFoto.PostedFile;
+                    HttpPostedFile imagen = fuFoto1.PostedFile;
                     int tamaño = imagen.ContentLength;
                     Byte[] arreglo = new Byte[tamaño];
                     imagen.InputStream.Read(arreglo, 0, tamaño);
@@ -141,15 +141,14 @@ namespace MCTuristic_Centro_Historico.GUI
             return url;
         }
 
-        protected void btnVer_Click1(object sender, EventArgs e)
+     
+        protected void btnVer_Click(object sender, EventArgs e)
         {
             if (VerificarArchivoImg() == true)
             {
-                imgFoto.ImageUrl = (string)Session["Url"];
+                imgFoto1.ImageUrl = (string)Session["Url"];
             }
         }
-
-
         //    //public Image RecuperarImagen(string Imagen)
         //    //{
         //    //    // Convert Base64 String to byte[]
