@@ -179,7 +179,7 @@
                     <div class="col-lg-12 form-group">
                         <h3><i class="glyph-icon icon-image"></i>Foto</h3>
                         <button class="btn btn-primary" data-toggle="modal" data-target="#Direccion" type="button">Seleccionar foto</button>
-                        <div class="modal fade bs-example-modal-lg" id="Direccion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal fade bs-example-modal-lg" id="Direccion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" data-keyboard="false" data-backdrop="static">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -191,21 +191,11 @@
                                         <div class="col-lg-6">
                                                     <h3><i class="glyph-icon icon-tag"></i>Foto</h3>
                                                     <center>
-                                                        <asp:UpdatePanel ID="upImagen" runat="server" UpdateMode="Conditional">
-                                                            <ContentTemplate>
                                                         <asp:Image ID="imgEstablecimiento" runat="server"></asp:Image>
-                                                                </ContentTemplate>
-                                                            <Triggers> <asp:AsyncPostBackTrigger ControlID="subir" EventName="Click" /></Triggers>
-                                                            </asp:UpdatePanel>
                                                         </center>
                                                     <br />
-                                            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                                                <ContentTemplate>
                                                     <asp:FileUpload ID="fuFoto" CssClass="btn-primary" runat="server" Visible="true"/>
-                                                    <asp:Button ID="subir" Visible="false" runat="server" />
-                                                    <asp:Button ID="btnSubir" runat="server" CssClass="btn btn-primary" Text="Subir foto" OnClick="btnSubir_Click" />
-                                                </ContentTemplate>
-                                            </asp:UpdatePanel>
+                                                    <asp:Button ID="btnSubir" runat="server" CssClass="preview" Text="Subir foto" OnClick="btnSubir_Click" />
                                                     <div class="col-lg-12">
                                             <div class="pull-right">
                                                 <asp:Button ID="btnAceptar" CssClass="btn btn-primary" runat="server" Text="Aceptar" />
@@ -239,7 +229,7 @@
                         <h3><i class="glyph-icon icon-table"></i>Tabla de datos</h3>
                         <asp:GridView ID="gvDatos" runat="server" CssClass="table-bordered form-control"></asp:GridView>
                     </div>
-                                
+                              </div>  
                 </div>
             </div>
         </div>
