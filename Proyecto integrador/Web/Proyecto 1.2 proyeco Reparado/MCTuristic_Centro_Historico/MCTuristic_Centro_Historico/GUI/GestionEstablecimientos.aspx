@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/mpBase.Master" AutoEventWireup="true" CodeBehind="GestionEstablecimientos.aspx.cs" Inherits="MCTuristic_Centro_Historico.GUI.GestionEstablecimientos" %>
+
+<%@ Register Assembly="DevExpress.Web.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="cphTituloPagina" runat="server">
     Gestion de establecimientos
 </asp:Content>
@@ -47,112 +50,18 @@
     </asp:PlaceHolder>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphBody" runat="server">
-    <script type="text/javascript">
-            function GurdarEstablecimiento() {
-                var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'telefono': '" + $("#<%=txtTelefono.ClientID%>")[0].value + "', 'facebook': '" + $("#<%=txtFacebook.ClientID%>")[0].value + "', 'abrir': '" + $("#<%=txtAbrir.ClientID%>")[0].value + "', 'cerrar': '" + $("#<%=txtCerrar.ClientID%>")[0].value + "', 'latitud': '" + $("#<%=txtLatitud.ClientID%>")[0].value + "', 'longitud': '" + $("#<%=txtLongitud.ClientID%>")[0].value + "'}  ";
-                $.ajax({
-                    type: "POST",
-                    url: "GestionEstablecimientos.aspx/GuardarEstablecimiento",
-                    data: actionData,
-                    contentType: "application/json; charset=utf-8",
-                    dataType: "json",
-                    success: OnSuccess,
-                    failure: function (response) {
-                        alert(response.d);
-                    }
-                });
-            }
-            function OnSuccess(response) {
-                alert("Respuesta " + response.d);
-            }
-    </script>
-    <%--<script runat="server">
-        protected void btnServicios_Click(object sender, EventArgs e)
-        {
-            Session["IdEstablecimiento"] = txtIdEstablecimiento.Text;
-            Response.Redirect("GestionServicios.aspx");
-        }
-
-        private bool VerificarArchivoImg()
-        {
-            if (fuFoto.HasFile)
-            {
-                string ext = System.IO.Path.GetExtension(fuFoto.FileName);
-                if (ext == ".jpeg" || ext == ".jpg" || ext == ".png")
-                {
-                    //string path = Server.MapPath(@"\Recursos\");
-                    //fu.SaveAs(path + fu.FileName);
-                    HttpPostedFile imagen = fuFoto.PostedFile;
-                    int tamaño = imagen.ContentLength;
-                    Byte[] arreglo = new Byte[tamaño];
-                    imagen.InputStream.Read(arreglo, 0, tamaño);
-                    Session["arreglo"] = arreglo;
-                    Session["Url"] = ConvertirImagenStringWebUrl(arreglo, ext);
-                }
-                return true;
-            }
-            else
-            {
-                Response.Write("<h3>Solo puedes seleccionar archivos tipo .jpeg , .jpg o .png</h3>");
-            }
-            return false;
-        }
-        public string ConvertirImagenStringWeb(Byte[] arreglo)
-        {
-            string imagen = Convert.ToBase64String(arreglo, 0, arreglo.Length);
-            return imagen;
-        }
-        public string ConvertirImagenStringWebUrl(Byte[] arreglo,
- string extension)
-        {
-            string url = Convert.ToBase64String(arreglo, 0, arreglo.Length);
-            url = "data:image/" + extension + "jpeg;base64," + url;
-            return url;
-        }
-        
-
-        protected void btnSubir_Click(object sender, EventArgs e)
-        {
-            if (VerificarArchivoImg() == true)
-            {
-                imgEstablecimiento.ImageUrl = (string)Session["Url"];
-            }
-        }
-
-        protected void lbtnGuardar_Click(object sender, EventArgs e)
-        {
-            
-            MCTuristic_Centro_Historico.localhost.WsMCTuristic owebService = new MCTuristic_Centro_Historico.localhost.WsMCTuristic();
-            MCTuristic_Centro_Historico.localhost.EstablecimientoBO oEstablecimientoBO = new MCTuristic_Centro_Historico.localhost.EstablecimientoBO();
-            oEstablecimientoBO.NombreEstable = txtNombre.Text.Trim();
-            oEstablecimientoBO.TelefonoEstable = txtTelefono.Text.Trim();
-            oEstablecimientoBO.PagFacebook = txtFacebook.Text.Trim();
-            oEstablecimientoBO.HoraInicioEstable = txtAbrir.Text.Trim();
-            oEstablecimientoBO.HoraCierreEstable = txtCerrar.Text.Trim();
-            oEstablecimientoBO.Latitud = Convert.ToDecimal(27.000);
-            oEstablecimientoBO.Longitud = Convert.ToDecimal(68.000);
-            oEstablecimientoBO.Foto = (byte[])Session["arreglo"];
-            int i = owebService.InsertarEstablecimiento(oEstablecimientoBO);
-            if (i > 0)
-            {
-                
-            }
-            
-        }
-    </script>--%>
-    
     <div class="row">
         <div class="col-lg-12">
             <div class="panel">
                 <div class="panel-body">
-                    
+
                     <h3 class="text-center font-bold"><i class="glyph-icon icon-building"></i>Control de establecimientos </h3>
                     <div class="divider"></div>
                     <asp:LinkButton ID="lbtnNuevo" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-plus-circle"></i> Nuevo</asp:LinkButton>
                     <div class="divider"></div>
                     <div class="col-lg-6">
                         <div class="form-group border-blue">
-                            
+
                             <asp:TextBox ID="txtIdEstablecimiento" runat="server" Visible="false"></asp:TextBox>
                             <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
                             <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control border-blue"></asp:TextBox>
@@ -162,10 +71,7 @@
                             <br />
                             <h3><i class="glyph-icon icon-facebook-square"></i>Facebook</h3>
                             <asp:TextBox ID="txtFacebook" runat="server" CssClass="form-control border-blue"></asp:TextBox>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group border-blue">
+                            <br />
                             <h3><i class="glyph-icon icon-sign-in"></i>Hora de apertura</h3>
                             <asp:TextBox ID="txtAbrir" runat="server" CssClass="form-control border-blue"></asp:TextBox>
                             <br />
@@ -176,66 +82,54 @@
                             <asp:Button ID="btnServicios" runat="server" Text="Ver servicios" CssClass="btn btn-primary" OnClick="btnServicios_Click" />
                         </div>
                     </div>
+                    <div class="col-lg-6">
+                        <div class="form-group border-blue">
+                            <h3><i class="glyph-icon icon-image"></i>Foto</h3>
+                            <center>
+                                <asp:Image ID="imgEstablecimiento" runat="server"></asp:Image>
+                            </center>
+                            <br />
+                            <asp:FileUpload ID="fuFoto" CssClass="btn-primary" runat="server" Visible="true" />
+                            <asp:Button ID="btnSubir" runat="server" CssClass="btn btn-primary" Text="Subir foto" OnClick="btnSubir_Click" />
+                        </div>
+                    </div>
                     <div class="col-lg-12 form-group">
-                        <h3><i class="glyph-icon icon-image"></i>Foto</h3>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#Direccion" type="button">Seleccionar foto</button>
-                        <div class="modal fade bs-example-modal-lg" id="Direccion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" data-keyboard="false" data-backdrop="static">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h3 class="modal-title"><b>Seleccionar foto del establecimiento</b></h3>
-                                    </div>
-                                    <div class="modal-body">
-                                
-                                        <div class="col-lg-6">
-                                                    <h3><i class="glyph-icon icon-tag"></i>Foto</h3>
-                                                    <center>
-                                                        <asp:Image ID="imgEstablecimiento" runat="server"></asp:Image>
-                                                        </center>
-                                                    <br />
-                                                    <asp:FileUpload ID="fuFoto" CssClass="btn-primary" runat="server" Visible="true"/>
-                                                    <asp:Button ID="btnSubir" runat="server" CssClass="preview" Text="Subir foto" OnClick="btnSubir_Click" />
-                                                    <div class="col-lg-12">
-                                            <div class="pull-right">
-                                                <asp:Button ID="btnAceptar" CssClass="btn btn-primary" runat="server" Text="Aceptar" />
-                                                <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
-                                            </div>
-                                        </div>
-        
-                                        </div>
-                                    <div class="modal-footer no-border">
-                                    </div>
-                                </div>
+                        <div class="col-lg-12 form-group">
+                            <asp:TextBox ID="txtLatitud" runat="server" Visible="false"></asp:TextBox>
+                            <asp:TextBox ID="txtLongitud" runat="server" Visible="false"></asp:TextBox>
+
+                            <h3><i class="glyph-icon icon-file-text"></i>Ubicación</h3>
+                            <div class="example-box-wrapper">
+                                <div id="map-basic" style="height: 300px;"></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12 form-group">
-                        <asp:TextBox ID="txtLatitud" runat="server" Visible="false"></asp:TextBox>
-                        <asp:TextBox ID="txtLongitud" runat="server" Visible="false"></asp:TextBox>
-                        
-                        <h3><i class="glyph-icon icon-file-text"></i>Ubicación</h3>
-                        <div class="example-box-wrapper">
-                            <div id="map-basic" style="height: 300px;"></div>
+                        <div class="col-lg-12">
+                            <div class="divider"></div>
+
+                            <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnGuardar_Click"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
+                            <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
+                            <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
+                            <div class="divider"></div>
+                            <h3><i class="glyph-icon icon-table"></i>Tabla de datos</h3>
+                            <dx:ASPxGridView ID="gvTabla" runat="server" CssClass="col-lg-12" Theme="iOS" OnFocusedRowChanged="gvTabla_FocusedRowChanged" OnSelectionChanged="gvTabla_SelectionChanged">
+
+                                <SettingsBehavior AllowSelectByRowClick="True" AllowSelectSingleRowOnly="True" />
+<SettingsCommandButton>
+<ShowAdaptiveDetailButton ButtonType="Image"></ShowAdaptiveDetailButton>
+
+<HideAdaptiveDetailButton ButtonType="Image"></HideAdaptiveDetailButton>
+</SettingsCommandButton>
+
+                            </dx:ASPxGridView>
                         </div>
-                    </div>
-                    <div class="col-lg-12 form-group">
                         <div class="divider"></div>
-        
-                        <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnGuardar_Click" ><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
-                        <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
-                        <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
-                        <div class="divider"></div>
-                        <h3><i class="glyph-icon icon-table"></i>Tabla de datos</h3>
-                        <asp:GridView ID="gvDatos" runat="server" CssClass="table-bordered form-control"></asp:GridView>
                     </div>
-                              </div>  
                 </div>
             </div>
         </div>
     </div>
-        
-        
+
+
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphBarraLat" runat="server">
     <div id="page-sidebar">
