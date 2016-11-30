@@ -46,6 +46,10 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private System.Threading.SendOrPostCallback ModificarDireccionOperationCompleted;
         
+        private System.Threading.SendOrPostCallback InsertarDireccion_adminOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ModificarDireccion_adminOperationCompleted;
+        
         private System.Threading.SendOrPostCallback InsertarEstablecimientoOperationCompleted;
         
         private System.Threading.SendOrPostCallback ModificarEstablecimientoOperationCompleted;
@@ -111,6 +115,8 @@ namespace MCTuristic_Centro_Historico.localhost {
         private System.Threading.SendOrPostCallback EliminarContactanosOperationCompleted;
         
         private System.Threading.SendOrPostCallback LoginOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ver_Admin_adminOperationCompleted;
         
         private System.Threading.SendOrPostCallback InsertarAdministradorOperationCompleted;
         
@@ -191,6 +197,12 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         /// <remarks/>
         public event ModificarDireccionCompletedEventHandler ModificarDireccionCompleted;
+        
+        /// <remarks/>
+        public event InsertarDireccion_adminCompletedEventHandler InsertarDireccion_adminCompleted;
+        
+        /// <remarks/>
+        public event ModificarDireccion_adminCompletedEventHandler ModificarDireccion_adminCompleted;
         
         /// <remarks/>
         public event InsertarEstablecimientoCompletedEventHandler InsertarEstablecimientoCompleted;
@@ -290,6 +302,9 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         /// <remarks/>
         public event LoginCompletedEventHandler LoginCompleted;
+        
+        /// <remarks/>
+        public event ver_Admin_adminCompletedEventHandler ver_Admin_adminCompleted;
         
         /// <remarks/>
         public event InsertarAdministradorCompletedEventHandler InsertarAdministradorCompleted;
@@ -545,6 +560,64 @@ namespace MCTuristic_Centro_Historico.localhost {
             if ((this.ModificarDireccionCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ModificarDireccionCompleted(this, new ModificarDireccionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarDireccion_admin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int InsertarDireccion_admin(DireccionBO obj) {
+            object[] results = this.Invoke("InsertarDireccion_admin", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertarDireccion_adminAsync(DireccionBO obj) {
+            this.InsertarDireccion_adminAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void InsertarDireccion_adminAsync(DireccionBO obj, object userState) {
+            if ((this.InsertarDireccion_adminOperationCompleted == null)) {
+                this.InsertarDireccion_adminOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertarDireccion_adminOperationCompleted);
+            }
+            this.InvokeAsync("InsertarDireccion_admin", new object[] {
+                        obj}, this.InsertarDireccion_adminOperationCompleted, userState);
+        }
+        
+        private void OnInsertarDireccion_adminOperationCompleted(object arg) {
+            if ((this.InsertarDireccion_adminCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertarDireccion_adminCompleted(this, new InsertarDireccion_adminCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ModificarDireccion_admin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int ModificarDireccion_admin(DireccionBO obj) {
+            object[] results = this.Invoke("ModificarDireccion_admin", new object[] {
+                        obj});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ModificarDireccion_adminAsync(DireccionBO obj) {
+            this.ModificarDireccion_adminAsync(obj, null);
+        }
+        
+        /// <remarks/>
+        public void ModificarDireccion_adminAsync(DireccionBO obj, object userState) {
+            if ((this.ModificarDireccion_adminOperationCompleted == null)) {
+                this.ModificarDireccion_adminOperationCompleted = new System.Threading.SendOrPostCallback(this.OnModificarDireccion_adminOperationCompleted);
+            }
+            this.InvokeAsync("ModificarDireccion_admin", new object[] {
+                        obj}, this.ModificarDireccion_adminOperationCompleted, userState);
+        }
+        
+        private void OnModificarDireccion_adminOperationCompleted(object arg) {
+            if ((this.ModificarDireccion_adminCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ModificarDireccion_adminCompleted(this, new ModificarDireccion_adminCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1501,6 +1574,33 @@ namespace MCTuristic_Centro_Historico.localhost {
             if ((this.LoginCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.LoginCompleted(this, new LoginCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ver_Admin_admin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet ver_Admin_admin() {
+            object[] results = this.Invoke("ver_Admin_admin", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ver_Admin_adminAsync() {
+            this.ver_Admin_adminAsync(null);
+        }
+        
+        /// <remarks/>
+        public void ver_Admin_adminAsync(object userState) {
+            if ((this.ver_Admin_adminOperationCompleted == null)) {
+                this.ver_Admin_adminOperationCompleted = new System.Threading.SendOrPostCallback(this.Onver_Admin_adminOperationCompleted);
+            }
+            this.InvokeAsync("ver_Admin_admin", new object[0], this.ver_Admin_adminOperationCompleted, userState);
+        }
+        
+        private void Onver_Admin_adminOperationCompleted(object arg) {
+            if ((this.ver_Admin_adminCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ver_Admin_adminCompleted(this, new ver_Admin_adminCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3238,6 +3338,58 @@ namespace MCTuristic_Centro_Historico.localhost {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertarDireccion_adminCompletedEventHandler(object sender, InsertarDireccion_adminCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertarDireccion_adminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertarDireccion_adminCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ModificarDireccion_adminCompletedEventHandler(object sender, ModificarDireccion_adminCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ModificarDireccion_adminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ModificarDireccion_adminCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void InsertarEstablecimientoCompletedEventHandler(object sender, InsertarEstablecimientoCompletedEventArgs e);
     
     /// <remarks/>
@@ -4090,6 +4242,32 @@ namespace MCTuristic_Centro_Historico.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((System.Data.DataTable)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void ver_Admin_adminCompletedEventHandler(object sender, ver_Admin_adminCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ver_Admin_adminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ver_Admin_adminCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
             }
         }
     }
