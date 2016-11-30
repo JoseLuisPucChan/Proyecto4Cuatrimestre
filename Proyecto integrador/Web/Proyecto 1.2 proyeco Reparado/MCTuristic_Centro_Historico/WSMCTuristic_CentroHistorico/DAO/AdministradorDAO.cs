@@ -145,6 +145,13 @@ namespace WSMCTuristic_CentroHistorico.DAO
         }
 
 
+        public DataSet ver_administradro_administradro()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC ver_admin_admin";
+            return conn.TablaDS(sql);
+        }
 
 
 

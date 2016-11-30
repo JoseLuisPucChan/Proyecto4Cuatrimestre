@@ -105,6 +105,26 @@ namespace WSMCTuristic_CentroHistorico.UI
             return oDireccionCTRL.ModificarDireccion(oDireccion);
         }
 
+        //......Admin
+        [WebMethod]
+        public int InsertarDireccion_admin(DireccionBO obj)
+        {
+            DireccionBO oDireccion = new DireccionBO();
+            oDireccion = obj;
+            oDireccionCTRL = new Services.CtrlDireccion();
+            return oDireccionCTRL.InsertarDireccion(oDireccion);
+        }
+        [WebMethod]
+        public int ModificarDireccion_admin(DireccionBO obj)
+        {
+            DireccionBO oDireccion = new DireccionBO();
+            oDireccion = obj;
+
+            oDireccionCTRL = new Services.CtrlDireccion();
+            return oDireccionCTRL.ModificarDireccion_admin(oDireccion);
+        }
+
+
         //---------------------ABC Establecimiento-----------------------
         [WebMethod]
         public int InsertarEstablecimiento(BO.EstablecimientoBO obj)
@@ -389,8 +409,12 @@ namespace WSMCTuristic_CentroHistorico.UI
             oAdministradorCTRL = new Services.CtrlAdministrador();
             return oAdministradorCTRL.LoginUsuario(oAdministrador);
         }
-
-
+        [WebMethod]
+        public DataSet ver_Admin_admin()
+        {
+            oAdministradorCTRL = new Services.CtrlAdministrador();
+            return oAdministradorCTRL.ver_admi_admin();
+        }
 
         [WebMethod]
         public int InsertarAdministrador(AdministradorBO obj)

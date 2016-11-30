@@ -169,12 +169,12 @@ Create procedure insertar_direccion
 	@Colonia varchar(50),
 	@Estado varchar(50),
 	@CodPostal varchar(50),
-	@IdUsuario int,
 	@IdAdministrador int
 )
 as
 INSERT INTO Direccion (Calle,Cruzamiento,Numero,Descripcion,Colonia,Estado,CodPostal,IdUsuario,IdAdministrador)
-VALUES (@Calle,@Cruzamiento,@Numero,@Descripcion,@Colonia,@Estado,@CodPostal,@IdUsuario,@IdAdministrador)
+VALUES (@Calle,@Cruzamiento,@Numero,@Descripcion,@Colonia,@Estado,@CodPostal,null,@IdAdministrador)
+
 go
 -- Actualizar direccion
 Create procedure actualizar_direccion
@@ -187,11 +187,10 @@ Create procedure actualizar_direccion
 	@Colonia varchar(50),
 	@Estado varchar(50),
 	@CodPostal varchar(50),
-	@IdUsuario int,
 	@IdAdministrador int
 )
 as
-UPDATE Direccion SET  Calle = @Calle,Cruzamiento = @Cruzamiento,Numero = @Numero,Descripcion = @Descripcion,Colonia = @Colonia,Estado = @Estado,CodPostal = @CodPostal,IdUsuario = @IdUsuario,IdAdministrador = @IdAdministrador
+UPDATE Direccion SET  Calle = @Calle,Cruzamiento = @Cruzamiento,Numero = @Numero,Descripcion = @Descripcion,Colonia = @Colonia,Estado = @Estado,CodPostal = @CodPostal,IdUsuario = null,IdAdministrador = @IdAdministrador
 where idDireccion = @idDireccion
 go
 

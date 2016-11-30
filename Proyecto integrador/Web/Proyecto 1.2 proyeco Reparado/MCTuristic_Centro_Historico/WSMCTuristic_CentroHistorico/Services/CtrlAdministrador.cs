@@ -33,6 +33,11 @@ namespace WSMCTuristic_CentroHistorico.Services
             oAdministrador = new DAO.AdministradorDAO();
             return oAdministrador.Login(obj);
         }
+        public DataSet ver_admi_admin()
+        {
+            oAdministrador = new DAO.AdministradorDAO();
+            return oAdministrador.ver_administradro_administradro();
+        }
         
         
     }
