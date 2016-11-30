@@ -68,8 +68,6 @@ namespace MCTuristic_Centro_Historico.GUI
         private void CargarAdmin()
         {
             localhost.WsMCTuristic owebService = new localhost.WsMCTuristic();
-            //gvDatos.DataSource = owebService.ver_Admin_admin();
-            //gvDatos.DataBind();
             ASPxGridView1.DataSource = owebService.ver_Admin_admin();
             ASPxGridView1.DataBind();
         }

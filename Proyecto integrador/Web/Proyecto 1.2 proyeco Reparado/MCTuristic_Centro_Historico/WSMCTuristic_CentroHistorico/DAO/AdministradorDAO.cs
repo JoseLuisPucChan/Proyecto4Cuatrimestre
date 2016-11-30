@@ -144,8 +144,6 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
         }
 
-
-<<<<<<< HEAD
         //Agregue el dataset y el arreglo de esta tabla. Diosemir Nah
         public DataSet AdministradorDS()
         {
@@ -154,7 +152,6 @@ namespace WSMCTuristic_CentroHistorico.DAO
             sql = "EXEC primero12registros";
             return conn.TablaDS(sql);
         }
-=======
         public DataSet ver_administradro_administradro()
         {
             conn = new Conexion();
@@ -163,8 +160,22 @@ namespace WSMCTuristic_CentroHistorico.DAO
             return conn.TablaDS(sql);
         }
 
-
->>>>>>> origin/master
+        public string Obtenerid_user()
+        {
+            string id = "";
+            cmd = new SqlCommand();
+            conn = new Conexion();
+            cmd.Connection = conn.Establecer();
+            cmd.CommandText = "usuario_reciente";
+            cmd.CommandType = CommandType.StoredProcedure;
+            conn.Abrir();
+            SqlDataReader Leer = cmd.ExecuteReader();
+            if (Leer.Read() == true)
+            {
+                id = Leer["Maximo"].ToString();
+            }
+            return id;
+        }
 
 
 
