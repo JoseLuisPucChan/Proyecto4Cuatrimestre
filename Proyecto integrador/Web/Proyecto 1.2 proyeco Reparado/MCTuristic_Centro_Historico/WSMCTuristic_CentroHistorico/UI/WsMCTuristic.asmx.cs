@@ -290,7 +290,7 @@ namespace WSMCTuristic_CentroHistorico.UI
         }
         [WebMethod]
         //Nuevo webmethod Diosemir Nah
-        public DataSet topServicios()
+        public DataSet topServicios_admin()
         {
             oServicioCTRL = new Services.CtrlServicio();
             return oServicioCTRL.topServicios_admin();

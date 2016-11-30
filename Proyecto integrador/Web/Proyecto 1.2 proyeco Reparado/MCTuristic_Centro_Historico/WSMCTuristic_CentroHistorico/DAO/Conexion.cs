@@ -15,7 +15,9 @@ namespace WSMCTuristic_CentroHistorico.DAO
         public SqlConnection Establecer()
         {
             //sql = "Data source = ANDRE-PC\\SQLSERVER; Initial Catalog=MCTuristic; Integrated Security=True";
-            sql = "Data source =25.65.245.232; Initial Catalog=MCTuristic;User id=user;password=1234";
+            //sql = "Data source =25.65.245.232; Initial Catalog=MCTuristic;User id=user;password=1234";
+            sql = "Data source = LAPTOP-U1DIF2PF\\SQLSERVER; Initial Catalog=MCTuristic; Integrated Security=True";
+            
             conn = new SqlConnection(sql);
             return conn;
         }

@@ -227,6 +227,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="establecimiento_AdminWS">
+        <s:complexType />
+      </s:element>
+      <s:element name="establecimiento_AdminWSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="establecimiento_AdminWSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="InsertarEvento">
         <s:complexType>
           <s:sequence>
@@ -392,6 +409,23 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="topServiciosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="topServicios_admin">
+        <s:complexType />
+      </s:element>
+      <s:element name="topServicios_adminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="topServicios_adminResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -992,6 +1026,12 @@
   <wsdl:message name="EliminarEstablecimientoSoapOut">
     <wsdl:part name="parameters" element="tns:EliminarEstablecimientoResponse" />
   </wsdl:message>
+  <wsdl:message name="establecimiento_AdminWSSoapIn">
+    <wsdl:part name="parameters" element="tns:establecimiento_AdminWS" />
+  </wsdl:message>
+  <wsdl:message name="establecimiento_AdminWSSoapOut">
+    <wsdl:part name="parameters" element="tns:establecimiento_AdminWSResponse" />
+  </wsdl:message>
   <wsdl:message name="InsertarEventoSoapIn">
     <wsdl:part name="parameters" element="tns:InsertarEvento" />
   </wsdl:message>
@@ -1051,6 +1091,12 @@
   </wsdl:message>
   <wsdl:message name="topServiciosSoapOut">
     <wsdl:part name="parameters" element="tns:topServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="topServicios_adminSoapIn">
+    <wsdl:part name="parameters" element="tns:topServicios_admin" />
+  </wsdl:message>
+  <wsdl:message name="topServicios_adminSoapOut">
+    <wsdl:part name="parameters" element="tns:topServicios_adminResponse" />
   </wsdl:message>
   <wsdl:message name="verFotoSerSoapIn">
     <wsdl:part name="parameters" element="tns:verFotoSer" />
@@ -1285,6 +1331,10 @@
       <wsdl:input message="tns:EliminarEstablecimientoSoapIn" />
       <wsdl:output message="tns:EliminarEstablecimientoSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="establecimiento_AdminWS">
+      <wsdl:input message="tns:establecimiento_AdminWSSoapIn" />
+      <wsdl:output message="tns:establecimiento_AdminWSSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="InsertarEvento">
       <wsdl:input message="tns:InsertarEventoSoapIn" />
       <wsdl:output message="tns:InsertarEventoSoapOut" />
@@ -1324,6 +1374,10 @@
     <wsdl:operation name="topServicios">
       <wsdl:input message="tns:topServiciosSoapIn" />
       <wsdl:output message="tns:topServiciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="topServicios_admin">
+      <wsdl:input message="tns:topServicios_adminSoapIn" />
+      <wsdl:output message="tns:topServicios_adminSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="verFotoSer">
       <wsdl:input message="tns:verFotoSerSoapIn" />
@@ -1565,6 +1619,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="establecimiento_AdminWS">
+      <soap:operation soapAction="http://tempuri.org/establecimiento_AdminWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertarEvento">
       <soap:operation soapAction="http://tempuri.org/InsertarEvento" style="document" />
       <wsdl:input>
@@ -1648,6 +1711,15 @@
     </wsdl:operation>
     <wsdl:operation name="topServicios">
       <soap:operation soapAction="http://tempuri.org/topServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="topServicios_admin">
+      <soap:operation soapAction="http://tempuri.org/topServicios_admin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2045,6 +2117,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="establecimiento_AdminWS">
+      <soap12:operation soapAction="http://tempuri.org/establecimiento_AdminWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertarEvento">
       <soap12:operation soapAction="http://tempuri.org/InsertarEvento" style="document" />
       <wsdl:input>
@@ -2128,6 +2209,15 @@
     </wsdl:operation>
     <wsdl:operation name="topServicios">
       <soap12:operation soapAction="http://tempuri.org/topServicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="topServicios_admin">
+      <soap12:operation soapAction="http://tempuri.org/topServicios_admin" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

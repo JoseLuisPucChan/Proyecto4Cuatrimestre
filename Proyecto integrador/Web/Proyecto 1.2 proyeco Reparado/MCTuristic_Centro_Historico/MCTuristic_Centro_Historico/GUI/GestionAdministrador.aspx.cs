@@ -12,7 +12,7 @@ namespace MCTuristic_Centro_Historico.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarAdmin();
+           
         }
         [WebMethod]
         public static string GuardarAdmin(string nombre, string apellido, string correo, string contra, string telefono, string fecha)
@@ -70,6 +70,22 @@ namespace MCTuristic_Centro_Historico.GUI
             localhost.WsMCTuristic owebService = new localhost.WsMCTuristic();
             ASPxGridView1.DataSource = owebService.ver_Admin_admin();
             ASPxGridView1.DataBind();
+        }
+
+        protected void lbtnModificar_Click(object sender, EventArgs e)
+        {
+            CargarAdmin();
+        }
+
+        protected void ASPxGridView1_RowCommand(object sender, DevExpress.Web.ASPxGridViewRowCommandEventArgs e)
+        {
+            if(e.CommandArgs.CommandArgument.ToString()=="Editar")
+            {
+                 txtNombre.Text = ASPxGridView1.GetRowValues(e.VisibleIndex, "Nombre").ToString();
+               
+
+                
+            }
         }
 
     }

@@ -56,6 +56,8 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         private System.Threading.SendOrPostCallback EliminarEstablecimientoOperationCompleted;
         
+        private System.Threading.SendOrPostCallback establecimiento_AdminWSOperationCompleted;
+        
         private System.Threading.SendOrPostCallback InsertarEventoOperationCompleted;
         
         private System.Threading.SendOrPostCallback ModificarEventoOperationCompleted;
@@ -75,6 +77,8 @@ namespace MCTuristic_Centro_Historico.localhost {
         private System.Threading.SendOrPostCallback EliminarServicioOperationCompleted;
         
         private System.Threading.SendOrPostCallback topServiciosOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback topServicios_adminOperationCompleted;
         
         private System.Threading.SendOrPostCallback verFotoSerOperationCompleted;
         
@@ -214,6 +218,9 @@ namespace MCTuristic_Centro_Historico.localhost {
         public event EliminarEstablecimientoCompletedEventHandler EliminarEstablecimientoCompleted;
         
         /// <remarks/>
+        public event establecimiento_AdminWSCompletedEventHandler establecimiento_AdminWSCompleted;
+        
+        /// <remarks/>
         public event InsertarEventoCompletedEventHandler InsertarEventoCompleted;
         
         /// <remarks/>
@@ -242,6 +249,9 @@ namespace MCTuristic_Centro_Historico.localhost {
         
         /// <remarks/>
         public event topServiciosCompletedEventHandler topServiciosCompleted;
+        
+        /// <remarks/>
+        public event topServicios_adminCompletedEventHandler topServicios_adminCompleted;
         
         /// <remarks/>
         public event verFotoSerCompletedEventHandler verFotoSerCompleted;
@@ -709,6 +719,33 @@ namespace MCTuristic_Centro_Historico.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/establecimiento_AdminWS", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet establecimiento_AdminWS() {
+            object[] results = this.Invoke("establecimiento_AdminWS", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void establecimiento_AdminWSAsync() {
+            this.establecimiento_AdminWSAsync(null);
+        }
+        
+        /// <remarks/>
+        public void establecimiento_AdminWSAsync(object userState) {
+            if ((this.establecimiento_AdminWSOperationCompleted == null)) {
+                this.establecimiento_AdminWSOperationCompleted = new System.Threading.SendOrPostCallback(this.Onestablecimiento_AdminWSOperationCompleted);
+            }
+            this.InvokeAsync("establecimiento_AdminWS", new object[0], this.establecimiento_AdminWSOperationCompleted, userState);
+        }
+        
+        private void Onestablecimiento_AdminWSOperationCompleted(object arg) {
+            if ((this.establecimiento_AdminWSCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.establecimiento_AdminWSCompleted(this, new establecimiento_AdminWSCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertarEvento", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public int InsertarEvento(EventoBO obj) {
             object[] results = this.Invoke("InsertarEvento", new object[] {
@@ -993,6 +1030,33 @@ namespace MCTuristic_Centro_Historico.localhost {
             if ((this.topServiciosCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.topServiciosCompleted(this, new topServiciosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/topServicios_admin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet topServicios_admin() {
+            object[] results = this.Invoke("topServicios_admin", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void topServicios_adminAsync() {
+            this.topServicios_adminAsync(null);
+        }
+        
+        /// <remarks/>
+        public void topServicios_adminAsync(object userState) {
+            if ((this.topServicios_adminOperationCompleted == null)) {
+                this.topServicios_adminOperationCompleted = new System.Threading.SendOrPostCallback(this.OntopServicios_adminOperationCompleted);
+            }
+            this.InvokeAsync("topServicios_admin", new object[0], this.topServicios_adminOperationCompleted, userState);
+        }
+        
+        private void OntopServicios_adminOperationCompleted(object arg) {
+            if ((this.topServicios_adminCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.topServicios_adminCompleted(this, new topServicios_adminCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3468,6 +3532,32 @@ namespace MCTuristic_Centro_Historico.localhost {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void establecimiento_AdminWSCompletedEventHandler(object sender, establecimiento_AdminWSCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class establecimiento_AdminWSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal establecimiento_AdminWSCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void InsertarEventoCompletedEventHandler(object sender, InsertarEventoCompletedEventArgs e);
     
     /// <remarks/>
@@ -3713,6 +3803,32 @@ namespace MCTuristic_Centro_Historico.localhost {
         private object[] results;
         
         internal topServiciosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void topServicios_adminCompletedEventHandler(object sender, topServicios_adminCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class topServicios_adminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal topServicios_adminCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
