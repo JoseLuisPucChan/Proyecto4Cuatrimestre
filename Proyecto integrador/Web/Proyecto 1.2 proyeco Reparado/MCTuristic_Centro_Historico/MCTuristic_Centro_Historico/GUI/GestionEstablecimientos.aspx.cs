@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Services;
+using System.Data;
 
 namespace MCTuristic_Centro_Historico.GUI
 {
@@ -12,7 +13,17 @@ namespace MCTuristic_Centro_Historico.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            DataTable data = new DataTable();
+            data.Columns.Add("Hola");
+            data.Columns.Add("Estás?");
+            data.Columns.Add("Yo si");
+            data.Columns.Add("Ok");
+            data.Rows.Add("Soy nuevo", "Yo igual", "Yo no", "XD");
+            data.Rows.Add("nuevo", "Yo igual", "Yo no", "XD");
+            data.Rows.Add("vo", "Yo igual", "Yo no", "XD");
+            data.Rows.Add("Soy", "Yo igual", "Yo no", "XD");
+            gvTabla.DataSource = data;
+            gvTabla.DataBind();
         }
         protected void btnServicios_Click(object sender, EventArgs e)
         {
@@ -104,12 +115,27 @@ namespace MCTuristic_Centro_Historico.GUI
             oEstablecimientoBO.Latitud = Convert.ToDecimal(27.000);
             oEstablecimientoBO.Longitud = Convert.ToDecimal(68.000);
             oEstablecimientoBO.Foto = (byte[])Session["arreglo"];
+            oEstablecimientoBO.IdUsuario = 1;
             int i = owebService.InsertarEstablecimiento(oEstablecimientoBO);
             if (i > 0)
             {
                 
             }
             
+        }
+
+        protected void gvTabla_SelectionChanged(object sender, EventArgs e)
+        {
+            Int32 posicion = gvTabla.FocusedRowIndex;
+            DataRow row = gvTabla.GetDataRow(posicion);
+            txtNombre.Text = row.Table.Rows[0].ToString();
+        }
+
+        protected void gvTabla_FocusedRowChanged(object sender, EventArgs e)
+        {
+            Int32 posicion = gvTabla.FocusedRowIndex;
+             string[] hola = new string[] { };
+            txtNombre.Text = gvTabla.GetRowValues(posicion, "Hola").ToString();
         }
     }
 }
