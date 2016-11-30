@@ -110,5 +110,22 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
             return retorno;
         }
+        //Agregue el dataser y el metodo de imagen de esta tabla. Diosemir Nah
+        public DataSet Establecimiento_UserDS()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC ver_establecimiento_user";
+            return conn.TablaDS(sql);
+        }
+        public DataSet Establecimiento_AdminDS()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC ver_establecimiento_admin";
+            return conn.TablaDS(sql);
+        }
+        
+        
     }
 }

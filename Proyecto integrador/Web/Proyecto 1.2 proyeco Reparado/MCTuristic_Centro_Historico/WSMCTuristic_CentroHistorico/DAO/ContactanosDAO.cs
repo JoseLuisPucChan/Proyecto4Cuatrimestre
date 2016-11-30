@@ -103,5 +103,13 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
             return retorno;
         }
+        //Agregue el dataset de esta tabla. Diosemir Nah
+        public DataSet ContactanosDS()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC primero12registros";
+            return conn.TablaDS(sql);
+        }
     }
 }

@@ -145,8 +145,14 @@ namespace WSMCTuristic_CentroHistorico.DAO
         }
 
 
-
-
+        //Agregue el dataset y el arreglo de esta tabla. Diosemir Nah
+        public DataSet AdministradorDS()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC primero12registros";
+            return conn.TablaDS(sql);
+        }
 
 
 

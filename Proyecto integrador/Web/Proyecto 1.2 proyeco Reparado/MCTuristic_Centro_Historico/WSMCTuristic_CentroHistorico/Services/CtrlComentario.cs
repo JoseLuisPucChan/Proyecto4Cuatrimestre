@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
+
 
 namespace WSMCTuristic_CentroHistorico.Services
 {
@@ -25,6 +27,11 @@ namespace WSMCTuristic_CentroHistorico.Services
             oComentarios = new DAO.ComentariosDAO();
             return oComentarios.EliminarComentarios(obj);
         }
-
+        public DataSet topComentariosDS()
+        {
+            oComentarios = new DAO.ComentariosDAO();
+            return oComentarios.ComentariosDS();
+        }
+        
     }
 }

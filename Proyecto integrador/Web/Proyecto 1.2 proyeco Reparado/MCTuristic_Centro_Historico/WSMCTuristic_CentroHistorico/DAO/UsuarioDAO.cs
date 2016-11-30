@@ -163,8 +163,27 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
         }
 
-  
-
-
+        //Agregue el dataset y el arreglo de esta tabla. Diosemir Nah
+        public DataSet Usuario_adminDS()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC ver_usuarios_admin";
+            return conn.TablaDS(sql);
+        }
+        public DataSet Usuario_adminfiltradoDS()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC ver_usuario_admin_filtrado";
+            return conn.TablaDS(sql);
+        }
+        public DataSet Usuario_userDS()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC ver_usuarios_user";
+            return conn.TablaDS(sql);
+        }
     }
 }
