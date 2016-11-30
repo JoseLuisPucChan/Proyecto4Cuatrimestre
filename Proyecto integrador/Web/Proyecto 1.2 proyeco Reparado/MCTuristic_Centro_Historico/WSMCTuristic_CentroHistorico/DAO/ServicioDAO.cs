@@ -110,6 +110,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             return retorno;
         }
 
+        //Retorna Un dataset
         public DataSet Serviciostop12()
         {
             conn = new Conexion();
