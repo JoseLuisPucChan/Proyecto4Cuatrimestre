@@ -143,6 +143,34 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="InsertarDireccion_admin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:DireccionBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarDireccion_adminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertarDireccion_adminResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarDireccion_admin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:DireccionBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarDireccion_adminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarDireccion_adminResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="InsertarEstablecimiento">
         <s:complexType>
           <s:sequence>
@@ -725,6 +753,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ver_Admin_admin">
+        <s:complexType />
+      </s:element>
+      <s:element name="ver_Admin_adminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ver_Admin_adminResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="InsertarAdministrador">
         <s:complexType>
           <s:sequence>
@@ -916,6 +961,18 @@
   </wsdl:message>
   <wsdl:message name="ModificarDireccionSoapOut">
     <wsdl:part name="parameters" element="tns:ModificarDireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarDireccion_adminSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarDireccion_admin" />
+  </wsdl:message>
+  <wsdl:message name="InsertarDireccion_adminSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarDireccion_adminResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarDireccion_adminSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarDireccion_admin" />
+  </wsdl:message>
+  <wsdl:message name="ModificarDireccion_adminSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarDireccion_adminResponse" />
   </wsdl:message>
   <wsdl:message name="InsertarEstablecimientoSoapIn">
     <wsdl:part name="parameters" element="tns:InsertarEstablecimiento" />
@@ -1115,6 +1172,12 @@
   <wsdl:message name="LoginSoapOut">
     <wsdl:part name="parameters" element="tns:LoginResponse" />
   </wsdl:message>
+  <wsdl:message name="ver_Admin_adminSoapIn">
+    <wsdl:part name="parameters" element="tns:ver_Admin_admin" />
+  </wsdl:message>
+  <wsdl:message name="ver_Admin_adminSoapOut">
+    <wsdl:part name="parameters" element="tns:ver_Admin_adminResponse" />
+  </wsdl:message>
   <wsdl:message name="InsertarAdministradorSoapIn">
     <wsdl:part name="parameters" element="tns:InsertarAdministrador" />
   </wsdl:message>
@@ -1201,6 +1264,14 @@
     <wsdl:operation name="ModificarDireccion">
       <wsdl:input message="tns:ModificarDireccionSoapIn" />
       <wsdl:output message="tns:ModificarDireccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDireccion_admin">
+      <wsdl:input message="tns:InsertarDireccion_adminSoapIn" />
+      <wsdl:output message="tns:InsertarDireccion_adminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDireccion_admin">
+      <wsdl:input message="tns:ModificarDireccion_adminSoapIn" />
+      <wsdl:output message="tns:ModificarDireccion_adminSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="InsertarEstablecimiento">
       <wsdl:input message="tns:InsertarEstablecimientoSoapIn" />
@@ -1334,6 +1405,10 @@
       <wsdl:input message="tns:LoginSoapIn" />
       <wsdl:output message="tns:LoginSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="ver_Admin_admin">
+      <wsdl:input message="tns:ver_Admin_adminSoapIn" />
+      <wsdl:output message="tns:ver_Admin_adminSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="InsertarAdministrador">
       <wsdl:input message="tns:InsertarAdministradorSoapIn" />
       <wsdl:output message="tns:InsertarAdministradorSoapOut" />
@@ -1438,6 +1513,24 @@
     </wsdl:operation>
     <wsdl:operation name="ModificarDireccion">
       <soap:operation soapAction="http://tempuri.org/ModificarDireccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDireccion_admin">
+      <soap:operation soapAction="http://tempuri.org/InsertarDireccion_admin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDireccion_admin">
+      <soap:operation soapAction="http://tempuri.org/ModificarDireccion_admin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1742,6 +1835,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ver_Admin_admin">
+      <soap:operation soapAction="http://tempuri.org/ver_Admin_admin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertarAdministrador">
       <soap:operation soapAction="http://tempuri.org/InsertarAdministrador" style="document" />
       <wsdl:input>
@@ -1891,6 +1993,24 @@
     </wsdl:operation>
     <wsdl:operation name="ModificarDireccion">
       <soap12:operation soapAction="http://tempuri.org/ModificarDireccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDireccion_admin">
+      <soap12:operation soapAction="http://tempuri.org/InsertarDireccion_admin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarDireccion_admin">
+      <soap12:operation soapAction="http://tempuri.org/ModificarDireccion_admin" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2188,6 +2308,15 @@
     </wsdl:operation>
     <wsdl:operation name="Login">
       <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ver_Admin_admin">
+      <soap12:operation soapAction="http://tempuri.org/ver_Admin_admin" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

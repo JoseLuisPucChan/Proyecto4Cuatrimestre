@@ -33,12 +33,21 @@ namespace WSMCTuristic_CentroHistorico.Services
             oAdministrador = new DAO.AdministradorDAO();
             return oAdministrador.Login(obj);
         }
+<<<<<<< HEAD
         //Agrege el data set a ctrl. Diosemir Nah
         public DataSet topAdministradorDS()
         {
             oAdministrador = new DAO.AdministradorDAO();
             return oAdministrador.AdministradorDS();
         }
+=======
+        public DataSet ver_admi_admin()
+        {
+            oAdministrador = new DAO.AdministradorDAO();
+            return oAdministrador.ver_administradro_administradro();
+        }
+        
+>>>>>>> origin/master
         
     }
 }

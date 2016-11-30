@@ -27,11 +27,27 @@ namespace WSMCTuristic_CentroHistorico.Services
             oDireccion = new DAO.DireccionDAO();
             return oDireccion.EliminarDireccion(obj);
         }
+<<<<<<< HEAD
         public DataSet topDireccionDS()
         {
             oDireccion = new DAO.DireccionDAO();
             return oDireccion.DireccionDS();
         }
         
+=======
+
+        public int InsertarDireccion_admin(object obj)
+        {
+            oDireccion = new DAO.DireccionDAO();
+            return oDireccion.AgregarDireccion_admin(obj);
+        }
+
+        public int ModificarDireccion_admin(object obj)
+        {
+            oDireccion = new DAO.DireccionDAO();
+            return oDireccion.ActualizarDireccion_admin(obj);
+        }
+
+>>>>>>> origin/master
     }
 }
