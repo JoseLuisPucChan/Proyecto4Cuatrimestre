@@ -269,7 +269,7 @@
 </li>
     <li>
 <label><font>Fecha de Nacimiento<font></font></font></label>
-    <ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="Calender"  Format="dd-MM-yyyy" />
+        <ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server" TargetControlID="Calender" Format="dd-MM-yyyy" />
  <asp:TextBox ID="Calender" runat="server"></asp:TextBox>
 </li>
          
