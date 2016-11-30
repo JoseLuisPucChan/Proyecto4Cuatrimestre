@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace WSMCTuristic_CentroHistorico.Services
 {
@@ -24,6 +25,11 @@ namespace WSMCTuristic_CentroHistorico.Services
         {
             oNotificaciones = new DAO.NotificacionesDAO();
             return oNotificaciones.EliminarNotificacion(obj);
+        }
+        public DataSet topNotificacionesDS()
+        {
+            oNotificaciones = new DAO.NotificacionesDAO();
+            return oNotificaciones.NotificacionesDS();
         }
     }
 }

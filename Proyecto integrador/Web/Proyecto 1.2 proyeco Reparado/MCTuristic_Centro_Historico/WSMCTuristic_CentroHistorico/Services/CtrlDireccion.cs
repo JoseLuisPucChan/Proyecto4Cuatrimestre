@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace WSMCTuristic_CentroHistorico.Services
 {
@@ -26,5 +27,11 @@ namespace WSMCTuristic_CentroHistorico.Services
             oDireccion = new DAO.DireccionDAO();
             return oDireccion.EliminarDireccion(obj);
         }
+        public DataSet topDireccionDS()
+        {
+            oDireccion = new DAO.DireccionDAO();
+            return oDireccion.DireccionDS();
+        }
+        
     }
 }

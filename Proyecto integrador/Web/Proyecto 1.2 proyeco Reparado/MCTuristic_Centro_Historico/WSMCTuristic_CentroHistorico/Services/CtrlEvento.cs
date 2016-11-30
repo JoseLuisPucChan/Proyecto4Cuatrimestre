@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace WSMCTuristic_CentroHistorico.Services
 {
@@ -25,5 +26,11 @@ namespace WSMCTuristic_CentroHistorico.Services
             oEvento = new DAO.EventoDAO();
             return oEvento.EliminarEvento(obj);
         }
+        public DataSet topEventoDS()
+        {
+            oEvento = new DAO.EventoDAO();
+            return oEvento.EventoDS();
+        }
+       
     }
 }

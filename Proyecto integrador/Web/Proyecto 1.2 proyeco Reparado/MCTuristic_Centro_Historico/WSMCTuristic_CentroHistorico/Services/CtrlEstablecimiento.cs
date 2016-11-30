@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace WSMCTuristic_CentroHistorico.Services
 {
@@ -25,5 +26,16 @@ namespace WSMCTuristic_CentroHistorico.Services
             oEstablecimiento = new DAO.EstablecimientoDAO();
             return oEstablecimiento.ModificarEstablecimiento(obj);
         }
+        public DataSet topEstablecimientos_userDS()
+        {
+            oEstablecimiento = new DAO.EstablecimientoDAO();
+            return oEstablecimiento.Establecimiento_UserDS();
+        }
+        public DataSet topEstablecimientos_adminDS()
+        {
+            oEstablecimiento = new DAO.EstablecimientoDAO();
+            return oEstablecimiento.Establecimiento_AdminDS();
+        }
+        
     }
 }

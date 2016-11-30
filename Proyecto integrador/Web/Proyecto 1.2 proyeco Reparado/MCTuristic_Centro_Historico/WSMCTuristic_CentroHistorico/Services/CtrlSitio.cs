@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace WSMCTuristic_CentroHistorico.Services
 {
@@ -25,5 +26,11 @@ namespace WSMCTuristic_CentroHistorico.Services
             oSitio = new DAO.SitioDAO();
             return oSitio.EliminarSitio(obj);
         }
+        public DataSet topSitioDS()
+        {
+            oSitio = new DAO.SitioDAO();
+            return oSitio.SitioDS();
+        }
+        
     }
 }

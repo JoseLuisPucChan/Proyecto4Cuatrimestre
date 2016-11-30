@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace WSMCTuristic_CentroHistorico.Services
 {
@@ -25,5 +26,11 @@ namespace WSMCTuristic_CentroHistorico.Services
             oContactanos = new DAO.ContactanosDAO();
             return oContactanos.EliminarContactanos(obj);
         }
+        public DataSet topContactanosDS()
+        {
+            oContactanos = new DAO.ContactanosDAO();
+            return oContactanos.ContactanosDS();
+        }
+        
     }
 }

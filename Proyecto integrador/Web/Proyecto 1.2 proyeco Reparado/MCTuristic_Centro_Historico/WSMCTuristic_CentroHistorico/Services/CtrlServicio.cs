@@ -28,15 +28,20 @@ namespace WSMCTuristic_CentroHistorico.Services
             oServicio = new DAO.ServicioDAO();
             return oServicio.EliminarServicio(obj);
         }
-        public DataSet topServicios()
+        public DataSet topServicios_user()
         {
             oServicio = new DAO.ServicioDAO();
-            return oServicio.Serviciostop12();
+            return oServicio.Servicio_userDS();
+        }
+        public DataSet topServicios_admin()
+        {
+            oServicio = new DAO.ServicioDAO();
+            return oServicio.Servicio_adminDS();
         }
         public byte[] verfoto(int id)
         {
             oServicio = new DAO.ServicioDAO();
-            return oServicio.verFoto(id);
+            return oServicio.verFoto_User(id);
         }
     }
 }

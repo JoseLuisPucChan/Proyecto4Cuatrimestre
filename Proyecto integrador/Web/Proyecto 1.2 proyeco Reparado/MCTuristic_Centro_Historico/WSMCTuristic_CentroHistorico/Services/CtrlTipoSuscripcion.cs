@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace WSMCTuristic_CentroHistorico.Services
 {
@@ -26,5 +27,11 @@ namespace WSMCTuristic_CentroHistorico.Services
             oTipoSuscripcion = new DAO.TipoSuscripcionDAO();
             return oTipoSuscripcion.EliminarTipoSuscripcion(obj);
         }
+        public DataSet topTipoSuscri()
+        {
+            oTipoSuscripcion = new DAO.TipoSuscripcionDAO();
+            return oTipoSuscripcion.TipoSuscripcionDS();
+        }
+        
     }
 }

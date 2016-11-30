@@ -109,5 +109,13 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
             return retorno;
         }
+        //Agregue el dataset y el arreglo de byte de esta tabla. Diosemir Nah
+        public DataSet SitioDS()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC ver_Sitios";
+            return conn.TablaDS(sql);
+        }
     }
 }

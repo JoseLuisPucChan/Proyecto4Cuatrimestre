@@ -111,15 +111,22 @@ namespace WSMCTuristic_CentroHistorico.DAO
         }
 
         //Retorna Un dataset
-        public DataSet Serviciostop12()
+        public DataSet Servicio_adminDS()
         {
             conn = new Conexion();
             string sql;
-            sql = "EXEC primero12registros";
+            sql = "EXEC ver_servicio_admin";
+            return conn.TablaDS(sql);
+        }
+        public DataSet Servicio_userDS()
+        {
+            conn = new Conexion();
+            string sql;
+            sql = "EXEC ver_servicio_user";
             return conn.TablaDS(sql);
         }
 
-        public byte[] verFoto(int id)
+        public byte[] verFoto_User(int id)
         {
             int idUser = (int)id;
             conn = new Conexion();
@@ -138,6 +145,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             conn.Cerrar();
             return imgData;
         }
+        
 
   
 

@@ -76,6 +76,25 @@ namespace WSMCTuristic_CentroHistorico.UI
              return oUsuarioCTRL.LoginUsuario(oUsuario);
          }
 
+         //Nuevo webmethod Diosemir Nah
+         public DataSet usuario_adminWS()
+         {
+             oUsuarioCTRL = new Services.CtrlUsuario();
+             return oUsuarioCTRL.topUsuarios_admin();
+         }
+         //Nuevo webmethod Diosemir Nah
+         public DataSet usuario_adminFiltradosWS()
+         {
+             oUsuarioCTRL = new Services.CtrlUsuario();
+             return oUsuarioCTRL.topUsuarios_adminFiltrados();
+         }
+         //Nuevo webmethod Diosemir Nah
+         public DataSet usuario_userWS()
+         {
+             oUsuarioCTRL = new Services.CtrlUsuario();
+             return oUsuarioCTRL.topUsuarios_User();
+         }
+
         //--------------------------ABC Direcciones-----------------------------
         [WebMethod]
         public int EliminarDireccion(DireccionBO obj)
@@ -131,6 +150,20 @@ namespace WSMCTuristic_CentroHistorico.UI
             oEstablecimientoBO = obj;
             oEstablecimiento = new Services.CtrlEstablecimiento();
             return oEstablecimiento.EliminarEstablecimiento(oEstablecimientoBO);
+        }
+
+        //Nuevo webmethod Diosemir Nah
+        public DataSet establecimiento_UserWS()
+        {
+            oEstablecimiento = new Services.CtrlEstablecimiento();
+            return oEstablecimiento.topEstablecimientos_userDS();
+        }
+        [WebMethod]
+        //Nuevo webmethod Diosemir Nah
+        public DataSet establecimiento_AdminWS()
+        {
+            oEstablecimiento = new Services.CtrlEstablecimiento();
+            return oEstablecimiento.topEstablecimientos_adminDS();
         }
 
         //--------------------------ABC Evento-----------------------------
@@ -229,10 +262,18 @@ namespace WSMCTuristic_CentroHistorico.UI
             return oServicioCTRL.EliminarServicio(oServicioBO);
         }
         [WebMethod]
+        //Nuevo webmethod Diosemir Nah
        public DataSet topServicios()
         {
             oServicioCTRL = new Services.CtrlServicio();
-            return oServicioCTRL.topServicios();
+            return oServicioCTRL.topServicios_user();
+        }
+        [WebMethod]
+        //Nuevo webmethod Diosemir Nah
+        public DataSet topServicios()
+        {
+            oServicioCTRL = new Services.CtrlServicio();
+            return oServicioCTRL.topServicios_admin();
         }
       [WebMethod]
         public byte[] verFotoSer(int Ser)
@@ -267,6 +308,12 @@ namespace WSMCTuristic_CentroHistorico.UI
 
             oSitioCtrl = new Services.CtrlSitio();
             return oSitioCtrl.EliminarSitio(oSitio);
+        }
+        //Nuevo webmethod Diosemir Nah
+        public DataSet sitio_WS()
+        {
+            oSitioCtrl = new Services.CtrlSitio();
+            return oSitioCtrl.topSitioDS();
         }
         //------------ABC Soporte-------------------
         [WebMethod]
@@ -311,6 +358,12 @@ namespace WSMCTuristic_CentroHistorico.UI
             TipoServicioBO oTipoServicio = obj;
             oTipoServicioCTRL = new Services.CtrlTipoServicio();
             return oTipoServicioCTRL.EliminarTipoServicio(oTipoServicio);
+        }
+        //Nuevo webmethod Diosemir Nah
+        public DataSet tipoServicioWS()
+        {
+            oTipoServicioCTRL = new Services.CtrlTipoServicio();
+            return oTipoServicioCTRL.topTipoServicios   ();
         }
         //------------- ABC TipoSitio -----------------
         [WebMethod]
