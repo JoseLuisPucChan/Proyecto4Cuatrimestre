@@ -12,7 +12,7 @@ namespace MCTuristic_Centro_Historico.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
         }
         protected void btnServicios_Click(object sender, EventArgs e)
         {
@@ -74,7 +74,7 @@ namespace MCTuristic_Centro_Historico.GUI
  string extension)
         {
             string url = Convert.ToBase64String(arreglo, 0, arreglo.Length);
-            url = "data:image/" + extension + "jpeg;base64," + url;
+            url = "data:image/" + ".jpeg" + "jpeg;base64," + url;
             return url;
         }
         
@@ -84,10 +84,7 @@ namespace MCTuristic_Centro_Historico.GUI
             if (VerificarArchivoImg() == true)
             {
                 imgEstablecimiento.ImageUrl = (string)Session["Url"];
-                
-                subir.Click += new EventHandler(Subir_Click);
             }
-
         }
 
         private void Subir_Click(object sender, EventArgs e)
