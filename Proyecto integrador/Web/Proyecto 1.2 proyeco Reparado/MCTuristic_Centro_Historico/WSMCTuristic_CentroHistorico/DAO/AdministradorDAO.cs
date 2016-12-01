@@ -164,6 +164,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         public string Obtenerid_admin()
         {
             string id = "";
@@ -180,6 +181,10 @@ namespace WSMCTuristic_CentroHistorico.DAO
             }
             return id;
         }
+=======
+
+>>>>>>> origin/master
+>>>>>>> parent of 46c46a8... Cambios
 =======
 
 >>>>>>> origin/master

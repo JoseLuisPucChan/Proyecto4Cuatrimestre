@@ -47,6 +47,7 @@ namespace WSMCTuristic_CentroHistorico.Services
             return oAdministrador.ver_administradro_administradro();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         public string id_admin()
         {
@@ -55,6 +56,10 @@ namespace WSMCTuristic_CentroHistorico.Services
             res = oAdministrador.Obtenerid_admin();
             return res;
         }
+=======
+        
+>>>>>>> origin/master
+>>>>>>> parent of 46c46a8... Cambios
 =======
         
 >>>>>>> origin/master
