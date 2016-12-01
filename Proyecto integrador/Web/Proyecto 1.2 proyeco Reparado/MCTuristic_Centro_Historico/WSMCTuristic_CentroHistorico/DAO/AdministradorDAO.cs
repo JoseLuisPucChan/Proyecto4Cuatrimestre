@@ -144,6 +144,8 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
         }
 
+
+<<<<<<< HEAD
         //Agregue el dataset y el arreglo de esta tabla. Diosemir Nah
         public DataSet AdministradorDS()
         {
@@ -152,6 +154,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             sql = "EXEC primero12registros";
             return conn.TablaDS(sql);
         }
+=======
         public DataSet ver_administradro_administradro()
         {
             conn = new Conexion();
@@ -160,6 +163,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             return conn.TablaDS(sql);
         }
 
+<<<<<<< HEAD
         public string Obtenerid_admin()
         {
             string id = "";
@@ -176,6 +180,10 @@ namespace WSMCTuristic_CentroHistorico.DAO
             }
             return id;
         }
+=======
+
+>>>>>>> origin/master
+>>>>>>> parent of 46c46a8... Cambios
 
 
 

@@ -33,18 +33,20 @@ namespace WSMCTuristic_CentroHistorico.Services
             oAdministrador = new DAO.AdministradorDAO();
             return oAdministrador.Login(obj);
         }
-
+<<<<<<< HEAD
         //Agrege el data set a ctrl. Diosemir Nah
         public DataSet topAdministradorDS()
         {
             oAdministrador = new DAO.AdministradorDAO();
             return oAdministrador.AdministradorDS();
         }
+=======
         public DataSet ver_admi_admin()
         {
             oAdministrador = new DAO.AdministradorDAO();
             return oAdministrador.ver_administradro_administradro();
         }
+<<<<<<< HEAD
 
         public string id_admin()
         {
@@ -53,6 +55,10 @@ namespace WSMCTuristic_CentroHistorico.Services
             res = oAdministrador.Obtenerid_admin();
             return res;
         }
+=======
+        
+>>>>>>> origin/master
+>>>>>>> parent of 46c46a8... Cambios
         
     }
 }

@@ -700,6 +700,7 @@ create proc login_user
 as
 Select Nombre,IdUsuario from Usuario
 where Email=@email and Contrasena=@password
+<<<<<<< HEAD
 go
 
 create procedure verfoto 
@@ -712,8 +713,9 @@ create procedure primero12Registros
 as
 select top 12 idServicio, NombreServ ,PreciosServicio ,Foto from Servicios order by idServicio  
 go
-
-
+=======
+GO
+>>>>>>> refs/remotes/origin/Login
 
 ------------------------------Login admin------------------------------
 create proc login_admin
@@ -722,12 +724,4 @@ create proc login_admin
 as
 Select Nombre,IdAdministrador from Administrador
 where Email=@email and Contrasena=@password
-GO
-
-
------------------------ultimo AdminAgregado---------------------
-
-create procedure admin_reciente
-as
-select MAX([IdAdministrador]) as Maximo from Administrador
 GO

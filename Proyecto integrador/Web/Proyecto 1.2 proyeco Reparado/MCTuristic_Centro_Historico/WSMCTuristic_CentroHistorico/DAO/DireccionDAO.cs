@@ -110,7 +110,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
 
             return retorno;
         }
-
+<<<<<<< HEAD
         //Agregue el dataset de esta tabla. Diosemir Nah
         public DataSet DireccionDS()
         {
@@ -119,6 +119,8 @@ namespace WSMCTuristic_CentroHistorico.DAO
             sql = "EXEC primero12registros";
             return conn.TablaDS(sql);
         }
+=======
+
 
 
         public int AgregarDireccion_admin(object obj)
@@ -192,5 +194,7 @@ namespace WSMCTuristic_CentroHistorico.DAO
             return retorno;
         }
 
+
+>>>>>>> origin/master
     }
 }
