@@ -55,6 +55,7 @@
     <Reference Include="DevExpress.Web.Resources.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -118,6 +119,7 @@
     <Content Include="MasterPage\mpBase.Master" />
     <Content Include="MasterPage\PaginaPrincipal.Master" />
     <Content Include="MasterPage\UsuarioVista.Master" />
+    <Fakes Include="Fakes\DevExpress.Data.v16.1.fakes" />
     <None Include="Web References\localhost\WsMCTuristic.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
