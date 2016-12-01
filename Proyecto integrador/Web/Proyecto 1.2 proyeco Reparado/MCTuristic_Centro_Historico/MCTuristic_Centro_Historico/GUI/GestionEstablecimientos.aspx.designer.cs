@@ -244,8 +244,6 @@ namespace MCTuristic_Centro_Historico.GUI {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView gvTabla;
-        
         /// <summary>
         /// Control phAdmin.
         /// </summary>

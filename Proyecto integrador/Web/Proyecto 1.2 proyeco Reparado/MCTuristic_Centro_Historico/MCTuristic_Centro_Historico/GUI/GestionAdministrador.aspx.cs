@@ -12,11 +12,6 @@ namespace MCTuristic_Centro_Historico.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-           
-=======
-
->>>>>>> refs/remotes/origin/Administrador
         }
         [WebMethod]
         public static string GuardarAdmin(string nombre, string apellido, string correo, string contra, string telefono, string fecha)
@@ -86,21 +81,20 @@ namespace MCTuristic_Centro_Historico.GUI
             CargarAdmin();
         }
 
-<<<<<<< HEAD
+
         protected void ASPxGridView1_RowCommand(object sender, DevExpress.Web.ASPxGridViewRowCommandEventArgs e)
         {
-            if(e.CommandArgs.CommandArgument.ToString()=="Editar")
+            if (e.CommandArgs.CommandArgument.ToString() == "Editar")
             {
-                 txtNombre.Text = ASPxGridView1.GetRowValues(e.VisibleIndex, "Nombre").ToString();
-               
+                txtNombre.Text = ASPxGridView1.GetRowValues(e.VisibleIndex, "Nombre").ToString();
 
-                
+
+
             }
-=======
+        }
         protected void ASPxGridView1_FocusedRowChanged(object sender, EventArgs e)
         {
-           
->>>>>>> refs/remotes/origin/Administrador
+
         }
 
     }

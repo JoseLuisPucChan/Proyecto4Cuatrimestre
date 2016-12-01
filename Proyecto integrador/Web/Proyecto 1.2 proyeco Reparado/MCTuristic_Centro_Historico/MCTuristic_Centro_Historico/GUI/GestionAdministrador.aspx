@@ -139,8 +139,7 @@
                     <div class="divider"></div>
                     <asp:LinkButton ID="lbtnNuevo" runat="server" CssClass="btn btn-blue-alt"><i class="glyph-icon icon-plus-circle"></i> Nuevo</asp:LinkButton>
                     <div class="divider"></div>
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                        <ContentTemplate>
+                  
                             <div class="col-lg-6">
                                 <div class="form-group border-blue">
                                     <h3><i class="glyph-icon icon-tag"></i>Nombre</h3>
@@ -237,67 +236,9 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="divider"></div>
-                                <%--<script type="text/javascript">
-            function GurdarUsuario() {
-                alert('Se ha presionado el boton: ' + numero);
-                    var actionData = " { 'nombre': '" + $("#<%=txtNombre.ClientID%>")[0].value + "', 'apellido': '" + $("#<%=txtApellidos.ClientID%>")[0].value + "', 'correo': '" + $("#<%=txtCorreo.ClientID%>")[0].value + "', 'direccion': '" + $("#<%=txtDireccion.ClientID%>")[0].value + "', 'contra': '" + $("#<%=txtContrasena.ClientID%>")[0].value + "', 'telefono': '" + $("#<%=txtTelefono.ClientID%>")[0].value + "', 'fecha': '" + $("#<%=txtFecha.ClientID%>")[0].value + "', 'fu': '" + $("#<%=fuFoto.ClientID%>")[0].value + "'}  ";
-            $.ajax({
-                type: "POST",
-                url: "GestionUsuariosGUI.aspx/GuardarUsuario",
-                data: actionData,
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: OnSuccess,
-                failure: function (response) {
-                    alert(response.d);
-                }
-            });
-        }
-        function OnSuccess(response) {
-            alert("Respuesta " + response.d);
-        }
-                        </script>--%>
-<<<<<<< HEAD
-                                <%--<input type="button" class="btn btn-blue-alt" onclick="GurdarUsuario()" value="Guardar" />--%>
+                              
+                       <%--<input type="button" class="btn btn-blue-alt" onclick="GurdarUsuario()" value="Guardar" />--%>
 
-                                <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnGuardar_Click1"><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
-
-                                <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnModificar_Click"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
-                                <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
-                                <div class="divider"></div>
-
-                                <asp:UpdateProgress runat="server" ID="UpdateProgress" AssociatedUpdatePanelID="UpdatePanel1" DisplayAfter="0" DynamicLayout="false">
-                                    <ProgressTemplate>
-                                        <img alt="In progress..." src="../images1/iOS7Loader.gif" width="400" height="90" />
-                                    </ProgressTemplate>
-                                </asp:UpdateProgress>
-                                <dx:ASPxGridView ID="ASPxGridView1" runat="server" Theme="iOS" AutoGenerateColumns="False" OnRowCommand="ASPxGridView1_RowCommand">
-                                    <Columns>
-
-                                        <dx:GridViewDataColumn FieldName="Nombre" VisibleIndex="1" />
-                                        <dx:GridViewDataColumn FieldName="Apellidos" VisibleIndex="2" />
-                                        <dx:GridViewDataColumn FieldName="Email" VisibleIndex="3" />
-                                        <dx:GridViewDataColumn FieldName="Cruzamiento" VisibleIndex="4" />
-                                        <dx:GridViewDataColumn FieldName="TelefonoCelular" VisibleIndex="5" />
-                                        <dx:GridViewDataColumn FieldName="Calle" VisibleIndex="6" />
-                                        <dx:GridViewDataColumn FieldName="Colonia" VisibleIndex="7" />
-                                        <dx:GridViewDataColumn FieldName="Estado" VisibleIndex="8" />
-                                        <dx:GridViewDataButtonEditColumn Caption="Editar Columnas" Name="Editar" VisibleIndex="9">
-                                        </dx:GridViewDataButtonEditColumn>
-                                        <dx:GridViewDataColumn Caption="Edit">
-                                            <DataItemTemplate>
-                                                <asp:LinkButton ID="Lnk" runat="server" CommandArgument="Editar" Text="Editar"></asp:LinkButton>
-                                            </DataItemTemplate>
-                                        </dx:GridViewDataColumn>
-                                    </Columns>
-
-
-                                </dx:ASPxGridView>
-
-                            </div>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-=======
                         <%--<input type="button" class="btn btn-blue-alt" onclick="GurdarUsuario()" value="Guardar" />--%>
                 
                                             
@@ -305,7 +246,7 @@
                         
               <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                  <contenttemplate>
-                             <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnGuardar_Click1"  ><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
+                  <asp:LinkButton ID="lbtnGuardar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnGuardar_Click1"  ><i class="glyph-icon icon-save"></i> Guardar</asp:LinkButton>
    
                         <asp:LinkButton ID="lbtnModificar" runat="server" CssClass="btn btn-blue-alt" OnClick="lbtnModificar_Click"><i class="glyph-icon icon-edit"></i> Modificar</asp:LinkButton>
                         <asp:LinkButton ID="lbtnEliminar" runat="server" CssClass="btn btn-blue-alt pull-right"><i class="glyph-icon icon-minus-square"></i> Eliminar</asp:LinkButton>
@@ -324,7 +265,6 @@
                        
               
                     </div>
->>>>>>> refs/remotes/origin/Administrador
                 </div>
             </div>
         </div>
